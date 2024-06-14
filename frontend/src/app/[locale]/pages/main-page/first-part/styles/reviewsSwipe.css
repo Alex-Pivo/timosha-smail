@@ -1,0 +1,122 @@
+.newsSlider {
+  height: 515px;
+}
+
+.newsSlider .swiper-backface-hidden {
+  backface-visibility: visible !important;
+  visibility: visible !important;
+}
+
+.newsSlider .swiper-wrapper {
+  height: 345px;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+}
+
+.newsSlider .swiper-wrapper .swiper-slide {
+  width: 336px !important;
+  height: 274px !important;
+
+  background-color: #ececec;
+  border-radius: 20px;
+}
+
+.newsSlider .swiper-wrapper .swiper-slide-active {
+  width: 708px !important;
+  height: 345px!important;
+
+  background-color: #ececec;
+  border-radius: 20px;
+}
+
+
+@media screen and (min-width: 835px) and (max-width: 1541px){
+  .newsSlider {
+    height: 408px;
+  }
+  
+  .newsSlider .swiper-wrapper {
+    height: 308px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+  
+  .newsSlider .swiper-wrapper .swiper-slide {
+    width: 313px !important;
+    height: 249px !important;
+  
+    background-color: #ececec;
+    border-radius: 20px;
+  }
+  
+  .newsSlider .swiper-wrapper .swiper-slide-active {
+    width: 632px !important;
+    height: 308px !important;
+  
+    background-color: #ececec;
+    border-radius: 20px;
+  }
+  
+}
+
+
+@media screen and (min-width: 767px) and (max-width:835px){
+  .newsSlider {
+    height: 258px;
+  }
+
+  .newsSlider .swiper-wrapper {
+    height: 178px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+
+  .newsSlider .swiper-wrapper .swiper-slide {
+    width: 174px !important;
+    height: 138px !important;
+  
+    background-color: #ececec;
+    border-radius: 20px;
+  }
+
+  .newsSlider .swiper-wrapper .swiper-slide-active {
+    width: 367px !important;
+    height: 178px !important;
+  
+    background-color: #ececec;
+    border-radius: 20px;
+  }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+  .newsSlider {
+    height: 250px;
+  }
+
+  .newsSlider .swiper-wrapper {
+    height: 128px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+
+  .newsSlider .swiper-wrapper .swiper-slide {
+    width: 252px !important;
+    height: 128px !important;
+  
+    background-color: #ececec;
+    border-radius: 12px;
+  }
+
+  .newsSlider .swiper-wrapper .swiper-slide-active {
+    width: 252px !important;
+    height: 128px !important;
+  
+    background-color: #ececec;
+    border-radius: 12px;
+  }
+}

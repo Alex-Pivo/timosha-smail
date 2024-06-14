@@ -76,7 +76,7 @@ export const Newsletter: React.FC<NewsletterProps> = () => {
 
         try {
             console.log(data)
-            const response = await axios.post('http://127.0.0.1:8000/email/send_data/', data);
+            const response = await axios.post('http://95.169.204.16:8000/email/send_data/', data);
 
             if (response.status === 200) {
                 setEmail('');

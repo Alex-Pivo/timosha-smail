@@ -61,7 +61,7 @@ export default function Reports({locale}:any) {
     }
     try{
       let data;
-      axios.get(`http://localhost:8000/reports_articles/${localeValue}`)
+      axios.get(`http://95.169.204.16:8000/reports_articles/${localeValue}`)
       .then(res => {
         data = res.data;
         setState(state = data.data)
@@ -83,7 +83,7 @@ export default function Reports({locale}:any) {
     }
     try{
       let data;
-      axios.get(`http://localhost:8000/reports_articles/${localeValue}`)
+      axios.get(`http://95.169.204.16:8000/reports_articles/${localeValue}`)
       .then(res => {
         data = res.data;
         setArticle(article = data.articles)
@@ -557,7 +557,7 @@ export default function Reports({locale}:any) {
                       <div
                         className={styles.photo}
                         style={{
-                          backgroundImage: `url(http://localhost:8000/media/${entry.article_image})`,
+                          backgroundImage: `url(http://95.169.204.16:8000/media/${entry.article_image})`,
                           backgroundPosition: "center",
                           backgroundSize: "cover",
                         }}

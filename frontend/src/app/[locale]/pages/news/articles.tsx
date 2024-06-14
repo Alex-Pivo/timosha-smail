@@ -32,7 +32,7 @@ export default function Articles({locale}:any) {
   let [indexPage, setIndexPage] = useState(0);
 
   const router = useRouter();
-  let localeValue = locale.value.replace(/"/g, '');
+  let localeValue = locale;
 
   const filters = [
     "childs_history",
@@ -75,7 +75,7 @@ export default function Articles({locale}:any) {
     }
     try{
       let data;
-      axios.get("http://localhost:8000/news/" + localeValue)
+      axios.get("http://95.169.204.16:8000/news/" + localeValue)
       .then(res => {
         data = res.data;
         setState(data);
@@ -226,7 +226,7 @@ export default function Articles({locale}:any) {
               <div
                 className={styles.image}
                 style={{
-                  backgroundImage: `url(http://localhost:8000/${item.main_image})`,
+                  backgroundImage: `url(http://95.169.204.16:8000/${item.main_image})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                 }}

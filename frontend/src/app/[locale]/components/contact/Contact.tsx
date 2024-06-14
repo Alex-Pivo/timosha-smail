@@ -73,7 +73,7 @@ export const Contact = () => {
 
 		try {
 			// виконуємо POST-запит
-			const response = await axios.post('http://127.0.0.1:8000/contact_with_us/uk/', dataToSend);
+			const response = await axios.post('http://95.169.204.16:8000/contact_with_us/uk/', dataToSend);
 			// якщо запит успішний, можна виконати додаткові дії з отриманим відповіддю, якщо це потрібно
 			console.log('Відповідь від сервера:', response.data);
 			if (response.data.status === 'success') {

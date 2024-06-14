@@ -30,7 +30,7 @@ ALLOWED_HOSTS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://95.169.204.16/',
+    'http://95.169.204.16',
 ]
 
 REST_FRAMEWORK = {

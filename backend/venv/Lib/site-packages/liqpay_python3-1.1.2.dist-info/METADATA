@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: liqpay-python3
+Version: 1.1.2
+Summary: LiqPay SDK for Python 3
+Home-page: UNKNOWN
+Author: PaulGregor
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: requests
+
+UNKNOWN
+
+

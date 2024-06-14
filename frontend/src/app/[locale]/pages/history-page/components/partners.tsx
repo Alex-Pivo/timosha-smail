@@ -27,7 +27,7 @@ export default function Partners({locale}:any) {
     }
     try{
       let data;
-      axios.get(`http://localhost:8000/partners/${localeValue}`)
+      axios.get(`http://95.169.204.16:8000/partners/${localeValue}`)
       .then(res => {
         data = res.data;
         setState(data);
@@ -149,7 +149,7 @@ export default function Partners({locale}:any) {
                       style={{
                         width: "80%",
                         height: "80px",
-                        background: `url(http://localhost:8000/${item.image})`,
+                        background: `url(http://95.169.204.16:8000/${item.image})`,
                         marginTop: "0px",
                         backgroundPosition: "center",
                         backgroundSize: "contain",

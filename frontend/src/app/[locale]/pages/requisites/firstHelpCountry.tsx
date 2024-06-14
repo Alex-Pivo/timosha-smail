@@ -40,7 +40,7 @@ export default function FirstHelpCountry() {
       };
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/donate/uk/",
+        "http://95.169.204.16:8000/donate/uk/",
         data
       );
 

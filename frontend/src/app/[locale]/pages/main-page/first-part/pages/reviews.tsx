@@ -26,7 +26,7 @@ export default function Reviews({locale}:any) {
     }
     try{
       let data;
-      axios.get(`http://localhost:8000/reviews/${localeValue}`)
+      axios.get(`http://95.169.204.16:8000/reviews/${localeValue}`)
       .then(res => {
         data = res.data;
         setState(data);

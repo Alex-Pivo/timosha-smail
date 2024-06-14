@@ -184,7 +184,7 @@ export default function Header({locale}:any) {
 			<div className={styles.burger__lang}>
 				<label htmlFor="langSelect">
 					<div className={styles.select}>
-						<select id="langSelect" value={selectedLanguage} 
+						<select id="langSelect"
 						defaultValue={loacleActive}
 						onChange={handleLanguageChange}>
 							<option value="ua">UA</option>

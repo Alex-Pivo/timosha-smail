@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.modalEnter {
+  opacity: 0;
+}
+// Анимация для сердечка
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+// Стили для модального окна
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  //width: 500px;
+  //height: 300px;
+  display: inline-flex;
+  padding: 60px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  //border: 1px solid #ccc;
+  border-radius: 30px;
+  //background: var(--Main-white, #F5F5F5);
+  //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+
+  .heart {
+    color: #1D1D1D;
+    font-family: Rubik, sans-serif;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: -2.16px;
+    animation: heartbeat 1s infinite; // Добавляем анимацию сердечка
+    &:hover{
+      animation: none;
+      cursor: default;
+    }
+  }
+}
+
+
+.modalEnterActive {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.modalExit {
+  opacity: 1;
+}
+
+.modalExitActive {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+
+
+
+.modalContent {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  .heart{
+    color: #1D1D1D;
+    font-family: Rubik, sans-serif;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 59.4px */
+    letter-spacing: -2.16px;
+  }
+  .txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    .mainTxt{
+      color: #1D1D1D;
+      font-family: Rubik, sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 110%; /* 35.2px */
+    }
+    .moreTxt{
+      color: #1D1D1D;
+      width: 385px;
+      text-align: center;
+      font-family: Commissioner, sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22px; /* 110% */
+    }
+  }
+}
+
+.modal p {
+  //margin-bottom: 20px;
+}
+
+.modal button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .modalEnter {
+    opacity: 0;
+  }
+  // Анимация для сердечка
+  @keyframes heartbeat {
+    from {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  // Стили для модального окна
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    //width: 500px;
+    //height: 300px;
+    display: inline-flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    //border: 1px solid #ccc;
+    border-radius: 30px;
+    //background: var(--Main-white, #F5F5F5);
+    //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+
+    .heart {
+      color: #1D1D1D;
+      font-family: Rubik, sans-serif;
+      font-size: 54px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%;
+      letter-spacing: -2.16px;
+      animation: heartbeat 1s infinite; // Добавляем анимацию сердечка
+      &:hover{
+        animation: none;
+        cursor: default;
+      }
+    }
+  }
+
+
+  .modalEnterActive {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  .modalExit {
+    opacity: 1;
+  }
+
+  .modalExitActive {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+
+
+
+
+  .modalContent {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    .heart{
+      color: #1D1D1D;
+      font-family: Rubik, sans-serif;
+      font-size: 54px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%; /* 59.4px */
+      letter-spacing: -2.16px;
+    }
+    .txt{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      .mainTxt{
+        color: var(--Chief-Black, #1D1D1D);
+        text-align: center;
+        font-family: Rubik, sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%; /* 26.4px */
+      }
+      .moreTxt{
+        width: 283px;
+        color: var(--Chief-Black, #1D1D1D);
+        text-align: center;
+        font-family: Commissioner, sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 25.2px */
+      }
+    }
+  }
+
+  .modal p {
+    //margin-bottom: 20px;
+  }
+
+  .modal button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+}

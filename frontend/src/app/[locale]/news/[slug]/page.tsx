@@ -328,7 +328,7 @@ export default function Page() {
 			locale = "uk";
 		}
 		try {
-			axios.get(`http://localhost:8000/news/${locale}`)
+			axios.get(`http://95.169.204.16:8000/news/${locale}`)
 				.then(res => {
 					setState(res.data);
 				})
@@ -342,10 +342,10 @@ export default function Page() {
 		const item = state.find((item) => item.slug === id);
 		if (item) {
 			const photos = [
-				item.main_image ? `http://localhost:8000/${item.main_image}` : null,
-				item.optional_image_1 ? `http://localhost:8000/${item.optional_image_1}` : null,
-				item.optional_image_2 ? `http://localhost:8000/${item.optional_image_2}` : null,
-				item.optional_image_3 ? `http://localhost:8000/${item.optional_image_3}` : null,
+				item.main_image ? `http://95.169.204.16:8000/${item.main_image}` : null,
+				item.optional_image_1 ? `http://95.169.204.16:8000/${item.optional_image_1}` : null,
+				item.optional_image_2 ? `http://95.169.204.16:8000/${item.optional_image_2}` : null,
+				item.optional_image_3 ? `http://95.169.204.16:8000/${item.optional_image_3}` : null,
 			].filter(Boolean); // Удалить null значения
 
 			setHidden(photos.length <= 2);
@@ -366,10 +366,10 @@ export default function Page() {
 				{state.map((item) => {
 					if (item.slug === id) {
 						const photos = [
-							item.main_image ? `http://localhost:8000/${item.main_image}` : null,
-							item.optional_image_1 ? `http://localhost:8000/${item.optional_image_1}` : null,
-							item.optional_image_2 ? `http://localhost:8000/${item.optional_image_2}` : null,
-							item.optional_image_3 ? `http://localhost:8000/${item.optional_image_3}` : null,
+							item.main_image ? `http://95.169.204.16:8000/${item.main_image}` : null,
+							item.optional_image_1 ? `http://95.169.204.16:8000/${item.optional_image_1}` : null,
+							item.optional_image_2 ? `http://95.169.204.16:8000/${item.optional_image_2}` : null,
+							item.optional_image_3 ? `http://95.169.204.16:8000/${item.optional_image_3}` : null,
 						].filter(Boolean); // Удалить null значения
 
 						return (

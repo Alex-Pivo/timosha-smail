@@ -1,30 +1,25 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import styles from './GetHelp.module.scss';
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from 'swiper/modules';
-import { Swiper as SwiperType } from 'swiper/types'; // Import Swiper type
+import {Swiper, SwiperSlide} from "swiper/react";
+import { Autoplay, Pagination } from 'swiper/modules';
 import { useTranslations } from 'next-intl';
 import 'swiper/css';
+import 'swiper/css/pagination';
+
 
 export const GetHelp: React.FC = () => {
 	const t = useTranslations("getHelp");
+	const [activeStep, setActiveStep] = useState(1);
 	const [highlightedStep, setHighlightedStep] = useState(1);
-	const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
-
-	const handleSlideChange = (swiper: SwiperType) => {
-		setHighlightedStep(swiper.realIndex + 1); // Update highlighted step based on the actual slide index
-	};
-
 	useEffect(() => {
 		const intervalId = setInterval(() => {
-			if (swiperInstance) {
-				swiperInstance.slideNext();
-			}
-		}, 6000); // Ensure this matches the autoplay delay
+			setActiveStep(prevStep => (prevStep % 3) + 1);
+			setHighlightedStep(prevStep => (prevStep % 3) + 1);
+		}, 13000);
 
 		return () => clearInterval(intervalId);
-	}, [swiperInstance]);
+	}, []);
 
 	return (
 		<section className={styles.getHelp}>
@@ -57,24 +52,33 @@ export const GetHelp: React.FC = () => {
 
 				<div className={styles.stepsPhone}>
 					<Swiper
-						onSwiper={setSwiperInstance}
 						rewind={true}
 						slidesPerView={2}
 						spaceBetween={180}
 						autoplay={{
-							delay: 6000,
+							delay: 13000,
 							disableOnInteraction: false,
 						}}
 						allowTouchMove={false}
+						// pagination={{
+						// 	clickable: true,
+						// }}
+						// onSliderMove={(swiper) => {
+						// 	setHighlightedStep(prevStep => (prevStep % 3) + 1);
+						// }}
 						modules={[Autoplay]}
-						onSlideChange={handleSlideChange}
+						onSlideChange={(swiper) => {
+							swiper.activeIndex++;
+						}}
 						style={{ width: '343px' }}
 					>
 						<SwiperSlide>
 							<div className={`${styles.stepAll} ${highlightedStep === 1 ? styles.highlighted : ''}`}>
 								<h3 className={styles.captionStep}>{t('op1')}</h3>
 								<div className={styles.loadWrapper}>
-									<p className={styles.text}>{t('des1')}</p>
+									<p className={styles.text}>
+										{t('des1')}
+									</p>
 									{highlightedStep === 1 && (
 										<div className={styles.loadingBar}>
 											<div className={styles.progressBar}></div>
@@ -87,7 +91,9 @@ export const GetHelp: React.FC = () => {
 							<div className={`${styles.stepAll} ${highlightedStep === 2 ? styles.highlighted : ''}`}>
 								<h3 className={styles.captionStep}>{t('op2')}</h3>
 								<div className={styles.loadWrapper}>
-									<p className={styles.text}>{t('des2')}</p>
+									<p className={styles.text}>
+										{t('des2')}
+									</p>
 									{highlightedStep === 2 && (
 										<div className={styles.loadingBar}>
 											<div className={styles.progressBar}></div>
@@ -100,7 +106,9 @@ export const GetHelp: React.FC = () => {
 							<div className={`${styles.stepAll} ${highlightedStep === 3 ? styles.highlighted : ''}`}>
 								<h3 className={styles.captionStep}>{t('op3')}</h3>
 								<div className={styles.loadWrapper}>
-									<p className={styles.text}>{t('des3')}</p>
+									<p className={styles.text}>
+										{t('des3')}
+									</p>
 									{highlightedStep === 3 && (
 										<div className={styles.loadingBar}>
 											<div className={styles.progressBar}></div>
@@ -116,5 +124,3 @@ export const GetHelp: React.FC = () => {
 		</section>
 	);
 };
-
-export default GetHelp;

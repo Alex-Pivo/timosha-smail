@@ -27,7 +27,7 @@ export default function Slider({locale}:any) {
     }
     try{
       let data;
-      axios.get(`http://localhost:8000/${localeValue}/`)
+      axios.get(`http://95.169.204.16:8000/${localeValue}/`)
       .then(res => {
         data = res.data;
         setState(data);

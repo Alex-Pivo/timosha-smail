@@ -65,6 +65,46 @@ export default function Reviews({locale}:any) {
                   830: {
                     spaceBetween: 20,
                   },
+                  450 :{
+                    slidesPerView: 1.8,
+                    spaceBetween: 20,
+                  },
+                  440 :{
+                    slidesPerView: 1.75,
+                    spaceBetween: 20,
+                  },
+                  430 :{
+                    slidesPerView: 1.7,
+                    spaceBetween: 20,
+                  },
+                  420 :{
+                    slidesPerView: 1.65,
+                    spaceBetween: 20,
+                  },
+                  410 :{
+                    slidesPerView: 1.6,
+                    spaceBetween: 20,
+                  },
+                  400 :{
+                    slidesPerView: 1.55,
+                    spaceBetween: 20,
+                  },
+                  390 :{
+                    slidesPerView: 1.5,
+                    spaceBetween: 20,
+                  },
+                  380 :{
+                    slidesPerView: 1.45,
+                    spaceBetween: 20,
+                  },
+                  370 :{
+                    slidesPerView: 1.4,
+                    spaceBetween: 20,
+                  },
+                  360 :{
+                    slidesPerView: 1.35,
+                    spaceBetween: 20,
+                  },
                   320 :{
                     slidesPerView: 1.4,
                     spaceBetween: 20,

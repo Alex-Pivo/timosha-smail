@@ -46,11 +46,11 @@ export default function NotFound() {
                     <p className={styles.oops}>{t('title')}</p>
                     <p className={styles.txt}>{t('sub')}</p>
                 </div>
-                <div className={styles.btnWrapper} >
+{/*                 <div className={styles.btnWrapper} >
                     <button className={styles.btn} onClick={handleReload}>
                     {t('btn')}
                     </button>
-                </div>
+                </div> */}
 
             </section>
         </>

@@ -5,6 +5,7 @@ import axios from "axios";
 import styles from "./styles/firstHelpUSA.module.scss";
 import { NavLink } from "react-router-dom";
 import { useTranslations } from "next-intl";
+import { useRouter, useSearchParams } from "next/navigation";
 // var scroll = Scroll.animateScroll;
 
 export default function FirstHelpUsa() {
@@ -26,6 +27,16 @@ export default function FirstHelpUsa() {
   let [btnSeven, setBtnSeven] = useState(false);
   let [btnEight, setBtnEight] = useState(false);
   let [active, setActive] = useState(true);
+
+  const searchParams = useSearchParams();
+  const amountPage = searchParams.get('amount');
+  let [amountP, setAmountP] = useState("");
+
+  useEffect(() => {
+    if (amountPage) {
+      setAmount(amountPage.toString());
+    }
+  }, [amountPage]);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -207,7 +218,7 @@ export default function FirstHelpUsa() {
                     setBtnEight((btnEight = false));
                     setAmount(amount = "150")
                   }}
-                  className={btn ? styles.blockActive : styles.block}
+                  className={btn || amount === "150" ? styles.blockActive : styles.block}
                 >
                   {t('1')}
                 </div>
@@ -223,7 +234,7 @@ export default function FirstHelpUsa() {
                     setBtnEight((btnEight = false));
                     setAmount(amount = "300")
                   }}
-                  className={btnTwo ? styles.blockActive : styles.block}
+                  className={btnTwo || amount === "300" ? styles.blockActive : styles.block}
                 >
                   {t('2')}
                 </div>
@@ -239,7 +250,7 @@ export default function FirstHelpUsa() {
                     setBtnEight((btnEight = false));
                     setAmount(amount = "500")
                   }}
-                  className={btnThree ? styles.blockActive : styles.block}
+                  className={btnThree || amount === "500" ? styles.blockActive : styles.block}
                 >
                   {t('3')}
                 </div>
@@ -255,7 +266,7 @@ export default function FirstHelpUsa() {
                     setBtnEight((btnEight = false));
                     setAmount(amount = "1000")
                   }}
-                  className={btnFour ? styles.blockActive : styles.block}
+                  className={btnFour || amount === "1000" ? styles.blockActive : styles.block}
                 >
                   {t('4')}
                 </div>
@@ -272,7 +283,7 @@ export default function FirstHelpUsa() {
                     setBtnEight((btnEight = false));
                     setAmount(amount = "1500")
                   }}
-                  className={btnSeven ? styles.blockActive : styles.block}
+                  className={btnSeven || amount === "1500" ? styles.blockActive : styles.block}
                 >
                   {t('5')}
                 </div>
@@ -289,7 +300,7 @@ export default function FirstHelpUsa() {
                     setBtnEight((btnEight = false));
                     setAmount(amount = "3000")
                   }}
-                  className={btnFive ? styles.blockActive : styles.block}
+                  className={btnFive || amount === "3000" ? styles.blockActive : styles.block}
                 >
                   {t('6')}
                 </div>
@@ -305,7 +316,7 @@ export default function FirstHelpUsa() {
                     setBtnEight((btnEight = true));
                     setAmount(amount = "5000")
                   }}
-                  className={btnEight ? styles.blockActive : styles.block}
+                  className={btnEight || amount === "5000" ? styles.blockActive : styles.block}
                 >
                   {t('7')}
                 </div>
@@ -320,7 +331,7 @@ export default function FirstHelpUsa() {
                     setBtnEight((btnEight = false));
                     setBtnSix((btnSix = true));
                   }}
-                  className={btnSix ? styles.blockActive : styles.block}
+                  className={btnSix || (amountPage !== "150" && amountPage !== "300" && amountPage !== "500" && amountPage !== "1000" && amountPage !== "5000") ? styles.blockActive : styles.block}
                 >
                   {t('another')}
                 </div>
@@ -329,7 +340,7 @@ export default function FirstHelpUsa() {
             <input
               type="text"
               placeholder={t('amount')}
-              className={btnSix ? styles.inputActive : styles.input}
+              className={btnSix || (amountPage !== "150" && amountPage !== "300" && amountPage !== "500" && amountPage !== "1000" && amountPage !== "5000") ? styles.inputActive : styles.input}
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
             />

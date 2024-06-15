@@ -158,8 +158,8 @@ class LiqPayFunc:
             'currency': 'UAH',
             'description': 'Підтримка з сайту',
             'order_id': order_id,
-            'server_url': f'http://95.169.204.16:8000/{language}/status/{hashed_order_id}',
-            'result_url': f'http://95.169.204.16:3002/donate/status/{hashed_order_id}',
+            'server_url': f'http://127.0.0.1:8000/{language}/status/{hashed_order_id}',
+            'result_url': f'http://localhost:3000/donate/status/{hashed_order_id}',
         }
 
         if is_subscription==True:
@@ -186,23 +186,30 @@ class LiqPayFunc:
 
 
 class InternationPaymentInformation:
-    def __init__(self, name='', last_name='', email='', phone=''):
+    def init(self, name='', last_name='', email='', phone=''):
         self.name = name
         self.last_name = last_name
         self.email = email
         self.phone = phone
 
-    def get_data_from_request(self, request):
-        if request.method == "POST":
-            self.name = request.POST.get('name')
-            self.last_name = request.POST.get('last_name')
-            self.email = request.POST.get('email_data')
-            self.phone = request.POST.get('phone')
+    def post(self, request, *args, **kwargs):
+        serializer = DonationSerializer(data=request.data)
+        if serializer.is_valid():
+            name = serializer.validated_data.get('name')
+            last_name = serializer.validated_data.get('last_name')
+            phone = serializer.validated_data.get('phone')
+            email = serializer.validated_data.get('email')
+            if name and last_name and phone and email:
+                try:
+                    save_to_db = LiqpayPayment.objects.create(name=name,last_name=last_name,phone=phone,email=email)
+                except Exception as e:
+                    return Response({'error': 'not_all_data'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-            add_to_db = InternationalPayment.objects.create(name=self.name, last_name=self.last_name, email=self.email, phone=self.phone)
-            if add_to_db:
-                return JsonResponse({'status':'succes'})
-            return JsonResponse({'status':'error'},status=404)
+                return Response('success', status=status.HTTP_201_CREATED)
+            else:
+                return Response({'error': 'not_all_data'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 

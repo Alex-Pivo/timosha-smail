@@ -898,7 +898,7 @@
 
     .head{
       width: 100%;
-      height: 11px;
+      height: auto;
       box-sizing: border-box;
       display: flex;
       flex-direction: row;
@@ -917,6 +917,31 @@
 
       svg{
         display: none;
+      }
+
+      .burger__lang{
+        margin-top: 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        select{
+          width: 60px;
+          border: none;
+          background: var(--gray-2, #F7F7F7);
+          font-family: "Commissioner", sans-serif;
+          color: #1d1d1d;
+          text-decoration: none;
+          position: relative;
+          display: inline-block;
+          font-size: 24px;
+          font-weight: 600;
+          margin-right: 0px;
+          -webkit-appearance: none; /* Убираем стандартные стили для элемента веб-кит браузерах */
+          -moz-appearance: none; /* Убираем стандартные стили для элемента в Firefox */
+          appearance: none; /* Убираем стандартные стили */
+          border-radius: 4px;
+        }
       }
     }
 
@@ -982,30 +1007,7 @@
       }
     }
 
-    .burger__lang{
-      margin-top: 50px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      select{
-        width: 60px;
-        border: none;
-        background: var(--gray-2, #F7F7F7);
-        font-family: "Commissioner", sans-serif;
-        color: #1d1d1d;
-        text-decoration: none;
-        position: relative;
-        display: inline-block;
-        font-size: 24px;
-        font-weight: 600;
-        margin-right: 0px;
-        -webkit-appearance: none; /* Убираем стандартные стили для элемента веб-кит браузерах */
-        -moz-appearance: none; /* Убираем стандартные стили для элемента в Firefox */
-        appearance: none; /* Убираем стандартные стили */
-        border-radius: 4px;
-      }
-    }
+    
   }
 
   .burger__menu__dis{

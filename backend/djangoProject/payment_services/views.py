@@ -185,13 +185,7 @@ class LiqPayFunc:
 
 
 
-class InternationPaymentInformation:
-    def init(self, name='', last_name='', email='', phone=''):
-        self.name = name
-        self.last_name = last_name
-        self.email = email
-        self.phone = phone
-
+class InternationalPaymentInformation(APIView):
     def post(self, request, *args, **kwargs):
         serializer = DonationSerializer(data=request.data)
         if serializer.is_valid():
@@ -201,7 +195,7 @@ class InternationPaymentInformation:
             email = serializer.validated_data.get('email')
             if name and last_name and phone and email:
                 try:
-                    save_to_db = LiqpayPayment.objects.create(name=name,last_name=last_name,phone=phone,email=email)
+                    save_to_db = InternationalPayment.objects.create(name=name,last_name=last_name,phone=phone,email=email)
                 except Exception as e:
                     return Response({'error': 'not_all_data'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 

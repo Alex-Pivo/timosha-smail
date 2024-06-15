@@ -59,6 +59,17 @@ export default function Header({locale}:any) {
 		await router.refresh();
 	};
 
+	const [isBodyOverflowHidden, setBodyOverflowHidden] = useState(false);
+
+  	const handleButtonClick = () => {
+    	setBodyOverflowHidden(!isBodyOverflowHidden);
+  	};
+
+  	// Применяем стили к body в зависимости от состояния isBodyOverflowHidden
+  	if (typeof window !== 'undefined') {
+    	document.body.style.overflow = isBodyOverflowHidden ? 'hidden' : 'auto';
+  	}
+
 
 
 
@@ -149,6 +160,7 @@ export default function Header({locale}:any) {
 					setActive(active = true);
 					else if(active === true)
 					setActive(active = false);
+					handleButtonClick();
 				}}
 				className={styles.burger}>
 					<div></div>
@@ -160,6 +172,20 @@ export default function Header({locale}:any) {
 		<div className={active ? styles.burger__menu : styles.burger__menu__dis}>
 			<div className={styles.head}>
 				<p>{t('home')} / {t('menu')}</p>
+				<div className={styles.burger__lang}>
+				<label htmlFor="langSelect">
+					<div className={styles.select}>
+						<select id="langSelect"
+						defaultValue={loacleActive}
+						onChange={handleLanguageChange}>
+							<option value="ua">UA</option>
+							<option value="en">EN</option>
+							<option value="ru">RU</option>
+							<option value="it">IT</option>
+						</select>
+					</div>
+				</label>
+			</div>
 				<svg
 				onClick={()=> {
 					setActive(active = false);
@@ -181,7 +207,7 @@ export default function Header({locale}:any) {
 					<Link href="/how-to-help" className={styles.link} passHref>{t('htj')}</Link>
 					<Link href="/contacts" className={styles.link} passHref>{t('contacts')}</Link>
 			</div>
-			<div className={styles.burger__lang}>
+			{/* <div className={styles.burger__lang}>
 				<label htmlFor="langSelect">
 					<div className={styles.select}>
 						<select id="langSelect"
@@ -194,8 +220,9 @@ export default function Header({locale}:any) {
 						</select>
 					</div>
 				</label>
-			</div>
+			</div> */}
 		</div>
 		</>
 	);
 }
+

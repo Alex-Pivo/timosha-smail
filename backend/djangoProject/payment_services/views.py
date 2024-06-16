@@ -13,7 +13,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 
 from rest_framework import status
-from .serializers import DonationSerializer
+from .serializers import DonationSerializer,InternationalPaymentInformation
 import urllib3
 from hashlib import sha256
 
@@ -187,23 +187,13 @@ class LiqPayFunc:
 
 class InternationalPaymentInformation(APIView):
     def post(self, request, *args, **kwargs):
-        serializer = DonationSerializer(data=request.data)
+        serializer = InternationalPaymentSerializer(data=request.data)
         if serializer.is_valid():
-            name = serializer.validated_data.get('name')
-            last_name = serializer.validated_data.get('last_name')
-            phone = serializer.validated_data.get('phone')
-            email = serializer.validated_data.get('email')
-            if name and last_name and phone and email:
-                try:
-                    save_to_db = InternationalPayment.objects.create(name=name,last_name=last_name,phone=phone,email=email)
-                except Exception as e:
-                    return Response({'error': 'not_all_data'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-                return Response('success', status=status.HTTP_201_CREATED)
-            else:
-                return Response({'error': 'not_all_data'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            serializer.save()
+            return Response('success', status=status.HTTP_201_CREATED)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 
 

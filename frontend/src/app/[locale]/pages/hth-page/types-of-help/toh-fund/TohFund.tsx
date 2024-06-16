@@ -8,7 +8,7 @@ export const TohFund = () => {
 	return (
 		<section className={styles.typesOfHelp}>
 			<div className={styles.wrapper}>
-				<div className={styles.imageOfTypes} >
+				<div className={styles.imageOfTypes} id="fund">
 					<Image src={'/img8.png'} alt={'02'} width={666} height={401} className={styles.imgNote}/>
 					<Image src={'/image 9_Desc.png'} alt={'02'} width={830} height={500} className={styles.imgDesc}/>
 					<Image src={'/серце2.png'} alt={'02'} width={134} height={130} className={styles.hearts}/>

@@ -5,7 +5,6 @@ import uuid
 
 from decimal import Decimal
 from datetime import datetime
-from django.http import JsonResponse
 from . import settings
 from .models import LiqpayPayment, InternationalPayment
 from liqpay.liqpay import LiqPay

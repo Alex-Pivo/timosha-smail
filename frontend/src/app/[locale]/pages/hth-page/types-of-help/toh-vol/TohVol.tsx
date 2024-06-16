@@ -1,10 +1,25 @@
+'use client'
 import styles from './TohVol.module.scss';
-import React from 'react'
+import React, {useEffect} from 'react'
 import Image from "next/image";
 import { useTranslations } from 'next-intl';
 
 export const TohVol = () => {
 	const t = useTranslations("htj");
+	useEffect(() => {
+		// Check if the URL contains the hash
+		if (window.location.hash) {
+			setTimeout(() => {
+				const yOffset = -120; // Adjust this value based on the height of your fixed header
+				const element = document.querySelector(window.location.hash);
+				if (element) {
+					const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+					window.scrollTo({ top: y, behavior: 'smooth' });
+				}
+			}, 100); // Delay to ensure the page has loaded
+		}
+	}, []);
+
 	return (
 		<section className={styles.typesOfHelp}>
 			<div className={styles.title}>
@@ -21,7 +36,7 @@ export const TohVol = () => {
 					</svg>
 				</p>
 			</div>
-			<div className={styles.wrapper}>
+			<div className={styles.wrapper} id="wrapper">
 				<div className={styles.nameOfTypes}>
 					<div className={styles.name}>
 						<span>01</span>

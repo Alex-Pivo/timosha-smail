@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
 
+.loadingBar .progressBar {
+  animation: loadingAnimation 6s linear infinite;
+}
 .getHelp{
   margin-bottom: 150px;
   .wrapper{
@@ -536,6 +539,9 @@
         display: none;
       }
     }
+  }
+  .loadingBar .progressBar {
+    animation: loadingAnimation 6s linear infinite;
   }
   @keyframes loadingAnimation {
     0% {

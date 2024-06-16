@@ -1,12 +1,19 @@
+'use client'
 import styles from './HelpOptions.module.scss';
 import React from 'react'
 import Image from 'next/image'
 import {Link} from "@/navigation" ;
-
+import { useRouter } from 'next/navigation'; // Добавляем useRouter для навигации
 import { useTranslations } from 'next-intl';
 import Option  from '@/app/[locale]/pages/main-page/second-part/help-options/option/Option'
+
 export const HelpOptions = () => {
 	const t = useTranslations("helpOptions");
+	const router = useRouter();
+
+	const handleNavigateAndScroll = (path: string) => {
+		router.push(path);
+	};
 
 	return (
 		<section className={styles.helpOptions}>
@@ -23,17 +30,20 @@ export const HelpOptions = () => {
 					<Option
 						name={t('op1')}
 						description={t('des1')}
+						href={'/how-to-help#wrapper'}
 					/>
 					<Option
 						name={t('op2')}
 						description={t('des2')}
+						href={'/how-to-help#partner'}
 					/>
 					<Option
 						name={t('op3')}
 						description={t('des3')}
+						href={'/how-to-help#fund'}
 					/>
 				</div>
-				<Link href="/how-to-help" className={styles.btn}>
+				<Link href="/how-to-help#wrapper" className={styles.btn}>
 					{t('btn')}
 				</Link>
 			</div>

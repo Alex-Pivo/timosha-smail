@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import styles from './Option.module.scss';
-import {Link} from "@/navigation" ;
 import { useTranslations } from 'next-intl';
+import {Link} from "@/navigation";
+
 interface IProps {
 	name: string;
 	description: string;
+	href: string;
 }
 
-const Option: React.FC<IProps> = ({ name, description }) => {
+const Option: React.FC<IProps> = ({ name, description, href }) => {
 	const t = useTranslations("helpOptions");
 	return (
-		<Link className={styles.form} href="/how-to-help">
+		<Link className={styles.form} href={href}>
 			<h3 className={styles.name}>{name}</h3>
 			<p className={styles.description}>{description}</p>
-			<Link href="/how-to-help" className={styles.contact}>
+			<Link href={href}  className={styles.contact}>
 				{t('btn')}
 			</Link>
 		</Link>

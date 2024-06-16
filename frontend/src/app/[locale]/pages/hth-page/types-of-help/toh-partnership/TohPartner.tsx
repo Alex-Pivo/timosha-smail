@@ -9,7 +9,7 @@ export const TohPartner = () => {
 	const { scrollToContact } = useScroll();
 	return (
 		<section className={styles.typesOfHelp}>
-			<div className={styles.wrapper}>
+			<div className={styles.wrapper} id="partner">
 				<div className={styles.typeCard}>
 					<div className={styles.nameOfTypes}>
 						<div className={styles.name}>

@@ -1,22 +1,28 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import styles from './GetHelp.module.scss';
-import {Swiper, SwiperSlide} from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from 'swiper/modules';
 import { useTranslations } from 'next-intl';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-
 export const GetHelp: React.FC = () => {
 	const t = useTranslations("getHelp");
 	const [activeStep, setActiveStep] = useState(1);
 	const [highlightedStep, setHighlightedStep] = useState(1);
+
 	useEffect(() => {
+		const checkScreenSize = () => {
+			const isPhone = window.innerWidth <= 767;
+			return isPhone ? 6000 : 13000;
+		};
+
+		const intervalDuration = checkScreenSize();
 		const intervalId = setInterval(() => {
 			setActiveStep(prevStep => (prevStep % 3) + 1);
 			setHighlightedStep(prevStep => (prevStep % 3) + 1);
-		}, 13000);
+		}, intervalDuration);
 
 		return () => clearInterval(intervalId);
 	}, []);
@@ -56,16 +62,10 @@ export const GetHelp: React.FC = () => {
 						slidesPerView={2}
 						spaceBetween={180}
 						autoplay={{
-							delay: 13000,
+							delay: window.innerWidth <= 767 ? 6000 : 13000,
 							disableOnInteraction: false,
 						}}
 						allowTouchMove={false}
-						// pagination={{
-						// 	clickable: true,
-						// }}
-						// onSliderMove={(swiper) => {
-						// 	setHighlightedStep(prevStep => (prevStep % 3) + 1);
-						// }}
 						modules={[Autoplay]}
 						onSlideChange={(swiper) => {
 							swiper.activeIndex++;

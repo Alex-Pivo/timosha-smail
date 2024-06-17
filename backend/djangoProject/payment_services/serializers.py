@@ -7,7 +7,7 @@ class DonationSerializer(serializers.ModelSerializer):
         fields = ['name', 'last_name', 'phone', 'email', 'amount']
 
     amount = serializers.IntegerField(allow_null=False, required=True)
-    currency =serializers.CharField(required=True)
+    # currency =serializers.CharField(required=True)
     email = serializers.EmailField(required=True)
     phone = serializers.CharField(required=True)
     name = serializers.CharField(required=True)

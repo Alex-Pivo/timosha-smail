@@ -75,6 +75,17 @@ export default function RootLayout({
         <title>Timosha smile</title>
         <link rel="icon" href="/logo-btn.ico" />
         <meta name='Charity' content='Charity' />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-654D9MSXCY"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-654D9MSXCY');
+            `,
+          }}
+        />
       </head>
       <body>
           <Popup isOpen={showPopup} onClose={handleClosePopup} />

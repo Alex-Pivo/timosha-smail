@@ -2,7 +2,8 @@
 import { useState } from "react";
 import styles from "./styles/cryptoUSA.module.scss";
 import { useTranslations } from "next-intl";
-
+import axios from "axios";
+import { ModalText } from "@/app/[locale]/components/modal/Modal";
 
 const PATH1 = "/QR/1.1.png";
 const PATH2 = "/QR/1.2.png";
@@ -18,10 +19,76 @@ export default function CryptoUsa() {
   let [activeSix, setActiveSix] = useState(false);
   let [activeSeven, setActiveSeven] = useState(false);
   let [activeEight, setActiveEight] = useState(false);
-  const t = useTranslations('Donate');
+
+  const [showModal, setShowModal] = useState(false);
+
+  const [name, setName] = useState<string>("");
+  const [last_name, setLastname] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const t = useTranslations("Donate");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const data = {
+      name: name,
+      last_name: last_name,
+      phone: phone,
+      email: email,
+    };
+
+    try {
+      
+      const response = await axios.post(
+        `http://95.169.204.16:8000/donate/internation_payment/`,
+        data
+      );
+      console.log(data);
+
+      if (response.status === 201) {
+        setEmail("");
+        setShowModal(true);
+        console.log("Yes!!!");
+      } else {
+        alert("Failed to subscribe. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error submitting subscription:", error);
+      alert("Failed to subscribe. Please try again later. 123");
+    }
+  };
+  const ModalWrapper = ({
+    onClose,
+    children,
+  }: {
+    onClose: () => void;
+    children: React.ReactNode;
+  }) => {
+    const handleClickOutside = (
+      event: React.MouseEvent<HTMLDivElement, MouseEvent>
+    ) => {
+      if (event.target === event.currentTarget) {
+        onClose();
+      }
+    };
+
+    return (
+      <div className={styles.modalWrapper}>
+        <div className={styles.modalBackdrop} onClick={handleClickOutside}>
+          {children}
+        </div>
+      </div>
+    );
+  };
 
   return (
     <>
+      {showModal && (
+        <ModalWrapper onClose={() => setShowModal(false)}>
+          <ModalText show={showModal} onClose={() => setShowModal(false)} />
+        </ModalWrapper>
+      )}
       <div id="crypto" className={styles.crypto}>
         <div className={styles.container}>
           <h2 className={styles.title}>{t("title4")}</h2>
@@ -132,7 +199,7 @@ export default function CryptoUsa() {
           </div>
           <div className={styles.box}>
             <svg
-            className={styles.logo}
+              className={styles.logo}
               xmlns="http://www.w3.org/2000/svg"
               width="43"
               height="43"
@@ -156,7 +223,7 @@ export default function CryptoUsa() {
 
             <div className={styles.right}>
               <div className={styles.info}>
-                <p className={styles.name}>{t('ether')}</p>
+                <p className={styles.name}>{t("ether")}</p>
                 <p className={styles.code}>
                   0xa02226982492b0b7dccf20e563cab4644aed26e6
                 </p>
@@ -168,7 +235,7 @@ export default function CryptoUsa() {
                   }}
                   className={styles.a}
                 >
-                  <p className={styles.link}>{t('qr')}</p>
+                  <p className={styles.link}>{t("qr")}</p>
                   <svg
                     className={active ? styles.ar__active : styles.ar}
                     xmlns="http://www.w3.org/2000/svg"
@@ -193,7 +260,7 @@ export default function CryptoUsa() {
                 Copy to clipboard
               </div>
               <svg
-              className={styles.copy}
+                className={styles.copy}
                 onMouseOver={() => {
                   setActiveSix((activeSix = true));
                 }}
@@ -256,7 +323,7 @@ export default function CryptoUsa() {
 
             <div className={styles.right}>
               <div className={styles.info}>
-                <p className={styles.name}>{t('tron')}</p>
+                <p className={styles.name}>{t("tron")}</p>
                 <p className={styles.code}>
                   TTFs4EGig2Ghq48v3Z9tPVDfPNMES1BAP7
                 </p>
@@ -268,7 +335,7 @@ export default function CryptoUsa() {
                     } else setActiveThree((activeThree = false));
                   }}
                 >
-                  <p className={styles.link}>{t('qr')}</p>
+                  <p className={styles.link}>{t("qr")}</p>
                   <svg
                     className={activeThree ? styles.ar__active : styles.ar}
                     xmlns="http://www.w3.org/2000/svg"
@@ -369,7 +436,7 @@ export default function CryptoUsa() {
 
             <div className={styles.right}>
               <div className={styles.info}>
-                <p className={styles.name}>{t('solana')}</p>
+                <p className={styles.name}>{t("solana")}</p>
                 <p className={styles.code}>
                   748NHu4BgjCYgg1T4xsyGVJ16WNXt9XHMjdM1jsAJL7X
                 </p>
@@ -381,7 +448,7 @@ export default function CryptoUsa() {
                     } else setActiveFour((activeFour = false));
                   }}
                 >
-                  <p className={styles.link}>{t('qr')}</p>
+                  <p className={styles.link}>{t("qr")}</p>
                   <svg
                     className={activeFour ? styles.ar__active : styles.ar}
                     xmlns="http://www.w3.org/2000/svg"
@@ -457,66 +524,66 @@ export default function CryptoUsa() {
       </div>
       <div id="country" className={styles.country}>
         <div className={styles.container}>
-          <h2 className={styles.title}>{t('title5')}</h2>
+          <h2 className={styles.title}>{t("title5")}</h2>
           <div className={styles.text}>
-            <p>{t('text1')} </p>
-            <p>{t('text2')}</p>
-            <p>{t('text3')}</p>
-          </div>               
+            <p>{t("text1")} </p>
+            <p>{t("text2")}</p>
+            <p>{t("text3")}</p>
+          </div>
 
-          <div className={styles.form}>
-          {/* <p className={styles.label}>Введіть свої дані</p> */}
+          <form onSubmit={handleSubmit} className={styles.form}>
+            <p className={styles.label}>{t("enter")}</p>
             <div className={styles.inputs__container}>
               <label className={styles.lab} htmlFor="name"></label>
               <input
                 required
                 className={styles.inp}
-                placeholder={t('first')}
+                placeholder={t("first")}
                 type="text"
                 name="name"
-                // value={name}
-                // onChange={(e) => setName(e.target.value)}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
               <label className={styles.lab} htmlFor="lastname"></label>
               <input
                 required
                 className={styles.inp}
-                placeholder={t('last')}
+                placeholder={t("last")}
                 type="text"
                 name="lastname"
-                // value={last_name}
-                // onChange={(e) => setLastname(e.target.value)}
+                value={last_name}
+                onChange={(e) => setLastname(e.target.value)}
               />
               <label className={styles.lab} htmlFor="phone"></label>
               <input
                 required
                 className={styles.inp}
-                placeholder={t('phone')}
+                placeholder={t("phone")}
                 type="tel"
                 id="phone"
                 name="phone"
-                // value={phone}
-                // onChange={(e) => setPhone(e.target.value)}
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
               />
               <label className={styles.lab} htmlFor="email"></label>
               <input
                 className={styles.inp}
-                placeholder={t('mail')}
+                placeholder={t("mail")}
                 type="email"
                 id="email"
                 size={30}
                 name="email"
-                // value={email}
+                value={email}
                 required
-                // onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className={styles.btn__container}>
               <button className={styles.btn} type="submit">
-              {t('button5')}
+                {t("button5")}
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </>

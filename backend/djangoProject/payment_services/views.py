@@ -25,25 +25,31 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 class DonateView(APIView):
     def post(self, request, *args, **kwargs):
-        serializer = DonationSerializer(data=request.data)
-        if serializer.is_valid():
-            name = serializer.validated_data.get('name')
-            last_name = serializer.validated_data.get('last_name')
-            phone = serializer.validated_data.get('phone')
-            email = serializer.validated_data.get('email')
-            amount = serializer.validated_data.get('amount')
-            # currency = serializer.validated_data.get('currency')
-            is_subscription = serializer.validated_data.get('is_subscription', None)
+        name = request.data.get('name')
+        last_name = request.data.get('last_name')
+        email = request.data.get('email')
+        phone = request.data.get('phone')
+        amount = request.data.get('amount')
+        is_subscription = request.data.get('is_subscription')
+        # serializer = DonationSerializer(data=request.data)
+        # if serializer.is_valid():
+        #     name = serializer.validated_data.get('name')
+        #     last_name = serializer.validated_data.get('last_name')
+        #     phone = serializer.validated_data.get('phone')
+        #     email = serializer.validated_data.get('email')
+        #     amount = serializer.validated_data.get('amount')
+        #     # currency = serializer.validated_data.get('currency')
+        #     is_subscription = serializer.validated_data.get('is_subscription', None)
 
-            if settings.LIQPAY_PUBLIC_KEY and settings.LIQPAY_PRIVATE_KEY:
+        if settings.LIQPAY_PUBLIC_KEY and settings.LIQPAY_PRIVATE_KEY:
 
                 payment = LiqPayFunc.pay_view(amount=amount, name=name, last_name=last_name, phone=phone, email=email, is_subscription=is_subscription)
 
                 return Response(payment, status=status.HTTP_201_CREATED)
-            else:
-                return Response({'error': 'LiqPay keys are not configured'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            # else:
+            #     return Response({'error': 'LiqPay keys are not configured'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            return Response('error', status=status.HTTP_400_BAD_REQUEST)
 
 
 

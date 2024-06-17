@@ -57,7 +57,7 @@ export const OurTeam = () => {
 					{/*</span>*/}
 				</div>
 				<div className={styles.sliders}>
-					<Swiper navigation={false} modules={[Navigation]} className={styles.mySwiper}>
+					<Swiper navigation={false} autoHeight modules={[Navigation]} className={styles.mySwiper}>
 
 						{/*Юлія Санько*/}
 
@@ -68,6 +68,7 @@ export const OurTeam = () => {
 									grabCursor={true}
 									centeredSlides={true}
 									// loop={true}
+									autoHeight={true}
 									modules={[EffectCards]}
 									className={styles.swiperCards}
 									style={{width: swiperWidth, height: swiperHeight}}

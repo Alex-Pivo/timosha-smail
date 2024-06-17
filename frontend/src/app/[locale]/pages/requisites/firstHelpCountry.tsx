@@ -228,7 +228,7 @@ export default function FirstHelpCountry() {
                     setBtnEight((btnEight = false));
                     setAmount(amount = "150")
                   }}
-                  className={btn || amount === "150" ? styles.blockActive : styles.block}
+                  className={btn || (amount === "150" && btnSix === false) ? styles.blockActive : styles.block}
                 >
                   {t('1')}
                 </div>
@@ -244,7 +244,7 @@ export default function FirstHelpCountry() {
                     setBtnEight((btnEight = false));
                     setAmount(amount = "300")
                   }}
-                  className={btnTwo || amount === "300" ? styles.blockActive : styles.block}
+                  className={btnTwo || (amount === "300" && btnSix === false) ? styles.blockActive : styles.block}
                 >
                   {t('2')}
                 </div>
@@ -260,7 +260,7 @@ export default function FirstHelpCountry() {
                     setBtnEight((btnEight = false));
                     setAmount(amount = "500")
                   }}
-                  className={btnThree || amount === "500" ? styles.blockActive : styles.block}
+                  className={btnThree || (amount === "500" && btnSix === false) ? styles.blockActive : styles.block}
                 >
                   {t('3')}
                 </div>
@@ -276,7 +276,7 @@ export default function FirstHelpCountry() {
                     setBtnEight((btnEight = false));
                     setAmount(amount = "1000")
                   }}
-                  className={btnFour || amount === "1000" ? styles.blockActive : styles.block}
+                  className={btnFour || (amount === "1000" && btnSix === false) ? styles.blockActive : styles.block}
                 >
                    {t('4')}
                 </div>
@@ -293,7 +293,7 @@ export default function FirstHelpCountry() {
                     setBtnEight((btnEight = false));
                     setAmount(amount = "1500")
                   }}
-                  className={btnSeven || amount === "1500" ? styles.blockActive : styles.block}
+                  className={btnSeven || (amount === "1500" && btnSix === false) ? styles.blockActive : styles.block}
                 >
                  {t('5')}
                 </div>
@@ -310,7 +310,7 @@ export default function FirstHelpCountry() {
                     setBtnEight((btnEight = false));
                     setAmount(amount = "3000")
                   }}
-                  className={btnFive || amount === "3000" ? styles.blockActive : styles.block}
+                  className={btnFive || (amount === "3000" && btnSix === false) ? styles.blockActive : styles.block}
                 >
                   {t('6')}
                 </div>
@@ -326,7 +326,7 @@ export default function FirstHelpCountry() {
                     setBtnEight((btnEight = true));
                     setAmount(amount = "5000")
                   }}
-                  className={btnEight || amount === "5000" ? styles.blockActive : styles.block}
+                  className={btnEight || (amount === "5000" && btnSix === false) ? styles.blockActive : styles.block}
                 >
                   {t('7')}
                 </div>

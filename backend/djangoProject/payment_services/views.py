@@ -32,7 +32,7 @@ class DonateView(APIView):
             phone = serializer.validated_data.get('phone')
             email = serializer.validated_data.get('email')
             amount = serializer.validated_data.get('amount')
-            currency = serializer.validated_data.get('currency')
+            # currency = serializer.validated_data.get('currency')
             is_subscription = serializer.validated_data.get('is_subscription', None)
 
             if settings.LIQPAY_PUBLIC_KEY and settings.LIQPAY_PRIVATE_KEY:

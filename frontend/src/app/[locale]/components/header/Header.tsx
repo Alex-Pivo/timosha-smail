@@ -144,7 +144,7 @@ export default function Header({locale}:any) {
 						<div className={styles.select}>
 							<select id="langSelect" 
 							// defaultValue={locale?.value?.replace(/"/g, '') ? locale?.value?.replace(/"/g, '') : selectedLanguage} 
-							defaultValue={loacleActive}
+							defaultValue={selectedLanguage}
 							onChange={handleLanguageChange}>
 								<option value="ua">UA</option>
 								<option value="en">EN</option>

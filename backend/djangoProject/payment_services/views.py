@@ -42,7 +42,7 @@ class DonateView(APIView):
 
         # Validate the amount
         try:
-            amount = Decimal(amount)
+            amount = int(amount)
         except (TypeError, InvalidOperation):
             logger.error("Invalid amount value: %s", amount)
             return Response({'error': 'Invalid amount value'}, status=status.HTTP_400_BAD_REQUEST)

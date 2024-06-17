@@ -84,14 +84,13 @@ class LiqPaymentAPI(APIView):
                     payment.description = get_description
                     payment.status = 'Successfully donated'
                     payment.save()
+                    return Response({'status': 'success'}, status=status.HTTP_202_ACCEPTED)
 
                 except Exception as e:
                     print("Error occurred while processing payment data:", str(e))
             else:
-                LiqpayPayment.objects.filter(order_id=original_order_id).delete()
-
-                # payment.status = 'Cancelled'
-                # payment.save()
+                pass
+                print('Статус не успішний')
 
         return Response({'status': res.get('status')})
 
@@ -118,23 +117,23 @@ class LiqPayFunc:
         return order_id
     @staticmethod
     def check_payment_status(order_id):
-        try:
-            liqpay = LiqPayFunc(settings.LIQPAY_PUBLIC_KEY, settings.LIQPAY_PRIVATE_KEY)
+        print(order_id)
 
-            res = liqpay.api("request", {
+        liqpay = LiqPayFunc(settings.LIQPAY_PUBLIC_KEY, settings.LIQPAY_PRIVATE_KEY)
+
+        res = liqpay.api("request", {
                 "action": "status",
                 "version": "3",
-                "order_id": order_id
+                "order_id": 'order_270a9e494f21487eb8f667775456a7e5'
             })
-            if res.get('status') == 'success':
+        if res.get('status') == 'success':
                 donate = LiqpayPayment.objects.get(order_id=order_id)
                 print(donate,'donate')
                 # donate.status = 'Successfully donated'
                 # donate.save()
-                return 'Succes'
-        except Exception as e:
-            print("Error with status",e)
-            return 'Error'
+            # return res.get('status')
+
+
     @staticmethod
     def pay_view(amount, currency,name, last_name, phone, email, is_subscription, language='uk'):
         try:
@@ -201,12 +200,15 @@ class LiqPayFunc:
 
 class InternationalPaymentInformation(APIView):
     def post(self, request, *args, **kwargs):
-        serializer = InternationalPaymentSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response('success', status=status.HTTP_201_CREATED)
-        else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        name = request.data.get('name')
+        last_name = request.data.get('lastname')
+        language = request.data.get('phone')
+        email = request.data.get('email')
+        try:
+            InternationalPayment.objects.create(name=name, last_name=last_name, email=email)
+            return Response({'status': 'success'})
+        except Exception as e:
+            return Response({'status': 'error'})
 
 
 

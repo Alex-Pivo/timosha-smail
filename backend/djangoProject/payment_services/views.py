@@ -5,7 +5,7 @@ import uuid
 
 from decimal import Decimal
 from datetime import datetime
-from . import settings as set
+from . import settingstings
 from .models import LiqpayPayment, InternationalPayment
 
 from liqpay.liqpay import LiqPay
@@ -17,8 +17,6 @@ from decimal import Decimal, InvalidOperation
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from django.conf import set
-
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -52,7 +50,7 @@ class DonateView(APIView):
             logger.error("Missing required fields")
             return Response({'error': 'Missing required fields'}, status=status.HTTP_400_BAD_REQUEST)
 
-        if set.LIQPAY_PUBLIC_KEY and set.LIQPAY_PRIVATE_KEY:
+        if settings.LIQPAY_PUBLIC_KEY and settings.LIQPAY_PRIVATE_KEY:
             try:
                 payment = LiqPayFunc.pay_view(
                     amount=amount,
@@ -78,7 +76,7 @@ class LiqPaymentAPI(APIView):
         original_order_id_query = LiqpayPayment.objects.filter(hashed_order_id=hashed_order_id).values('order_id')
         if original_order_id_query.exists():
             original_order_id = original_order_id_query.first()['order_id']
-            liqpay = LiqPayFunc(set.LIQPAY_PUBLIC_KEY, set.LIQPAY_PRIVATE_KEY)
+            liqpay = LiqPayFunc(settings.LIQPAY_PUBLIC_KEY, settings.LIQPAY_PRIVATE_KEY)
 
             res = liqpay.api("request", {
                 "action": "status",
@@ -145,7 +143,7 @@ class LiqPayFunc:
     def check_payment_status(order_id):
         print(order_id)
 
-        liqpay = LiqPayFunc(set.LIQPAY_PUBLIC_KEY, set.LIQPAY_PRIVATE_KEY)
+        liqpay = LiqPayFunc(settings.LIQPAY_PUBLIC_KEY, settings.LIQPAY_PRIVATE_KEY)
 
         res = liqpay.api("request", {
                 "action": "status",
@@ -188,8 +186,8 @@ class LiqPayFunc:
 
         params = {
             'version': '3',
-            'public_key': set.LIQPAY_PUBLIC_KEY,
-            'private_key': set.LIQPAY_PRIVATE_KEY,
+            'public_key': settings.LIQPAY_PUBLIC_KEY,
+            'private_key': settings.LIQPAY_PRIVATE_KEY,
             'action': 'pay',
             'amount': str(input_amount),
             'info': f"Ім'я:{name} Прізвище:{last_name} Email:{email} Phone:{phone}",
@@ -212,7 +210,7 @@ class LiqPayFunc:
         json_string = json.dumps(params, separators=(',', ':'))
         data = base64.b64encode(json_string.encode('utf-8')).decode('utf-8')
 
-        signature = LiqPayFunc.generate_signature(set.LIQPAY_PRIVATE_KEY, data)
+        signature = LiqPayFunc.generate_signature(settings.LIQPAY_PRIVATE_KEY, data)
 
         redirected_url = f'https://www.liqpay.ua/api/3/checkout/{data}/?signature={signature}'
 

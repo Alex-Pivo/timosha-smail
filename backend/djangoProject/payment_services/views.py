@@ -7,6 +7,7 @@ from decimal import Decimal
 from datetime import datetime
 from . import settings
 from .models import LiqpayPayment, InternationalPayment
+
 from liqpay.liqpay import LiqPay
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -31,12 +32,12 @@ class DonateView(APIView):
             phone = serializer.validated_data.get('phone')
             email = serializer.validated_data.get('email')
             amount = serializer.validated_data.get('amount')
-            is_subscription = serializer.validated_data.get('is_subscription')
+            currency = serializer.validated_data.get('currency')
+            is_subscription = serializer.validated_data.get('is_subscription', None)
 
-            # Перевірка наявності валідних ключів
             if settings.LIQPAY_PUBLIC_KEY and settings.LIQPAY_PRIVATE_KEY:
 
-                payment = LiqPayFunc.pay_view(amount=amount, name=name, last_name=last_name, phone=phone, email=email, is_subscription=is_subscription)
+                payment = LiqPayFunc.pay_view(amount=amount,currency=currency, name=name, last_name=last_name, phone=phone, email=email, is_subscription=is_subscription)
 
                 return Response(payment, status=status.HTTP_201_CREATED)
             else:
@@ -51,7 +52,6 @@ class LiqPaymentAPI(APIView):
         original_order_id_query = LiqpayPayment.objects.filter(hashed_order_id=hashed_order_id).values('order_id')
         if original_order_id_query.exists():
             original_order_id = original_order_id_query.first()['order_id']
-            print('ORIGINAL_ORDER_ID:', original_order_id)
             liqpay = LiqPayFunc(settings.LIQPAY_PUBLIC_KEY, settings.LIQPAY_PRIVATE_KEY)
 
             res = liqpay.api("request", {
@@ -59,7 +59,6 @@ class LiqPaymentAPI(APIView):
                 "version": "3",
                 "order_id": original_order_id
             })
-            print('STATUS:',res.get('status'))
             if res.get('status') == 'success':
                 try:
                     get_data_from_res = res.get('info')
@@ -116,11 +115,28 @@ class LiqPayFunc:
     @staticmethod
     def generate_order_id():
         order_id = f'order_{uuid.uuid4().hex}'
-        # hashed_order_id = sha256(order_id.encode()).hexdigest()
-        # print('ORDER_ID',order_id)
         return order_id
     @staticmethod
-    def pay_view(amount, name, last_name, phone, email,is_subscription, language='uk'):
+    def check_payment_status(order_id):
+        try:
+            liqpay = LiqPayFunc(settings.LIQPAY_PUBLIC_KEY, settings.LIQPAY_PRIVATE_KEY)
+
+            res = liqpay.api("request", {
+                "action": "status",
+                "version": "3",
+                "order_id": order_id
+            })
+            if res.get('status') == 'success':
+                donate = LiqpayPayment.objects.get(order_id=order_id)
+                print(donate,'donate')
+                # donate.status = 'Successfully donated'
+                # donate.save()
+                return 'Succes'
+        except Exception as e:
+            print("Error with status",e)
+            return 'Error'
+    @staticmethod
+    def pay_view(amount, currency,name, last_name, phone, email, is_subscription, language='uk'):
         try:
             input_amount = Decimal(amount)
             if input_amount <= 0:
@@ -130,16 +146,15 @@ class LiqPayFunc:
 
         order_id = LiqPayFunc.generate_order_id()
         hashed_order_id = sha256(order_id.encode()).hexdigest()
-        # print("HASHED_ORDERID",hashed_order_id)
         try:
             LiqpayPayment.objects.create(
                 amount=input_amount,
-                currency='UAH',
+                currency=(currency if currency else 'UAH'),
                 email=email,
                 phone=phone,
                 name=name,
                 last_name=last_name,
-                status='In procces...',
+                status='В процесі...',
                 order_id=order_id,
                 hashed_order_id=hashed_order_id,
             )
@@ -154,14 +169,14 @@ class LiqPayFunc:
             'amount': str(input_amount),
             'info': f"Ім'я:{name} Прізвище:{last_name} Email:{email} Phone:{phone}",
             'language': language,
-            'currency': 'UAH',
-            'description': 'Підтримка з сайту',
+            'currency': (currency if currency else 'UAH'),
+            'description': ('Підтримка з сайту' if currency == 'UAH' else 'Support from website'),
             'order_id': order_id,
             'server_url': f'http://95.169.204.16:8000//{language}/status/{hashed_order_id}',
             'result_url': f'http://95.169.204.16:3002/donate/status/{hashed_order_id}',
         }
 
-        if is_subscription==True:
+        if is_subscription is not None:
             todays_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             params.update({
                 'email_data': '1',

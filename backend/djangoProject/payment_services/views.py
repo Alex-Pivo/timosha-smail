@@ -37,7 +37,7 @@ class DonateView(APIView):
 
             if settings.LIQPAY_PUBLIC_KEY and settings.LIQPAY_PRIVATE_KEY:
 
-                payment = LiqPayFunc.pay_view(amount=amount,currency=currency, name=name, last_name=last_name, phone=phone, email=email, is_subscription=is_subscription)
+                payment = LiqPayFunc.pay_view(amount=amount,currency='USD', name=name, last_name=last_name, phone=phone, email=email, is_subscription=is_subscription)
 
                 return Response(payment, status=status.HTTP_201_CREATED)
             else:

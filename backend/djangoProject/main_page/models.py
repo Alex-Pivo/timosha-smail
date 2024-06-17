@@ -10,7 +10,7 @@ class ChooseLanguage(models.TextChoices):
 
 class MainPageSetting(models.Model):
     child_name = models.TextField(max_length=20, blank=False,verbose_name="Ім'я дитини")
-    child_age = models.CharField(max_length=2, blank=False,default='', verbose_name="Вік дитини")
+    child_age = models.CharField(max_length=15, blank=False,default='2 роки', verbose_name="Вік дитини")
     image1 = models.ImageField(upload_to='media_storage/main_page_images', blank=False, default=None,verbose_name="Фото 1")
     image2 = models.ImageField(upload_to='media_storage/main_page_images', blank=False, default=None,verbose_name="Фото 2")
     image3 = models.ImageField(upload_to='media_storage/main_page_images', blank=False, default=None,verbose_name="Фото 3")

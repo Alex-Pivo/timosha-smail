@@ -176,7 +176,7 @@ export default function Header({locale}:any) {
 				<label htmlFor="langSelect">
 					<div className={styles.select}>
 						<select id="langSelect"
-						defaultValue={loacleActive}
+						defaultValue={selectedLanguage}
 						onChange={handleLanguageChange}>
 							<option value="ua">UA</option>
 							<option value="en">EN</option>

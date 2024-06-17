@@ -4,6 +4,7 @@ import Tagline from "../pages/history-page/components/tagline";
 import Partners from "../pages/history-page/components/partners";
 
 import styles from "./History.module.scss";
+import styles1 from "@/app/[locale]/page.module.scss";
 import { OurTeam } from '@/app/[locale]/components/our-team/OurTeam'
 import { Contact } from '@/app/[locale]/components/contact/Contact'
 import React from 'react'
@@ -20,7 +21,7 @@ export default function History() {
 				<HistoryPart></HistoryPart>
 				<Tagline></Tagline>
 				<Partners locale={locale}></Partners>
-				<div className={styles.downContainer}>
+				<div className={styles1.container}>
 					<OurTeam />
 					<Contact />
 				</div>

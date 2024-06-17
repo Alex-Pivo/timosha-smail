@@ -1,25 +1,3 @@
-// import { NextIntlClientProvider } from "next-intl";
-// import { getLocale, getMessages } from "next-intl/server";
-// import { unstable_setRequestLocale } from 'next-intl/server';
-
-// export default async function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode
-// })
-
-
-// {
-//   const messages = await getMessages();
-//   const locale = await getLocale();
-//   unstable_setRequestLocale(locale);
-//   return(
-//       <NextIntlClientProvider locale={locale} messages={messages}>
-//         {children}
-//       </NextIntlClientProvider>
-//   );
-// }
-
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 
@@ -36,6 +14,19 @@ export default async function LocaleLayout({
 
   return (
       <html lang={locale}>
+      <head>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-654D9MSXCY"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-654D9MSXCY');
+            `,
+          }}
+        />
+      </head>
       <body>
       <NextIntlClientProvider messages={messages}>
         {children}

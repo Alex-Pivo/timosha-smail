@@ -37,7 +37,7 @@ class DonateView(APIView):
 
             if settings.LIQPAY_PUBLIC_KEY and settings.LIQPAY_PRIVATE_KEY:
 
-                payment = LiqPayFunc.pay_view(amount=amount,currency='USD', name=name, last_name=last_name, phone=phone, email=email, is_subscription=is_subscription)
+                payment = LiqPayFunc.pay_view(amount=amount, name=name, last_name=last_name, phone=phone, email=email, is_subscription=is_subscription)
 
                 return Response(payment, status=status.HTTP_201_CREATED)
             else:
@@ -135,7 +135,7 @@ class LiqPayFunc:
 
 
     @staticmethod
-    def pay_view(amount, currency,name, last_name, phone, email, is_subscription, language='uk'):
+    def pay_view(amount,name, last_name, phone, email, is_subscription, language='uk'):
         try:
             input_amount = Decimal(amount)
             if input_amount <= 0:
@@ -148,7 +148,7 @@ class LiqPayFunc:
         try:
             LiqpayPayment.objects.create(
                 amount=input_amount,
-                currency=(currency if currency else 'UAH'),
+                currency='UAH',
                 email=email,
                 phone=phone,
                 name=name,
@@ -168,8 +168,8 @@ class LiqPayFunc:
             'amount': str(input_amount),
             'info': f"Ім'я:{name} Прізвище:{last_name} Email:{email} Phone:{phone}",
             'language': language,
-            'currency': (currency if currency else 'UAH'),
-            'description': ('Підтримка з сайту' if currency == 'UAH' else 'Support from website'),
+            'currency': 'UAH',
+            'description': 'Підтримка з сайту',
             'order_id': order_id,
             'server_url': f'http://95.169.204.16:8000//{language}/status/{hashed_order_id}',
             'result_url': f'http://95.169.204.16:3002/donate/status/{hashed_order_id}',

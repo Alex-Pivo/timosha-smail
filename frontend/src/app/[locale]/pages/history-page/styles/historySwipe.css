@@ -10,7 +10,7 @@
 @media screen and (min-width: 835px) and (max-width: 1541px){
   .historySwipe {
     width: 100%;
-    height: 474px;
+    /* height: auto; */
   }
   
   .historySwipe .slideHidden {
@@ -22,7 +22,7 @@
 @media screen and (min-width: 767px) and (max-width:835px) {
   .historySwipe {
     width: 100%;
-    height: 360px;
+    /* height: auto; */
   }
 }
 

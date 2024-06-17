@@ -72,7 +72,7 @@ class DonateView(APIView):
 
 
 class LiqPaymentAPI(APIView):
-    def get(self, request, hashed_order_id, language):
+    def get(self, request,language, hashed_order_id):
         original_order_id_query = LiqpayPayment.objects.filter(hashed_order_id=hashed_order_id).values('order_id')
         if original_order_id_query.exists():
             original_order_id = original_order_id_query.first()['order_id']

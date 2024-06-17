@@ -5,7 +5,7 @@ import uuid
 
 from decimal import Decimal
 from datetime import datetime
-from . import set as set
+from . import settings as set
 from .models import LiqpayPayment, InternationalPayment
 
 from liqpay.liqpay import LiqPay

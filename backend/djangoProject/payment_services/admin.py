@@ -23,7 +23,7 @@ class LiqpayPaymentAdmin(admin.ModelAdmin):
                 "order_id": id,
             })
             if res.get('status') == 'success':
-                payment = LiqpayPayment.objects.get(order_id=original_order_id)
+                payment = LiqpayPayment.objects.get(order_id=id)
                 payment.status = 'Successfully donated'
                 payment.save()
 

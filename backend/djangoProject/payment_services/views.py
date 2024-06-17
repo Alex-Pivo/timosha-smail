@@ -199,7 +199,7 @@ class LiqPayFunc:
             'description': 'Підтримка з сайту',
             'order_id': order_id,
             'server_url': f'http://95.169.204.16:8000/{language}/status/{hashed_order_id}',
-            'result_url': f'http://95.169.204.16:3002/{new_language}/status/{hashed_order_id}',
+            'result_url': f'http://95.169.204.16:3002/{new_language}/donate/status/{hashed_order_id}',
         }
 
         if is_subscription is not None:

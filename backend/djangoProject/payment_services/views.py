@@ -9,19 +9,23 @@ from . import settings
 from .models import LiqpayPayment, InternationalPayment
 
 from liqpay.liqpay import LiqPay
-from rest_framework.views import APIView
-from rest_framework.response import Response
-
-from rest_framework import status
-from .serializers import DonationSerializer,InternationalPaymentSerializer
 import urllib3
 from hashlib import sha256
+
+import logging
+from decimal import Decimal, InvalidOperation
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from django.conf import settings
 
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 
+
+logger = logging.getLogger(__name__)
 
 class DonateView(APIView):
     def post(self, request, *args, **kwargs):
@@ -31,25 +35,41 @@ class DonateView(APIView):
         phone = request.data.get('phone')
         amount = request.data.get('amount')
         is_subscription = request.data.get('is_subscription')
-        # serializer = DonationSerializer(data=request.data)
-        # if serializer.is_valid():
-        #     name = serializer.validated_data.get('name')
-        #     last_name = serializer.validated_data.get('last_name')
-        #     phone = serializer.validated_data.get('phone')
-        #     email = serializer.validated_data.get('email')
-        #     amount = serializer.validated_data.get('amount')
-        #     # currency = serializer.validated_data.get('currency')
-        #     is_subscription = serializer.validated_data.get('is_subscription', None)
+
+        # Log the incoming data
+        logger.info("Request data: name=%s, last_name=%s, email=%s, phone=%s, amount=%s, is_subscription=%s",
+                    name, last_name, email, phone, amount, is_subscription)
+
+        # Validate the amount
+        try:
+            amount = Decimal(amount)
+        except (TypeError, InvalidOperation):
+            logger.error("Invalid amount value: %s", amount)
+            return Response({'error': 'Invalid amount value'}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Check required fields
+        if not all([name, last_name, email, phone, amount]):
+            logger.error("Missing required fields")
+            return Response({'error': 'Missing required fields'}, status=status.HTTP_400_BAD_REQUEST)
 
         if settings.LIQPAY_PUBLIC_KEY and settings.LIQPAY_PRIVATE_KEY:
-
-                payment = LiqPayFunc.pay_view(amount=amount, name=name, last_name=last_name, phone=phone, email=email, is_subscription=is_subscription)
-
+            try:
+                payment = LiqPayFunc.pay_view(
+                    amount=amount,
+                    name=name,
+                    last_name=last_name,
+                    phone=phone,
+                    email=email,
+                    is_subscription=is_subscription
+                )
                 return Response(payment, status=status.HTTP_201_CREATED)
-            # else:
-            #     return Response({'error': 'LiqPay keys are not configured'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            except Exception as e:
+                logger.error("Payment processing error: %s", str(e))
+                return Response({'error': 'Payment processing failed'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         else:
-            return Response('error', status=status.HTTP_400_BAD_REQUEST)
+            logger.error("LiqPay keys are not configured")
+            return Response({'error': 'LiqPay keys are not configured'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 
 
 

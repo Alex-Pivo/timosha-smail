@@ -331,7 +331,7 @@ export default function FirstHelpUsa() {
                     setBtnEight((btnEight = false));
                     setBtnSix((btnSix = true));
                   }}
-                  className={btnSix || (amountPage !== "150" && amountPage !== "300" && amountPage !== "500" && amountPage !== "1000" && amountPage !== "5000") ? styles.blockActive : styles.block}
+                  className={btnSix || (amount === amountPage && (amountPage !== "150" && amountPage !== "300" && amountPage !== "500" && amountPage !== "1000" && amountPage !== "5000")) ? styles.blockActive : styles.block}
                 >
                   {t('another')}
                 </div>
@@ -340,7 +340,7 @@ export default function FirstHelpUsa() {
             <input
               type="text"
               placeholder={t('amount')}
-              className={btnSix || (amountPage !== "150" && amountPage !== "300" && amountPage !== "500" && amountPage !== "1000" && amountPage !== "5000") ? styles.inputActive : styles.input}
+              className={btnSix || (amount === amountPage && (amountPage !== "150" && amountPage !== "300" && amountPage !== "500" && amountPage !== "1000" && amountPage !== "5000")) ? styles.inputActive : styles.input}
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
             />

@@ -40,7 +40,7 @@ export const HelpOptions = () => {
 					<Option
 						name={t('op3')}
 						description={t('des3')}
-						href={'/how-to-help#fund'}
+						href={'/how-to-help#fundrais'}
 					/>
 				</div>
 				<Link href="/how-to-help#wrapper" className={styles.btn}>

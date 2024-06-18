@@ -18,7 +18,7 @@ import styles from "../styles/partners.module.scss";
 export default function Partners({locale}:any) {
   const t = useTranslations('History');
   let [state, setState] = useState<any[]>([]);
-  let localeValue = locale.value.replace(/"/g, '');
+  let localeValue = locale;
   
 
   function componentDidMount(){

@@ -5,10 +5,10 @@
 }
 
 .photos .swiper-pagination {
-    position: relative;
+    position: absolute;
     z-index: 10;
     /* bottom: 44px; */
-    top: -60px;
+    bottom: -50px;
     left: 280px;
     width: 156px;
     display: flex;
@@ -38,9 +38,9 @@
     }
     
     .photos .swiper-pagination {
-        position: relative;
+        position: absolute;
         z-index: 10;
-        top: -45px;
+        bottom: -65px;
         left: 200px;
         width: 156px;
         display: flex;
@@ -71,9 +71,9 @@
     }
     
     .photos .swiper-pagination {
-        position: relative;
+        position: absolute;
         z-index: 10;
-        top: -35px;
+        bottom: -60px;
         left: 132px;
         width: 74px;
         display: flex;

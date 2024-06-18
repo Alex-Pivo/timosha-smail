@@ -11,13 +11,15 @@ import { TohPartner } from '@/app/[locale]/pages/hth-page/types-of-help/toh-part
 import { Contact } from '@/app/[locale]/components/contact/Contact'
 import {Newsletter} from "@/app/[locale]/components/email-newsletter/Newsletter";
 import {ScrollProvider} from "@/app/[locale]/components/scroll-context/ScrollContext";
+import { useLocale } from "next-intl";
 
 export default function HowToHelpPage() {
+	let locale = useLocale();
 	return (
 		<>
 			<ScrollProvider>
 				<div className={styles.container}>
-					<Header />
+					<Header locale={locale} />
 					<Caption />
 					<TohVol />
 					<Advantages />

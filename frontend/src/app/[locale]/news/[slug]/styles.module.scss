@@ -67,6 +67,7 @@
         .slider{
             height: 100%;
             width: 708px;
+            position: relative;
             box-sizing: border-box;
 
             .photos{
@@ -172,8 +173,8 @@
     width: 500px;
     height: 95px;
     box-sizing: border-box;
-    position: relative;
-    bottom: 124px;
+    position: absolute;
+    bottom: 0;
     left: 104px;
 
     display: flex;
@@ -258,6 +259,7 @@
                 height: 100%;
                 width: 552px;
                 box-sizing: border-box;
+                position: relative;
     
                 .photos{
                     box-sizing: border-box;
@@ -363,8 +365,8 @@
         width: 400px;
         height: 60px;
         box-sizing: border-box;
-        position: relative;
-        bottom: 84px;
+        position: absolute;
+        bottom: 0px;
         left: 74px;
     
         display: flex;
@@ -457,6 +459,7 @@
                 height: 100%;
                 width: 331px;
                 box-sizing: border-box;
+                position: relative;
     
                 .photos{
                     box-sizing: border-box;
@@ -569,8 +572,8 @@
         width: 234px;
         height: 50px;
         box-sizing: border-box;
-        position: relative;
-        bottom: 64px;
+        position: absolute;
+        bottom: 0px;
         left: 50px;
     
         display: flex;
@@ -661,6 +664,7 @@
                 height: 100%;
                 width: 100%;
                 box-sizing: border-box;
+                position: relative;
                 order: 2;
                 margin-top: 30px;
     
@@ -778,8 +782,8 @@
         width: 234px;
         height: 50px;
         box-sizing: border-box;
-        position: relative;
-        bottom: 64px;
+        position: absolute;
+        bottom: 0px;
         left: 50px;
     
         display: flex;

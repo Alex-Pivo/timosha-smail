@@ -93,7 +93,7 @@ export default function Partners({locale}:any) {
                       style={{
                         width: "100%",
                         height: "80px",
-                        background: `url(http://localhost:8000/${item.image})`,
+                        background: `url(http://95.169.204.16:8000/${item.image})`,
                         marginTop: "0px",
                         backgroundPosition: "center",
                         backgroundSize: "contain",

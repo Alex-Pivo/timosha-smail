@@ -286,11 +286,13 @@
         }
       }
       .imageOfTypes{
-        width: 367px;
+        width: 100%;
+        max-width: 367px;
         height: 220.966px;
         flex-shrink: 0;
         border-radius: 20px;
-        background: url("/img9(tablet).png");
+        background: url("/img9.png") no-repeat center center;
+        background-size: cover;
       }
     }
     .joinBtnTablet{
@@ -332,117 +334,134 @@
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-  .typesOfHelp{
+  .typesOfHelp {
     margin-bottom: 70px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    .wrapper{
+
+    .wrapper {
       display: none;
     }
-    .wrapperPhone{
+
+    .wrapperPhone {
       display: flex;
       width: 343px;
       justify-content: center;
       align-items: center;
       gap: 16px;
       position: relative;
-      .typeCard{
+
+      .typeCard {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 30px;
-        .joinBtn{
+
+        .joinBtn {
           display: none;
         }
-        .nameOfTypes{
+
+        .nameOfTypes {
           display: flex;
           width: 343px;
           flex-direction: column;
           align-items: flex-start;
           gap: 16px;
-          .name{
+
+          .name {
             display: flex;
             align-items: center;
             width: 100%;
             justify-content: center;
             gap: 8px;
-            span{
+
+            span {
               color: var(--Chief-Black, #1D1D1D);
               font-family: Rubik, sans-serif;
               font-size: 20px;
               font-style: normal;
               font-weight: 800;
-              line-height: 110%; /* 22px */
+              line-height: 110%; // 22px
             }
           }
-          .corona{
+
+          .corona {
             position: absolute;
             left: -4px;
-            bottom: 146.516px;
+            bottom: 170px;
             width: 43px;
             height: 31px;
           }
-          .fish{
+
+          .fish {
             width: 67px;
             height: 66px;
             position: absolute;
             right: -13px;
-            top: 10px;
+            top: 15px;
           }
-          .imageOfTypes{
-            width: 343px;
-            height: 206.516px;
+
+          .imageOfTypes {
+            width: 100%;
+            max-width: 343px;
+            height: 206px;;
             flex-shrink: 0;
             border-radius: 20px;
-            background: url("/img9(tablet).png");
+            background: url("/img9.png") no-repeat center center;
+            background-size: cover;
           }
-          .description{
+
+          .description {
             width: 343px;
             color: var(--Neutral-Neutral-700, #374151);
             font-family: Commissioner, sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 500;
-            line-height: 140%; /* 22.4px */
+            line-height: 140%; // 22.4px
           }
         }
       }
-    }
-    .joinBtnTablet{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .contact{
-        svg{
-          stroke-width: 3px;
-          width: 16px;
-          height: 22px;
-          transform: rotate(-135deg);
-        }
+
+      .joinBtnTablet {
         display: flex;
-        width: 343px;
-        height: 45px;
-        padding: 20px 51px;
         justify-content: center;
         align-items: center;
-        gap: 5px;
-        border-radius: 8px;
-        background: var(--main-green, #649612);
-        color: #FFF;
-        text-align: center;
-        font-family: Rubik, sans-serif;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 11px; /* 61.111% */
-        &:hover {
-          background: #45660e;
-          transition: all 0.4s ease 0s;
-        }
-        &:active {
-          background: #263a06;
-          transition: all 0.4s ease 0s;
+
+        .contact {
+          svg {
+            stroke-width: 3px;
+            width: 16px;
+            height: 22px;
+            transform: rotate(-135deg);
+          }
+          display: flex;
+          width: 343px;
+          height: 45px;
+          padding: 20px 51px;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          border-radius: 8px;
+          background: var(--main-green, #649612);
+          color: #FFF;
+          text-align: center;
+          font-family: Rubik, sans-serif;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 11px; // 61.111%
+
+          &:hover {
+            background: #45660e;
+            transition: all 0.4s ease 0s;
+          }
+
+          &:active {
+            background: #263a06;
+            transition: all 0.4s ease 0s;
+          }
         }
       }
     }

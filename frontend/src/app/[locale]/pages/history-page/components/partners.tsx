@@ -18,7 +18,7 @@ import styles from "../styles/partners.module.scss";
 export default function Partners({locale}:any) {
   const t = useTranslations('History');
   let [state, setState] = useState<any[]>([]);
-  let localeValue = locale.value.replace(/"/g, '');
+  let localeValue = locale;
   
 
   function componentDidMount(){
@@ -93,7 +93,7 @@ export default function Partners({locale}:any) {
                       style={{
                         width: "100%",
                         height: "80px",
-                        background: `url(http://localhost:8000/${item.image})`,
+                        background: `url(http://95.169.204.16:8000/${item.image})`,
                         marginTop: "0px",
                         backgroundPosition: "center",
                         backgroundSize: "contain",

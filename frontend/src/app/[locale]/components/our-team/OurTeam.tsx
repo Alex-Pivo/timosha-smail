@@ -3,11 +3,12 @@ import { Swiper,SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
 import 'swiper/css';
 import styles from './OurTeam.module.scss';
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import { SwiperNavButtons } from '@/app/[locale]/components/our-team/SwiperNavButton'
 import { EffectCards } from 'swiper/modules';
 import { useTranslations } from 'next-intl';
 import './swiper.scss'
+import { Swiper as SwiperType } from 'swiper/types';
 export const OurTeam = () => {
 	const [isExpanded, setIsExpanded] = useState(false);
 	const t = useTranslations("ourTeam");
@@ -17,7 +18,8 @@ export const OurTeam = () => {
 	};
 	const [swiperHeight, setSwiperHeight] = useState('460.526px');
 	const [swiperWidth, setSwiperWidth] = useState('460.526px');
-
+	const [isPhone, setIsPhone] = useState(false);
+	const swiperRef = useRef<SwiperType | null>(null);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -30,9 +32,11 @@ export const OurTeam = () => {
 				} else {
 					setSwiperWidth('478px');
 				}
+				setIsPhone(true);
 			} else {
 				setSwiperHeight('460.526px');
 				setSwiperWidth('460.526px');
+				setIsPhone(false);
 			}
 		};
 
@@ -44,7 +48,18 @@ export const OurTeam = () => {
 			window.removeEventListener('resize', handleResize); // Удалите обработчик события при размонтировании компонента
 		};
 	}, []);
-
+	const [activeIndex, setActiveIndex] = useState(0);
+	const teamMembers = [
+		{ post: t('post1'), name: t('name1'), text: t('text'), hidText: t('hidText') },
+		{ post: t('post2'), name: t('name2'), text: '', hidText: '' },
+		{ post: t('post3'), name: t('name3'), text: '', hidText: '' },
+		{ post: t('post4'), name: t('name4'), text: '', hidText: '' },
+		{ post: t('post5'), name: t('name5'), text: '', hidText: '' },
+		{ post: t('post6'), name: t('name6'), text: '', hidText: '' },
+		{ post: t('post7'), name: t('name7'), text: '', hidText: '' },
+		{ post: t('post8'), name: t('name8'), text: '', hidText: '' },
+		{ post: t('post9'), name: t('name9'), text: '', hidText: '' }
+	];
 	return (
 		<section className={styles.ourTeam}>
 			<div className={styles.wrapper}>
@@ -57,23 +72,27 @@ export const OurTeam = () => {
 					{/*</span>*/}
 				</div>
 				<div className={styles.sliders}>
-					<Swiper navigation={false} autoHeight modules={[Navigation]} className={styles.mySwiper}>
 
-						{/*Юлія Санько*/}
-
-						<SwiperSlide>
 							<div className={styles.slidWTxt}>
 								<Swiper
 									effect={'cards'}
 									grabCursor={true}
 									centeredSlides={true}
 									// loop={true}
-									autoHeight={true}
-									modules={[EffectCards]}
+									onSlideChange={(swiper) => {
+										setActiveIndex(swiper.activeIndex )
+										console.log(swiper.activeIndex)
+									}
+
+									}
+									onSwiper={(swiper) => (swiperRef.current = swiper)}
+									autoHeight={isPhone}
+									modules={[EffectCards, Navigation]}
 									className={styles.swiperCards}
 									style={{width: swiperWidth, height: swiperHeight}}
 								>
-									<SwiperSlide className={styles.card} style={{display:"flex", justifyContent: "center"}}>
+									<SwiperSlide
+										className={styles.card} style={{display:"flex", justifyContent: "center"}}>
 										<img src="/sliderRand1.png" alt="" style={{borderRadius: '10px'}}/>
 										<div className="swiper-slide-shadow swiper-slide-shadow-cards"
 											 style={{
@@ -82,54 +101,6 @@ export const OurTeam = () => {
 												 transitionDuration: '0ms'
 											 }}></div>
 									</SwiperSlide>
-									{/*<SwiperSlide className={styles.card}>*/}
-									{/*	<img src="/sliderRand2.png" alt=""/>*/}
-									{/*	<div className="swiper-slide-shadow swiper-slide-shadow-cards"*/}
-									{/*		 style={{*/}
-									{/*			 background: 'transparent',*/}
-									{/*			 opacity: '1',*/}
-									{/*			 transitionDuration: '0ms'*/}
-									{/*		 }}></div>*/}
-									{/*</SwiperSlide>*/}
-									{/*<SwiperSlide className={styles.card}>*/}
-									{/*	<img src="/sliderRand.png" alt=""/>*/}
-									{/*	<div className="swiper-slide-shadow swiper-slide-shadow-cards"*/}
-									{/*		 style={{*/}
-									{/*			 background: 'transparent',*/}
-									{/*			 opacity: '1',*/}
-									{/*			 transitionDuration: '0ms'*/}
-									{/*		 }}></div>*/}
-									{/*</SwiperSlide>*/}
-								</Swiper>
-								<div className={styles.wrapTxt}>
-									<div className={styles.captionTxt}>
-										<span className={styles.post}>{t('post1')}</span>
-										<span className={styles.name}>{t('name1')}</span>
-									</div>
-									<div className={`${styles.descTxt} ${isExpanded ? 'expanded' : ''}`}>
-										<p>{t('text')}</p>
-										<div className="textWrapper">
-											{isExpanded && <p>{t('hidText')}</p>}
-										</div>
-										<button className={styles.btnReadMore} onClick={toggleExpand}>
-											{isExpanded ? t('hide') : t('read')}
-										</button>
-									</div>
-								</div>
-							</div>
-						</SwiperSlide>
-
-						{/*Олена Комлєва*/}
-
-						<SwiperSlide>
-							<div className={styles.slidWTxt}>
-								<Swiper
-									effect={'cards'}
-									grabCursor={true}
-									modules={[EffectCards]}
-									className={styles.swiperCards}
-									style={{width: swiperWidth, height: swiperHeight }}
-								>
 									<SwiperSlide className={styles.card} style={{display:"flex", justifyContent: "center"}}>
 										<img src="/sliderRand2.png" alt=""/>
 										<div className="swiper-slide-shadow swiper-slide-shadow-cards"
@@ -139,27 +110,6 @@ export const OurTeam = () => {
 												 transitionDuration: '0ms'
 											 }}></div>
 									</SwiperSlide>
-								</Swiper>
-								<div className={styles.wrapTxt}>
-									<div className={styles.captionTxt}>
-										<span className={styles.post}>{t('post2')}</span>
-										<span className={styles.name}>{t('name2')}</span>
-									</div>
-								</div>
-							</div>
-						</SwiperSlide>
-
-						{/*Тетяна Іванюк*/}
-
-						<SwiperSlide>
-							<div className={styles.slidWTxt}>
-								<Swiper
-									effect={'cards'}
-									grabCursor={true}
-									modules={[EffectCards]}
-									className={styles.swiperCards}
-									style={{width: swiperWidth, height: swiperHeight}}
-								>
 									<SwiperSlide className={styles.card} style={{display:"flex", justifyContent: "center"}}>
 										<img src="/sliderRand3.png" alt=""/>
 										<div className="swiper-slide-shadow swiper-slide-shadow-cards"
@@ -169,27 +119,6 @@ export const OurTeam = () => {
 												 transitionDuration: '0ms'
 											 }}></div>
 									</SwiperSlide>
-								</Swiper>
-								<div className={styles.wrapTxt}>
-									<div className={styles.captionTxt}>
-										<span className={styles.post}>{t('post3')}</span>
-										<span className={styles.name}>{t('name3')}</span>
-									</div>
-								</div>
-							</div>
-						</SwiperSlide>
-
-						{/*Світлана Свиридюк*/}
-
-						<SwiperSlide>
-							<div className={styles.slidWTxt}>
-								<Swiper
-									effect={'cards'}
-									grabCursor={true}
-									modules={[EffectCards]}
-									className={styles.swiperCards}
-									style={{width: swiperWidth, height: swiperHeight}}
-								>
 									<SwiperSlide className={styles.card} style={{display:"flex", justifyContent: "center"}}>
 										<img src="/sliderRand4.png" alt=""/>
 										<div className="swiper-slide-shadow swiper-slide-shadow-cards"
@@ -199,26 +128,6 @@ export const OurTeam = () => {
 												 transitionDuration: '0ms'
 											 }}></div>
 									</SwiperSlide>
-								</Swiper>
-								<div className={styles.wrapTxt}>
-									<div className={styles.captionTxt}>
-										<span className={styles.post}>{t('post4')}</span>
-										<span className={styles.name}>{t('name4')}</span>
-									</div>
-								</div>
-							</div>
-						</SwiperSlide>
-
-
-						<SwiperSlide>
-							<div className={styles.slidWTxt}>
-								<Swiper
-									effect={'cards'}
-									grabCursor={true}
-									modules={[EffectCards]}
-									className={styles.swiperCards}
-									style={{width: swiperWidth, height: swiperHeight}}
-								>
 									<SwiperSlide className={styles.card} style={{display:"flex", justifyContent: "center"}}>
 										<img src="/sliderRand5.png" alt=""/>
 										<div className="swiper-slide-shadow swiper-slide-shadow-cards"
@@ -228,24 +137,6 @@ export const OurTeam = () => {
 												 transitionDuration: '0ms'
 											 }}></div>
 									</SwiperSlide>
-								</Swiper>
-								<div className={styles.wrapTxt}>
-									<div className={styles.captionTxt}>
-										<span className={styles.post}>{t('post5')}</span>
-										<span className={styles.name}>{t('name5')}</span>
-									</div>
-								</div>
-							</div>
-						</SwiperSlide>
-						<SwiperSlide>
-							<div className={styles.slidWTxt}>
-								<Swiper
-									effect={'cards'}
-									grabCursor={true}
-									modules={[EffectCards]}
-									className={styles.swiperCards}
-									style={{width: swiperWidth, height: swiperHeight}}
-								>
 									<SwiperSlide className={styles.card} style={{display:"flex", justifyContent: "center"}}>
 										<img src="/sliderRand6.png" alt=""/>
 										<div className="swiper-slide-shadow swiper-slide-shadow-cards"
@@ -255,24 +146,6 @@ export const OurTeam = () => {
 												 transitionDuration: '0ms'
 											 }}></div>
 									</SwiperSlide>
-								</Swiper>
-								<div className={styles.wrapTxt}>
-									<div className={styles.captionTxt}>
-										<span className={styles.post}>{t('post6')}</span>
-										<span className={styles.name}>{t('name6')}</span>
-									</div>
-								</div>
-							</div>
-						</SwiperSlide>
-						<SwiperSlide>
-							<div className={styles.slidWTxt}>
-								<Swiper
-									effect={'cards'}
-									grabCursor={true}
-									modules={[EffectCards]}
-									className={styles.swiperCards}
-									style={{width: swiperWidth, height: swiperHeight}}
-								>
 									<SwiperSlide className={styles.card} style={{display:"flex", justifyContent: "center"}}>
 										<img src="/sliderRand7.png" alt=""/>
 										<div className="swiper-slide-shadow swiper-slide-shadow-cards"
@@ -282,24 +155,6 @@ export const OurTeam = () => {
 												 transitionDuration: '0ms'
 											 }}></div>
 									</SwiperSlide>
-								</Swiper>
-								<div className={styles.wrapTxt}>
-									<div className={styles.captionTxt}>
-										<span className={styles.post}>{t('post7')}</span>
-										<span className={styles.name}>{t('name7')}</span>
-									</div>
-								</div>
-							</div>
-						</SwiperSlide>
-						<SwiperSlide>
-							<div className={styles.slidWTxt}>
-								<Swiper
-									effect={'cards'}
-									grabCursor={true}
-									modules={[EffectCards]}
-									className={styles.swiperCards}
-									style={{width: swiperWidth, height: swiperHeight}}
-								>
 									<SwiperSlide className={styles.card} style={{display:"flex", justifyContent: "center"}}>
 										<img src="/sliderRand8.png" alt=""/>
 										<div className="swiper-slide-shadow swiper-slide-shadow-cards"
@@ -309,17 +164,37 @@ export const OurTeam = () => {
 												 transitionDuration: '0ms'
 											 }}></div>
 									</SwiperSlide>
+									<SwiperSlide className={styles.card} style={{display:"flex", justifyContent: "center"}}>
+										<img src="/sliderRand9.png" alt=""/>
+										<div className="swiper-slide-shadow swiper-slide-shadow-cards"
+											 style={{
+												 background: 'transparent',
+												 opacity: '1',
+												 transitionDuration: '0ms'
+											 }}></div>
+									</SwiperSlide>
 								</Swiper>
+
+
 								<div className={styles.wrapTxt}>
 									<div className={styles.captionTxt}>
-										<span className={styles.post}>{t('post8')}</span>
-										<span className={styles.name}>{t('name8')}</span>
+										<span className={styles.post}>{teamMembers[activeIndex].post}</span>
+										<span className={styles.name}>{teamMembers[activeIndex].name}</span>
+									</div>
+									<div className={`${styles.descTxt} ${isExpanded ? 'expanded' : ''}`}>
+										<p>{teamMembers[activeIndex].text}</p>
+										<div className="textWrapper">
+											{isExpanded && <p>{teamMembers[activeIndex].hidText}</p>}
+										</div>
+										{teamMembers[activeIndex].text &&
+											<button className={styles.btnReadMore} onClick={toggleExpand}>
+												{isExpanded ? t('hide') : t('read')}
+											</button>
+										}
 									</div>
 								</div>
+								<SwiperNavButtons swiperRef={swiperRef} />
 							</div>
-						</SwiperSlide>
-						<SwiperNavButtons />
-					</Swiper>
 				</div>
 			</div>
 		</section>

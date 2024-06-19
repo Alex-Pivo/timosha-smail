@@ -10,14 +10,14 @@ import { Contact } from '@/app/[locale]/components/contact/Contact'
 import React from 'react'
 import { Footer } from '@/app/[locale]/components/footer/Footer'
 import {Newsletter} from "@/app/[locale]/components/email-newsletter/Newsletter";
-import { getLocale } from "next-intl/server";
+import { useLocale } from "next-intl";
 
 export default function History() {
-	const locale = getLocale();
+	let locale = useLocale();
 	return (
 		<>
 			<div className={styles.body__container}>
-				<Header></Header>
+				<Header locale={locale}></Header>
 				<HistoryPart></HistoryPart>
 				<Tagline></Tagline>
 				<Partners locale={locale}></Partners>

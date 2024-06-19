@@ -5,14 +5,14 @@ import { Footer }  from '@/app/[locale]/components/footer/Footer'
 import stylesRep from "../pages/reports/styles/main.module.scss";
 import Reports from '@/app/[locale]/pages/reports/reports'
 import {Newsletter} from "@/app/[locale]/components/email-newsletter/Newsletter";
-import { getLocale } from "next-intl/server";
+import { useLocale } from "next-intl";
 
 export default function HowToHelpPage() {
-	const locale = getLocale();
+	let locale = useLocale();
 	return (
 		<>
 			<div className={styles.container}>
-				<Header />
+				<Header locale={locale} />
 			</div>
 			<div className={stylesRep.body__container}>
 				<Reports locale={locale} />

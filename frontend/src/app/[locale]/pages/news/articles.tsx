@@ -32,7 +32,7 @@ export default function Articles({locale}:any) {
   let [indexPage, setIndexPage] = useState(0);
 
   const router = useRouter();
-  let localeValue = locale.value.replace(/"/g, '');
+  let localeValue = locale;
 
   const filters = [
     "childs_history",

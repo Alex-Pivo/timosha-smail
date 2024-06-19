@@ -3,12 +3,13 @@ import styles from "../../page.module.scss";
 import React from 'react';
 import Image from "next/image";
 import Header from "@/app/[locale]/components/header/Header";
+import { useLocale } from "next-intl";
 export default function NotFound() {
-
+    let locale = useLocale();
     return (
         <>
             <div className={styles.container}>
-                <Header />
+                <Header locale={locale} />
             </div>
             <section className={styles.notFound}>
                 <div className={styles.wrapper}>

@@ -381,7 +381,7 @@ export default function FirstHelp() {
               <input
                 type="text"
                 placeholder={t("amount")}
-                className={btnSix || (amountPage !== "150" && amountPage !== "300" && amountPage !== "500" && amountPage !== "1000" && amountPage !== "5000") ? styles.inputActive : styles.input}
+                className={btnSix || (amount === amountPage && (amountPage !== "150" && amountPage !== "300" && amountPage !== "500" && amountPage !== "1000" && amountPage !== "5000")) ? styles.inputActive : styles.input}
                 value={amount}
                 onChange={(e) => {
                   setAmount(e.target.value);

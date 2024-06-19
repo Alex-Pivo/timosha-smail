@@ -131,6 +131,7 @@
 .swiper_btns{
   display: flex;
 }
+
 .slider_button_left, .slider_button_right {
   width: 60px;
   height: 60px;
@@ -145,13 +146,13 @@
 .slider_button_right{
   position: absolute;
   right: 0;
-  top: 40%;
+  top: 50%;
   z-index: 10;
 }
 .slider_button_left{
   position: absolute;
   left: 0;
-  top: 40%;
+  top: 50%;
   z-index: 10;
 }
 .slider_button:hover {
@@ -305,13 +306,13 @@
   .slider_button_right{
     position: absolute;
     right: 0;
-    top: 40%;
+    top: 50%;
     z-index: 10;
   }
   .slider_button_left{
     position: absolute;
     left: 0;
-    top: 40%;
+    top: 50%;
     z-index: 10;
   }
   .slider_button:hover {
@@ -339,6 +340,7 @@
 }
 
 @media (min-width: 836px)  and (max-width: 1249px){
+  // swiper.scss
 
   .ourTeam{
     margin-bottom: 200px;
@@ -464,13 +466,13 @@
   .slider_button_right{
     position: absolute;
     right: 0;
-    top: 40%;
+    top: 50%;
     z-index: 10;
   }
   .slider_button_left{
     position: absolute;
     left: 0;
-    top: 40%;
+    top: 50%;
     z-index: 10;
   }
   .slider_button:hover {
@@ -483,6 +485,7 @@
     fill: #649612;
   }
   .card{
+    width: 500px;
     background-color: transparent;
     .shadow{
       background: transparent;
@@ -828,20 +831,19 @@
     display: block;
   }
   .swiper_btns {
-    margin-top: 50px;
     display: flex;
     height: 70px;
   }
   .slider_button_left{
     position: relative;
-    left: 30%;
+    right: 20%;
     bottom: 0;
     top: 0;
     z-index: 10;
   }
  .slider_button_right{
    position: relative;
-   left: 40%;
+   left: 10%;
    bottom: 0;
    top: 0;
    z-index: 10;

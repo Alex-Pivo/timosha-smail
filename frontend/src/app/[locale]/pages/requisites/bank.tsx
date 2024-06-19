@@ -98,7 +98,11 @@ export default function Bank() {
             </div>
             <div className={styles.line}>
               <p className={styles.left}>{t("iban")}</p>
-              <p className={styles.center}>{t("iban1")}</p>
+              <p className={styles.center}>
+                {activeBtn ? "UA 66 305299 00000 26009000705161" : ""}
+                {activeBtn2 ? "UA 87 305299 00000 26007010705357" : ""}
+                {activeBtn3 ? "UA 56 305299 00000 26008040701579" : ""}
+              </p>
               <div className={active ? styles.massage__active : styles.massage}>
                 Copy to clipboard
               </div>

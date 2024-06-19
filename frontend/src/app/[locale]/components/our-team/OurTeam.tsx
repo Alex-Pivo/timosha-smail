@@ -175,7 +175,7 @@ export const OurTeam = () => {
 									<div className={`${styles.descTxt} ${isExpanded ? 'expanded' : ''}`}>
 										<p>{teamMembers[activeIndex].text}</p>
 										<div className="textWrapper">
-											{isExpanded && <p>{t('hidText')}</p>}
+											{isExpanded && <p>{teamMembers[activeIndex].hidText}</p>}
 										</div>
 										{teamMembers[activeIndex].text &&
 											<button className={styles.btnReadMore} onClick={toggleExpand}>

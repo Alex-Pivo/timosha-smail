@@ -225,7 +225,7 @@
       }
 
       .btn__container {
-        width: 362px;
+        width: auto;
         height: 42px;
 
         margin-top: 60px;
@@ -234,6 +234,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        gap: 20px;
 
         .btnCash {
           width: 53px;
@@ -411,7 +412,7 @@
       }
 
       .btn__container {
-        width: 362px;
+        width: auto;
         height: 45px;
 
         margin-top: 18px;
@@ -420,6 +421,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        gap: 20px;
 
         .btnCash {
           width: 55px;
@@ -600,7 +602,7 @@
       }
 
       .btn__container {
-        width: 90%;
+        width: auto;
         height: 104px;
 
         margin-top: 18px;
@@ -610,6 +612,7 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+        gap: 15px;
 
         .btnCash {
           width: 53px;

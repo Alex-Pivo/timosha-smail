@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 @font-face {
-  font-family: Ermilov;
+  font-family: Ermilov, sans-serif;
   src: url('../../../../../../fonts/Ermilov-bold.otf') format('otf'); /* путь к вашему файлу шрифта */
   /* Дополнительные свойства для настройки шрифта, такие как font-weight и font-style, могут быть указаны здесь */
 }
@@ -126,7 +126,7 @@
             span{
               color: var(--Main-white, #D0142C);
               text-align: center;
-              font-family: Ermilov;
+              font-family: Ermilov, sans-serif;
               font-size: 40px;
               font-style: normal;
               font-weight: 700;

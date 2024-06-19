@@ -6,22 +6,20 @@ import { usePathname } from "next/navigation";
 import axios from "axios";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
-
 import FirstHelp from "@/app/[locale]/pages/requisites/firstHelp";
 import Bank from "@/app/[locale]/pages/requisites/bank";
 import BankQR from "@/app/[locale]/pages/requisites/bankQR";
 import Crypto from "@/app/[locale]/pages/requisites/crypto";
-
+import { useLocale } from "next-intl";
 import styles from "./styles.module.scss";
 import stylesPop from "../../../pages/reports/styles/main.module.scss"
-
 import { useRouter } from 'next/router';
 
 export default function Status() {
     // Получаем текущий путь
     const path = usePathname();
     const t = useTranslations('status');
-
+     let locale = useLocale();
     // Извлекаем идентификатор заказа из пути
     let orderId = null;
     const match = path.match(/[\w\d]+$/);
@@ -67,7 +65,7 @@ export default function Status() {
             return (
                 <>
                     <div className={styles.container}>
-                        <Header />
+                        <Header locale={locale} />
                     </div>
                     <div className={stylesPop.body__container}>
                         <div className={styles.modal}>

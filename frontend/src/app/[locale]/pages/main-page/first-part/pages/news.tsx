@@ -34,12 +34,12 @@ export default function News() {
   const achievementsList = [
     {
       metric: `${t('number1')}`,
-      value: "101",
+      value: "107",
       postfix: "+",
     },
     {
       metric: `${t('number2')}`,
-      value: "3",
+      value: "4",
       postfix: "+",
     },
     {
@@ -57,7 +57,7 @@ function getFNUmber() {
   const intervalId = setInterval(() => {
     currentNumber += 1;
 
-    if (currentNumber >= 101) {
+    if (currentNumber >= 107) {
       clearInterval(intervalId);
     }
     setFNumber(fNumber = currentNumber);
@@ -70,7 +70,7 @@ function getSNUmber() {
   const intervalId = setInterval(() => {
     currentNumber += 1;
 
-    if (currentNumber >= 3) {
+    if (currentNumber >= 4) {
       clearInterval(intervalId);
     }
     setSNumber(sNumber = currentNumber);

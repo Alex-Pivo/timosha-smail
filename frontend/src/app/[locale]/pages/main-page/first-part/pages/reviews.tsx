@@ -144,7 +144,7 @@ export default function Reviews({locale}:any) {
                           visibility:"visible",
                           width: "50%",
                           height: "100%",
-                          background: `url("http://localhost:8000/${item.image}")`,
+                          background: `url("http://95.169.204.16:8000/${item.image}")`,
                           backgroundSize: "cover",
                           backgroundPosition: "center",
                         }}

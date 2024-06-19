@@ -15,11 +15,12 @@ import stylesRep from "../pages/reports/styles/main.module.scss"
 import PopupDonate from "../components/popup-donate/popupDonate";
 import Chek from "../pages/requisites/chek";
 import { useState, useEffect } from "react";
+import { useLocale } from "next-intl";
 
 export default function Donate() {
 	const [isPopupVisible, setIsPopupVisible] = useState(false);
 	const [country, setCountry] = useState('');
-
+	let locale = useLocale();
 	useEffect(() => {
 		// Показываем попап при загрузке страницы
 		setIsPopupVisible(true);
@@ -38,7 +39,7 @@ export default function Donate() {
 	return (
 		<>
 			<div className={styles.container}>
-				<Header />
+				<Header locale={locale} />
 			</div>
 			<PopupDonate isVisible={isPopupVisible} onClose={handleClosePopup}  onCountryChange={handleCountryChange}/>
 			{country === "" && (

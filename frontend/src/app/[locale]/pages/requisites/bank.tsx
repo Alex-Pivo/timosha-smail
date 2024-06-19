@@ -58,30 +58,6 @@ export default function Bank() {
             >
               EUR
             </button>
-            <button
-              className={activeBtn4 ? styles.btnCash__active : styles.btnCash}
-              onClick={() => {
-                setActiveBtn((activeBtn = false));
-                setActiveBtn2((activeBtn2 = false));
-                setActiveBtn3((activeBtn3 = false));
-                setActiveBtn4((activeBtn4 = true));
-                setActiveBtn5((activeBtn5 = false));
-              }}
-            >
-              RYB
-            </button>
-            <button
-              className={activeBtn5 ? styles.btnCash__active : styles.btnCash}
-              onClick={() => {
-                setActiveBtn((activeBtn = false));
-                setActiveBtn2((activeBtn2 = false));
-                setActiveBtn3((activeBtn3 = false));
-                setActiveBtn4((activeBtn4 = false));
-                setActiveBtn5((activeBtn5 = true));
-              }}
-            >
-              BYN
-            </button>
           </div>
 
           <div className={styles.cash}>

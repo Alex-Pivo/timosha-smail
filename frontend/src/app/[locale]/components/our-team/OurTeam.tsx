@@ -57,7 +57,8 @@ export const OurTeam = () => {
 		{ post: t('post5'), name: t('name5'), text: '', hidText: '' },
 		{ post: t('post6'), name: t('name6'), text: '', hidText: '' },
 		{ post: t('post7'), name: t('name7'), text: '', hidText: '' },
-		{ post: t('post8'), name: t('name8'), text: '', hidText: '' }
+		{ post: t('post8'), name: t('name8'), text: '', hidText: '' },
+		{ post: t('post9'), name: t('name9'), text: '', hidText: '' }
 	];
 	return (
 		<section className={styles.ourTeam}>
@@ -163,7 +164,15 @@ export const OurTeam = () => {
 												 transitionDuration: '0ms'
 											 }}></div>
 									</SwiperSlide>
-
+									<SwiperSlide className={styles.card} style={{display:"flex", justifyContent: "center"}}>
+										<img src="/sliderRand9.png" alt=""/>
+										<div className="swiper-slide-shadow swiper-slide-shadow-cards"
+											 style={{
+												 background: 'transparent',
+												 opacity: '1',
+												 transitionDuration: '0ms'
+											 }}></div>
+									</SwiperSlide>
 								</Swiper>
 
 

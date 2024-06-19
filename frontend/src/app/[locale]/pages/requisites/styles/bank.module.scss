@@ -39,7 +39,7 @@
     }
 
     .btn__container {
-      width: 668px;
+      width: auto;
       height: 54px;
 
       margin-top: 64px;
@@ -48,6 +48,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      gap: 20px;
 
       .btnCash {
         width: 112px;

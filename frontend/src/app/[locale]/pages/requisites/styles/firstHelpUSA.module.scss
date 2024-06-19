@@ -329,6 +329,12 @@
           color: #ffffff;
           cursor: pointer;
 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          text-align: center;
+
           transition: all 0.4s ease 0s;
         }
         .btn:hover {

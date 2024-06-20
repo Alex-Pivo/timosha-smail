@@ -153,6 +153,17 @@ export default function FirstHelp() {
             </Link>
             <Link
               activeClass={styles.activeLink}
+              to="bankQR"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={400}
+              className={styles.btn}
+            >
+              Monobank, PayPal, Venmo, Cash App
+            </Link>
+            <Link
+              activeClass={styles.activeLink}
               to="crypto"
               spy={true}
               smooth={true}
@@ -161,29 +172,6 @@ export default function FirstHelp() {
               className={styles.btn}
             >
               {t("btn3")}
-            </Link>
-            <Link
-              activeClass={styles.activeLink}
-              to="country"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={400}
-              className={styles.btn}
-              id={styles.btn__country}
-            >
-              {t("btn4")}
-            </Link>
-            <Link
-              activeClass={styles.activeLink}
-              to="bankQR"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={400}
-              className={styles.btn}
-            >
-              {t("btn5")}
             </Link>
           </div>
           <div id="card" className={styles.container}>

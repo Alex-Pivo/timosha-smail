@@ -16,6 +16,7 @@ import PopupDonate from "../components/popup-donate/popupDonate";
 import Chek from "../pages/requisites/chek";
 import { useState, useEffect } from "react";
 import { useLocale } from "next-intl";
+import GoFound from "@/app/[locale]/pages/requisites/goFound"
 
 export default function Donate() {
 	const [isPopupVisible, setIsPopupVisible] = useState(false);
@@ -62,25 +63,27 @@ export default function Donate() {
 				<div className={stylesRep.body__container}>
 					<FirstHelpUsa></FirstHelpUsa>
 					<BankQRUSA></BankQRUSA>
-					<CryptoUsa></CryptoUsa>
 					<Chek></Chek>
+					<GoFound></GoFound>
+					<CryptoUsa></CryptoUsa>
 				</div>
 			)}
 			{country === "USA" && (
 				<div className={stylesRep.body__container}>
 					<FirstHelpUsa></FirstHelpUsa>
 					<BankQRUSA></BankQRUSA>
-					<CryptoUsa></CryptoUsa>
 					<Chek></Chek>
+					<GoFound></GoFound>
+					<CryptoUsa></CryptoUsa>
 				</div>
 			)}
 			{country === "Other" && (
 				<div className={stylesRep.body__container}>
-					<FirstHelpCountry></FirstHelpCountry>
+					<FirstHelpUsa></FirstHelpUsa>
 					<BankQRUSA></BankQRUSA>
-					<Bank></Bank>
-					<CryptoUsa></CryptoUsa>
 					<Chek></Chek>
+					<GoFound></GoFound>
+					<CryptoUsa></CryptoUsa>
 				</div>
 			)}
 			

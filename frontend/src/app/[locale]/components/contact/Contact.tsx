@@ -255,16 +255,12 @@ export const Contact = () => {
 							</button>
 						</div>
 						<div className={styles.btnsTablet}>
-							<label htmlFor="btnsTabletSelect">
-								<div className={styles.select}>
-									<select value={activeButton} onChange={handleSelectChange}>
+									<select value={activeButton} className={styles.sel} onChange={handleSelectChange}>
 										<option value="needHelp">{c('btn1')}</option>
 										<option value="vol">{c('btn2')}</option>
 										<option value="fund">{c('btn3')}</option>
 										<option value="friendship">{c('btn4')}</option>
 									</select>
-								</div>
-							</label>
 						</div>
 						{activeButton && (
 							<form className={styles.form} onSubmit={handleSubmit}>

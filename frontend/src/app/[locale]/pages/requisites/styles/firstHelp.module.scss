@@ -11,6 +11,8 @@
 
   padding-top: 128px;
 
+
+
   .pages {
     font-family: "Commissioner", sans-serif;
     color: #374151;
@@ -66,15 +68,16 @@
   }
 
   .btns__container {
-    width: 1255px;
+    max-width: 1396px;
     height: 54px;
     margin: 102px auto 0 auto;
 
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     box-sizing: border-box;
+    gap: 10px;
 
     .btn {
       width: auto;
@@ -88,9 +91,10 @@
       align-items: center;
       justify-content: center;
       text-decoration: none;
+      text-align: center;
 
       color: #1d1d1d;
-      font-family: "Rubik", sans-serif;
+      font-family: "Commissioner", sans-serif;
       font-size: 24px;
       font-style: normal;
       font-weight: 500;
@@ -104,7 +108,7 @@
     .activeLink {
       background: #649612 !important;
       color: #f5f5f5;
-      font-family: "Rubik", sans-serif;
+      font-family: "Commissioner", sans-serif;
       font-size: 24px;
       font-style: normal;
       font-weight: 500;
@@ -398,6 +402,12 @@
   }
 }
 
+#found{
+  .container{
+    margin-top: 0px !important;
+  }
+}
+
 #spanTitle {
   width: auto;
   border-right: none;
@@ -425,7 +435,7 @@
   display: flex;
 }
 
-@media screen and (min-width: 835px) and (max-width: 1541px) {
+@media screen and (min-width: 1201px) and (max-width: 1541px) {
   .firstHelp {
     width: 100%;
     height: auto;
@@ -491,14 +501,14 @@
     }
 
     .btns__container {
-      width: 769px;
+      max-width: 869px;
       height: 42px;
       margin: 112px auto 0 auto;
 
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
 
       .btn {
         width: auto;
@@ -826,7 +836,7 @@
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 835px) {
+@media screen and (min-width: 767px) and (max-width: 1201px) {
   .firstHelp {
     width: 100%;
     height: auto;
@@ -901,9 +911,10 @@
 
       display: flex;
       flex-direction: row;
-      // align-items: center;
-      // justify-content: center;
+      align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 20px;
 
       .btn {
         width: auto;
@@ -926,7 +937,7 @@
         font-weight: 500;
         line-height: 140%; /* 22.4px */
 
-        margin: 0 auto;
+        // margin: 0 auto;
 
         cursor: pointer;
         scroll-behavior: smooth;
@@ -1340,7 +1351,7 @@
       flex-direction: row;
       align-items: flex-start;
       justify-content: center;
-      gap: 8px;
+      gap: 12px;
       flex-wrap: wrap;
 
       .btn {
@@ -1351,7 +1362,7 @@
         padding: 0px 17.5px 0px 17.5px;
         background: #f5f5f5;
         box-sizing: border-box;
-        margin-bottom: 14px;
+        margin-bottom: 0px;
 
         display: flex;
         align-items: center;

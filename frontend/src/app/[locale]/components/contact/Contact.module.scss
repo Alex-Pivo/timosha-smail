@@ -991,34 +991,54 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
-        .btnsTablet{
-          select{
-            text-align: center;
-            width: 173px;
-            color: var(--Main-white, #F5F5F5);
-            font-family: "Commissioner", sans-serif;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 140%; /* 19.6px */
-            background: #649612;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            &:focus{
-              outline: none;
-            }
-          }
-          display: flex;
+        select {
+          text-align: center;
           width: 343px;
           height: 30px;
-          padding: 0px;
-          justify-content: center;
-          align-items: center;
-          gap: 10px;
           border-radius: 10px;
+          color: var(--Main-white, #F5F5F5);
+          font-family: "Commissioner", sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%; /* 19.6px */
           background: #649612;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+
+          &:focus {
+            outline: none;
+          }
         }
+        //.btnsTablet{
+        //  select{
+        //    text-align: center;
+        //    width: 173px;
+        //    color: var(--Main-white, #F5F5F5);
+        //    font-family: "Commissioner", sans-serif;
+        //    font-size: 14px;
+        //    font-style: normal;
+        //    font-weight: 500;
+        //    line-height: 140%; /* 19.6px */
+        //    background: #649612;
+        //    -webkit-appearance: none;
+        //    -moz-appearance: none;
+        //    appearance: none;
+        //    &:focus{
+        //      outline: none;
+        //    }
+        //  }
+        //  display: flex;
+        //  width: 343px;
+        //  height: 30px;
+        //  padding: 0px;
+        //  justify-content: center;
+        //  align-items: center;
+        //  gap: 10px;
+        //  border-radius: 10px;
+        //  background: #649612;
+        //}
         .btns{
           display: none;
         }

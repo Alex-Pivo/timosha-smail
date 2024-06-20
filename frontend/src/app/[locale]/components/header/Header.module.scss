@@ -98,11 +98,13 @@
     }
 
     .lang {
-
+      margin-left: 20px;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      gap: 4px;
+
       select{
         width: 60px;
         border: none;
@@ -202,7 +204,7 @@
     }
   
     .menu {
-      width: 1040px;
+      width: 1060px;
   
       display: flex;
       flex-direction: row;
@@ -244,6 +246,7 @@
       }
   
       .button {
+        margin-left: 20px;
         display: flex;
         padding: 20px 51px;
         justify-content: center;
@@ -259,8 +262,7 @@
         font-weight: 600;
         line-height: normal;
         cursor: pointer;
-        margin: 0;
-        border: 0;
+
         &:hover {
           background: #45660e;
           transition: all 0.4s ease 0s;
@@ -446,7 +448,7 @@
       }
   
       .lang {
-  
+        margin-left: 0px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -475,7 +477,7 @@
         width: 30px;
         height: 22px;
         box-sizing: border-box;
-        margin-left: 50px;
+        margin-left: 10px;
         cursor: pointer;
 
         display:flex;
@@ -591,6 +593,10 @@
         font-weight: 500;
         line-height: 20.933px; /* 65.416% */
         text-decoration: none;
+      }
+
+      .button{
+        display: none;
       }
     }
 
@@ -762,6 +768,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      gap: 20px;
   
       .nav {
         width: 100px;
@@ -800,7 +807,7 @@
   
       .button {
         margin-left: auto;
-        display: flex;
+        display: none;
         padding: 13.5px 16px;
         justify-content: center;
         align-items: center;
@@ -830,11 +837,20 @@
       }
   
       .lang {
-  
-        display: none;
+        width: auto;
+        margin-left: 0px;
+        display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        order: 3;
+        gap: 4px;
+
+        .flag{
+          width: 36px;
+          height: 26px;
+        }
+
         select{
           width: 60px;
           border: none;
@@ -861,6 +877,7 @@
         box-sizing: border-box;
         margin-left: 0px;
         cursor: pointer;
+        margin-left: auto;
 
         display:flex;
         flex-direction: column;
@@ -921,7 +938,7 @@
 
       .burger__lang{
         margin-top: 0px;
-        display: flex;
+        display: none;
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -985,7 +1002,7 @@
       margin: 0 auto;
       margin-top: 50.19px;
       width: 240px;
-      height: 366px;
+      height: 466px;
 
       display: flex;
       flex-direction: column;
@@ -1004,6 +1021,39 @@
         font-weight: 500;
         line-height: 20.933px; /* 65.416% */
         text-decoration: none;
+      }
+
+      .button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13.5px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        background-color: #649612;
+        border-radius: 8px;
+        color: #FBFBFB;
+        font-family: Commissioner, sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: 20px;
+        border: 0;
+        &:hover {
+          background: #45660e;
+          transition: all 0.4s ease 0s;
+        }
+        &:active {
+          background: #263a06;
+          transition: all 0.4s ease 0s;
+        }
       }
     }
 

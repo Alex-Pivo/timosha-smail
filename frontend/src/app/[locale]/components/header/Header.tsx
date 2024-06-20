@@ -9,8 +9,6 @@ import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import {getLocale, unstable_setRequestLocale} from "next-intl/server";
 
-
-
 export default function Header({locale}:any) {
 
 	const router = useRouter();
@@ -21,9 +19,22 @@ export default function Header({locale}:any) {
 	let [active, setActive] = useState(false);
 	const t = useTranslations('Header');
 	const [isPending, startTransition] = useTransition();
+	let [lang, setLang] = useState("");
 	// const pathname = usePathname();
 	const params = useParams();
 	const loacleActive = locale;
+
+	const ukraine = "/ukraine.png";
+	const usa = "/usa.png";
+	const italy = "/italy.png";
+	const rus = "/rus.jpg";
+
+	useEffect(() => {
+		if(locale === "ua") setLang(lang = ukraine);
+		if(locale === "en") setLang(lang = usa);
+		if(locale === "it") setLang(lang = italy);
+		if(locale === "ru") setLang(lang = rus);
+	}, [locale])
 
 	useEffect(() => {
 		const languageFromCookie = Cookies.get('selectedLanguage');
@@ -140,6 +151,18 @@ export default function Header({locale}:any) {
 				</div>
 				<Link href={'/donate'} className={styles.button}>{t('donate')}</Link>
 				<div className={styles.lang}>
+					<div 
+					style={{
+						width: "30px",
+						height: "26px",
+						background: `url(${lang})`,
+						backgroundSize: "cover",
+						backgroundPosition: "center",
+						borderRadius: "6px",
+					}}
+					className={styles.flag}>
+					</div>
+
 					<label htmlFor="langSelect">
 						<div className={styles.select}>
 							<select id="langSelect" 
@@ -206,21 +229,8 @@ export default function Header({locale}:any) {
 					<Link href="/reports" className={styles.link} passHref>{t('reports')}</Link>
 					<Link href="/how-to-help" className={styles.link} passHref>{t('htj')}</Link>
 					<Link href="/contacts" className={styles.link} passHref>{t('contacts')}</Link>
+					<Link href={'/donate'} className={styles.button}>{t('donate')}</Link>
 			</div>
-			{/* <div className={styles.burger__lang}>
-				<label htmlFor="langSelect">
-					<div className={styles.select}>
-						<select id="langSelect"
-						defaultValue={loacleActive}
-						onChange={handleLanguageChange}>
-							<option value="ua">UA</option>
-							<option value="en">EN</option>
-							<option value="ru">RU</option>
-							<option value="it">IT</option>
-						</select>
-					</div>
-				</label>
-			</div> */}
 		</div>
 		</>
 	);

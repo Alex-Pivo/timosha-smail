@@ -1035,8 +1035,16 @@
         align-items: flex-start;
         gap: 24px;
         .btnsTablet{
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+          display: flex;
           label{
             width: 100%;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            display: flex;
             .select{
               width: 100%;
               align-items: center;
@@ -1072,12 +1080,9 @@
             }
           }
 
-          display: flex;
           width: 343px;
           height: 30px;
           padding: 0px;
-          justify-content: center;
-          align-items: center;
           gap: 10px;
           border-radius: 10px;
           background: #649612;

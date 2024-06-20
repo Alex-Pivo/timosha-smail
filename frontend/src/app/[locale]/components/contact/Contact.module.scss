@@ -625,19 +625,22 @@
   }
   .contact{
     margin-bottom: 70px;
-    .wrapper{
+    .wrapper {
       display: flex;
       align-items: flex-start;
       gap: 117px;
-      .captionPhone{
+
+      .captionPhone {
         display: none;
       }
-      .mainTxt{
+
+      .mainTxt {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 30px;
-        .caption{
+
+        .caption {
           color: var(--Chief-Black, #1D1D1D);
           font-family: "Rubik", sans-serif;
           font-size: 32px;
@@ -645,14 +648,16 @@
           font-weight: 800;
           line-height: 110%;
         }
-        .contactInfo{
+
+        .contactInfo {
           position: relative;
           display: flex;
           height: 330px;
           flex-direction: column;
           align-items: flex-start;
           gap: 40px;
-          .heart{
+
+          .heart {
             width: 186.778px;
             height: 144.079px;
             position: absolute;
@@ -661,51 +666,62 @@
           }
         }
       }
-      .mainForm{
+
+      .mainForm {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
-        .btnsTablet{
-          label{
-            width: 100%;
-            .select{
-              width: 100%;
 
-              select{
-                width: 100%;
-                color: var(--Main-white, #F5F5F5);
-                font-family: "Commissioner", sans-serif;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%; /* 19.6px */
-                background: #649612;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                option{
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  text-align: center;
-                }
-                &:focus{
-                  outline: none;
-                }
-              }
-            }
-          }
-
-          background: #649612;
+        .btnsTablet {
+          height: 30px;
           display: flex;
-          width: 250px;
-          height: 10px;
-          padding: 10px;
-          justify-content: center;
-          align-items: center;
+          justify-content: center; /* Центрирование по горизонтали */
+          align-items: center; /* Центрирование по вертикали */
+          width: 100%; /* Ширина контейнера */
+          padding: 0;
           gap: 10px;
           border-radius: 10px;
+          background: #649612;
+
+          select {
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            width: 100%;
+            color: var(--Main-white, #F5F5F5);
+            font-family: "Commissioner", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 140%; /* 19.6px */
+            background: #649612;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+            option {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+        
+
+          //background: #649612;
+          //display: flex;
+          //width: 250px;
+          //height: 10px;
+          //padding: 10px;
+          //justify-content: center;
+          //align-items: center;
+          //gap: 10px;
+          //border-radius: 10px;
         }
         //.btnsTablet{
         //  select{
@@ -946,28 +962,6 @@
     color: red;
     margin-top: 5px;
   }
-  .select {
-    position: relative;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-  }
-  .select:after {
-    content: "ᨆ";
-    font-size: 15px;
-    position: absolute;
-    font-family: "Commissioner", sans-serif;
-    right: 15px;
-    top: -2px;
-    z-index: 1;
-    text-align: center;
-    width: 20px;
-    height: 20px;
-    pointer-events: none;
-    box-sizing: border-box;
-    color: white;
-  }
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .modalBackdrop {
@@ -1061,6 +1055,7 @@
             appearance: none;
 
             option {
+              width: 100%;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -1072,6 +1067,7 @@
             }
           }
         }
+
         .btns{
           display: none;
         }
@@ -1284,5 +1280,26 @@
     line-height: 140%;
     color: red;
     margin-top: 5px;
+  }
+  .btnsTablet {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  .btnsTablet:after {
+    content: "ᨆ";
+    font-size: 15px;
+    position: absolute;
+    font-family: "Commissioner", sans-serif;
+    right: 45px;
+    top: 2px;
+    z-index: 1;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    box-sizing: border-box;
+    color: white;
   }
 }

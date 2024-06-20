@@ -522,7 +522,7 @@ export default function CryptoUsa() {
           </div>
         </div>
       </div>
-      <div id="country" className={styles.country}>
+      {/* <div id="country" className={styles.country}>
         <div className={styles.container}>
           <h2 className={styles.title}>{t("title5")}</h2>
           <div className={styles.text}>
@@ -585,7 +585,7 @@ export default function CryptoUsa() {
             </div>
           </form>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

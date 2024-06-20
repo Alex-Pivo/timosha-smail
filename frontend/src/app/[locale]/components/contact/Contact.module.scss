@@ -948,7 +948,10 @@
   }
   .select {
     position: relative;
-    display: inline-block;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
   }
   .select:after {
     content: "ᨆ";
@@ -1036,8 +1039,15 @@
             width: 100%;
             .select{
               width: 100%;
-
+              align-items: center;
+              text-align: center;
+              justify-content: center;
+              display: flex;
               select{
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                display: flex;
                 width: 100%;
                 color: var(--Main-white, #F5F5F5);
                 font-family: "Commissioner", sans-serif;
@@ -1286,8 +1296,10 @@
     margin-top: 5px;
   }
   .select {
-    position: relative;
-    display: inline-block;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
   }
   .select:after {
     content: "ᨆ";

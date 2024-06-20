@@ -1034,43 +1034,43 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
-        .btnsTablet{
+        .btnsTablet {
+          height: 30px;
           display: flex;
-          position: relative;
-          select{
+          justify-content: center; /* Центрирование по горизонтали */
+          align-items: center; /* Центрирование по вертикали */
+          width: 100%; /* Ширина контейнера */
+          padding: 0;
+          gap: 10px;
+          border-radius: 10px;
+          background: #649612;
+
+          select {
             border-radius: 10px;
-            align-items: center;
             text-align: center;
-            justify-content: center;
             display: flex;
             width: 100%;
             color: var(--Main-white, #F5F5F5);
             font-family: "Commissioner", sans-serif;
             font-size: 14px;
-            font-style: normal;
             font-weight: 500;
             line-height: 140%; /* 19.6px */
             background: #649612;
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
-            option{
+
+            option {
               display: flex;
               justify-content: center;
               align-items: center;
               text-align: center;
             }
-            &:focus{
+
+            &:focus {
               outline: none;
             }
           }
-
-          width: 343px;
-          height: 30px;
-          padding: 0px;
-          gap: 10px;
-          border-radius: 10px;
-          background: #649612;
         }
         .btns{
           display: none;
@@ -1284,26 +1284,5 @@
     line-height: 140%;
     color: red;
     margin-top: 5px;
-  }
-  .btnsTablet {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-  }
-  .btnsTablet:after {
-    content: "ᨆ";
-    font-size: 15px;
-    position: absolute;
-    font-family: "Commissioner", sans-serif;
-    right: 45px;
-    top: 2px;
-    z-index: 1;
-    text-align: center;
-    width: 20px;
-    height: 20px;
-    pointer-events: none;
-    box-sizing: border-box;
-    color: white;
   }
 }

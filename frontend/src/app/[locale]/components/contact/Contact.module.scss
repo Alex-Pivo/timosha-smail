@@ -686,9 +686,7 @@
 
           select {
             border-radius: 10px;
-            text-align: center;
-            display: flex;
-            width: 100%;
+            padding-left: 10%;
             color: var(--Main-white, #F5F5F5);
             font-family: "Commissioner", sans-serif;
             font-size: 14px;
@@ -699,19 +697,12 @@
             -moz-appearance: none;
             appearance: none;
 
-            option {
-              width: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-            }
 
             &:focus {
               outline: none;
             }
           }
-        
+
 
           //background: #649612;
           //display: flex;

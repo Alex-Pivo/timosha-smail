@@ -176,7 +176,7 @@
   box-sizing: border-box;
 }
 
-@media screen and (min-width: 836px) and (max-width: 1541px){
+@media screen and (min-width: 1201px) and (max-width: 1541px){
   .header {
     background: var(--gray-2, #F7F7F7);
     width: 100%;
@@ -348,7 +348,7 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 835px){
+@media screen and (min-width: 768px) and (max-width: 1201px){
   .header {
     background: var(--gray-2, #F7F7F7);
     width: 100%;

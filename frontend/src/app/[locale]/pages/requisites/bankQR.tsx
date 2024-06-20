@@ -17,7 +17,7 @@ export default function BankQR() {
     <>
       <div id="bankQR" className={styles.bank}>
         <div className={styles.container}>
-          <h2 className={styles.title}>{t("title3")}</h2>
+          <h2 className={styles.title}>Monobank, PayPal, Venmo, Cash App</h2>
 
           <div className={styles.box}>
             <div className={styles.card}>
@@ -63,7 +63,7 @@ export default function BankQR() {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-              <a href="">
+              <a href="https://www.paypal.me/TimoshasSmileUSA">
                 <div
                   className={styles.qr}
                   style={{
@@ -119,7 +119,7 @@ export default function BankQR() {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-              <a href="">
+              <a href="https://cash.app/$TimoshasSmile">
                 <div
                   className={styles.qr}
                   style={{

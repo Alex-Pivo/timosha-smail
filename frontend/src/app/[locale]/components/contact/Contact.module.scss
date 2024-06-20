@@ -1035,48 +1035,33 @@
         align-items: flex-start;
         gap: 24px;
         .btnsTablet{
-          align-items: center;
-          text-align: center;
-          justify-content: center;
           display: flex;
-          label{
-            width: 100%;
+          position: relative;
+          select{
+            border-radius: 10px;
             align-items: center;
             text-align: center;
             justify-content: center;
             display: flex;
-            .select{
-              width: 100%;
+            width: 100%;
+            color: var(--Main-white, #F5F5F5);
+            font-family: "Commissioner", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 19.6px */
+            background: #649612;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            option{
+              display: flex;
+              justify-content: center;
               align-items: center;
               text-align: center;
-              justify-content: center;
-              display: flex;
-              select{
-                align-items: center;
-                text-align: center;
-                justify-content: center;
-                display: flex;
-                width: 100%;
-                color: var(--Main-white, #F5F5F5);
-                font-family: "Commissioner", sans-serif;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%; /* 19.6px */
-                background: #649612;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                option{
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  text-align: center;
-                }
-                &:focus{
-                  outline: none;
-                }
-              }
+            }
+            &:focus{
+              outline: none;
             }
           }
 
@@ -1300,19 +1285,19 @@
     color: red;
     margin-top: 5px;
   }
-  .select {
+  .btnsTablet {
     align-items: center;
     text-align: center;
     justify-content: center;
     display: flex;
   }
-  .select:after {
+  .btnsTablet:after {
     content: "ᨆ";
     font-size: 15px;
     position: absolute;
     font-family: "Commissioner", sans-serif;
-    right: 60px;
-    top: -2px;
+    right: 45px;
+    top: 2px;
     z-index: 1;
     text-align: center;
     width: 20px;

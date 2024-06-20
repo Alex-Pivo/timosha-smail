@@ -30,7 +30,7 @@
            gap: 30px;
            .caption{
              color: var(--Chief-Black, #1D1D1D);
-             font-family: Rubik, sans-serif;
+             font-family: "Rubik", sans-serif;
              font-size: 52px;
              font-style: normal;
              font-weight: 800;
@@ -78,7 +78,7 @@
           border-radius: 30px;
           border: 1px solid var(--main-green, #649612);
           color: var(--Chief-Black, #1D1D1D);
-          font-family: Commissioner, sans-serif;
+          font-family: "Commissioner", sans-serif;
           font-size: 16px;
           font-style: normal;
           font-weight: 500;
@@ -86,7 +86,7 @@
           transition: all 0.2s ease-in-out;
           &.activeButton, &:hover{
             color: var(--Main-white, #F5F5F5);
-            font-family: Commissioner, sans-serif;
+            font-family: "Commissioner", sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 500;
@@ -118,7 +118,7 @@
             align-items: flex-start;
             gap: 10px;
             color: var(--Chief-Black, #1D1D1D);
-            font-family: Commissioner, sans-serif;
+            font-family: "Commissioner", sans-serif;
             font-size: 24px;
             font-style: normal;
             font-weight: 500;
@@ -130,7 +130,7 @@
               align-items: center;
               gap: 10px;
               color: #959595;
-              font-family: Commissioner, sans-serif;
+              font-family: "Commissioner", sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 500;
@@ -144,7 +144,7 @@
           }
           .tel{
             color: var(--Chief-Black, #1D1D1D);
-            font-family: Commissioner,sans-serif;
+            font-family: "Commissioner",sans-serif;
             font-size: 24px;
             font-style: normal;
             font-weight: 500;
@@ -166,7 +166,7 @@
               align-items: center;
               gap: 10px;
               color: #959595;
-              font-family: Commissioner, sans-serif;
+              font-family: "Commissioner", sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 500;
@@ -188,14 +188,14 @@
             align-items: flex-start;
             gap: 10px;
             color: var(--Chief-Black, #1D1D1D);
-            font-family: Commissioner, sans-serif;
+            font-family: "Commissioner", sans-serif;
             font-size: 24px;
             font-style: normal;
             font-weight: 500;
             line-height: 140%;
             .smallTxt{
               color: var(--Chief-Black, #1D1D1D);
-              font-family: Commissioner, sans-serif;
+              font-family: "Commissioner", sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
@@ -211,7 +211,7 @@
               border-radius: 10px;
               border: 2px solid #D0D0D0;
               color: #959595;
-              font-family: Commissioner, sans-serif;
+              font-family: "Commissioner", sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 500;
@@ -227,7 +227,7 @@
               align-items: center;
               gap: 10px;
               color: #959595;
-              font-family: Commissioner, sans-serif;
+              font-family: "Commissioner", sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 500;
@@ -250,7 +250,7 @@
             background: #649612;
             color: #FFF;
             text-align: center;
-            font-family: Rubik,sans-serif;
+            font-family: "Rubik",sans-serif;
             font-size: 24px;
             font-style: normal;
             font-weight: 600;
@@ -282,7 +282,7 @@
   gap: 8px;
   .txt{
     color: var(--Chief-Black, #1D1D1D);
-    font-family: Commissioner, sans-serif;
+    font-family: "Commissioner", sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
@@ -295,7 +295,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  font-family: Commissioner, sans-serif;
+  font-family: "Commissioner", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -333,7 +333,7 @@
              gap: 29px;
              .caption{
                color: var(--Chief-Black, #1D1D1D);
-               font-family: Rubik, sans-serif;
+               font-family: "Rubik", sans-serif;
                font-size: 48px;
                font-style: normal;
                font-weight: 800;
@@ -383,7 +383,7 @@
             border-radius: 30px;
             border: 1px solid var(--main-green, #649612);
             color: var(--Chief-Black, #1D1D1D);
-            font-family: Commissioner, sans-serif;
+            font-family: "Commissioner", sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 500;
@@ -391,7 +391,7 @@
             transition: all 0.2s ease-in-out;
             &.activeButton, &:hover{
               color: var(--Main-white, #F5F5F5);
-              font-family: Commissioner, sans-serif;
+              font-family: "Commissioner", sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 500;
@@ -423,7 +423,7 @@
               align-items: flex-start;
               gap: 10px;
               color: var(--Chief-Black, #1D1D1D);
-              font-family: Commissioner, sans-serif;
+              font-family: "Commissioner", sans-serif;
               font-size: 24px;
               font-style: normal;
               font-weight: 500;
@@ -435,7 +435,7 @@
                 align-items: center;
                 gap: 10px;
                 color: #959595;
-                font-family: Commissioner, sans-serif;
+                font-family: "Commissioner", sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 500;
@@ -449,7 +449,7 @@
             }
             .tel{
               color: var(--Chief-Black, #1D1D1D);
-              font-family: Commissioner,sans-serif;
+              font-family: "Commissioner",sans-serif;
               font-size: 24px;
               font-style: normal;
               font-weight: 500;
@@ -471,7 +471,7 @@
                 align-items: center;
                 gap: 10px;
                 color: #959595;
-                font-family: Commissioner, sans-serif;
+                font-family: "Commissioner", sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 500;
@@ -493,14 +493,14 @@
               align-items: flex-start;
               gap: 10px;
               color: var(--Chief-Black, #1D1D1D);
-              font-family: Commissioner, sans-serif;
+              font-family: "Commissioner", sans-serif;
               font-size: 24px;
               font-style: normal;
               font-weight: 500;
               line-height: 140%;
               .smallTxt{
                 color: var(--Chief-Black, #1D1D1D);
-                font-family: Commissioner, sans-serif;
+                font-family: "Commissioner", sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -517,7 +517,7 @@
                 border-radius: 10px;
                 border: 2px solid #D0D0D0;
                 color: #959595;
-                font-family: Commissioner, sans-serif;
+                font-family: "Commissioner", sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 500;
@@ -533,7 +533,7 @@
                 align-items: center;
                 gap: 10px;
                 color: #959595;
-                font-family: Commissioner, sans-serif;
+                font-family: "Commissioner", sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 500;
@@ -556,7 +556,7 @@
               background: #649612;
               color: #FFF;
               text-align: center;
-              font-family: Rubik,sans-serif;
+              font-family: "Rubik",sans-serif;
               font-size: 24px;
               font-style: normal;
               font-weight: 600;
@@ -588,7 +588,7 @@
     gap: 8px;
     .txt{
       color: var(--Chief-Black, #1D1D1D);
-      font-family: Commissioner, sans-serif;
+      font-family: "Commissioner", sans-serif;
       font-size: 24px;
       font-style: normal;
       font-weight: 500;
@@ -601,7 +601,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    font-family: Commissioner, sans-serif;
+    font-family: "Commissioner", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -639,7 +639,7 @@
         gap: 30px;
         .caption{
           color: var(--Chief-Black, #1D1D1D);
-          font-family: Rubik, sans-serif;
+          font-family: "Rubik", sans-serif;
           font-size: 32px;
           font-style: normal;
           font-weight: 800;
@@ -670,7 +670,7 @@
           select{
             width: 173px;
             color: var(--Main-white, #F5F5F5);
-            font-family: Commissioner, sans-serif;
+            font-family: "Commissioner", sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 500;
@@ -717,7 +717,7 @@
               align-items: flex-start;
               gap: 10px;
               color: var(--Chief-Black, #1D1D1D);
-              font-family: Commissioner, sans-serif;
+              font-family: "Commissioner", sans-serif;
               font-size: 24px;
               font-style: normal;
               font-weight: 500;
@@ -732,7 +732,7 @@
                 border-radius: 6px;
                 border: 1.5px solid #D0D0D0;
                 color: var(--Chief-Black, #1D1D1D);
-                font-family: Commissioner, sans-serif;
+                font-family: "Commissioner", sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -744,7 +744,7 @@
             }
             .tel{
               color: var(--Chief-Black, #1D1D1D);
-              font-family: Commissioner, sans-serif;
+              font-family: "Commissioner", sans-serif;
               font-size: 24px;
               font-style: normal;
               font-weight: 500;
@@ -767,7 +767,7 @@
                 height: 38px;
                 gap: 10px;
                 color: var(--Chief-Black, #1D1D1D);
-                font-family: Commissioner, sans-serif;
+                font-family: "Commissioner", sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -789,14 +789,14 @@
               align-items: flex-start;
               gap: 10px;
               color: var(--Chief-Black, #1D1D1D);
-              font-family: Commissioner, sans-serif;
+              font-family: "Commissioner", sans-serif;
               font-size: 24px;
               font-style: normal;
               font-weight: 500;
               line-height: 140%; /* 33.6px */
               .smallTxt{
                 color: var(--Chief-Black, #1D1D1D);
-                font-family: Commissioner, sans-serif;
+                font-family: "Commissioner", sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -812,7 +812,7 @@
                 border-radius: 10px;
                 border: 2px solid #D0D0D0;
                 color: var(--Chief-Black, #1D1D1D);
-                font-family: Commissioner, sans-serif;
+                font-family: "Commissioner", sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -828,7 +828,7 @@
                 align-items: center;
                 gap: 10px;
                 color: var(--Chief-Black, #1D1D1D);
-                font-family: Commissioner, sans-serif;
+                font-family: "Commissioner", sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -851,7 +851,7 @@
               border-radius: 8px;
               background: var(--main-green, #649612);
               color: var(--Main-white, #F5F5F5);
-              font-family: Commissioner, sans-serif;
+              font-family: "Commissioner", sans-serif;
               font-size: 24px;
               font-style: normal;
               font-weight: 600;
@@ -886,7 +886,7 @@
     }
     .txt{
       color: var(--Chief-Black, #1D1D1D);
-      font-family: Commissioner, sans-serif;
+      font-family: "Commissioner", sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
@@ -898,7 +898,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    font-family: Commissioner, sans-serif;
+    font-family: "Commissioner", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -954,7 +954,7 @@
         width: 264px;
         color: var(--Chief-Black, #1D1D1D);
         text-align: center;
-        font-family: Rubik, sans-serif;
+        font-family: "Rubik", sans-serif;
         font-size: 24px;
         font-style: normal;
         font-weight: 800;
@@ -994,7 +994,7 @@
         .btnsTablet{
           select{
             color: var(--Main-white, #F5F5F5);
-            font-family: Commissioner, sans-serif;
+            font-family: "Commissioner", sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 500;
@@ -1040,7 +1040,7 @@
               align-items: flex-start;
               gap: 10px;
               color: var(--Chief-Black, #1D1D1D);
-              font-family: Commissioner, sans-serif;
+              font-family: "Commissioner", sans-serif;
               font-size: 18px;
               font-style: normal;
               font-weight: 500;
@@ -1054,7 +1054,7 @@
                 border-radius: 6px;
                 border: 1.5px solid #D0D0D0;
                 color: var(--Chief-Black, #1D1D1D);
-                font-family: Commissioner, sans-serif;
+                font-family: "Commissioner", sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -1066,7 +1066,7 @@
             }
             .tel{
               color: var(--Chief-Black, #1D1D1D);
-              font-family: Commissioner, sans-serif;
+              font-family: "Commissioner", sans-serif;
               font-size: 18px;
               font-style: normal;
               font-weight: 500;
@@ -1089,7 +1089,7 @@
                 height: 38px;
                 gap: 10px;
                 color: var(--Chief-Black, #1D1D1D);
-                font-family: Commissioner, sans-serif;
+                font-family: "Commissioner", sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -1111,14 +1111,14 @@
               align-items: flex-start;
               gap: 10px;
               color: var(--Chief-Black, #1D1D1D);
-              font-family: Commissioner, sans-serif;
+              font-family: "Commissioner", sans-serif;
               font-size: 18px;
               font-style: normal;
               font-weight: 500;
               line-height: 140%; /* 25.2px */
               .smallTxt{
                 color: var(--Chief-Black, #1D1D1D);
-                font-family: Commissioner, sans-serif;
+                font-family: "Commissioner", sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -1134,7 +1134,7 @@
                 border-radius: 10px;
                 border: 2px solid #D0D0D0;
                 color: var(--Chief-Black, #1D1D1D);
-                font-family: Commissioner, sans-serif;
+                font-family: "Commissioner", sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -1152,7 +1152,7 @@
                 border-radius: 6px;
                 border: 1.5px solid #D0D0D0;
                 color: var(--Chief-Black, #1D1D1D);
-                font-family: Commissioner, sans-serif;
+                font-family: "Commissioner", sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -1175,7 +1175,7 @@
               background: var(--main-green, #649612);
               color: #FFF;
               text-align: center;
-              font-family: Rubik, sans-serif;
+              font-family: "Rubik", sans-serif;
               font-size: 18px;
               font-style: normal;
               font-weight: 600;
@@ -1210,7 +1210,7 @@
     }
     .txt{
       color: var(--Chief-Black, #1D1D1D);
-      font-family: Commissioner, sans-serif;
+      font-family: "Commissioner", sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
@@ -1222,7 +1222,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    font-family: Commissioner, sans-serif;
+    font-family: "Commissioner", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;

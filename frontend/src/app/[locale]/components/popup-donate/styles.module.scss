@@ -17,7 +17,7 @@
 
     .modal__content{
         width: 758px;
-        height: 489px;
+        min-height: auto;
         padding: 30px 57px;
         display: flex;
         flex-direction: column;
@@ -62,7 +62,7 @@
 
         .box{
             width: 100%;
-            height: 164px;
+            height: auto;
 
             padding: 0px 52.5px;
             display: flex;

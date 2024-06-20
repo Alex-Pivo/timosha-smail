@@ -129,28 +129,15 @@ export default function FirstHelpUsa() {
           </Link>
           <Link
             activeClass={styles.activeLink}
-            to="country"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={400}
-            className={styles.btn}
-            // id={styles.btn__country}
-          >
-           {t('btn4')}
-          </Link>
-          <Link
-            activeClass={styles.activeLink}
-            to="crypto"
+            to="bankQR"
             spy={true}
             smooth={true}
             offset={0}
             duration={400}
             className={styles.btn}
           >
-            {t('btn3')}
+            Venmo, Zelle, Cash App, PayPall
           </Link>
-
           <Link
             activeClass={styles.activeLink}
             to="chek"
@@ -165,15 +152,30 @@ export default function FirstHelpUsa() {
           </Link>
           <Link
             activeClass={styles.activeLink}
-            to="bankQR"
+            to="found"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={400}
+            className={styles.btn}
+            // id={styles.btn__country}
+          >
+           GoFoundMe
+          </Link>
+          <Link
+            activeClass={styles.activeLink}
+            to="crypto"
             spy={true}
             smooth={true}
             offset={0}
             duration={400}
             className={styles.btn}
           >
-            {t('btn5')}
+            {t('btn3')}
           </Link>
+
+          
+          
         </div>
         <div id="card" className={styles.container}>
           <form
@@ -183,7 +185,7 @@ export default function FirstHelpUsa() {
             className={styles.help}
           >
             <p className={styles.title}>
-                 {t('donate')}
+                 {t('btn1')}
             </p>
             <div className={styles.btn__container}>
                 <a href="https://app.aplos.com/aws/give/Timoshassmile" className={styles.btn} type="submit">

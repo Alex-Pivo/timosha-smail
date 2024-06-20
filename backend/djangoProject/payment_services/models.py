@@ -55,3 +55,4 @@ class InternationalPayment(models.Model):
     class Meta:
         verbose_name_plural = "Міжнародні перекази"
         verbose_name = "Міжнародний переказ"
+

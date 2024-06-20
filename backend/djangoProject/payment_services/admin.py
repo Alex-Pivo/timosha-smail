@@ -2,6 +2,9 @@ from django.contrib import admin
 from .models import LiqpayPayment, InternationalPayment
 from . import views
 from . import settings
+
+
+
 @admin.register(LiqpayPayment)
 class LiqpayPaymentAdmin(admin.ModelAdmin):
     list_display = ('name', 'last_name', 'amount', 'currency', 'email', 'phone', 'status', 'created_at')
@@ -26,6 +29,8 @@ class LiqpayPaymentAdmin(admin.ModelAdmin):
                 payment = LiqpayPayment.objects.get(order_id=id)
                 payment.status = 'Successfully donated'
                 payment.save()
+            else:
+                print('Status',res.get('status'))
 
 
 

@@ -1272,25 +1272,5 @@
     color: red;
     margin-top: 5px;
   }
-  .btnsTablet {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-  }
-  .btnsTablet:after {
-    content: "ᨆ";
-    font-size: 15px;
-    position: absolute;
-    font-family: "Commissioner", sans-serif;
-    right: 45px;
-    top: 2px;
-    z-index: 1;
-    text-align: center;
-    width: 20px;
-    height: 20px;
-    pointer-events: none;
-    box-sizing: border-box;
-    color: white;
-  }
+  
 }

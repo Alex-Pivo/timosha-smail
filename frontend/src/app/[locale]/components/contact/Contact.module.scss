@@ -991,58 +991,44 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
-        .select {
-          //display: inline-block;
+
+        .btnsTablet{
+
+          label{
+            width: 100%;
+
+            .select{
+              width: 100%;
+
+              select{
+                padding-left: 30px;
+                width: 100%;
+                color: var(--Main-white, #F5F5F5);
+                font-family: "Commissioner", sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%; /* 19.6px */
+                background: #649612;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                &:focus{
+                  outline: none;
+                }
+              }
+            }
+          }
+          display: flex;
           width: 343px;
           height: 30px;
+          padding: 0px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
           border-radius: 10px;
-          color: var(--Main-white, #F5F5F5);
-          font-family: "Commissioner", sans-serif;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 140%; /* 19.6px */
           background: #649612;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
-          text-align: center;
-          option{
-            display: inline-block;
-          }
-          &:focus {
-            outline: none;
-          }
         }
-
-        //.btnsTablet{
-        //  select{
-        //    text-align: center;
-        //    width: 173px;
-        //    color: var(--Main-white, #F5F5F5);
-        //    font-family: "Commissioner", sans-serif;
-        //    font-size: 14px;
-        //    font-style: normal;
-        //    font-weight: 500;
-        //    line-height: 140%; /* 19.6px */
-        //    background: #649612;
-        //    -webkit-appearance: none;
-        //    -moz-appearance: none;
-        //    appearance: none;
-        //    &:focus{
-        //      outline: none;
-        //    }
-        //  }
-        //  display: flex;
-        //  width: 343px;
-        //  height: 30px;
-        //  padding: 0px;
-        //  justify-content: center;
-        //  align-items: center;
-        //  gap: 10px;
-        //  border-radius: 10px;
-        //  background: #649612;
-        //}
         .btns{
           display: none;
         }
@@ -1265,7 +1251,7 @@
     font-size: 15px;
     position: absolute;
     font-family: "Commissioner", sans-serif;
-    right: -30px;
+    right: 20px;
     top: -2px;
     z-index: 1;
     text-align: center;

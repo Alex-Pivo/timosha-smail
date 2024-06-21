@@ -1,10 +1,10 @@
 import styles from "../styles/main.module.scss";
-import { getLocale } from "next-intl/server";
+import { useLocale } from "next-intl";
 import Slider from "@/app/[locale]/pages/main-page/first-part/pages/slider";
 import HelpComponent from "../components/HelpComponent";
 
 export default function Firstblock() {
-  let locale = getLocale();
+  let locale = useLocale();
   return (
     <>
       <div className={styles.firstBlock}>

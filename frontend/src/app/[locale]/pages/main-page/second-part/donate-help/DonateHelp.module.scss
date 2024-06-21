@@ -70,8 +70,8 @@
   .donateHelp{
     height: 692px;
     position: relative;
-    background: url('/bgBaby.png');
-    background-position: center;
+    background: url('/bgBaby.png') no-repeat center center;
+    background-size: cover;
     margin-bottom: 200px;
     flex-shrink: 0;
     .bottomImages{
@@ -136,8 +136,8 @@
   .donateHelp{
     height: 692px;
     position: relative;
-    background: url('/bgBaby.png');
-    background-position: center;
+    background: url('/bgBaby.png') no-repeat center center;
+    background-size: cover;
     margin-bottom: 300px;
     flex-shrink: 0;
     .bottomImages{
@@ -204,7 +204,8 @@
 
   .donateHelp {
     position: relative;
-    background: url(/bgBabyTablet.png), no-repeat;
+    background: url(/bgBabyTablet.png), no-repeat center center;
+    background-size: cover;
     margin-bottom: 400px;
     width: 100%;
     height: 596px;
@@ -282,8 +283,8 @@
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .donateHelp {
     position: relative;
-    background: url(/donatePhone.png);
-    background-position: center;
+    background: url(/donatePhone.png) no-repeat center center;
+    background-size: cover;
     margin-bottom: 300px;
     width: 100%;
     height: 367px;

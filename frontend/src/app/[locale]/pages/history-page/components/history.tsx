@@ -142,7 +142,6 @@ export default function HistoryPart() {
                   </div>
                 </div>
                 </SwiperSlide>
-                <SwiperSlide />
               <BtnsHistory/>
             </Swiper>
           </div>

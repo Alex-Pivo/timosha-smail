@@ -202,6 +202,7 @@
               line-height: 140%; /* 22.4px */
             }
             textarea{
+              resize: none;
               display: flex;
               height: 150px;
               padding: 14px 10px;
@@ -508,6 +509,7 @@
               }
               textarea{
                 width: 552px;
+                resize: none;
                 display: flex;
                 height: 150px;
                 padding: 14px 10px;
@@ -628,7 +630,7 @@
     .wrapper{
       display: flex;
       align-items: flex-start;
-      gap: 100px;
+      justify-content: space-between;
       .captionPhone{
         display: none;
       }
@@ -840,6 +842,7 @@
                 line-height: 140%; /* 22.4px */
               }
               textarea{
+                resize: none;
                 display: flex;
                 height: 150px;
                 padding: 14px 10px;
@@ -1174,6 +1177,7 @@
                 line-height: 140%; /* 22.4px */
               }
               textarea{
+                resize: none;
                 display: flex;
                 height: 150px;
                 padding: 14px 10px;

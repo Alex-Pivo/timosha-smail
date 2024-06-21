@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image'
 import {ModalText} from "@/app/[locale]/components/modal/Modal";
 import {useScroll} from "@/app/[locale]/components/scroll-context/ScrollContext";
+import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
 
 const ModalContent = styled.div`
   height: 100%;
@@ -255,24 +256,24 @@ export const Contact = () => {
 								{c('btn4')}
 							</button>
 						</div>
-						{/*<div className={styles.btnsTablet}>*/}
-						{/*	<label htmlFor="btnsTabletSelect">*/}
-						{/*		<div className={styles.select}>*/}
-						{/*			<select value={activeButton} onChange={handleSelectChange}>*/}
-						{/*				<option value="needHelp">{c('btn1')}</option>*/}
-						{/*				<option value="vol">{c('btn2')}</option>*/}
-						{/*				<option value="fund">{c('btn3')}</option>*/}
-						{/*				<option value="friendship">{c('btn4')}</option>*/}
-						{/*			</select>*/}
-						{/*		</div>*/}
-						{/*	</label>*/}
-						{/*</div>*/}
-						<select value={activeButton} className={styles.select} onChange={handleSelectChange}>
-							<option value="needHelp">{c('btn1')}</option>
-							<option value="vol">{c('btn2')}</option>
-							<option value="fund">{c('btn3')}</option>
-							<option value="friendship">{c('btn4')}</option>
-						</select>
+						<div className={styles.btnsTablet}>
+							<label htmlFor="btnsTabletSelect">
+								<div className={styles.select}>
+									<select value={activeButton} onChange={handleSelectChange}>
+										<option value="needHelp">{c('btn1')}</option>
+										<option value="vol">{c('btn2')}</option>
+										<option value="fund">{c('btn3')}</option>
+										<option value="friendship">{c('btn4')}</option>
+									</select>
+								</div>
+							</label>
+						</div>
+						{/*<select value={activeButton} className={styles.select} onChange={handleSelectChange}>*/}
+						{/*	<option className={styles.option} value="needHelp">{c('btn1')}</option>*/}
+						{/*	<option className={styles.option} value="vol">{c('btn2')}</option>*/}
+						{/*	<option className={styles.option} value="fund">{c('btn3')}</option>*/}
+						{/*	<option className={styles.option} value="friendship">{c('btn4')}</option>*/}
+						{/*</select>*/}
 
 						{activeButton && (
 							<form className={styles.form} onSubmit={handleSubmit}>

@@ -15,7 +15,7 @@ import BtnsFirstSwiper from "../components/btnsFirstSwiper";
 import { Pagination, Autoplay, EffectFade } from "swiper/modules";
 
 export default function Slider({locale}:any) {
-  let localeValue = locale.value.replace(/"/g, '');
+  let localeValue = locale;
   let [state, setState] = useState<any[]>([]);
   let [mouse, setMouse] = useState(true);
   const t = useTranslations('mSlider');

@@ -882,7 +882,7 @@
   }
 }
 
-@media screen and (min-width: 835px) and (max-width: 1541px) {
+@media screen and (min-width: 1201px) and (max-width: 1541px) {
   .body__container {
     width: 100%;
     height: auto;
@@ -1773,14 +1773,15 @@
 }
 
 
-@media screen and (min-width: 767px) and (max-width: 835px){
+@media screen and (min-width: 767px) and (max-width: 1201px){
   .firstBlock{
-
+    height: 595px;
     .info {
       position: absolute;
       z-index: 5;
       bottom: -280px;
-      right: 15%;
+      left: 50%;
+      transform: translate(-50%, 0%);
       
       width: auto;
       height: auto;

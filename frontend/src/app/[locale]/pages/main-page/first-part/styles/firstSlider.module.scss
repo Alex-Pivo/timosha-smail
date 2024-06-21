@@ -1243,6 +1243,52 @@
       opacity: 0;
       transition: all 0.4s ease 0s;
     }
+
+    .zone {
+      top: 0px;
+      left: 64px;
+      position: absolute;
+      width: 56%;
+      height: 500px;
+      opacity: 0;
+      transition: all 0.4s ease 0s;
+      z-index: 6;
+  
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  
+      padding: 0;
+      margin: 0;
+      border: 0;
+      box-sizing: border-box;
+  
+      .circle {
+        width: 295px;
+        height: 295px;
+        border-radius: 150px;
+        border: 5px solid #d4d4d4;
+  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+  
+        font-family: "Rubik", sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+  
+        line-height: 110%;
+        letter-spacing: -1px;
+        a {
+          color: #f5f5f5;
+        }
+      }
+    }
+    .zone:hover {
+      transition: all 0.4s ease 0s;
+      opacity: 1;
+    }
   }
 
   .firstImage {
@@ -1681,6 +1727,47 @@
     .mykDis {
       opacity: 0;
       transition: all 0.4s ease 0s;
+    }
+
+    .zone {
+      top: -80px;
+      right: -80px;
+      position: absolute;
+      width: 56%;
+      height: 500px;
+      opacity: 1;
+      transition: all .4s ease 0s;
+      z-index: 6;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      box-sizing: border-box;
+  
+      .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 150px;
+            border: 5px solid #d4d4d4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: Rubik, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 110%;
+            letter-spacing: -1px;
+        a {
+          color: #f5f5f5;
+        }
+      }
+    }
+    .zone:hover {
+      transition: all 0.4s ease 0s;
+      opacity: 1;
     }
   }
 

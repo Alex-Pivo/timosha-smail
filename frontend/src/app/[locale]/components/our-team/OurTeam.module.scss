@@ -487,6 +487,12 @@
   .card{
     width: 500px;
     background-color: transparent;
+    img{
+      border-radius: 10px;
+      width: 270px;
+      height: 370px;
+      flex-shrink: 0;
+    }
     .shadow{
       background: transparent;
       position: absolute;

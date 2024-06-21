@@ -991,8 +991,8 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
-        select {
-          text-align: center;
+        .select {
+          //display: inline-block;
           width: 343px;
           height: 30px;
           border-radius: 10px;
@@ -1006,11 +1006,15 @@
           -webkit-appearance: none;
           -moz-appearance: none;
           appearance: none;
-
+          text-align: center;
+          option{
+            display: inline-block;
+          }
           &:focus {
             outline: none;
           }
         }
+
         //.btnsTablet{
         //  select{
         //    text-align: center;

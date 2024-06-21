@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 .header {
-  background: var(--gray-2, #F7F7F7);
+  background: var(--gray-2, #f7f7f7);
   width: 100%;
   height: 98px;
 
@@ -20,7 +20,7 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  box-shadow: 0px 3px 60px 0px rgba(198, 198, 198, 0.30);
+  box-shadow: 0px 3px 60px 0px rgba(198, 198, 198, 0.3);
 
   .logo {
     width: 119px;
@@ -45,7 +45,7 @@
 
       margin: 0;
       border: 0;
-      .activeLink{
+      .activeLink {
         color: var(--main-green, #649612);
         text-align: right;
         font-family: Commissioner, sans-serif;
@@ -78,7 +78,7 @@
       text-decoration: none;
       background-color: #649612;
       border-radius: 8px;
-      color: #FBFBFB;
+      color: #fbfbfb;
       font-family: Commissioner, sans-serif;
       font-size: 32px;
       font-style: normal;
@@ -105,10 +105,10 @@
       justify-content: center;
       gap: 4px;
 
-      select{
+      select {
         width: 60px;
         border: none;
-        background: var(--gray-2, #F7F7F7);
+        background: var(--gray-2, #f7f7f7);
         font-family: "Commissioner", sans-serif;
         color: #1d1d1d;
         text-decoration: none;
@@ -122,22 +122,21 @@
         appearance: none; /* Убираем стандартные стили */
         border-radius: 4px;
       }
-
     }
 
-    .burger{
+    .burger {
       width: 30px;
       height: 22px;
       box-sizing: border-box;
       margin-left: 50px;
       cursor: pointer;
 
-      display:none;
+      display: none;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
 
-      div{
+      div {
         width: 100%;
         height: 2px;
         border-radius: 2px;
@@ -147,14 +146,14 @@
   }
 }
 
-.burger__menu__dis{
+.burger__menu__dis {
   display: none;
 }
 
 .select {
   position: relative;
   display: inline-block;
-  &:focus-visible{
+  &:focus-visible {
     outline: wave;
   }
 }
@@ -171,57 +170,57 @@
   width: 12px;
   height: 6px;
   stroke-width: 2px;
-  stroke: #1D1D1D;
+  stroke: #1d1d1d;
   pointer-events: none;
   box-sizing: border-box;
 }
 
-@media screen and (min-width: 1201px) and (max-width: 1541px){
+@media screen and (min-width: 1201px) and (max-width: 1541px) {
   .header {
-    background: var(--gray-2, #F7F7F7);
+    background: var(--gray-2, #f7f7f7);
     width: 100%;
     height: 78px;
-  
+
     position: fixed;
     z-index: 20;
     left: 0;
     top: 0;
-  
+
     margin: 0;
     border: 0;
-  
+
     padding: 0px 44px 0px 44px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    box-shadow: 0px 3px 60px 0px rgba(198, 198, 198, 0.30);
-  
+    box-shadow: 0px 3px 60px 0px rgba(198, 198, 198, 0.3);
+
     .logo {
       width: 119px;
       height: 63px;
     }
-  
+
     .menu {
       width: 1060px;
-  
+
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-  
+
       .nav {
         width: 713px;
-  
+
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-  
+
         margin: 0;
         border: 0;
-        .activeLink{
+        .activeLink {
           color: var(--main-green, #649612);
           text-align: right;
           font-family: Commissioner, sans-serif;
@@ -234,7 +233,7 @@
           font-family: "Commissioner", sans-serif;
           color: #1d1d1d;
           text-decoration: none;
-  
+
           font-size: 20px;
           font-weight: 500;
           transition: all 0.2s ease 0s;
@@ -244,7 +243,7 @@
           transition: all 0.2s ease 0s;
         }
       }
-  
+
       .button {
         margin-left: 20px;
         display: flex;
@@ -255,7 +254,7 @@
         text-decoration: none;
         background-color: #649612;
         border-radius: 8px;
-        color: #FBFBFB;
+        color: #fbfbfb;
         font-family: Commissioner, sans-serif;
         font-size: 24px;
         font-style: normal;
@@ -272,17 +271,16 @@
           transition: all 0.4s ease 0s;
         }
       }
-  
+
       .lang {
-  
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        select{
+        select {
           width: 60px;
           border: none;
-          background: var(--gray-2, #F7F7F7);
+          background: var(--gray-2, #f7f7f7);
           font-family: "Commissioner", sans-serif;
           color: #1d1d1d;
           text-decoration: none;
@@ -296,22 +294,21 @@
           appearance: none; /* Убираем стандартные стили */
           border-radius: 4px;
         }
-  
       }
-  
-      .burger{
+
+      .burger {
         width: 30px;
         height: 22px;
         box-sizing: border-box;
         margin-left: 50px;
         cursor: pointer;
-  
-        display:none;
+
+        display: none;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-  
-        div{
+
+        div {
           width: 100%;
           height: 2px;
           border-radius: 2px;
@@ -320,11 +317,11 @@
       }
     }
   }
-  
-  .burger__menu__dis{
+
+  .burger__menu__dis {
     display: none;
   }
-  
+
   .select {
     position: relative;
     display: inline-block;
@@ -342,58 +339,58 @@
     width: 12px;
     height: 6px;
     stroke-width: 2px;
-    stroke: #1D1D1D;
+    stroke: #1d1d1d;
     pointer-events: none;
     box-sizing: border-box;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1201px){
+@media screen and (min-width: 768px) and (max-width: 1201px) {
   .header {
-    background: var(--gray-2, #F7F7F7);
+    background: var(--gray-2, #f7f7f7);
     width: 100%;
     height: 113px;
-  
+
     position: fixed;
     z-index: 20;
     left: 0;
     top: 0;
-  
+
     margin: 0;
     border: 0;
-  
+
     padding: 0px 40px 0px 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-  
+
     .logo {
       width: 119px;
       height: 63px;
     }
-  
+
     .menu {
       width: 1040px;
-  
+
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-  
+
       .nav {
         width: 713px;
-  
+
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         display: none;
-  
+
         margin: 0;
         border: 0;
-        .activeLink{
+        .activeLink {
           color: var(--main-green, #649612);
           text-align: right;
           font-family: Commissioner, sans-serif;
@@ -406,7 +403,7 @@
           font-family: "Commissioner", sans-serif;
           color: #1d1d1d;
           text-decoration: none;
-  
+
           font-size: 20px;
           font-weight: 500;
           transition: all 0.2s ease 0s;
@@ -416,7 +413,7 @@
           transition: all 0.2s ease 0s;
         }
       }
-  
+
       .button {
         display: flex;
         padding: 16.5px 51px;
@@ -426,7 +423,7 @@
         text-decoration: none;
         background-color: #649612;
         border-radius: 8px;
-        color: #FBFBFB;
+        color: #fbfbfb;
         font-family: Commissioner, sans-serif;
         font-size: 24px;
         font-style: normal;
@@ -446,17 +443,17 @@
           transition: all 0.4s ease 0s;
         }
       }
-  
+
       .lang {
         margin-left: 0px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        select{
+        select {
           width: 60px;
           border: none;
-          background: var(--gray-2, #F7F7F7);
+          background: var(--gray-2, #f7f7f7);
           font-family: "Commissioner", sans-serif;
           color: #1d1d1d;
           text-decoration: none;
@@ -470,22 +467,21 @@
           appearance: none; /* Убираем стандартные стили */
           border-radius: 4px;
         }
-  
       }
 
-      .burger{
+      .burger {
         width: 30px;
         height: 22px;
         box-sizing: border-box;
         margin-left: 10px;
         cursor: pointer;
 
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
 
-        div{
+        div {
           width: 100%;
           height: 2px;
           border-radius: 2px;
@@ -494,27 +490,27 @@
       }
     }
   }
-  
-  .burger__menu{
+
+  .burger__menu {
     width: 100%;
-    height: 88%;
+    height: 100%;
     box-sizing: border-box;
     position: fixed;
     z-index: 19;
     overflow: auto;
     transition: all 0.6s ease 0s;
 
-    top: 113px;
+    top: 111px;
     left: 0;
     padding: 0px 40px 40px 40px;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 
-    .head{
+    .head {
       width: 100%;
       height: 46px;
       box-sizing: border-box;
@@ -524,7 +520,7 @@
       justify-content: space-between;
       margin-top: 46px;
 
-      p{
+      p {
         color: var(--Neutral-Neutral-700, #374151);
         font-family: Commissioner, sans-serif;
         font-size: 20px;
@@ -534,7 +530,7 @@
       }
     }
 
-    .titleBox{
+    .titleBox {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -542,14 +538,14 @@
 
       margin-top: 66px;
 
-      .left{
+      .left {
         width: 121px;
         height: 79px;
         background: url("/left1.png");
         background-size: cover;
         background-position: center;
       }
-      .right{
+      .right {
         width: 121px;
         height: 79px;
         background: url("/left2.png");
@@ -557,8 +553,8 @@
         background-position: center;
       }
 
-      .title{
-        color: var(--Chief-Black, #1D1D1D);
+      .title {
+        color: var(--Chief-Black, #1d1d1d);
         font-family: Rubik, sans-serif;
         font-size: 60px;
         font-style: normal;
@@ -570,7 +566,7 @@
       }
     }
 
-    .burger__links{
+    .burger__links {
       margin: 0 auto;
       margin-top: 50.19px;
       width: 316px;
@@ -581,11 +577,11 @@
       align-items: center;
       justify-content: space-between;
 
-      .link{
+      .link {
         width: 100%;
         min-height: 31px;
         border-bottom: 3px solid #649612;
-        color: var(--Chief-Black, #1D1D1D);
+        color: var(--Chief-Black, #1d1d1d);
         text-align: center;
         font-family: Rubik, sans-serif;
         font-size: 32px;
@@ -595,21 +591,21 @@
         text-decoration: none;
       }
 
-      .button{
+      .button {
         display: none;
       }
     }
 
-    .burger__lang{
+    .burger__lang {
       margin-top: 50px;
       display: none;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      select{
+      select {
         width: 60px;
         border: none;
-        background: var(--gray-2, #F7F7F7);
+        background: var(--gray-2, #f7f7f7);
         font-family: "Commissioner", sans-serif;
         color: #1d1d1d;
         text-decoration: none;
@@ -626,26 +622,26 @@
     }
   }
 
-  .burger__menu__dis{
+  .burger__menu__dis {
     width: 100%;
-    height: 80%;
+    height: 100%;
     box-sizing: border-box;
     position: fixed;
     z-index: 19;
     overflow-y: scroll;
     transition: all 0.6s ease 0s;
 
-    top: -1213px;
+    top: -1313px;
     left: 0px;
     padding: 0px 40px 40px 40px;
-    background-color: #FBFBFB;
+    background-color: #fbfbfb;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 
-    .head{
+    .head {
       width: 100%;
       height: 46px;
       box-sizing: border-box;
@@ -655,7 +651,7 @@
       justify-content: space-between;
       margin-top: 46px;
 
-      p{
+      p {
         color: var(--Neutral-Neutral-700, #374151);
         font-family: Commissioner, sans-serif;
         font-size: 20px;
@@ -665,7 +661,7 @@
       }
     }
 
-    .titleBox{
+    .titleBox {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -673,14 +669,14 @@
 
       margin-top: 66px;
 
-      .left{
+      .left {
         width: 121px;
         height: 79px;
         background: url("/left1.png");
         background-size: cover;
         background-position: center;
       }
-      .right{
+      .right {
         width: 121px;
         height: 79px;
         background: url("/left2.png");
@@ -688,8 +684,8 @@
         background-position: center;
       }
 
-      .title{
-        color: var(--Chief-Black, #1D1D1D);
+      .title {
+        color: var(--Chief-Black, #1d1d1d);
         font-family: Rubik, sans-serif;
         font-size: 60px;
         font-style: normal;
@@ -701,7 +697,7 @@
       }
     }
 
-    .burger__links{
+    .burger__links {
       margin: 0 auto;
       margin-top: 50.19px;
       width: 316px;
@@ -712,11 +708,11 @@
       align-items: center;
       justify-content: space-between;
 
-      .link{
+      .link {
         width: 100%;
         min-height: 31px;
         border-bottom: 3px solid #649612;
-        color: var(--Chief-Black, #1D1D1D);
+        color: var(--Chief-Black, #1d1d1d);
         text-align: center;
         font-family: Rubik, sans-serif;
         font-size: 32px;
@@ -725,63 +721,66 @@
         line-height: 20.933px; /* 65.416% */
         text-decoration: none;
       }
+
+      .button {
+        display: none;
+      }
     }
   }
 }
 
-
-@media screen and (min-width: 320px) and (max-width: 767px){
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .header {
-    background: var(--gray-2, #F7F7F7);
+    background: var(--gray-2, #f7f7f7);
     width: 100%;
     height: 80px;
-  
+
     position: fixed;
     z-index: 20;
     left: 0;
     top: 0;
-  
+
     margin: 0;
     border: 0;
-  
+
     padding: 0px 16px 0px 16px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-  
+
     .logo {
       width: 83px;
       height: 44px;
 
-      svg{
+      svg {
         width: 83px;
         height: 44px;
       }
     }
-  
+
     .menu {
       width: 440px;
-  
+
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-  
+
       .nav {
         width: 100px;
-  
+
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         display: none;
-  
+
         margin: 0;
         border: 0;
-        .activeLink{
+        .activeLink {
           color: var(--main-green, #649612);
           text-align: right;
           font-family: Commissioner, sans-serif;
@@ -794,7 +793,7 @@
           font-family: "Commissioner", sans-serif;
           color: #1d1d1d;
           text-decoration: none;
-  
+
           font-size: 20px;
           font-weight: 500;
           transition: all 0.2s ease 0s;
@@ -804,7 +803,7 @@
           transition: all 0.2s ease 0s;
         }
       }
-  
+
       .button {
         margin-left: auto;
         display: none;
@@ -815,7 +814,7 @@
         text-decoration: none;
         background-color: #649612;
         border-radius: 8px;
-        color: #FBFBFB;
+        color: #fbfbfb;
         font-family: Commissioner, sans-serif;
         font-size: 18px;
         font-style: normal;
@@ -835,7 +834,7 @@
           transition: all 0.4s ease 0s;
         }
       }
-  
+
       .lang {
         width: auto;
         margin-left: 0px;
@@ -846,15 +845,15 @@
         order: 3;
         gap: 4px;
 
-        .flag{
+        .flag {
           width: 36px;
           height: 26px;
         }
 
-        select{
+        select {
           width: 60px;
           border: none;
-          background: var(--gray-2, #F7F7F7);
+          background: var(--gray-2, #f7f7f7);
           font-family: "Commissioner", sans-serif;
           color: #1d1d1d;
           text-decoration: none;
@@ -868,10 +867,9 @@
           appearance: none; /* Убираем стандартные стили */
           border-radius: 4px;
         }
-  
       }
 
-      .burger{
+      .burger {
         width: 30px;
         height: 22px;
         box-sizing: border-box;
@@ -879,12 +877,12 @@
         cursor: pointer;
         margin-left: auto;
 
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
 
-        div{
+        div {
           width: 100%;
           height: 2px;
           border-radius: 2px;
@@ -893,8 +891,8 @@
       }
     }
   }
-  
-  .burger__menu{
+
+  .burger__menu {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -906,14 +904,14 @@
     top: 80px;
     left: 0;
     padding: 0px 40px 40px 40px;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 
-    .head{
+    .head {
       width: 100%;
       height: auto;
       box-sizing: border-box;
@@ -923,7 +921,7 @@
       justify-content: space-between;
       margin-top: 20px;
 
-      p{
+      p {
         color: var(--Neutral-Neutral-700, #374151);
         font-family: Commissioner, sans-serif;
         font-size: 16px;
@@ -932,20 +930,20 @@
         line-height: 29px; /* 145% */
       }
 
-      svg{
+      svg {
         display: none;
       }
 
-      .burger__lang{
+      .burger__lang {
         margin-top: 0px;
         display: none;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        select{
+        select {
           width: 60px;
           border: none;
-          background: var(--gray-2, #F7F7F7);
+          background: var(--gray-2, #f7f7f7);
           font-family: "Commissioner", sans-serif;
           color: #1d1d1d;
           text-decoration: none;
@@ -962,7 +960,7 @@
       }
     }
 
-    .titleBox{
+    .titleBox {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -970,14 +968,14 @@
 
       margin-top: 30px;
 
-      .left{
+      .left {
         width: 75px;
         height: 49px;
         background: url("/left1.png");
         background-size: cover;
         background-position: center;
       }
-      .right{
+      .right {
         width: 75px;
         height: 49px;
         background: url("/left2.png");
@@ -985,8 +983,8 @@
         background-position: center;
       }
 
-      .title{
-        color: var(--Chief-Black, #1D1D1D);
+      .title {
+        color: var(--Chief-Black, #1d1d1d);
         font-family: Rubik, sans-serif;
         font-size: 36px;
         font-style: normal;
@@ -998,7 +996,7 @@
       }
     }
 
-    .burger__links{
+    .burger__links {
       margin: 0 auto;
       margin-top: 50.19px;
       width: 240px;
@@ -1009,11 +1007,11 @@
       align-items: center;
       justify-content: space-between;
 
-      .link{
+      .link {
         width: 100%;
         min-height: 31px;
         border-bottom: 3px solid #649612;
-        color: var(--Chief-Black, #1D1D1D);
+        color: var(--Chief-Black, #1d1d1d);
         text-align: center;
         font-family: Rubik, sans-serif;
         font-size: 24px;
@@ -1035,7 +1033,7 @@
         text-decoration: none;
         background-color: #649612;
         border-radius: 8px;
-        color: #FBFBFB;
+        color: #fbfbfb;
         font-family: Commissioner, sans-serif;
         font-size: 18px;
         font-style: normal;
@@ -1056,11 +1054,9 @@
         }
       }
     }
-
-    
   }
 
-  .burger__menu__dis{
+  .burger__menu__dis {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -1072,14 +1068,14 @@
     top: -1213px;
     left: 0;
     padding: 0px 40px 40px 40px;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 
-    .head{
+    .head {
       width: 100%;
       height: 11px;
       box-sizing: border-box;
@@ -1089,7 +1085,7 @@
       justify-content: space-between;
       margin-top: 20px;
 
-      p{
+      p {
         color: var(--Neutral-Neutral-700, #374151);
         font-family: Commissioner, sans-serif;
         font-size: 16px;
@@ -1098,12 +1094,12 @@
         line-height: 29px; /* 145% */
       }
 
-      svg{
+      svg {
         display: none;
       }
     }
 
-    .titleBox{
+    .titleBox {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -1111,14 +1107,14 @@
 
       margin-top: 30px;
 
-      .left{
+      .left {
         width: 75px;
         height: 49px;
         background: url("/left1.png");
         background-size: cover;
         background-position: center;
       }
-      .right{
+      .right {
         width: 75px;
         height: 49px;
         background: url("/left2.png");
@@ -1126,8 +1122,8 @@
         background-position: center;
       }
 
-      .title{
-        color: var(--Chief-Black, #1D1D1D);
+      .title {
+        color: var(--Chief-Black, #1d1d1d);
         font-family: Rubik, sans-serif;
         font-size: 36px;
         font-style: normal;
@@ -1139,7 +1135,7 @@
       }
     }
 
-    .burger__links{
+    .burger__links {
       margin: 0 auto;
       margin-top: 50.19px;
       width: 240px;
@@ -1150,11 +1146,11 @@
       align-items: center;
       justify-content: space-between;
 
-      .link{
+      .link {
         width: 100%;
         min-height: 31px;
         border-bottom: 3px solid #649612;
-        color: var(--Chief-Black, #1D1D1D);
+        color: var(--Chief-Black, #1d1d1d);
         text-align: center;
         font-family: Rubik, sans-serif;
         font-size: 24px;
@@ -1165,16 +1161,16 @@
       }
     }
 
-    .burger__lang{
+    .burger__lang {
       margin-top: 50px;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      select{
+      select {
         width: 60px;
         border: none;
-        background: var(--gray-2, #F7F7F7);
+        background: var(--gray-2, #f7f7f7);
         font-family: "Commissioner", sans-serif;
         color: #1d1d1d;
         text-decoration: none;
@@ -1190,5 +1186,4 @@
       }
     }
   }
-
 }

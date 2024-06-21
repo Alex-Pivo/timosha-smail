@@ -6,8 +6,10 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import { useTranslations } from 'next-intl';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { useSwiperSlide } from 'swiper/react';
 
 export const GetHelp: React.FC = () => {
+	const swiperSlide = useSwiperSlide();
 	const t = useTranslations("getHelp");
 	const [activeStep, setActiveStep] = useState(1);
 	const [highlightedStep, setHighlightedStep] = useState(1);
@@ -61,15 +63,16 @@ export const GetHelp: React.FC = () => {
 						rewind={true}
 						slidesPerView={2}
 						spaceBetween={180}
+						onSlidesUpdated={(swiper) => {
+							swiper.activeIndex++;
+						}}
 						autoplay={{
 							delay: window.innerWidth <= 767 ? 6000 : 13000,
 							disableOnInteraction: false,
+							waitForTransition: false
 						}}
-						allowTouchMove={false}
-						modules={[Autoplay]}
-						onSlideChange={(swiper) => {
-							swiper.activeIndex++;
-						}}
+						
+						modules={[Autoplay, Pagination]}
 						style={{ width: '343px' }}
 					>
 						<SwiperSlide>

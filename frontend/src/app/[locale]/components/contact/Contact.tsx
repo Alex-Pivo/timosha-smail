@@ -9,8 +9,6 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image'
 import {ModalText} from "@/app/[locale]/components/modal/Modal";
 import {useScroll} from "@/app/[locale]/components/scroll-context/ScrollContext";
-import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
-
 const ModalContent = styled.div`
   height: 100%;
   width: 100%;

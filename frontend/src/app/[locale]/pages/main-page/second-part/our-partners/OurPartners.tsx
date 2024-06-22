@@ -39,6 +39,7 @@ export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 	const fetchData = async () => {
 		try {
 			const res = await axios.get(`http://95.169.204.16:8000/partners/${localeValue}`);
+			console.log(res.data)
 			setState(res.data);
 		} catch (error) {
 			console.log("error", error);
@@ -62,19 +63,19 @@ export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 						{state.map((partner, idx) => (
 							<motion.a href={partner.company_url}
 									  className={styles.card}
-									
+
 									  style={{
 										  textDecoration: "none",
 									  }}
 							>
-								{partner.partner_name == "Y.K Agency" && (
+								{partner.partner_name == "Y.K AGENCY" && (
 									<div className={styles.yk_agency}>
 										<span className={styles.yk}>y.k</span>
 										<span className={styles.agency}> AGENCY</span>
 									</div>
 								)}
 								{/*<a href={partner.company_url} target="_blank" rel="noopener noreferrer">*/}
-								{partner.partner_name != "Y.K Agency" && (
+								{partner.partner_name != "Y.K AGENCY" && (
 										<div
 											className={styles.logo}
 											style={{
@@ -99,7 +100,7 @@ export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 						{state.map((partner, idx) => (
 							<motion.a href={partner.company_url}
 									  className={styles.card}
-									  
+
 									  style={{
 										  textDecoration: "none",
 									  }}

@@ -205,7 +205,6 @@ class LiqPayFunc:
             todays_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             params.update({
                 'action': 'subscribe',
-                'description': f'Щомісячна підтримка початок з {todays_date} ',
                 'recurringbytoken': '1',
                 'subscribe_date_start': todays_date,
                 'subscribe_periodicity': 'month',

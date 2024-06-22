@@ -140,25 +140,30 @@ export default function Partners({locale}:any) {
             id="slider"
               className={styles.swiperPar}>
                 {state.map((item:any, idx:any) => (
-                  <SwiperSlide className={styles.slide}>
-                  
-                  {item.partner_name == "Y.K Agency" && (
-                      <h2 className={styles.textLogo}>
-                      <span> Y.K </span> Agency</h2>
-                  )}
-                  {item.partner_name != "Y.K Agency" && ( 
-                    <div
-                      className={styles.logo}
-                      style={{
-                        width: "80%",
-                        height: "80px",
-                        background: `url(http://95.169.204.16:8000/${item.image})`,
-                        marginTop: "0px",
-                        backgroundPosition: "center",
-                        backgroundSize: "contain",
-                        backgroundRepeat: "no-repeat"
-                      }}
-                    ></div>
+                  <SwiperSlide>
+                  	<a className={styles.slide} href={item.company_url}
+				style={{
+					textDecoration: "none",
+				}}
+				> 
+	                  {item.partner_name == "Y.K Agency" && (
+	                      <h2 className={styles.textLogo}>
+	                      <span> Y.K </span> Agency</h2>
+	                  )}
+	                  {item.partner_name != "Y.K Agency" && ( 
+	                    <div
+	                      className={styles.logo}
+	                      style={{
+	                        width: "80%",
+	                        height: "80px",
+	                        background: `url(http://95.169.204.16:8000/${item.image})`,
+	                        marginTop: "0px",
+	                        backgroundPosition: "center",
+	                        backgroundSize: "contain",
+	                        backgroundRepeat: "no-repeat"
+	                      }}
+                    	    ></div>
+			  <a/>
                   )}
                   <div className={styles.text}>
                   {item.description}

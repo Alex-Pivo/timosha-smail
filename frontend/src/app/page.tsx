@@ -35,7 +35,8 @@ export default function IndexPage({params: {locale}}: { params: {locale: string}
             <div className={styles.container}>
                 <OurTeam />
                 <HelpOptions />
-                <OurPartners />
+                        <OurPartners locale={locale} />
+
                 <GetHelp />
             </div>
             <DonateHelp />

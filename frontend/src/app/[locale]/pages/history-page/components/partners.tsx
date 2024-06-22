@@ -75,13 +75,16 @@ export default function Partners({locale}:any) {
           </div>
           <div className={styles.box__partners}>
               {state.map((item:any, idx:any) => (
-                <motion.div
+                <motion.a href={item.company_url}
                   className={styles.card}
                   whileHover={{
                     rotate: -3,
                     transition: { duration: 0 },
                     backgroundImage: `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23649612FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e")`,
                   }}
+		  style={{
+			  textDecoration: "none",
+		  }}
                 >
                   {item.partner_name == "Y.K Agency" && (
                       <h2 className={styles.textLogo}>
@@ -106,7 +109,7 @@ export default function Partners({locale}:any) {
                   <div className={styles.text}>
                   {item.description}
                   </div>
-                </motion.div>
+                </motion.a>
             ))}
             </div>
           </div>

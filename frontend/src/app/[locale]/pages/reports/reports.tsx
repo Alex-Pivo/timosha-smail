@@ -568,9 +568,9 @@ export default function Reports({locale}:any) {
                   </SwiperSlide>
                     )
                   })}
-                  {active && (
+{/*                   {active && (
                   <SwiperSlide/>
-                )}
+                )} */}
               <BtnsHistory/>
             </Swiper>
         </div>

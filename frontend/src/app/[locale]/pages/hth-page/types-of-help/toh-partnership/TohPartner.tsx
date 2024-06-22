@@ -44,11 +44,13 @@ export const TohPartner = () => {
 							<span>03</span>
 							<span>{t('tit3')}</span>
 						</div>
-						<div className={styles.imageOfTypes} />
-						<Image src={'/рибка.png'} alt={'Fish'} width={107} height={105}
-							   className={styles.fish}/>
-						<Image src={'/корона.png'} alt={'corona'} width={127} height={91}
-							   className={styles.corona}/>
+						{/*<div className={styles.imageOfTypes} />*/}
+						<div className={styles.imageOfTypes} >
+							<Image src={'/рибка.png'} alt={'Fish'} width={107} height={105}
+								   className={styles.fish}/>
+							<Image src={'/корона.png'} alt={'corona'} width={127} height={91}
+								   className={styles.corona}/>
+						</div>
 						<p className={styles.description}>
 						{t('des3')}
 						</p>

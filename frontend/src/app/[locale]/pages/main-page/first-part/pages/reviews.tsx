@@ -162,25 +162,25 @@ export default function Reviews({ locale }: any) {
                 ))}
 
                 {active && (
-                  <>
                     <SwiperSlide
                       style={{
                         visibility: "hidden",
                       }}
                     ></SwiperSlide>
+                )}
+                {active && (
                     <SwiperSlide
-                      id={styles.hidSlide}
                       style={{
                         visibility: "hidden",
                       }}
                     ></SwiperSlide>
+                )}
+                {active && (
                     <SwiperSlide
-                      id={styles.hidSlide}
                       style={{
                         visibility: "hidden",
                       }}
                     ></SwiperSlide>
-                  </>
                 )}
 
                 <BtnsSwiper></BtnsSwiper>

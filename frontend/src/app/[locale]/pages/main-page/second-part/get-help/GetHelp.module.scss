@@ -401,7 +401,7 @@
     margin-bottom: 70px;
 
     .wrapper {
-      display: inline-flex;
+      display: flex;
       flex-direction: column;
       align-items: center;
       gap: 28px;
@@ -419,9 +419,9 @@
       }
       .steps {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: 20px;
+        width: 100%;
 
         .stepAll {
           width: 170px;

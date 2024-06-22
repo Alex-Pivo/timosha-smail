@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -13,109 +12,114 @@ import "swiper/css/navigation";
 
 import "../styles/reviewsSwipe.css";
 import styles from "../styles/reviews.module.scss";
-import {unstable_setRequestLocale} from "next-intl/server";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function Reviews({locale}:any) {
+export default function Reviews({ locale }: any) {
   let localeValue = locale;
   let [state, setState] = useState<any[]>([]);
-  const t = useTranslations('mReviews');
+  const t = useTranslations("mReviews");
+  let [active, setActive] = useState(true);
 
-  function componentDidMount(){
-    if(localeValue === "ua"){
+  function componentDidMount() {
+    if (localeValue === "ua") {
       localeValue = "uk";
     }
-    try{
+    try {
       let data;
-      axios.get(`http://95.169.204.16:8000/reviews/${localeValue}`)
-      .then(res => {
-        data = res.data;
-        setState(data);
-      })
-      .catch(err => { })
-    }
-    catch(error){
+      axios
+        .get(`http://95.169.204.16:8000/reviews/${localeValue}`)
+        .then((res) => {
+          data = res.data;
+          setState(data);
+        })
+        .catch((err) => {});
+    } catch (error) {
       console.log("error", error);
     }
   }
 
   useEffect(() => {
     componentDidMount();
-  }, []);
 
+    if (window.innerWidth <= 767) {
+      setActive((active = false));
+    }
+  }, []);
 
   return (
     <>
       <div className={styles.reviews}>
         <div className={styles.container}>
           <div className={styles.title__container}>
-            <h3 className={styles.title}>{t('mTitle')}</h3>
+            <h3 className={styles.title}>{t("mTitle")}</h3>
           </div>
           <div className={styles.main}>
             <div className={styles.slider}>
               <Swiper
-                slidesPerView={4}
+                slidesPerView="auto"
                 spaceBetween={40}
                 speed={800}
-                
-                breakpoints={{
-                  1442: {
-                    width: 1442,
-                    slidesPerView: 4.3,
-                  },
-                  830: {
-                    spaceBetween: 20,
-                  },
-                  450 :{
-                    slidesPerView: 1.8,
-                    spaceBetween: 20,
-                  },
-                  440 :{
-                    slidesPerView: 1.75,
-                    spaceBetween: 20,
-                  },
-                  430 :{
-                    slidesPerView: 1.7,
-                    spaceBetween: 20,
-                  },
-                  420 :{
-                    slidesPerView: 1.65,
-                    spaceBetween: 20,
-                  },
-                  410 :{
-                    slidesPerView: 1.6,
-                    spaceBetween: 20,
-                  },
-                  400 :{
-                    slidesPerView: 1.55,
-                    spaceBetween: 20,
-                  },
-                  390 :{
-                    slidesPerView: 1.5,
-                    spaceBetween: 20,
-                  },
-                  380 :{
-                    slidesPerView: 1.45,
-                    spaceBetween: 20,
-                  },
-                  370 :{
-                    slidesPerView: 1.4,
-                    spaceBetween: 20,
-                  },
-                  360 :{
-                    slidesPerView: 1.35,
-                    spaceBetween: 20,
-                  },
-                  320 :{
-                    slidesPerView: 1.4,
-                    spaceBetween: 20,
-                  }
-                }}
+                // breakpoints={{
+                //   1442: {
+                //     width: 1442,
+                //     slidesPerView: 4.3,
+                //   },
+                //   830: {
+                //     spaceBetween: 20,
+                //   },
+                //   450 :{
+                //     slidesPerView: 1.8,
+                //     spaceBetween: 20,
+                //   },
+                //   440 :{
+                //     slidesPerView: 1.75,
+                //     spaceBetween: 20,
+                //   },
+                //   430 :{
+                //     slidesPerView: 1.7,
+                //     spaceBetween: 20,
+                //   },
+                //   420 :{
+                //     slidesPerView: 1.65,
+                //     spaceBetween: 20,
+                //   },
+                //   410 :{
+                //     slidesPerView: 1.6,
+                //     spaceBetween: 20,
+                //   },
+                //   400 :{
+                //     slidesPerView: 1.55,
+                //     spaceBetween: 20,
+                //   },
+                //   390 :{
+                //     slidesPerView: 1.5,
+                //     spaceBetween: 20,
+                //   },
+                //   380 :{
+                //     slidesPerView: 1.45,
+                //     spaceBetween: 20,
+                //   },
+                //   370 :{
+                //     slidesPerView: 1.4,
+                //     spaceBetween: 20,
+                //   },
+                //   360 :{
+                //     slidesPerView: 1.35,
+                //     spaceBetween: 20,
+                //   },
+                //   320 :{
+                //     slidesPerView: 1.4,
+                //     spaceBetween: 20,
+                //   }
+                // }}
                 className="newsSlider"
               >
-                {state.map((item:any, idx:any) => (
-                    <SwiperSlide key={idx}>
+                {state.map((item: any, idx: any) => (
+                  <SwiperSlide key={idx}>
                     {({ isActive }) => (
-                      <div className={isActive ? styles.slide : styles.slideNot}>
+                      <div
+                        className={isActive ? styles.slide : styles.slideNot}
+                      >
                         <svg
                           className={styles.talk}
                           xmlns="http://www.w3.org/2000/svg"
@@ -132,51 +136,53 @@ export default function Reviews({locale}:any) {
                           />
                         </svg>
                         <div className={isActive ? styles.info : styles.dis}>
-                          <p className={styles.text}>
-                            {item.message}
-                          </p>
-                          <p className={styles.name}>
-                            {item.name}
-                          </p>
+                          <p className={styles.text}>{item.message}</p>
+                          <p className={styles.name}>{item.name}</p>
                         </div>
-                        <div className={isActive ? styles.video : styles.dis}
-                        style={{
-                          visibility:"visible",
-                          width: "50%",
-                          height: "100%",
-                          background: `url("http://95.169.204.16:8000/${item.image}")`,
-                          backgroundSize: "cover",
-                          backgroundPosition: "center",
-                        }}
+                        <div
+                          className={isActive ? styles.video : styles.dis}
+                          style={{
+                            visibility: "visible",
+                            width: "50%",
+                            height: "100%",
+                            background: `url("http://95.169.204.16:8000/${item.image}")`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                          }}
                         ></div>
                         <p className={isActive ? styles.dis : styles.text}>
-                            {item.message}
+                          {item.message}
                         </p>
                         <p className={isActive ? styles.dis : styles.name}>
-                            {item.name}
-                          </p>
+                          {item.name}
+                        </p>
                       </div>
                     )}
                   </SwiperSlide>
                 ))}
 
-                <SwiperSlide
-                  style={{
-                    visibility: "hidden",
-                  }}
-                ></SwiperSlide>
-                <SwiperSlide
-                 id={styles.hidSlide}
-                  style={{
-                    visibility: "hidden",
-                  }}
-                ></SwiperSlide>
-                <SwiperSlide
-                 id={styles.hidSlide}
-                  style={{
-                    visibility: "hidden",
-                  }}
-                ></SwiperSlide>
+                {active && (
+                  <>
+                    <SwiperSlide
+                      style={{
+                        visibility: "hidden",
+                      }}
+                    ></SwiperSlide>
+                    <SwiperSlide
+                      id={styles.hidSlide}
+                      style={{
+                        visibility: "hidden",
+                      }}
+                    ></SwiperSlide>
+                    <SwiperSlide
+                      id={styles.hidSlide}
+                      style={{
+                        visibility: "hidden",
+                      }}
+                    ></SwiperSlide>
+                  </>
+                )}
+
                 <BtnsSwiper></BtnsSwiper>
               </Swiper>
             </div>

@@ -190,7 +190,7 @@ class LiqPayFunc:
             'version': '3',
             'public_key': settings.LIQPAY_PUBLIC_KEY,
             'private_key': settings.LIQPAY_PRIVATE_KEY,
-            'action': 'donate',
+            'action': 'pay',
             'amount': str(input_amount),
             'info': f"Ім'я:{name} Прізвище:{last_name} Email:{email} Phone:{phone}",
             'language': language,
@@ -204,6 +204,8 @@ class LiqPayFunc:
         if is_subscription == 'true':
             todays_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             params.update({
+                'action': 'subscribe',
+                'description': f'Щомісячна підтримка початок з {todays_date} ',
                 'recurringbytoken': '1',
                 'subscribe_date_start': todays_date,
                 'subscribe_periodicity': 'month',

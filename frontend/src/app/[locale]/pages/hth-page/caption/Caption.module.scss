@@ -218,29 +218,32 @@
         width: 355px;
         height: 50.599px;
         .captionTxt{
+          text-align: center;
           color: var(--Chief-Black, #1D1D1D);
           font-family: Rubik, sans-serif;
-          font-size: 36px;
+          font-size: 30px;
           font-style: normal;
           font-weight: 500;
           line-height: 110%;
           letter-spacing: -1.44px;
+          margin-left: 5px;
+          margin-right: 5px;
         }
         .secHeart{
           width: 39.945px;
           height: 34.908px;
           transform: rotate(-40.158deg);
           flex-shrink: 0;
-          position: absolute;
-          left: 5px;
+          //position: absolute;
+          //left: 5px;
         }
         .firstHeart{
           margin-left: 0px;
           width: 34.536px;
           height: 30.572px;
           flex-shrink: 0;
-          position: absolute;
-          right: 25px;
+          //position: absolute;
+          //right: 35px;
         }
         .circles{
           margin-top: 5px;
@@ -249,8 +252,8 @@
           height: 6.561px;
           transform: rotate(-13.495deg);
           flex-shrink: 0;
-          position: absolute;
-          right: 25px;
+          //position: absolute;
+          //right: 25px;
         }
       }
     }

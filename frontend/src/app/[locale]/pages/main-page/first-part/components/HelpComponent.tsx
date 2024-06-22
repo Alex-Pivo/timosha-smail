@@ -165,7 +165,10 @@ export default function HelpComponent() {
             <Link className={styles.btn} 
             href={{
               pathname: "/donate",
-              query: { amount: amount }
+              query: { 
+                amount: amount,
+                is_subscription: is_subscription,
+              }
             }}
             >
               <button className={styles.btn} type="submit">

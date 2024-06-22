@@ -139,7 +139,7 @@
     
         .modal__content{
             width: 654px;
-            height: 425px;
+            min-height: auto;
             padding: 30px 57px;
             display: flex;
             flex-direction: column;

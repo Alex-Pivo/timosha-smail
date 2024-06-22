@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "../styles/historySwipe.css";
 import Link from 'next/link'
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 const PATH = "/history/slider/1.png";
 const PATH2 = "/history/slider/2.png";
@@ -17,6 +17,7 @@ const PATH4 = "/history/slider/4.png";
 export default function HistoryPart() {
   const [isLastSlide, setIsLastSlide] = useState(false);
   const t = useTranslations('History');
+  let [active, setActive] = useState(true);
 
   const handleSlideChange = (swiper: any) => {
     if (swiper.activeIndex === 3){
@@ -27,6 +28,15 @@ export default function HistoryPart() {
       setIsLastSlide(false);
     }
   };
+
+  useEffect(() => {
+    if(window.innerWidth <= 767){
+      setActive(active = false);
+    }
+	}, []);
+
+
+
   return (
     <>
       <div className={styles.history}>
@@ -44,18 +54,10 @@ export default function HistoryPart() {
             <Swiper
                 // slidesPerView={1.19}
                 autoHeight={true}
+                slidesPerView="auto"
                 breakpoints={{
                   376:{
                     autoHeight: true,
-                  },
-                  736:{
-                    slidesPerView:1,
-                  },
-                  1030: {
-                    slidesPerView:1.23,
-                  },
-                  1541: {
-                    slidesPerView: 1.2,
                   }
                 }}
                 spaceBetween={99}
@@ -142,6 +144,9 @@ export default function HistoryPart() {
                   </div>
                 </div>
                 </SwiperSlide>
+                {active && (
+                  <SwiperSlide/>
+                )}
               <BtnsHistory/>
             </Swiper>
           </div>

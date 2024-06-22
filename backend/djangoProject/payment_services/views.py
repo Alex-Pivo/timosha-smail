@@ -32,6 +32,7 @@ class DonateView(APIView):
         email = request.data.get('email')
         phone = request.data.get('phone')
         amount = request.data.get('amount')
+        currency = request.data.get('currency')
         is_subscription = request.data.get('is_subscription')
         print("ПІДПИСКА:",is_subscription,type(is_subscription))
 
@@ -55,6 +56,7 @@ class DonateView(APIView):
             try:
                 payment = LiqPayFunc.pay_view(
                     amount=amount,
+                    currency=currency,
                     name=name,
                     last_name=last_name,
                     phone=phone,
@@ -158,7 +160,7 @@ class LiqPayFunc:
 
 
     @staticmethod
-    def pay_view(amount, name, last_name, phone, email, is_subscription: str, language='uk'):
+    def pay_view(amount,currency, name, last_name, phone, email, is_subscription: str, language='uk'):
         try:
             input_amount = Decimal(amount)
             if input_amount <= 0:
@@ -171,7 +173,7 @@ class LiqPayFunc:
         try:
             LiqpayPayment.objects.create(
                 amount=input_amount,
-                currency='UAH',
+                currency=(currency if currency else 'UAH'),
                 email=email,
                 phone=phone,
                 name=name,
@@ -182,9 +184,7 @@ class LiqPayFunc:
             )
         except Exception as e:
             print(e)
-        new_language = ''
-        if language == 'uk':
-            new_language = 'ua'
+        new_language = 'ua' if language == 'uk' else language
 
         params = {
             'version': '3',
@@ -194,18 +194,17 @@ class LiqPayFunc:
             'amount': str(input_amount),
             'info': f"Ім'я:{name} Прізвище:{last_name} Email:{email} Phone:{phone}",
             'language': language,
-            'currency': 'UAH',
-            'description': 'Підтримка з сайту',
+            'currency': (currency if currency else 'UAH'),
+            'description': ('Підтримка з сайту' if language =='uk' else 'Support from timoshas-smile.org'),
             'order_id': order_id,
             'server_url': f'http://95.169.204.16:8000/{language}/status/{hashed_order_id}',
             'result_url': f'http://95.169.204.16:3002/{new_language}/donate/status/{hashed_order_id}',
         }
 
         if is_subscription == 'true':
-            print('SUBSCRIBED')
             todays_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             params.update({
-                'email_data': '1',
+                'recurringbytoken': '1',
                 'subscribe_date_start': todays_date,
                 'subscribe_periodicity': 'month',
             })

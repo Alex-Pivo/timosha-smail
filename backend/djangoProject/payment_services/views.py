@@ -33,7 +33,7 @@ class DonateView(APIView):
         phone = request.data.get('phone')
         amount = request.data.get('amount')
         is_subscription = request.data.get('is_subscription')
-        print("ПІДПИСКА:",is_subscription)
+        print("ПІДПИСКА:",is_subscription,type(is_subscription))
 
         # Log the incoming data
         logger.info("Request data: name=%s, last_name=%s, email=%s, phone=%s, amount=%s, is_subscription=%s",
@@ -152,9 +152,9 @@ class LiqPayFunc:
             })
         if res.get('status') == 'success':
                 donate = LiqpayPayment.objects.get(order_id=order_id)
-                # donate.status = 'Successfully donated'
-                # donate.save()
-            # return res.get('status')
+                donate.status = 'Successfully donated'
+                donate.save()
+                return res.get('status')
 
 
     @staticmethod

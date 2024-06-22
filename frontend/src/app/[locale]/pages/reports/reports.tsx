@@ -24,6 +24,7 @@ const PATH4 = "/history/slider/4.png";
 
 export default function Reports({locale}:any) {
   const t = useTranslations('Reports');
+  let [active, setActive] = useState(true);
   let [index, setIndex] = useState(3);
   const [scrollPosition, setScrollPosition] = useState(0);
   let localeValue = locale;
@@ -282,6 +283,12 @@ export default function Reports({locale}:any) {
   }, []);
 
   useEffect(() => {
+    if(window.innerWidth <= 767){
+      setActive(active = false);
+    }
+	}, []);
+
+  useEffect(() => {
     componentDidMount();
   }, [index])
 
@@ -530,18 +537,6 @@ export default function Reports({locale}:any) {
                 breakpoints={{
                   376:{
                     autoHeight: true,
-                  },
-                  736:{
-                    slidesPerView:1,
-                  },
-                  1030: {
-                    slidesPerView:1.23,
-                  },
-                  1445: {
-                    slidesPerView:1.19,
-                  },
-                  1561: {
-                    slidesPerView: 1.2,
                   }
                 }}
                 spaceBetween={99}
@@ -572,6 +567,9 @@ export default function Reports({locale}:any) {
                   </SwiperSlide>
                     )
                   })}
+                  {active && (
+                  <SwiperSlide/>
+                )}
               <BtnsHistory/>
             </Swiper>
         </div>

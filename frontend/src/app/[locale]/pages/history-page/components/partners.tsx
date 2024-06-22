@@ -141,7 +141,7 @@ export default function Partners({locale}:any) {
               className={styles.swiperPar}>
                 {state.map((item:any, idx:any) => (
                   <SwiperSlide>
-                  	<a className={styles.slide} href={item.company_url}
+{/*                   	<a className={styles.slide} href={item.company_url}
 				style={{
 					textDecoration: "none",
 				}}
@@ -167,7 +167,7 @@ export default function Partners({locale}:any) {
                   )}
                   <div className={styles.text}>
                   {item.description}
-                  </div>
+                  </div> */}
                   </SwiperSlide>
                 
             ))}

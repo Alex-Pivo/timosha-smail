@@ -18,6 +18,7 @@ export default function Slider({locale}:any) {
   let localeValue = locale;
   let [state, setState] = useState<any[]>([]);
   let [mouse, setMouse] = useState(true);
+  let [active, setActive] = useState(true);
   const t = useTranslations('mSlider');
 
 
@@ -42,6 +43,10 @@ export default function Slider({locale}:any) {
 
   useEffect(() => {
     componentDidMount();
+
+    if (window.innerWidth <= 767) {
+      setActive((active = false));
+    } else{setActive(active = true)}
   }, []);
 
   return (
@@ -66,7 +71,7 @@ export default function Slider({locale}:any) {
             style={{
               width: "100%",
               height: "100%",
-              background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image1}")`,
+              background: `${active ? `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image1}")` : `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("/tel.jpg")`}`, 
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

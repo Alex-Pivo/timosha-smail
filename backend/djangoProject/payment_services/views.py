@@ -33,6 +33,7 @@ class DonateView(APIView):
         phone = request.data.get('phone')
         amount = request.data.get('amount')
         is_subscription = request.data.get('is_subscription')
+        print("ПІДПИСКА:",is_subscription)
 
         # Log the incoming data
         logger.info("Request data: name=%s, last_name=%s, email=%s, phone=%s, amount=%s, is_subscription=%s",

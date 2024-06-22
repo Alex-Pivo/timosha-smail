@@ -201,7 +201,7 @@ class LiqPayFunc:
             'result_url': f'http://95.169.204.16:3002/{new_language}/donate/status/{hashed_order_id}',
         }
 
-        if is_subscription is not None:
+        if is_subscription=='true':
             todays_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             params.update({
                 'email_data': '1',

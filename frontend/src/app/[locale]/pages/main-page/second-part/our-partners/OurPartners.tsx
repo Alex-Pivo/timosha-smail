@@ -1,10 +1,51 @@
+'use client'
 import styles from './OurPartners.module.scss'
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl';
+import axios from "axios";
+import { motion } from "framer-motion";
 
-export const OurPartners = () => {
+interface Partner {
+	id: number;
+	name: string;
+	logo: string;
+}
+
+interface OurPartnersProps {
+	locale: string;
+}
+
+export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 	const t = useTranslations("partners");
+	const [state, setState] = useState<any[]>([]);
+	let localeValue = locale;
+
+	useEffect(() => {
+		if (localeValue === "ua") {
+			localeValue = "uk";
+		}
+
+		// Initial fetch
+		fetchData();
+
+		// Set interval to fetch data every 60 seconds (60000 milliseconds)
+		const intervalId = setInterval(fetchData, 60000);
+
+		// Clear the interval on component unmount
+		return () => clearInterval(intervalId);
+	}, [localeValue]);
+
+	const fetchData = async () => {
+		try {
+			const res = await axios.get(`http://95.169.204.16:8000/partners/${localeValue}`);
+			console.log(res.data)
+			setState(res.data);
+		} catch (error) {
+			console.log("error", error);
+		}
+	};
+
 	return (
 		<section className={styles.helpOptions}>
 			<div className={styles.wrapper}>
@@ -19,66 +60,82 @@ export const OurPartners = () => {
 				</div>
 				<div className={styles.companies}>
 					<div className={styles.firstPart}>
-						<div className={styles.yk_agency}>
-							<span className={styles.yk}>y.k</span>
-							<span className={styles.agency}> Agency</span>
-						</div>
-						<div className={styles.diyami}>
-							<Image src={'/trivent.png'} alt={'town_image'} width={188} height={44}/>
-						</div>
-						<div className={styles.town_image}>
-							<Image src={'/town.png'} alt={'town_image'} width={220} height={117}/>
-						</div>
-						<div className={styles.bevar}>
-							<Image src={'/bevarr.jpeg'} alt={'bevar'} width={108} height={106}/>
-						</div>
-					</div>
-					<div className={styles.secondPart}>
-						<div className={styles.centro}>
-							<Image src={'/centro.png'} alt={'centro'} width={234} height={54}/>
-						</div>
-						<div className={styles.migrac}>
-							<Image src={'/partnerTerrGromada.png'} alt={'partnerTerrGromada'} width={87} height={117}/>
-						</div>
-						<div className={styles.comitatio}>
-							<Image src={'/comitatio.png'} alt={'comitatio'} width={227} height={59} />
-						</div>
+						{state.map((partner, idx) => (
+							<motion.a href={partner.company_url}
+									  className={styles.card}
+									  whileHover={{
+										  rotate: -3,
+										  transition: {duration: 0},
+										  backgroundImage: `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23649612FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e")`,
+									  }}
+									  style={{
+										  textDecoration: "none",
+									  }}
+							>
+								{partner.partner_name == "Y.K Agency" && (
+									<div className={styles.yk_agency}>
+										<span className={styles.yk}>y.k</span>
+										<span className={styles.agency}> AGENCY</span>
+									</div>
+								)}
+								{/*<a href={partner.company_url} target="_blank" rel="noopener noreferrer">*/}
+								{partner.partner_name != "Y.K Agency" && (
+										<div
+											className={styles.logo}
+											style={{
+												width: "100%",
+												height: "80px",
+												background: `url(http://95.169.204.16:8000/${partner.image})`,
+												marginTop: "0px",
+												backgroundPosition: "center",
+												backgroundSize: "contain",
+												backgroundRepeat: "no-repeat"
+											}}
+										></div>
+								)}
+
+							</motion.a>
+						))}
 					</div>
 				</div>
 
 				<div className={styles.companiesPhone}>
 					<div className={styles.firstPart}>
-						<div className={styles.yk_agency}>
-							<span className={styles.yk}>y.k</span>
-							<span className={styles.agency}> Agency</span>
-						</div>
-						<div className={styles.diyami}>
-							<Image src={'/trivent.png'} alt={'town_image'} width={188} height={44}/>
-						</div>
-					</div>
+						{state.map((partner, idx) => (
+							<motion.a href={partner.company_url}
+									  className={styles.card}
+									  whileHover={{
+										  rotate: -3,
+										  transition: {duration: 0},
+										  backgroundImage: `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23649612FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e")`,
+									  }}
+									  style={{
+										  textDecoration: "none",
+									  }}
+							>
+								{partner.partner_name == "Y.K Agency" && (
+									<div className={styles.yk_agency}>
+										<span className={styles.yk}>y.k</span>
+										<span className={styles.agency}> AGENCY</span>
+									</div>
+								)}
+								{partner.partner_name != "Y.K Agency" && (
+									<div
+										className={styles.logo}
+										style={{
+											width: "100%",
+											height: "80px",
+											background: `url(http://95.169.204.16:8000/${partner.image})`,
+											marginTop: "0px",
+											backgroundPosition: "center",
+											backgroundSize: "contain",
+											backgroundRepeat: "no-repeat"
+										}}
+									></div>
+								)}
 
-					<div className={styles.secondPart}>
-						<div className={styles.bevar}>
-							<Image src={'/bevarr.jpeg'} alt={'bevar'} width={108} height={106}/>
-						</div>
-						<div className={styles.town_image}>
-							<Image src={'/town.png'} alt={'town_image'} width={247} height={149}/>
-						</div>
-					</div>
-
-					<div className={styles.thirdPart} >
-						<div className={styles.centro}>
-							<Image src={'/centro.png'} alt={'centro'} width={234} height={54}/>
-						</div>
-						<div className={styles.migrac}>
-							<Image src={'/partnerTerrGromada.png'} alt={'partnerTerrGromada'} width={87} height={117}/>
-						</div>
-					</div>
-
-					<div className={styles.fourthPart}>
-						<div className={styles.comitatio}>
-							<Image src={'/comitatio.png'} alt={'comitatio'} width={227} height={59} />
-						</div>
+							</motion.a>
+						))}
 					</div>
 				</div>
 			</div>

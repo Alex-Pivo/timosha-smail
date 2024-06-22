@@ -204,6 +204,7 @@ class LiqPayFunc:
         if is_subscription == 'true':
             todays_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             params.update({
+                'description': f'Щомісячна підтримка початок з {todays_date} ',
                 'recurringbytoken': '1',
                 'subscribe_date_start': todays_date,
                 'subscribe_periodicity': 'month',

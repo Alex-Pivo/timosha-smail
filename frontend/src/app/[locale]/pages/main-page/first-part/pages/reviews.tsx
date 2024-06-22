@@ -115,7 +115,10 @@ export default function Reviews({ locale }: any) {
                 breakpoints={{
                   1200: {
                      spaceBetween: 20,
-                   }
+                   },
+                  320:{
+                    spaceBetween: 20,
+                  },
                 }}
                 className="newsSlider"
               >

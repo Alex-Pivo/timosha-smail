@@ -142,7 +142,6 @@ class LiqPayFunc:
         return order_id
     @staticmethod
     def check_payment_status(order_id):
-        print(order_id)
 
         liqpay = LiqPayFunc(settings.LIQPAY_PUBLIC_KEY, settings.LIQPAY_PRIVATE_KEY)
 
@@ -153,7 +152,6 @@ class LiqPayFunc:
             })
         if res.get('status') == 'success':
                 donate = LiqpayPayment.objects.get(order_id=order_id)
-                print(donate,'donate')
                 # donate.status = 'Successfully donated'
                 # donate.save()
             # return res.get('status')

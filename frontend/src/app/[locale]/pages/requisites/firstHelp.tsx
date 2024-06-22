@@ -13,8 +13,9 @@ export default function FirstHelp() {
   const [last_name, setLastname] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  let [is_subscription, setIs_subscription] = useState("false");
+  let [is_subscription, setIs_subscription] = useState("");
   let [amount, setAmount] = useState("");
+  let [sub, setSub] = useState("");
   const [paymentStatus, setPaymentStatus] = useState("");
   const [language, setLanguage] = useState("uk"); // Установка начального значения для языка
   const t = useTranslations("Donate");
@@ -27,10 +28,11 @@ export default function FirstHelp() {
   let [btnSix, setBtnSix] = useState(false);
   let [btnSeven, setBtnSeven] = useState(false);
   let [btnEight, setBtnEight] = useState(false);
-  let [active, setActive] = useState(true);
+  let [active, setActive] = useState("");
 
   const searchParams = useSearchParams();
   const amountPage = searchParams.get("amount");
+  const isSubscription = searchParams.get("is_subscription");
   let [amountP, setAmountP] = useState("");
 
   useEffect(() => {
@@ -38,6 +40,13 @@ export default function FirstHelp() {
       setAmount(amountPage.toString());
     }
   }, [amountPage]);
+
+  useEffect(() => {
+    if (isSubscription) {
+      setSub(isSubscription.toString());
+      setIs_subscription(isSubscription.toString());
+    }
+  }, [isSubscription]);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -183,22 +192,24 @@ export default function FirstHelp() {
             >
               <p className={styles.title}>
                 <span
-                  className={active ? styles.span__active : styles.span}
+                  className={(sub === "false") ? styles.span__active : styles.span}
                   id={styles.spanTitle}
                   onClick={() => {
-                    setActive((active = true));
+                    setActive((active = "true"));
                     setIs_subscription((is_subscription = "false"));
+                    setSub("false");
                   }}
                 >
                   {t("yes")}
                 </span>
                 <span id={styles.tag}>/</span>
                 <span
-                  className={active ? styles.span : styles.span__active}
+                  className={(sub === "true") ? styles.span__active : styles.span}
                   id={styles.spanTitle1}
                   onClick={() => {
-                    setActive((active = false));
+                    setActive((active = "false"));
                     setIs_subscription((is_subscription = "true"));
+                    setSub("true");
                   }}
                 >
                   {t("no")}

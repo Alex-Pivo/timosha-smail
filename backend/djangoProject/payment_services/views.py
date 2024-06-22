@@ -158,7 +158,7 @@ class LiqPayFunc:
 
 
     @staticmethod
-    def pay_view(amount,name, last_name, phone, email, is_subscription, language='uk'):
+    def pay_view(amount, name, last_name, phone, email, is_subscription: str, language='uk'):
         try:
             input_amount = Decimal(amount)
             if input_amount <= 0:
@@ -201,7 +201,8 @@ class LiqPayFunc:
             'result_url': f'http://95.169.204.16:3002/{new_language}/donate/status/{hashed_order_id}',
         }
 
-        if is_subscription=='true':
+        if is_subscription == 'true':
+            print('SUBSCRIBED')
             todays_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             params.update({
                 'email_data': '1',

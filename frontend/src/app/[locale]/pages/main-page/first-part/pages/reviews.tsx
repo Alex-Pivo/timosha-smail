@@ -161,7 +161,7 @@ export default function Reviews({ locale }: any) {
                   </SwiperSlide>
                 ))}
 
-                {active && (
+{/*                 {active && (
                     <SwiperSlide
                       style={{
                         visibility: "hidden",
@@ -181,7 +181,7 @@ export default function Reviews({ locale }: any) {
                         visibility: "hidden",
                       }}
                     ></SwiperSlide>
-                )}
+                )} */}
 
                 <BtnsSwiper></BtnsSwiper>
               </Swiper>

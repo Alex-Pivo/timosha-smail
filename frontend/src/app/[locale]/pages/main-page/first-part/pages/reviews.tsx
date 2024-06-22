@@ -112,6 +112,11 @@ export default function Reviews({ locale }: any) {
                 //     spaceBetween: 20,
                 //   }
                 // }}
+                breakpoints={{
+                  1200: {
+                     spaceBetween: 20,
+                   }
+                }}
                 className="newsSlider"
               >
                 {state.map((item: any, idx: any) => (

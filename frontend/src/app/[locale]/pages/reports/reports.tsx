@@ -534,6 +534,7 @@ export default function Reports({locale}:any) {
         <Swiper
                 // slidesPerView={1.19}
                 autoHeight={true}
+		slidesPerView="auto"
                 breakpoints={{
                   376:{
                     autoHeight: true,

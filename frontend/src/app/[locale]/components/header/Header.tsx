@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 // import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 import { getLocale, unstable_setRequestLocale } from "next-intl/server";
-
+import {motion} from "framer-motion";
 export default function Header({ locale }: any) {
   const router = useRouter();
   const pathname = usePathname();
@@ -90,11 +90,30 @@ export default function Header({ locale }: any) {
   if (loading) {
     return null;
   }
+  const textAnimation = {
+    hidden:{
+      y: -40,
+      opacity: 0,
+    },
+    visible: {
+      y:0,
+      opacity: 1,
+      transition: {
+        // delay: 0.2,
+        duration: 0.4
+      },
 
+    }
+  }
   return (
     <>
-      <header className={styles.header}>
-        <div className={styles.logo}>
+      <motion.header
+          initial="hidden"
+          whileInView="visible"
+          variants={textAnimation}
+          className={styles.header}>
+        <div
+            className={styles.logo}>
           <a href={"/"}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -227,7 +246,7 @@ export default function Header({ locale }: any) {
             <div></div>
           </div>
         </div>
-      </header>
+      </motion.header>
       <div className={active ? styles.burger__menu : styles.burger__menu__dis}>
         <div className={styles.head}>
           <p>

@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl';
 import axios from "axios";
 import { motion } from "framer-motion";
+import {rotate} from "next/dist/server/lib/squoosh/impl";
 
 interface Partner {
 	id: number;
@@ -63,7 +64,9 @@ export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 						{state.map((partner, idx) => (
 							<motion.a href={partner.company_url}
 									  className={styles.card}
-
+									  whileHover={{
+										  transform: "rotate(2deg)"
+									  }}
 									  style={{
 										  textDecoration: "none",
 									  }}
@@ -79,7 +82,7 @@ export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 										<div
 											className={styles.logo}
 											style={{
-												width: "100%",
+												width: "80%",
 												height: "80px",
 												background: `url(http://95.169.204.16:8000/${partner.image})`,
 												marginTop: "0px",
@@ -115,7 +118,7 @@ export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 									<div
 										className={styles.logo}
 										style={{
-											width: "100%",
+											width: "80%",
 											height: "80px",
 											background: `url(http://95.169.204.16:8000/${partner.image})`,
 											marginTop: "0px",

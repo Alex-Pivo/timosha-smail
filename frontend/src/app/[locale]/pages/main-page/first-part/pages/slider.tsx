@@ -79,7 +79,7 @@ export default function Slider({ locale }: any) {
                   active
                     ? `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image1}")`
                     : state[0].image1 ===
-                      "/media_storage/media_storage/main_page_images/comp.png"
+                      "/media_storage/media_storage/main_page_images/comp_pxgzyze.png"
                     ? `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("/tel.jpg")`
                     : `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image1}")`
                 }`,

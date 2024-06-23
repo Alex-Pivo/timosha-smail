@@ -15,7 +15,7 @@ export default function BankQR() {
 
   return (
     <>
-      <div id="bankQR" className={styles.bank}>
+      <div className={styles.bank}>
         <div className={styles.container}>
           <h2 className={styles.title}>Monobank, PayPal, Venmo, Cash App</h2>
 
@@ -130,7 +130,7 @@ export default function BankQR() {
                   }}
                 ></div>
               </a>
-              <p className={styles.text}>
+              <p id="crypto" className={styles.text}>
               {t("qrText")}
               </p>
             </div>

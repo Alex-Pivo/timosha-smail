@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useTranslations } from "next-intl";
 import { Link } from "@/navigation";
+import {motion} from "framer-motion";
 
 export default function HelpComponent() {
   let [btn, setBtn] = useState(false);
@@ -25,12 +26,29 @@ export default function HelpComponent() {
   const [paymentStatus, setPaymentStatus] = useState("");
   const [language, setLanguage] = useState("uk");
   const t = useTranslations("helpcomp");
-
+    const textAnimation = {
+        hidden:{
+            x: 100,
+            opacity: 0,
+        },
+        visible: {
+            x:0,
+            opacity: 1,
+            transition: {
+                // delay: 0.2,
+                duration: 0.3
+            },
+        }
+    }
   return (
     <>
-      <div className={styles.info__container}>
-        <form
+      <motion.div
+          initial="hidden"
+          whileInView="visible"
+          className={styles.info__container}>
+        <motion.form
           className={styles.help}
+          variants={textAnimation}
           action="{% url 'payment_services:pay_view' %}"
           method="POST"
         >
@@ -196,8 +214,8 @@ export default function HelpComponent() {
               <p>{t("down")}</p>
             </div>
           </div>
-        </form>
-      </div>
+       </motion.form>
+      </motion.div>
     </>
   );
 }

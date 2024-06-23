@@ -6,7 +6,10 @@ import styles from "./styles/firstHelp.module.scss";
 import { NavLink } from "react-router-dom";
 import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
+import {useLocale} from "next-intl";
 // var scroll = Scroll.animateScroll;
+
+
 
 export default function FirstHelp() {
   const [name, setName] = useState("");
@@ -14,11 +17,14 @@ export default function FirstHelp() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   let [is_subscription, setIs_subscription] = useState("");
+  let [currency, setCurrency] = useState("");
   let [amount, setAmount] = useState("");
-  let [sub, setSub] = useState("");
+  let [sub, setSub] = useState("false");
   const [paymentStatus, setPaymentStatus] = useState("");
   const [language, setLanguage] = useState("uk"); // Установка начального значения для языка
   const t = useTranslations("Donate");
+
+  let locale = useLocale();
 
   let [btn, setBtn] = useState(false);
   let [btnTwo, setBtnTwo] = useState(false);
@@ -34,6 +40,17 @@ export default function FirstHelp() {
   const amountPage = searchParams.get("amount");
   const isSubscription = searchParams.get("is_subscription");
   let [amountP, setAmountP] = useState("");
+
+  useEffect(() => {
+    if(locale === "ua"){
+      setCurrency(currency = "UAH");
+    } else if(locale === "ru"){
+      setCurrency(currency = "UAH");
+    }
+    else {
+      setCurrency(currency = "USD");
+    }
+  }, [locale]);
 
   useEffect(() => {
     if (amountPage) {
@@ -59,6 +76,7 @@ export default function FirstHelp() {
         email: email,
         amount: amount,
         is_subscription: is_subscription,
+        currency: currency,
       };
 
       const response = await axios.post(
@@ -216,7 +234,9 @@ export default function FirstHelp() {
                 </span>
               </p>
               <div className={styles.summa}>
-                <p className={styles.label}>{t("subtitle")}</p>
+                <p className={styles.label}>
+                {sub === "false" ?  t("subtitle") :  t("subtitle1")}
+                  </p>
                 <div className={styles.containerForm}>
                   <div
                     onClick={() => {
@@ -228,10 +248,10 @@ export default function FirstHelp() {
                       setBtnSix((btnSix = false));
                       setBtnSeven((btnSeven = false));
                       setBtnEight((btnEight = false));
-                      setAmount((amount = "150"));
+                      setAmount((amount = t("11")));
                     }}
                     className={
-                      btn || (amount === "150" && btnSix === false)
+                      btn || (amount === t("11") && btnSix === false)
                         ? styles.blockActive
                         : styles.block
                     }
@@ -248,10 +268,10 @@ export default function FirstHelp() {
                       setBtnSix((btnSix = false));
                       setBtnSeven((btnSeven = false));
                       setBtnEight((btnEight = false));
-                      setAmount((amount = "300"));
+                      setAmount((amount = t("22")));
                     }}
                     className={
-                      btnTwo || (amount === "300" && btnSix === false)
+                      btnTwo || (amount === t("22") && btnSix === false)
                         ? styles.blockActive
                         : styles.block
                     }
@@ -268,10 +288,10 @@ export default function FirstHelp() {
                       setBtnSix((btnSix = false));
                       setBtnSeven((btnSeven = false));
                       setBtnEight((btnEight = false));
-                      setAmount((amount = "500"));
+                      setAmount((amount = t("33")));
                     }}
                     className={
-                      btnThree || (amount === "500" && btnSix === false)
+                      btnThree || (amount === t("33") && btnSix === false)
                         ? styles.blockActive
                         : styles.block
                     }
@@ -288,10 +308,10 @@ export default function FirstHelp() {
                       setBtnSix((btnSix = false));
                       setBtnSeven((btnSeven = false));
                       setBtnEight((btnEight = false));
-                      setAmount((amount = "1000"));
+                      setAmount((amount = t("44")));
                     }}
                     className={
-                      btnFour || (amount === "1000" && btnSix === false)
+                      btnFour || (amount === t("44") && btnSix === false)
                         ? styles.blockActive
                         : styles.block
                     }
@@ -309,10 +329,10 @@ export default function FirstHelp() {
                       setBtnSix((btnSix = false));
                       setBtnSeven((btnSeven = true));
                       setBtnEight((btnEight = false));
-                      setAmount((amount = "1500"));
+                      setAmount((amount = t("55")));
                     }}
                     className={
-                      btnSeven || (amount === "1500" && btnSix === false)
+                      btnSeven || (amount === t("55") && btnSix === false)
                         ? styles.blockActive
                         : styles.block
                     }
@@ -330,10 +350,10 @@ export default function FirstHelp() {
                       setBtnSix((btnSix = false));
                       setBtnSeven((btnSeven = false));
                       setBtnEight((btnEight = false));
-                      setAmount((amount = "3000"));
+                      setAmount((amount = t("66")));
                     }}
                     className={
-                      btnFive || (amount === "3000" && btnSix === false)
+                      btnFive || (amount === t("66") && btnSix === false)
                         ? styles.blockActive
                         : styles.block
                     }
@@ -350,10 +370,10 @@ export default function FirstHelp() {
                       setBtnSix((btnSix = false));
                       setBtnSeven((btnSeven = false));
                       setBtnEight((btnEight = true));
-                      setAmount((amount = "5000"));
+                      setAmount((amount = t("77")));
                     }}
                     className={
-                      btnEight || (amount === "5000" && btnSix === false)
+                      btnEight || (amount === t("77") && btnSix === false)
                         ? styles.blockActive
                         : styles.block
                     }
@@ -371,7 +391,7 @@ export default function FirstHelp() {
                       setBtnEight((btnEight = false));
                       setBtnSix((btnSix = true));
                     }}
-                    className={btnSix || (amount === amountPage && (amountPage !== "150" && amountPage !== "300" && amountPage !== "500" && amountPage !== "1000" && amountPage !== "5000")) ? styles.blockActive : styles.block}
+                    className={btnSix || (amount === amountPage && (amountPage !== t("11") && amountPage !== t("22") && amountPage !== t("33") && amountPage !== t("44") && amountPage !== t("77"))) ? styles.blockActive : styles.block}
                   >
                     {t("another")}
                   </div>
@@ -380,7 +400,7 @@ export default function FirstHelp() {
               <input
                 type="text"
                 placeholder={t("amount")}
-                className={btnSix || (amount === amountPage && (amountPage !== "150" && amountPage !== "300" && amountPage !== "500" && amountPage !== "1000" && amountPage !== "5000")) ? styles.inputActive : styles.input}
+                className={btnSix || (amount === amountPage && (amountPage !== t("11") && amountPage !== t("22") && amountPage !== t("33") && amountPage !== t("44") && amountPage !== t("77"))) ? styles.inputActive : styles.input}
                 value={amount}
                 onChange={(e) => {
                   setAmount(e.target.value);
@@ -438,12 +458,19 @@ export default function FirstHelp() {
                   style={{ visibility: "hidden" }}
                   value={is_subscription}
                 />
+                <input
+                  type="text"
+                  name="currency"
+                  id="currency"
+                  style={{ visibility: "hidden" }}
+                  value={currency}
+                />
               </div>
               <div className={styles.btn__container}>
                 <button className={styles.btn} type="submit">
                   {t("btn")}
                 </button>
-                <div className={styles.description}>
+                <div id="bank" className={styles.description}>
                   <svg
                     className={styles.star}
                     xmlns="http://www.w3.org/2000/svg"

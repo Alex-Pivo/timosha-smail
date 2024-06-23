@@ -9,16 +9,19 @@ import BtnsSwiper from "../components/btnsSwiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/free-mode";
 
 import "../styles/reviewsSwipe.css";
 import styles from "../styles/reviews.module.scss";
 import { unstable_setRequestLocale } from "next-intl/server";
+import { FreeMode } from "swiper/modules";
 
 export default function Reviews({ locale }: any) {
   let localeValue = locale;
   let [state, setState] = useState<any[]>([]);
   const t = useTranslations("mReviews");
   let [active, setActive] = useState(true);
+  const [activeSlide, setActiveSlide] = useState(null);
 
   function componentDidMount() {
     if (localeValue === "ua") {
@@ -42,7 +45,7 @@ export default function Reviews({ locale }: any) {
     componentDidMount();
 
     if (window.innerWidth <= 767) {
-      setActive((active = false));
+      setActive((active = true));
     }
   }, []);
 
@@ -59,70 +62,19 @@ export default function Reviews({ locale }: any) {
                 slidesPerView="auto"
                 spaceBetween={40}
                 speed={800}
-                // breakpoints={{
-                //   1442: {
-                //     width: 1442,
-                //     slidesPerView: 4.3,
-                //   },
-                //   830: {
-                //     spaceBetween: 20,
-                //   },
-                //   450 :{
-                //     slidesPerView: 1.8,
-                //     spaceBetween: 20,
-                //   },
-                //   440 :{
-                //     slidesPerView: 1.75,
-                //     spaceBetween: 20,
-                //   },
-                //   430 :{
-                //     slidesPerView: 1.7,
-                //     spaceBetween: 20,
-                //   },
-                //   420 :{
-                //     slidesPerView: 1.65,
-                //     spaceBetween: 20,
-                //   },
-                //   410 :{
-                //     slidesPerView: 1.6,
-                //     spaceBetween: 20,
-                //   },
-                //   400 :{
-                //     slidesPerView: 1.55,
-                //     spaceBetween: 20,
-                //   },
-                //   390 :{
-                //     slidesPerView: 1.5,
-                //     spaceBetween: 20,
-                //   },
-                //   380 :{
-                //     slidesPerView: 1.45,
-                //     spaceBetween: 20,
-                //   },
-                //   370 :{
-                //     slidesPerView: 1.4,
-                //     spaceBetween: 20,
-                //   },
-                //   360 :{
-                //     slidesPerView: 1.35,
-                //     spaceBetween: 20,
-                //   },
-                //   320 :{
-                //     slidesPerView: 1.4,
-                //     spaceBetween: 20,
-                //   }
-                // }}
+                freeMode={true}
+                modules={[FreeMode]}
                 breakpoints={{
                   1200: {
-                     spaceBetween: 20,
-                   },
-                  320:{
+                    spaceBetween: 20,
+                  },
+                  320: {
                     spaceBetween: 20,
                   },
                 }}
                 className="newsSlider"
               >
-                {state.map((item: any, idx: any) => (
+                {/* {state.map((item: any, idx: any) => (
                   <SwiperSlide key={idx}>
                     {({ isActive }) => (
                       <div
@@ -167,30 +119,75 @@ export default function Reviews({ locale }: any) {
                       </div>
                     )}
                   </SwiperSlide>
-                ))}
+                ))} */}
 
-{/*                 {active && (
+                {state.map((item: any, idx: any) => (
+                  <SwiperSlide key={idx}>
+                    <div
+                      className={
+                        activeSlide === idx ? styles.slide : styles.slideNot
+                      }
+                      onClick={() => setActiveSlide(idx)}
+                    >
+                      <div
+                        className={
+                          activeSlide === idx ? styles.info : styles.dis
+                        }
+                      >
+                        <p className={styles.text}>{item.message}</p>
+                        <p className={styles.name}>{item.name}</p>
+                      </div>
+                      <div
+                        className={
+                          activeSlide === idx ? styles.video : styles.dis
+                        }
+                        style={{
+                          visibility: "visible",
+                          width: "50%",
+                          height: "100%",
+                          background: `url("http://95.169.204.16:8000/${item.image}")`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                        }}
+                      ></div>
+                      <p
+                        className={
+                          activeSlide === idx ? styles.dis : styles.text
+                        }
+                      >
+                        {item.message}
+                      </p>
+                      <p
+                        className={
+                          activeSlide === idx ? styles.dis : styles.name
+                        }
+                      >
+                        {item.name}
+                      </p>
+                    </div>
+                  </SwiperSlide>
+                ))}
+                {/* {active && (
+                    <SwiperSlide
+                      style={{
+                        visibility: "hidden",
+                      }}
+                    ></SwiperSlide>
+                )}
+                {active && (
+                    <SwiperSlide
+                      style={{
+                        visibility: "hidden",
+                      }}
+                    ></SwiperSlide>
+                )}
+                {active && (
                     <SwiperSlide
                       style={{
                         visibility: "hidden",
                       }}
                     ></SwiperSlide>
                 )} */}
-                {active && (
-                    <SwiperSlide
-                      style={{
-                        visibility: "hidden",
-                      }}
-                    ></SwiperSlide>
-                )}
-                {active && (
-                    <SwiperSlide
-                      style={{
-                        visibility: "hidden",
-                      }}
-                    ></SwiperSlide>
-                )}
-
                 <BtnsSwiper></BtnsSwiper>
               </Swiper>
             </div>

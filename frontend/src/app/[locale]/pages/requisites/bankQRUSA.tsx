@@ -16,7 +16,7 @@ export default function BankQRUSA() {
   const t = useTranslations('Donate');
   return (
     <>
-      <div id="bankQR" className={styles.bank}>
+      <div className={styles.bank}>
         <div className={styles.container}>
           <h2 className={styles.title}>Venmo, Zelle, Cash App, PayPall</h2>
 
@@ -128,7 +128,7 @@ export default function BankQRUSA() {
                   }}
                 ></div>
               </a>
-              <p className={styles.text}>
+              <p id="chek" className={styles.text}>
               {t("qrText")}
               </p>
             </div>

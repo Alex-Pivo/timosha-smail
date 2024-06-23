@@ -60,7 +60,9 @@ export default function HelpComponent() {
           </p>
 
           <div className={styles.summa}>
-            <p className={styles.label}> {t("subtitle")}</p>
+            <p className={styles.label}> 
+              {active ?  t("subtitle") :  t("subtitle1")}
+              </p>
             <div className={styles.container}>
               <div
                 onClick={() => {
@@ -70,7 +72,7 @@ export default function HelpComponent() {
                   setBtnFour((btnFour = false));
                   setBtnFive((btnFive = false));
                   setBtnSix((btnSix = false));
-                  setAmount((amount = "150"));
+                  setAmount((amount = t("11")));
                 }}
                 className={btn ? styles.blockActive : styles.block}
               >
@@ -84,7 +86,7 @@ export default function HelpComponent() {
                   setBtnFour((btnFour = false));
                   setBtnFive((btnFive = false));
                   setBtnSix((btnSix = false));
-                  setAmount((amount = "300"));
+                  setAmount((amount = t("22")));
                 }}
                 className={btnTwo ? styles.blockActive : styles.block}
               >
@@ -98,7 +100,7 @@ export default function HelpComponent() {
                   setBtnFour((btnFour = false));
                   setBtnFive((btnFive = false));
                   setBtnSix((btnSix = false));
-                  setAmount((amount = "500"));
+                  setAmount((amount = t("33")));
                 }}
                 className={btnThree ? styles.blockActive : styles.block}
               >
@@ -112,7 +114,7 @@ export default function HelpComponent() {
                   setBtnFour((btnFour = true));
                   setBtnFive((btnFive = false));
                   setBtnSix((btnSix = false));
-                  setAmount((amount = "1000"));
+                  setAmount((amount = t("44")));
                 }}
                 className={btnFour ? styles.blockActive : styles.block}
               >
@@ -126,7 +128,7 @@ export default function HelpComponent() {
                   setBtnFour((btnFour = false));
                   setBtnFive((btnFive = true));
                   setBtnSix((btnSix = false));
-                  setAmount((amount = "5000"));
+                  setAmount((amount = t("55")));
                 }}
                 className={btnFive ? styles.blockActive : styles.block}
               >

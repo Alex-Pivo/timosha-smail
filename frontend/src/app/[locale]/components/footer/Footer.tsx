@@ -46,15 +46,15 @@ export const Footer: React.FC = () => {
 	};
 	const logoStyles: Record<Language, { width: string, height: string }> = {
 		ua: { width: '119px', height: '63px' },
-		en: { width: '135px', height: '135px' },
-		ru: { width: '190px', height: '105px' },
-		it: { width: '135px', height: '135px'},
+		en: {  width: '140px', height: '77px' },
+		ru: { width: '160px', height: '90px' },
+		it: {  width: '140px', height: '77px'},
 	};
 	const logoStylesPhone: Record<Language, { width: string, height: string, marginTop?: string }> = {
 		ua: { width: '119px', height: '63px' },
-		en: { width: '100px', height: '105px' },
+		en: { width: '119px', height: '63px' },
 		ru: { width: '140px', height: '85px', },
-		it: { width: '100px', height: '105px'},
+		it: { width: '119px', height: '63px'},
 	};
 	const logoStylePhone  = logoStylesPhone[selectedLanguage as Language] || logoStylesPhone['en'];
 

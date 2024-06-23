@@ -59,7 +59,7 @@ export const TohPartner = () => {
 						</p>
 					</div>
 					<div className={styles.joinBtn}>
-						<button className={styles.contact} onClick={scrollToContact}>
+						<button className={styles.contact} onClick={() => handleButtonClick('friendship')}>
 							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="34" viewBox="0 0 25 34" fill="none">
 								<path
 									d="M12.5 31.6667L23.25 20.6667M12.5 31.6667L1.75 20.6667M12.5 31.6667L12.5 12.4167M12.5 2.33342L12.5 6.91675"
@@ -71,7 +71,7 @@ export const TohPartner = () => {
 				</div>
 			</div>
 			<div className={styles.joinBtnTablet}>
-				<button className={styles.contact} onClick={scrollToContact}>
+				<button className={styles.contact} onClick={() => handleButtonClick('friendship')}>
 					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="34" viewBox="0 0 25 34" fill="none">
 						<path
 							d="M12.5 31.6667L23.25 20.6667M12.5 31.6667L1.75 20.6667M12.5 31.6667L12.5 12.4167M12.5 2.33342L12.5 6.91675"

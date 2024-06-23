@@ -3,6 +3,8 @@
 
 .newsSlider {
   height: 515px;
+  width: auto !important;
+  padding-right: 30px !important;
 }
 
 .newsSlider .swiper-backface-hidden {
@@ -11,11 +13,12 @@
 }
 
 .newsSlider .swiper-wrapper {
+  width: auto!important;
   height: 345px;
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  justify-content: space-between !important;
+  justify-content: flex-start !important;
 }
 
 .newsSlider .swiper-wrapper .swiper-slide {
@@ -71,6 +74,7 @@
 @media screen and (min-width: 767px) and (max-width:1201px){
   .newsSlider {
     height: 258px;
+    padding-right: 14px !important;
   }
 
   .newsSlider .swiper-wrapper {
@@ -101,6 +105,7 @@
 @media screen and (min-width: 320px) and (max-width: 767px){
   .newsSlider {
     height: 250px;
+    padding-right: 0px !important;
   }
 
   .newsSlider .swiper-wrapper {

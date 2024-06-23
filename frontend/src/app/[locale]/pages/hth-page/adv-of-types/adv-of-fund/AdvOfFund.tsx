@@ -6,6 +6,9 @@ import {useScroll} from "@/app/[locale]/components/scroll-context/ScrollContext"
 export const Fundraising = () => {
 	const t = useTranslations("htj");
 	const { scrollToContact } = useScroll();
+	const handleButtonClick = (param: string) => {
+		scrollToContact(param);
+	};
 	return (
 		<section className={styles.fundraising}>
 			<div className={styles.wrapper}>
@@ -57,7 +60,7 @@ export const Fundraising = () => {
 				</div>
 			</div>
 			<div className={styles.joinBtn}>
-				<button className={styles.contact} onClick={scrollToContact}>
+				<button className={styles.contact} onClick={() => handleButtonClick('fund')}>
 					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="34" viewBox="0 0 25 34" fill="none">
 						<path
 							d="M12.5 31.6667L23.25 20.6667M12.5 31.6667L1.75 20.6667M12.5 31.6667L12.5 12.4167M12.5 2.33342L12.5 6.91675"

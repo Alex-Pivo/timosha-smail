@@ -64,6 +64,8 @@ export default function Slider({locale}:any) {
         navigation={false}
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
+        simulateTouch={!active}
+        allowTouchMove={!active}
         className={styles.swiper}
       >
           <SwiperSlide className={styles.swiperslide}>
@@ -71,7 +73,12 @@ export default function Slider({locale}:any) {
             style={{
               width: "100%",
               height: "100%",
-              background: `${active ? `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image1}")` : `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("/tel.jpg")`}`, 
+              background: `${active 
+                ? `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image1}")` 
+                : (state[0].image1 === "/media_storage/media_storage/main_page_images/comp.png" 
+                    ? `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("/tel.jpg")` 
+                    : `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image1}")`
+                )}`,         
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

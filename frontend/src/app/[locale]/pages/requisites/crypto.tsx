@@ -21,7 +21,7 @@ export default function Crypto() {
 
   return (
     <>
-      <div id="crypto" className={styles.crypto}>
+      <div className={styles.crypto}>
         <div className={styles.container}>
           <h2 className={styles.title}>{t("title4")}</h2>
 

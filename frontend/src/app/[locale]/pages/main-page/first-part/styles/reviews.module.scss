@@ -79,6 +79,7 @@
 
           background-color: #ececec;
           border-radius: 20px;
+          transition: all 0.4s ease 0s;
 
           padding: 31px 45px 37px 45px;
 
@@ -214,7 +215,7 @@
         }
 
         .slideNot {
-          width: 313px !important;
+          width: 708px !important;
           height: 249px !important;
           box-sizing: border-box;
 
@@ -227,11 +228,12 @@
           align-items: flex-start;
           justify-content: space-between;
 
-          // transition: all 0.4s ease 0s;
+          transition: all 0.4s ease 0s;
+          cursor: pointer;
 
           .talk {
             position: absolute;
-            left: 583px;
+            left: 523px;
             top: 0px;
             z-index: 20;
             display: none;
@@ -646,7 +648,7 @@
           }
   
           .slideNot {
-            width: 313px !important;
+            width: 632px !important;
             height: 249px !important;
             box-sizing: border-box;
   
@@ -1062,7 +1064,7 @@
           }
   
           .slideNot {
-            width: 174px !important;
+            width: 367px !important;
             height: 138px !important;
             box-sizing: border-box;
   
@@ -1330,6 +1332,7 @@
   
             position: relative;
             box-sizing: border-box;
+            transition: all 0.4s ease 0s;
   
             .talk {
               position: absolute;
@@ -1458,7 +1461,7 @@
   
           .slideNot {
             width: 252px !important;
-            height: 128px !important;
+            height: 108px !important;
             box-sizing: border-box;
   
             padding: 20px 21px 19.5px 21px;
@@ -1470,7 +1473,7 @@
             align-items: flex-start;
             justify-content: space-between;
   
-            // transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
   
             .talk {
               position: absolute;

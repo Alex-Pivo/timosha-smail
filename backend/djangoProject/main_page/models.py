@@ -18,7 +18,7 @@ class MainPageSetting(models.Model):
     image4 = models.ImageField(upload_to='media_storage/main_page_images', blank=False, default=None,verbose_name="Фото 4")
     image5 = models.ImageField(upload_to='media_storage/main_page_images', blank=False, default=None,verbose_name="Фото 5")
     image6 = models.ImageField(upload_to='media_storage/main_page_images', blank=False, default=None,verbose_name="Фото 6")
-    image1_url_new = models.URLField(verbose_name="Посилання статті на 'Фото 1 '")
+    image1_url_new = models.URLField(verbose_name="Посилання статті на 'Фото 1 '",blank=True,null=False,default='')
     language = models.CharField(max_length=30, choices=ChooseLanguage.choices, default=ChooseLanguage.ukrainian,verbose_name="Мова сайту")
 
     def __str__(self):

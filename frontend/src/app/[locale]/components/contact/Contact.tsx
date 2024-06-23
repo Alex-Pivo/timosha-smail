@@ -1,7 +1,7 @@
 'use client'
 import styled from "styled-components";
 import styles from './Contact.module.scss';
-import React, {ChangeEvent, useRef, useState} from 'react'
+import React, {ChangeEvent, useEffect, useRef, useState} from 'react'
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 import axios from "axios";
@@ -36,6 +36,10 @@ export const Contact = () => {
 		setPhoneError(false);
 		setDescriptionError(false);
 	};
+	const { contactSectionRef } = useScroll();
+	const { scrollParam } = useScroll();
+	console.log(typeof scrollParam)
+
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		if (!name) {
@@ -88,6 +92,15 @@ export const Contact = () => {
 		}
 	};
 
+	useEffect(() => {
+		console.log('heello', activeButton)
+
+		if (scrollParam !== undefined) {
+			console.log('heello', activeButton)
+			setActiveButton(scrollParam);
+		}
+	}, [scrollParam]);
+
 	const ModalWrapper = ({ onClose, children }: { onClose: () => void; children: React.ReactNode }) => {
 		const handleClickOutside = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 			if (event.target === event.currentTarget) {
@@ -106,7 +119,6 @@ export const Contact = () => {
 	const handleSelectChange = (event:any) => {
 		setActiveButton(event.target.value);
 	};
-	const { contactSectionRef } = useScroll();
 	return (
 		<>
 			{showModal &&

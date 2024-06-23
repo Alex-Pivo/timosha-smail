@@ -12,7 +12,7 @@ export default function Chek() {
 
   return (
     <>
-      <div id="chek" className={styles.bank}>
+      <div className={styles.bank}>
         <div className={styles.container}>
           <p className={styles.title}>{t('title6')}</p>
 
@@ -58,7 +58,7 @@ export default function Chek() {
               <div className={active ? styles.massage__active : styles.massage}>
                 Copy to clipboard
               </div>
-              <svg
+              <svg id="found"
                 onMouseOver={() => {
                   setActive((active = true));
                 }}

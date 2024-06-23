@@ -207,7 +207,7 @@ export default function FirstHelpUsa() {
                     fill="#EBD041"
                   />
                 </svg>
-                <p>{t('down')}</p>
+                <p id="bankQR">{t('down')}</p>
               </div>
             </div>
           </form>

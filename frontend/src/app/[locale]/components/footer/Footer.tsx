@@ -30,6 +30,22 @@ export const Footer: React.FC = () => {
 			setCookiesAccepted(true);
 		}
 	}, []);
+
+	const handleDownload = () => {
+		const docUrls = {
+			ua: '/files/Публічна оферта фонд.doc',
+			en: '/files/public_offer_timoshas_smile.doc',
+			ru: '/files/Публичная_оферта_на_благотворительные_пожертвования.doc',
+			it: '/files/Offerta pubblica per donazioni benefiche.doc',
+		};
+
+		const docUrl = docUrls[selectedLanguage] || docUrls.en;
+		const link = document.createElement('a');
+		link.href = docUrl;
+		link.download = docUrl.split('/').pop();
+		link.click();
+	};
+
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.wrapper}>
@@ -167,9 +183,9 @@ export const Footer: React.FC = () => {
 								</svg>
 							</a>
 						</div>
-						<a href="" className={styles.profit}>
+						<div className={styles.profit} onClick={handleDownload}>
 							{t('user')}
-						</a>
+						</div>
 					</div>
 
 				<div className={styles.navListPhone}>
@@ -256,9 +272,9 @@ export const Footer: React.FC = () => {
 								</a>
 							</div>
 						</div>
-						<a href="" className={styles.profit}>
+						<div className={styles.profit} onClick={handleDownload}>
 							{t('user')}
-						</a>
+						</div>
 					</div>
 					<div className={styles.socialMedia}>
 						<a target="_blank" href="https://www.youtube.com/@timoshas_smile">

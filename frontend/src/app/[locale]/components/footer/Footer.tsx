@@ -38,8 +38,10 @@ export const Footer: React.FC = () => {
 		ru: '/files/Публичная_оферта_на_благотворительные_пожертвования.doc',
 		it: '/files/Offerta pubblica per donazioni benefiche.doc',
 	};
+
 	const handleDownload = () => {
-		const docUrl = docUrls[selectedLanguage] || docUrls.en;
+		const lang = (selectedLanguage as Language) || 'en';
+		const docUrl = docUrls[lang];
 		const link = document.createElement('a');
 		link.href = docUrl;
 		link.download = docUrl.split('/').pop()!;

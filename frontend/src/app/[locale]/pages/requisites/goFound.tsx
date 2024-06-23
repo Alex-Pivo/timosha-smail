@@ -34,7 +34,7 @@ export default function GoFound() {
 
   return (
     <>
-      <div id="found" className={styles.firstHelp}>
+      <div className={styles.firstHelp}>
         <div className={styles.container}>
           <form
             action="{% url 'payment_services:pay_view' %}"
@@ -64,7 +64,7 @@ export default function GoFound() {
                     fill="#EBD041"
                   />
                 </svg>
-                <p>{t('down')}</p>
+                <p id="crypto">{t('down')}</p>
               </div>
             </div>
           </form>

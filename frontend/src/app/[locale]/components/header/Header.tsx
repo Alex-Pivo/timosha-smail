@@ -55,7 +55,7 @@ export default function Header({ locale }: any) {
       setCookiesAccepted(true);
     }
   }, []);
-  type Locale = "ua" | "en" | "ru" | "it" | undefined;
+  type Locale = "ua" | "en" | "ru" | "it";
 
   const handleLanguageChange = async (
     event: React.ChangeEvent<HTMLSelectElement>

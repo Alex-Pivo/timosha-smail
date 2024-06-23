@@ -225,9 +225,11 @@ export const Footer: React.FC = () => {
 				</div>
 				<div className={styles.contactPhone}>
 					<div className={styles.wrapperContact}>
-						<p className={styles.address}>
-							{t('city')} <br/>{t('street')}<br/>{t('code')}
-						</p>
+						<Link href="https://maps.app.goo.gl/zXE8Ft1jG1CNE8x5A">
+							<p className={styles.address}>
+								{t('city')} <br/>{t('street')}<br/>{t('code')}
+							</p>
+						</Link>
 						<div className={styles.phoneNumber}>
 							<div className={styles.countryPhone}>
 								<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"

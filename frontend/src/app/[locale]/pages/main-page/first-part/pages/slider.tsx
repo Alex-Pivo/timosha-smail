@@ -14,29 +14,28 @@ import styles from "../styles/firstSlider.module.scss";
 import BtnsFirstSwiper from "../components/btnsFirstSwiper";
 import { Pagination, Autoplay, EffectFade } from "swiper/modules";
 
-export default function Slider({locale}:any) {
+export default function Slider({ locale }: any) {
   let localeValue = locale;
   let [state, setState] = useState<any[]>([]);
   let [mouse, setMouse] = useState(true);
   let [active, setActive] = useState(true);
-  const t = useTranslations('mSlider');
+  const t = useTranslations("mSlider");
 
-
-  function componentDidMount(){
-    if(localeValue === "ua"){
+  function componentDidMount() {
+    if (localeValue === "ua") {
       localeValue = "";
     }
-    try{
+    try {
       let data;
-      axios.get(`http://95.169.204.16:8000/${localeValue}/`)
-      .then(res => {
-        data = res.data;
-        setState(data);
-        console.log(data);
-      })
-      .catch(err => { })
-    }
-    catch(error){
+      axios
+        .get(`http://95.169.204.16:8000/${localeValue}/`)
+        .then((res) => {
+          data = res.data;
+          setState(data);
+          console.log(data);
+        })
+        .catch((err) => {});
+    } catch (error) {
       console.log("error", error);
     }
   }
@@ -46,44 +45,50 @@ export default function Slider({locale}:any) {
 
     if (window.innerWidth <= 767) {
       setActive((active = false));
-    } else{setActive(active = true)}
+    } else {
+      setActive((active = true));
+    }
   }, []);
 
   return (
     <>
-    {state.length > 0 && (
-      <Swiper
-        direction={"vertical"}
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={{
-          delay: 10500,
-          disableOnInteraction: false,
-        }}
-        navigation={false}
-        modules={[Autoplay, Pagination, EffectFade]}
-        effect="fade"
-        simulateTouch={!active}
-        allowTouchMove={!active}
-        className={styles.swiper}
-      >
+      {state.length > 0 && (
+        <Swiper
+          direction={"vertical"}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 10500,
+            disableOnInteraction: false,
+          }}
+          navigation={false}
+          modules={[Autoplay, Pagination, EffectFade]}
+          effect="fade"
+          simulateTouch={!active}
+          allowTouchMove={!active}
+          className={styles.swiper}
+        >
           <SwiperSlide className={styles.swiperslide}>
-            <div className={styles.firstImage}
-            style={{
-              width: "100%",
-              height: "100%",
-              background: `${active 
-                ? `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image1}")` 
-                : (state[0].image1 === "/media_storage/media_storage/main_page_images/comp.png" 
-                    ? `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("/tel.jpg")` 
+            <div
+              className={styles.firstImage}
+              style={{
+                width: "100%",
+                height: "100%",
+                background: `${
+                  active
+                    ? `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image1}")`
+                    : state[0].image1 ===
+                      "/media_storage/media_storage/main_page_images/comp.png"
+                    ? `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("/tel.jpg")`
                     : `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image1}")`
-                )}`,         
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+                }`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className={styles.info__container1}>
+                {state[0].image1_url_new && (
                   <div
                     onMouseEnter={() => {
                       setMouse((mouse = false));
@@ -97,12 +102,13 @@ export default function Slider({locale}:any) {
                     className={styles.zone}
                   >
                     <div className={styles.circle}>
-                      <a href={state[0].image1_url_new}>{t('read')}</a>
+                      <a href={state[0].image1_url_new}>{t("read")}</a>
                     </div>
                   </div>
-                  <p className={mouse ? styles.myk : styles.mykDis}>
+                )}
+                <p className={mouse ? styles.myk : styles.mykDis}>
                   {state[0].child_name} <br /> {state[0].child_age}
-                  </p>
+                </p>
               </div>
               <div className={styles.text}>
                 <svg
@@ -120,27 +126,36 @@ export default function Slider({locale}:any) {
                     stroke-linecap="round"
                   />
                 </svg>
-                <svg className={styles.line1} xmlns="http://www.w3.org/2000/svg" width="296" height="63" viewBox="0 0 296 63" fill="none">
-                  <path d="M193.87 3.06139C182.334 3.06138 104.319 1.32106 37.1258 16.3733C-7.47589 26.3647 -9.2659 44.2006 37.1259 52.4374C105.76 64.6232 185.125 60.9261 256.237 49.5602C294.587 43.4307 319.167 26.6458 245.281 16.3733C232.865 14.647 196.563 12.8639 160.629 14.2449" stroke="#649612" stroke-width="6" stroke-linecap="round"/>
+                <svg
+                  className={styles.line1}
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="296"
+                  height="63"
+                  viewBox="0 0 296 63"
+                  fill="none"
+                >
+                  <path
+                    d="M193.87 3.06139C182.334 3.06138 104.319 1.32106 37.1258 16.3733C-7.47589 26.3647 -9.2659 44.2006 37.1259 52.4374C105.76 64.6232 185.125 60.9261 256.237 49.5602C294.587 43.4307 319.167 26.6458 245.281 16.3733C232.865 14.647 196.563 12.8639 160.629 14.2449"
+                    stroke="#649612"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
                 </svg>
-                <h1 className={styles.title}>
-                {t('title1')}
-                </h1>
-                <h3 className={styles.description}>
-                {t('subtitle')}
-                </h3>
+                <h1 className={styles.title}>{t("title1")}</h1>
+                <h3 className={styles.description}>{t("subtitle")}</h3>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide className={styles.swiperslide}>
-            <div className={styles.secondImage}
-            style={{
-              width: "100%",
-              height: "100%",
-              background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image2}")`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            <div
+              className={styles.secondImage}
+              style={{
+                width: "100%",
+                height: "100%",
+                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image2}")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className={styles.text}>
                 <svg
@@ -158,24 +173,21 @@ export default function Slider({locale}:any) {
                     stroke-linecap="round"
                   />
                 </svg>
-                <h1 className={styles.title}>
-                {t('title2')}
-                </h1>
-                <h3 className={styles.description}>
-                {t('subtitle')}
-                </h3>
+                <h1 className={styles.title}>{t("title2")}</h1>
+                <h3 className={styles.description}>{t("subtitle")}</h3>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide className={styles.swiperslide}>
-            <div className={styles.thirdImage}
-            style={{
-              width: "100%",
-              height: "100%",
-              background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image3}")`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            <div
+              className={styles.thirdImage}
+              style={{
+                width: "100%",
+                height: "100%",
+                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image3}")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className={styles.text}>
                 <svg
@@ -193,24 +205,21 @@ export default function Slider({locale}:any) {
                     stroke-linecap="round"
                   />
                 </svg>
-                <h1 className={styles.title}>
-                {t('title3')}
-                </h1>
-                <h3 className={styles.description}>
-                {t('subtitle')}
-                </h3>
+                <h1 className={styles.title}>{t("title3")}</h1>
+                <h3 className={styles.description}>{t("subtitle")}</h3>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide className={styles.swiperslide}>
-            <div className={styles.fourthImage}
-            style={{
-              width: "100%",
-              height: "100%",
-              background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image4}")`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            <div
+              className={styles.fourthImage}
+              style={{
+                width: "100%",
+                height: "100%",
+                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image4}")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className={styles.text}>
                 <svg
@@ -228,24 +237,21 @@ export default function Slider({locale}:any) {
                     stroke-linecap="round"
                   />
                 </svg>
-                <h1 className={styles.title}>
-                {t('title4')}
-                </h1>
-                <h3 className={styles.description}>
-                {t('subtitle')}
-                </h3>
+                <h1 className={styles.title}>{t("title4")}</h1>
+                <h3 className={styles.description}>{t("subtitle")}</h3>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide className={styles.swiperslide}>
-            <div className={styles.fifthImage}
-            style={{
-              width: "100%",
-              height: "100%",
-              background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image5}")`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            <div
+              className={styles.fifthImage}
+              style={{
+                width: "100%",
+                height: "100%",
+                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image5}")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className={styles.text}>
                 <svg
@@ -263,24 +269,21 @@ export default function Slider({locale}:any) {
                     stroke-linecap="round"
                   />
                 </svg>
-                <h1 className={styles.title}>
-                {t('title5')}
-                </h1>
-                <h3 className={styles.description}>
-                {t('subtitle')}
-                </h3>
+                <h1 className={styles.title}>{t("title5")}</h1>
+                <h3 className={styles.description}>{t("subtitle")}</h3>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide className={styles.swiperslide}>
-            <div className={styles.thixImage}
-            style={{
-              width: "100%",
-              height: "100%",
-              background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image6}")`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            <div
+              className={styles.thixImage}
+              style={{
+                width: "100%",
+                height: "100%",
+                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image6}")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className={styles.text}>
                 <svg
@@ -298,16 +301,14 @@ export default function Slider({locale}:any) {
                     stroke-linecap="round"
                   />
                 </svg>
-                <h1 className={styles.title}>{t('title6')}</h1>
-                <h3 className={styles.description}>
-                {t('subtitle')}
-                </h3>
+                <h1 className={styles.title}>{t("title6")}</h1>
+                <h3 className={styles.description}>{t("subtitle")}</h3>
               </div>
             </div>
           </SwiperSlide>
-        <BtnsFirstSwiper></BtnsFirstSwiper>
-      </Swiper>
-    )}
+          <BtnsFirstSwiper></BtnsFirstSwiper>
+        </Swiper>
+      )}
     </>
   );
 }

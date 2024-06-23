@@ -1,19 +1,21 @@
-'use client';
 // ScrollContext.js
-import React, { createContext, useContext, useRef } from 'react';
+'use client';
+import React, { createContext, useContext, useRef, useState } from 'react';
 
 interface ScrollContextType {
     contactSectionRef: React.RefObject<HTMLDivElement>;
-    scrollToContact: () => void;
+    scrollToContact: (param?: string) => void;
+    scrollParam?: string;
 }
 
 const ScrollContext = createContext<ScrollContextType | null>(null);
 
 export const ScrollProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const contactSectionRef = useRef<HTMLDivElement>(null);
+    const [scrollParam, setScrollParam] = useState<string | undefined>(undefined);
     const headerOffset = 120; // Replace with your header's height
 
-    const scrollToContact = () => {
+    const scrollToContact = (param?: string) => {
         if (contactSectionRef.current) {
             const elementPosition = contactSectionRef.current.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -22,13 +24,18 @@ export const ScrollProvider: React.FC<{ children: React.ReactNode }> = ({ childr
                 top: offsetPosition,
                 behavior: 'smooth'
             });
+
+            if (param) {
+                console.log(`Setting scrollParam: ${param}`);
+                setScrollParam(param);
+            }
         } else {
             console.warn("ScrollProvider: Contact section reference is not available.");
         }
     };
 
     return (
-        <ScrollContext.Provider value={{ contactSectionRef, scrollToContact }}>
+        <ScrollContext.Provider value={{ contactSectionRef, scrollToContact, scrollParam }}>
             {children}
         </ScrollContext.Provider>
     );

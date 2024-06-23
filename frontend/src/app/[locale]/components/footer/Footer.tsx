@@ -30,9 +30,9 @@ export const Footer: React.FC = () => {
 			setCookiesAccepted(true);
 		}
 	}, []);
-
+	type Language = 'ua' | 'en' | 'ru' | 'it';
 	const handleDownload = () => {
-		const docUrls = {
+		const docUrls: Record<Language, string> = {
 			ua: '/files/Публічна оферта фонд.doc',
 			en: '/files/public_offer_timoshas_smile.doc',
 			ru: '/files/Публичная_оферта_на_благотворительные_пожертвования.doc',
@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
 		const docUrl = docUrls[selectedLanguage] || docUrls.en;
 		const link = document.createElement('a');
 		link.href = docUrl;
-		link.download = docUrl.split('/').pop();
+		link.download = docUrl.split('/').pop()!;
 		link.click();
 	};
 

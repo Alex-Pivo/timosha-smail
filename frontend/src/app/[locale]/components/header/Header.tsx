@@ -113,15 +113,15 @@ export default function Header({ locale }: any) {
   };
   const logoStyles: Record<Locale, { width: string, height: string, marginTop?: string }> = {
     ua: { width: '119px', height: '63px' },
-    en: { width: '80px', height: '85px', marginTop: '-10px' },
-    ru: { width: '119px', height: '77px', marginTop: '-5px' },
-    it: { width: '80px', height: '85px', marginTop: '-10px'},
+    en: { width: '119px', height: '63px' },
+    ru: { width: '125px', height: '77px', marginTop: '-5px' },
+    it: {  width: '119px', height: '63px'},
   };
   const logoStylesPhone: Record<Locale, { width: string, height: string, marginTop?: string }> = {
     ua: { width: '83px', height: '44px', },
-    en: { width: '65px', height: '70px', marginTop: '-10px' },
+    en: { width: '100px', height: '55px', marginTop: '-5px' },
     ru: { width: '90px', height: '52px', },
-    it: { width: '65px', height: '70px', marginTop: '-10px' },
+    it: { width: '100px', height: '55px', marginTop: '-5px' },
   };
 
   const logoSrc = logoUrls[selectedLanguage as Locale] || logoUrls['en'];

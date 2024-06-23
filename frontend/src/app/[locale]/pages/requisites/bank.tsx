@@ -8,7 +8,7 @@ export default function Bank() {
   let [activeTwo, setActiveTwo] = useState(false);
   let [activeThree, setActiveThree] = useState(false);
   let [activeFour, setActiveFour] = useState(false);
-  const t = useTranslations('Donate');
+  const t = useTranslations("Donate");
 
   let [activeBtn, setActiveBtn] = useState(true);
   let [activeBtn2, setActiveBtn2] = useState(false);
@@ -16,9 +16,25 @@ export default function Bank() {
   let [activeBtn4, setActiveBtn4] = useState(false);
   let [activeBtn5, setActiveBtn5] = useState(false);
 
+  let [iban, setIban] = useState("");
+
+  function getActive() {
+    if (activeBtn === true) {
+      setIban((iban = "UA 66 305299 00000 26009000705161"));
+    }
+    if (activeBtn2 === true) {
+      setIban((iban = "UA 87 305299 00000 26007010705357"));
+    }
+    if (activeBtn3 === true) {
+      setIban((iban = "UA 56 305299 00000 26008040701579"));
+    }
+
+    return iban;
+  }
+
   return (
     <>
-      <div id="bank" className={styles.bank}>
+      <div className={styles.bank}>
         <div className={styles.container}>
           <p className={styles.title}>{t("title2")}</p>
           <div className={styles.btn__container}>
@@ -117,9 +133,7 @@ export default function Bank() {
                   cursor: "pointer",
                 }}
                 onClick={() => {
-                  navigator.clipboard.writeText(
-                    t("iban1")
-                  );
+                  navigator.clipboard.writeText(getActive());
                 }}
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -174,9 +188,7 @@ export default function Bank() {
             </div>
             <div className={styles.line}>
               <p className={styles.left}>{t("bank")}</p>
-              <p className={styles.center}>
-              {t("bank1")}
-              </p>
+              <p className={styles.center}>{t("bank1")}</p>
               <div
                 className={activeFour ? styles.massage__active : styles.massage}
               >
@@ -193,9 +205,7 @@ export default function Bank() {
                   cursor: "pointer",
                 }}
                 onClick={() => {
-                  navigator.clipboard.writeText(
-                    t("bank1")
-                  );
+                  navigator.clipboard.writeText(t("bank1"));
                 }}
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -213,13 +223,16 @@ export default function Bank() {
             </div>
           </div>
           <button
+            id="bankQR"
             style={{
               cursor: "pointer",
             }}
             className={styles.btn}
             onClick={() => {
               navigator.clipboard.writeText(
-                `${t("recName1")}, ${t("iban1")}, ${t("reccode1")}, ${t("bank1")}`
+                `${t("recName1")}, ${t("iban1")}, ${t("reccode1")}, ${t(
+                  "bank1"
+                )}`
               );
             }}
           >

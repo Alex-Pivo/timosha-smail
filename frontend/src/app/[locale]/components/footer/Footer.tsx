@@ -38,7 +38,28 @@ export const Footer: React.FC = () => {
 		ru: '/files/Публичная_оферта_на_благотворительные_пожертвования.doc',
 		it: '/files/Offerta pubblica per donazioni benefiche.doc',
 	};
+	const logoUrls: Record<Language, string> = {
+		ua: '/logo.svg',
+		en: '/enLogo.png',
+		ru: '/ruLogo.png',
+		it: '/enLogo.png',
+	};
+	const logoStyles: Record<Language, { width: string, height: string }> = {
+		ua: { width: '119px', height: '63px' },
+		en: { width: '135px', height: '135px' },
+		ru: { width: '190px', height: '105px' },
+		it: { width: '135px', height: '135px'},
+	};
+	const logoStylesPhone: Record<Language, { width: string, height: string, marginTop?: string }> = {
+		ua: { width: '119px', height: '63px' },
+		en: { width: '100px', height: '105px' },
+		ru: { width: '140px', height: '85px', },
+		it: { width: '100px', height: '105px'},
+	};
+	const logoStylePhone  = logoStylesPhone[selectedLanguage as Language] || logoStylesPhone['en'];
 
+	const logoSrc = logoUrls[selectedLanguage as Language] || logoUrls['en'];
+	const logoStyle  = logoStyles[selectedLanguage as Language] || logoStyles['en'];
 	const handleDownload = () => {
 		const lang = (selectedLanguage as Language) || 'en';
 		const docUrl = docUrls[lang];
@@ -47,19 +68,18 @@ export const Footer: React.FC = () => {
 		link.download = docUrl.split('/').pop()!;
 		link.click();
 	};
-
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.wrapper}>
 				<div className={styles.logo}>
-					<img src="/logo.svg" alt="Logo" className={styles.image} />
+					<a href="/"><img src={logoSrc} alt="Logo" className={styles.image} style={window.innerWidth > 767 ? logoStyle : logoStylePhone} /></a>
 					<p className={styles.text}>{t('title')}</p>
 					<Link href={'/donate'} className={styles.btn}>{t('btn')}</Link>
 					<div className={styles.txtBtnPhone}>
 						<p className={styles.textPhone}>{t('title')}</p>
-						<button className={styles.btn}>
+						<Link href={'/donate'}  className={styles.btn}>
 						{t('btn')}
-						</button>
+						</Link>
 					</div>
 					<div className={styles.paymentMethodsTablet}>
 						<img src="/visa.svg" alt="VISA" />

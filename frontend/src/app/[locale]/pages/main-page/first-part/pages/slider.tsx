@@ -106,11 +106,11 @@ export default function Slider({locale}:any) {
                     className={styles.zone}
                   >
                     <div className={styles.circle}>
-                      <a href={state[0].image1_url_new}>{t('read')}</a>
+                      <a href={state[0].image_url_new1}>{t('read')} {state[0].read_story1}</a>
                     </div>
                   </div>
                   <p className={mouse ? styles.myk : styles.mykDis}>
-                  {state[0].child_name} <br /> {state[0].child_age}
+                  {state[0].child_name1} <br /> {state[0].child_age1}
                   </p>
               </div>
               <motion.div className={styles.text}
@@ -158,6 +158,27 @@ export default function Slider({locale}:any) {
               backgroundPosition: "center",
             }}
             >
+              <div className={styles.info__container1}>
+                  <div
+                    onMouseEnter={() => {
+                      setMouse((mouse = false));
+                    }}
+                    onMouseLeave={() => {
+                      setMouse((mouse = true));
+                    }}
+                    onClick={() => {
+                      setMouse((mouse = true));
+                    }}
+                    className={styles.zone}
+                  >
+                    <div className={styles.circle}>
+                      <a href={state[0].image_url_new2}>{t('read')} {state[0].read_story2}</a>
+                    </div>
+                  </div>
+                  <p className={mouse ? styles.myk : styles.mykDis}>
+                  {state[0].child_name2} <br /> {state[0].child_age2}
+                  </p>
+              </div>
               <div className={styles.text}>
                 <svg
                   className={styles.line}
@@ -193,6 +214,27 @@ export default function Slider({locale}:any) {
               backgroundPosition: "center",
             }}
             >
+              <div className={styles.info__container1}>
+                  <div
+                    onMouseEnter={() => {
+                      setMouse((mouse = false));
+                    }}
+                    onMouseLeave={() => {
+                      setMouse((mouse = true));
+                    }}
+                    onClick={() => {
+                      setMouse((mouse = true));
+                    }}
+                    className={styles.zone}
+                  >
+                    <div className={styles.circle}>
+                      <a href={state[0].image_url_new3}>{t('read')} {state[0].read_story3}</a>
+                    </div>
+                  </div>
+                  <p className={mouse ? styles.myk : styles.mykDis}>
+                  {state[0].child_name3} <br /> {state[0].child_age3}
+                  </p>
+              </div>
               <div className={styles.text}>
                 <svg
                   className={styles.line}
@@ -228,6 +270,27 @@ export default function Slider({locale}:any) {
               backgroundPosition: "center",
             }}
             >
+              <div className={styles.info__container1}>
+                  <div
+                    onMouseEnter={() => {
+                      setMouse((mouse = false));
+                    }}
+                    onMouseLeave={() => {
+                      setMouse((mouse = true));
+                    }}
+                    onClick={() => {
+                      setMouse((mouse = true));
+                    }}
+                    className={styles.zone}
+                  >
+                    <div className={styles.circle}>
+                      <a href={state[0].image_url_new4}>{t('read')} {state[0].read_story4}</a>
+                    </div>
+                  </div>
+                  <p className={mouse ? styles.myk : styles.mykDis}>
+                  {state[0].child_name4} <br /> {state[0].child_age4}
+                  </p>
+              </div>
               <div className={styles.text}>
                 <svg
                   className={styles.line}
@@ -263,6 +326,27 @@ export default function Slider({locale}:any) {
               backgroundPosition: "center",
             }}
             >
+              <div className={styles.info__container1}>
+                  <div
+                    onMouseEnter={() => {
+                      setMouse((mouse = false));
+                    }}
+                    onMouseLeave={() => {
+                      setMouse((mouse = true));
+                    }}
+                    onClick={() => {
+                      setMouse((mouse = true));
+                    }}
+                    className={styles.zone}
+                  >
+                    <div className={styles.circle}>
+                      <a href={state[0].image_url_new5}>{t('read')} {state[0].read_story5}</a>
+                    </div>
+                  </div>
+                  <p className={mouse ? styles.myk : styles.mykDis}>
+                  {state[0].child_name5} <br /> {state[0].child_age5}
+                  </p>
+              </div>
               <div className={styles.text}>
                 <svg
                   className={styles.line}
@@ -298,6 +382,27 @@ export default function Slider({locale}:any) {
               backgroundPosition: "center",
             }}
             >
+              <div className={styles.info__container1}>
+                  <div
+                    onMouseEnter={() => {
+                      setMouse((mouse = false));
+                    }}
+                    onMouseLeave={() => {
+                      setMouse((mouse = true));
+                    }}
+                    onClick={() => {
+                      setMouse((mouse = true));
+                    }}
+                    className={styles.zone}
+                  >
+                    <div className={styles.circle}>
+                      <a href={state[0].image_url_new6}>{t('read')} {state[0].read_story6}</a>
+                    </div>
+                  </div>
+                  <p className={mouse ? styles.myk : styles.mykDis}>
+                  {state[0].child_name6} <br /> {state[0].child_age6}
+                  </p>
+              </div>
               <div className={styles.text}>
                 <svg
                   className={styles.line}

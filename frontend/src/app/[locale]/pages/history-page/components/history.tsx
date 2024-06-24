@@ -13,6 +13,7 @@ const PATH = "/history/slider/1.png";
 const PATH2 = "/history/slider/2.png";
 const PATH3 = "/history/slider/3.png";
 const PATH4 = "/history/slider/4.png";
+const PATH5 = "/history/slider/5.jpg";
 
 export default function HistoryPart() {
   const [isLastSlide, setIsLastSlide] = useState(false);
@@ -20,7 +21,7 @@ export default function HistoryPart() {
   let [active, setActive] = useState(true);
 
   const handleSlideChange = (swiper: any) => {
-    if (swiper.activeIndex === 3){
+    if (swiper.activeIndex === 4){
       swiper.allowSlideNext = false
       setIsLastSlide(true);
     } else {
@@ -144,6 +145,24 @@ export default function HistoryPart() {
                   </div>
                 </div>
                 </SwiperSlide>
+                <SwiperSlide className={styles.slide}>
+                <div className={styles.inSlide}>
+                  <div
+                    className={styles.photo}
+                    style={{
+                      background: `url(${PATH5})`,
+                      backgroundPosition: "center",
+                      backgroundSize: "cover",
+                    }}
+                  ></div>
+                  <div className={styles.info}>
+                    <p className={styles.year}>{t('year5')}</p>
+                    <p className={styles.text}>
+                    {t('text5')}
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
                 {active && (
                   <SwiperSlide/>
                 )}

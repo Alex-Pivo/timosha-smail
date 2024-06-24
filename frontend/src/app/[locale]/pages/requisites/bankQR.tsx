@@ -11,7 +11,7 @@ const LOGO3 = "/QR/LOGO3.png";
 const LOGO4 = "/QR/LOGO4.png";
 
 export default function BankQR() {
-  const t = useTranslations('Donate');
+  const t = useTranslations("Donate");
 
   return (
     <>
@@ -35,7 +35,7 @@ export default function BankQR() {
                   fill="black"
                 />
               </svg>
-              <a href="">
+              <a className={styles.a} href="https://send.monobank.ua/jar/2jSVJ9SeVu">
                 <div
                   className={styles.qr}
                   style={{
@@ -46,9 +46,15 @@ export default function BankQR() {
                   }}
                 ></div>
               </a>
-              <p className={styles.text}>
-              {t("qrText")}
-              </p>
+              <a
+              href="https://send.monobank.ua/jar/2jSVJ9SeVu"
+                style={{
+                  textDecoration: "none",
+                }}
+                className={styles.text}
+              >
+                {t("qrText")}
+              </a>
             </div>
 
             <div className={styles.card}>
@@ -63,7 +69,12 @@ export default function BankQR() {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-              <a href="https://www.paypal.me/TimoshasSmileUSA">
+              <a 
+              className={styles.a}
+              style={{
+                textDecoration: "none",
+              }}
+              href="https://www.paypal.me/TimoshasSmileUSA">
                 <div
                   className={styles.qr}
                   style={{
@@ -74,9 +85,12 @@ export default function BankQR() {
                   }}
                 ></div>
               </a>
-              <p className={styles.text}>
-              {t("qrText")}
-              </p>
+              <a 
+              href="https://www.paypal.me/TimoshasSmileUSA"
+              style={{
+                textDecoration: "none",
+              }}
+              className={styles.text}>{t("qrText")}</a>
             </div>
 
             <div className={styles.card}>
@@ -91,7 +105,9 @@ export default function BankQR() {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-              <a href="">
+              <a 
+              className={styles.a}
+              href="https://www.venmo.com/u/timoshassmile">
                 <div
                   className={styles.qr}
                   style={{
@@ -102,9 +118,12 @@ export default function BankQR() {
                   }}
                 ></div>
               </a>
-              <p className={styles.text}>
-              {t("qrText")}
-              </p>
+              <a 
+              href="https://www.venmo.com/u/timoshassmile"
+              style={{
+                textDecoration: "none",
+              }}
+              className={styles.text}>{t("qrText")}</a>
             </div>
 
             <div className={styles.card}>
@@ -119,7 +138,9 @@ export default function BankQR() {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-              <a href="https://cash.app/$TimoshasSmile">
+              <a 
+              className={styles.a}
+              href="https://cash.app/$TimoshasSmile">
                 <div
                   className={styles.qr}
                   style={{
@@ -130,9 +151,14 @@ export default function BankQR() {
                   }}
                 ></div>
               </a>
-              <p id="crypto" className={styles.text}>
-              {t("qrText")}
-              </p>
+              <a
+              style={{
+                textDecoration: "none",
+              }}
+              href="https://cash.app/$TimoshasSmile"
+              id="crypto" className={styles.text}>
+                {t("qrText")}
+              </a>
             </div>
           </div>
         </div>

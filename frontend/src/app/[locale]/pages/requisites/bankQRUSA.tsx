@@ -13,14 +13,14 @@ const LOGO4 = "/QR/LOGO4.png";
 const LOGO5 = "/QR/LOGO5.png";
 
 export default function BankQRUSA() {
-  const t = useTranslations('Donate');
+  const t = useTranslations("Donate");
   return (
     <>
       <div className={styles.bank}>
         <div className={styles.container}>
           <h2 className={styles.title}>Venmo, Zelle, Cash App, PayPall</h2>
 
-          <div className={styles.box}>   
+          <div className={styles.box}>
             <div className={styles.card}>
               <div
                 className={styles.logo}
@@ -33,7 +33,7 @@ export default function BankQRUSA() {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-              <a href="">
+              <a href="https://www.venmo.com/u/timoshassmile" className={styles.a}>
                 <div
                   className={styles.qr}
                   style={{
@@ -44,9 +44,12 @@ export default function BankQRUSA() {
                   }}
                 ></div>
               </a>
-              <p className={styles.text}>
-              {t("qrText")}
-              </p>
+              <a 
+              href="https://www.venmo.com/u/timoshassmile"
+              style={{
+                textDecoration: "none",
+              }}
+              className={styles.text}>{t("qrText")}</a>
             </div>
 
             <div className={styles.card}>
@@ -61,7 +64,7 @@ export default function BankQRUSA() {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-              <a href="">
+              <a href="" className={styles.a}>
                 <div
                   className={styles.qr}
                   style={{
@@ -72,9 +75,12 @@ export default function BankQRUSA() {
                   }}
                 ></div>
               </a>
-              <p className={styles.text}>
-              timoshas.smile@gmail.com
-              </p>
+              <a 
+              href=""
+              style={{
+                textDecoration: "none",
+              }}
+              className={styles.text}>timoshas.smile@gmail.com</a>
             </div>
 
             <div className={styles.card}>
@@ -89,7 +95,7 @@ export default function BankQRUSA() {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-              <a href="https://cash.app/$TimoshasSmile">
+              <a href="https://cash.app/$TimoshasSmile" className={styles.a}>
                 <div
                   className={styles.qr}
                   style={{
@@ -100,9 +106,12 @@ export default function BankQRUSA() {
                   }}
                 ></div>
               </a>
-              <p className={styles.text}>
-              {t("qrText")}
-              </p>
+              <a
+              href="https://cash.app/$TimoshasSmile"
+              style={{
+                textDecoration: "none",
+              }}
+              className={styles.text}>{t("qrText")}</a>
             </div>
 
             <div className={styles.card}>
@@ -117,7 +126,10 @@ export default function BankQRUSA() {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
-              <a href="https://www.paypal.me/TimoshasSmileUSA">
+              <a
+                href="https://www.paypal.me/TimoshasSmileUSA"
+                className={styles.a}
+              >
                 <div
                   className={styles.qr}
                   style={{
@@ -128,9 +140,16 @@ export default function BankQRUSA() {
                   }}
                 ></div>
               </a>
-              <p id="chek" className={styles.text}>
-              {t("qrText")}
-              </p>
+              <a
+                href="https://www.paypal.me/TimoshasSmileUSA"
+                style={{
+                  textDecoration: "none",
+                }}
+                id="chek"
+                className={styles.text}
+              >
+                {t("qrText")}
+              </a>
             </div>
           </div>
         </div>

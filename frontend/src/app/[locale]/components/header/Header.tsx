@@ -240,6 +240,7 @@ export default function Header({ locale }: any) {
               }}
               className={styles.flag}
             ></div>
+            
 
             <label htmlFor="langSelect">
               <div className={styles.select}>
@@ -336,9 +337,9 @@ export default function Header({ locale }: any) {
           <Link href="/contacts" className={styles.link} passHref>
             {t("contacts")}
           </Link>
-          <Link href={"/donate"} className={styles.button}>
+          {/* <Link href={"/donate"} className={styles.button}>
             {t("donate")}
-          </Link>
+          </Link> */}
         </div>
       </div>
     </>

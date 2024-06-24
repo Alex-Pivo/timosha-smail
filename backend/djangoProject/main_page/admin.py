@@ -6,4 +6,4 @@ from .models import MainPageSetting
 
 @admin.register(MainPageSetting)
 class ChangeImagesAdmin(admin.ModelAdmin):
-    list_display = ['child_name','language']
+    list_display = ['language']

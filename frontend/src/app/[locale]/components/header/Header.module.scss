@@ -740,9 +740,6 @@
     left: 0;
     top: 0;
 
-    margin: 0;
-    border: 0;
-
     padding: 0px 16px 0px 16px;
     display: flex;
     flex-direction: row;
@@ -761,13 +758,13 @@
     }
 
     .menu {
-      width: 440px;
+      width: 240px;
 
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 10px;
 
       .nav {
         width: 100px;
@@ -806,7 +803,7 @@
 
       .button {
         margin-left: auto;
-        display: none;
+        display: flex;
         padding: 13.5px 16px;
         justify-content: center;
         align-items: center;
@@ -816,14 +813,14 @@
         border-radius: 8px;
         color: #fbfbfb;
         font-family: Commissioner, sans-serif;
-        font-size: 18px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
         box-sizing: border-box;
         cursor: pointer;
         margin-left: auto;
-        margin-right: 20px;
+        margin-right: 0px;
         border: 0;
         &:hover {
           background: #45660e;
@@ -875,7 +872,7 @@
         box-sizing: border-box;
         margin-left: 0px;
         cursor: pointer;
-        margin-left: auto;
+        // margin-left: auto;
 
         display: flex;
         flex-direction: column;
@@ -883,7 +880,7 @@
         justify-content: space-between;
 
         div {
-          width: 100%;
+          width: 30px;
           height: 2px;
           border-radius: 2px;
           background-color: #000000;

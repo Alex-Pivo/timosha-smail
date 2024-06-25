@@ -65,7 +65,7 @@ class MainPageSetting(models.Model):
                                 verbose_name="Мова сайту")
 
     def __str__(self):
-        return self.child_name1  # Assuming the primary representation of the model should be the first child's name
+        return self.language  # Assuming the primary representation of the model should be the first child's name
 
     class Meta:
         verbose_name_plural = 'Налаштування фотографій діточок на головній сторінці'

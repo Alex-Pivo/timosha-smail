@@ -71,14 +71,14 @@ export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 										  textDecoration: "none",
 									  }}
 							>
-								{partner.partner_name == "Y.K AGENCY" && (
+								{partner.partner_name == "Y.K Agency" && (
 									<div className={styles.yk_agency}>
 										<span className={styles.yk}>y.k</span>
 										<span className={styles.agency}> AGENCY</span>
 									</div>
 								)}
 								{/*<a href={partner.company_url} target="_blank" rel="noopener noreferrer">*/}
-								{partner.partner_name != "Y.K AGENCY" && (
+								{partner.partner_name != "Y.K Agency" && (
 										<div
 											className={styles.logo}
 											style={{

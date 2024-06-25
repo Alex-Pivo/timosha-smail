@@ -11,7 +11,7 @@ class ChooseLanguage(models.TextChoices):
 class MainPageSetting(models.Model):
     read_story1 = models.CharField(max_length=25, blank=True,
                                    verbose_name='Читати історію для дитини 1 ("e.x:Святослава,Ірини") :')
-    child_age1 = models.CharField(max_length=20, blank=False, default='2 роки', verbose_name="Вік дитини 1")
+    
     image1 = models.ImageField(upload_to='media_storage/main_page_images', blank=False, default=None,
                                verbose_name="Фото 1")
     image_url_new1 = models.URLField(verbose_name="Посилання статті на 'Фото 1'", blank=True, null=False, default='')

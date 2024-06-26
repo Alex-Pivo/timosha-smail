@@ -28,7 +28,7 @@ export default function HelpComponent() {
   const t = useTranslations("helpcomp");
     const textAnimation = {
         hidden:{
-            x: window.innerWidth > 800 ?  100 : 0,
+            x: window.innerWidth > 1700 ?  100 : 0,
             opacity: 0,
         },
         visible: {

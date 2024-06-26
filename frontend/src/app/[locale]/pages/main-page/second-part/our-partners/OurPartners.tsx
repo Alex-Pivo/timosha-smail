@@ -108,13 +108,13 @@ export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 										  textDecoration: "none",
 									  }}
 							>
-								{partner.partner_name == "Y.K AGENCY" && (
+								{partner.partner_name == "Y.K Agency" && (
 									<div className={styles.yk_agency}>
 										<span className={styles.yk}>y.k</span>
 										<span className={styles.agency}> AGENCY</span>
 									</div>
 								)}
-								{partner.partner_name != "Y.K AGENCY" && (
+								{partner.partner_name != "Y.K Agency" && (
 									<div
 										className={styles.logo}
 										style={{

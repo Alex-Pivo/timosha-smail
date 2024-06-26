@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import axios from "axios";
 import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -14,31 +14,30 @@ import styles from "../styles/firstSlider.module.scss";
 
 import BtnsFirstSwiper from "../components/btnsFirstSwiper";
 import { Pagination, Autoplay, EffectFade } from "swiper/modules";
-import {hidden} from "next/dist/lib/picocolors";
+import { hidden } from "next/dist/lib/picocolors";
 
-export default function Slider({locale}:any) {
+export default function Slider({ locale }: any) {
   let localeValue = locale;
   let [state, setState] = useState<any[]>([]);
   let [mouse, setMouse] = useState(true);
   let [active, setActive] = useState(true);
-  const t = useTranslations('mSlider');
+  const t = useTranslations("mSlider");
 
-
-  function componentDidMount(){
-    if(localeValue === "ua"){
+  function componentDidMount() {
+    if (localeValue === "ua") {
       localeValue = "";
     }
-    try{
+    try {
       let data;
-      axios.get(`http://95.169.204.16:8000/${localeValue}/`)
-      .then(res => {
-        data = res.data;
-        setState(data);
-        console.log(data);
-      })
-      .catch(err => { })
-    }
-    catch(error){
+      axios
+        .get(`http://95.169.204.16:8000/${localeValue}/`)
+        .then((res) => {
+          data = res.data;
+          setState(data);
+          console.log(data);
+        })
+        .catch((err) => {});
+    } catch (error) {
       console.log("error", error);
     }
   }
@@ -48,74 +47,84 @@ export default function Slider({locale}:any) {
 
     if (window.innerWidth <= 767) {
       setActive((active = false));
-    } else{setActive(active = true)}
+    } else {
+      setActive((active = true));
+    }
   }, []);
 
   const textAnimation = {
-    hidden:{
+    hidden: {
       x: -100,
       opacity: 0,
     },
     visible: {
-      x:0,
+      x: 0,
       opacity: 1,
       transition: {
         // delay: 0.2,
-        duration: 0.3
+        duration: 0.3,
       },
-    }
-  }
+    },
+  };
   return (
     <>
-    {state.length > 0 && (
-      <Swiper
-        direction={"vertical"}
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={{
-          delay: 10500,
-          disableOnInteraction: false,
-        }}
-        navigation={false}
-        modules={[Autoplay, Pagination, EffectFade]}
-        effect="fade"
-        className={styles.swiper}
-      >
+      {state.length > 0 && (
+        <Swiper
+          direction={"vertical"}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 10500,
+            disableOnInteraction: false,
+          }}
+          navigation={false}
+          modules={[Autoplay, Pagination, EffectFade]}
+          effect="fade"
+          className={styles.swiper}
+        >
           <SwiperSlide className={styles.swiperslide}>
-            <div className={styles.firstImage}
-            style={{
-              width: "100%",
-              height: "100%",
-              background: `${active ? `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image1}")` : `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("/tel.jpg")`}`, 
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            <div
+              className={styles.firstImage}
+              style={{
+                width: "100%",
+                height: "100%",
+                background: `${
+                  active
+                    ? `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image1}")`
+                    : `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("/tel.jpg")`
+                }`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className={styles.info__container1}>
-                  <div
-                    onMouseEnter={() => {
-                      setMouse((mouse = false));
-                    }}
-                    onMouseLeave={() => {
-                      setMouse((mouse = true));
-                    }}
-                    onClick={() => {
-                      setMouse((mouse = true));
-                    }}
-                    className={styles.zone}
-                  >
-                    <div className={styles.circle}>
-                      <a href={state[0].image_url_new1}>{t('read')} {state[0].read_story1}</a>
-                    </div>
+                <div
+                  onMouseEnter={() => {
+                    setMouse((mouse = false));
+                  }}
+                  onMouseLeave={() => {
+                    setMouse((mouse = true));
+                  }}
+                  onClick={() => {
+                    setMouse((mouse = true));
+                  }}
+                  className={styles.zone}
+                >
+                  <div className={styles.circle}>
+                    <a href={state[0].image_url_new1}>
+                      {t("read")} {state[0].read_story1}
+                    </a>
                   </div>
-                  <p className={mouse ? styles.myk : styles.mykDis}>
+                </div>
+                <p className={mouse ? styles.myk : styles.mykDis}>
                   {state[0].child_name1} <br /> {state[0].child_age1}
-                  </p>
+                </p>
               </div>
-              <motion.div className={styles.text}
-                          initial="hidden"
-                          whileInView="visible"
+              <motion.div
+                className={styles.text}
+                initial="hidden"
+                whileInView="visible"
               >
                 <svg
                   className={styles.line}
@@ -132,52 +141,66 @@ export default function Slider({locale}:any) {
                     stroke-linecap="round"
                   />
                 </svg>
-                <svg className={styles.line1} xmlns="http://www.w3.org/2000/svg" width="296" height="63" viewBox="0 0 296 63" fill="none">
-                  <path d="M193.87 3.06139C182.334 3.06138 104.319 1.32106 37.1258 16.3733C-7.47589 26.3647 -9.2659 44.2006 37.1259 52.4374C105.76 64.6232 185.125 60.9261 256.237 49.5602C294.587 43.4307 319.167 26.6458 245.281 16.3733C232.865 14.647 196.563 12.8639 160.629 14.2449" stroke="#649612" stroke-width="6" stroke-linecap="round"/>
+                <svg
+                  className={styles.line1}
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="296"
+                  height="63"
+                  viewBox="0 0 296 63"
+                  fill="none"
+                >
+                  <path
+                    d="M193.87 3.06139C182.334 3.06138 104.319 1.32106 37.1258 16.3733C-7.47589 26.3647 -9.2659 44.2006 37.1259 52.4374C105.76 64.6232 185.125 60.9261 256.237 49.5602C294.587 43.4307 319.167 26.6458 245.281 16.3733C232.865 14.647 196.563 12.8639 160.629 14.2449"
+                    stroke="#649612"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
                 </svg>
-                <motion.h1
-                    variants={textAnimation}
-                    className={styles.title}>
-                {t('title1')}
+                <motion.h1 variants={textAnimation} className={styles.title}>
+                  {t("title1")}
                 </motion.h1>
                 <motion.h3
-                    variants={textAnimation}
-                    className={styles.description}>
-                {t('subtitle')}
+                  variants={textAnimation}
+                  className={styles.description}
+                >
+                  {t("subtitle")}
                 </motion.h3>
               </motion.div>
             </div>
           </SwiperSlide>
           <SwiperSlide className={styles.swiperslide}>
-            <div className={styles.secondImage}
-            style={{
-              width: "100%",
-              height: "100%",
-              background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image2}")`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            <div
+              className={styles.secondImage}
+              style={{
+                width: "100%",
+                height: "100%",
+                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image2}")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className={styles.info__container1}>
-                  <div
-                    onMouseEnter={() => {
-                      setMouse((mouse = false));
-                    }}
-                    onMouseLeave={() => {
-                      setMouse((mouse = true));
-                    }}
-                    onClick={() => {
-                      setMouse((mouse = true));
-                    }}
-                    className={styles.zone}
-                  >
-                    <div className={styles.circle}>
-                      <a href={state[0].image_url_new2}>{t('read')} {state[0].read_story2}</a>
-                    </div>
+                <div
+                  onMouseEnter={() => {
+                    setMouse((mouse = false));
+                  }}
+                  onMouseLeave={() => {
+                    setMouse((mouse = true));
+                  }}
+                  onClick={() => {
+                    setMouse((mouse = true));
+                  }}
+                  className={styles.zone}
+                >
+                  <div className={styles.circle}>
+                    <a href={state[0].image_url_new2}>
+                      {t("read")} {state[0].read_story2}
+                    </a>
                   </div>
-                  <p className={mouse ? styles.myk : styles.mykDis}>
+                </div>
+                <p className={mouse ? styles.myk : styles.mykDis}>
                   {state[0].child_name2} <br /> {state[0].child_age2}
-                  </p>
+                </p>
               </div>
               <div className={styles.text}>
                 <svg
@@ -195,45 +218,44 @@ export default function Slider({locale}:any) {
                     stroke-linecap="round"
                   />
                 </svg>
-                <h1 className={styles.title}>
-                {t('title2')}
-                </h1>
-                <h3 className={styles.description}>
-                {t('subtitle')}
-                </h3>
+                <h1 className={styles.title}>{t("title2")}</h1>
+                <h3 className={styles.description}>{t("subtitle")}</h3>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide className={styles.swiperslide}>
-            <div className={styles.thirdImage}
-            style={{
-              width: "100%",
-              height: "100%",
-              background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image3}")`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            <div
+              className={styles.thirdImage}
+              style={{
+                width: "100%",
+                height: "100%",
+                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image3}")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className={styles.info__container1}>
-                  <div
-                    onMouseEnter={() => {
-                      setMouse((mouse = false));
-                    }}
-                    onMouseLeave={() => {
-                      setMouse((mouse = true));
-                    }}
-                    onClick={() => {
-                      setMouse((mouse = true));
-                    }}
-                    className={styles.zone}
-                  >
-                    <div className={styles.circle}>
-                      <a href={state[0].image_url_new3}>{t('read')} {state[0].read_story3}</a>
-                    </div>
+                <div
+                  onMouseEnter={() => {
+                    setMouse((mouse = false));
+                  }}
+                  onMouseLeave={() => {
+                    setMouse((mouse = true));
+                  }}
+                  onClick={() => {
+                    setMouse((mouse = true));
+                  }}
+                  className={styles.zone}
+                >
+                  <div className={styles.circle}>
+                    <a href={state[0].image_url_new3}>
+                      {t("read")} {state[0].read_story3}
+                    </a>
                   </div>
-                  <p className={mouse ? styles.myk : styles.mykDis}>
+                </div>
+                <p className={mouse ? styles.myk : styles.mykDis}>
                   {state[0].child_name3} <br /> {state[0].child_age3}
-                  </p>
+                </p>
               </div>
               <div className={styles.text}>
                 <svg
@@ -251,45 +273,44 @@ export default function Slider({locale}:any) {
                     stroke-linecap="round"
                   />
                 </svg>
-                <h1 className={styles.title}>
-                {t('title3')}
-                </h1>
-                <h3 className={styles.description}>
-                {t('subtitle')}
-                </h3>
+                <h1 className={styles.title}>{t("title3")}</h1>
+                <h3 className={styles.description}>{t("subtitle")}</h3>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide className={styles.swiperslide}>
-            <div className={styles.fourthImage}
-            style={{
-              width: "100%",
-              height: "100%",
-              background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image4}")`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            <div
+              className={styles.fourthImage}
+              style={{
+                width: "100%",
+                height: "100%",
+                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image4}")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className={styles.info__container1}>
-                  <div
-                    onMouseEnter={() => {
-                      setMouse((mouse = false));
-                    }}
-                    onMouseLeave={() => {
-                      setMouse((mouse = true));
-                    }}
-                    onClick={() => {
-                      setMouse((mouse = true));
-                    }}
-                    className={styles.zone}
-                  >
-                    <div className={styles.circle}>
-                      <a href={state[0].image_url_new4}>{t('read')} {state[0].read_story4}</a>
-                    </div>
+                <div
+                  onMouseEnter={() => {
+                    setMouse((mouse = false));
+                  }}
+                  onMouseLeave={() => {
+                    setMouse((mouse = true));
+                  }}
+                  onClick={() => {
+                    setMouse((mouse = true));
+                  }}
+                  className={styles.zone}
+                >
+                  <div className={styles.circle}>
+                    <a href={state[0].image_url_new4}>
+                      {t("read")} {state[0].read_story4}
+                    </a>
                   </div>
-                  <p className={mouse ? styles.myk : styles.mykDis}>
+                </div>
+                <p className={mouse ? styles.myk : styles.mykDis}>
                   {state[0].child_name4} <br /> {state[0].child_age4}
-                  </p>
+                </p>
               </div>
               <div className={styles.text}>
                 <svg
@@ -307,45 +328,44 @@ export default function Slider({locale}:any) {
                     stroke-linecap="round"
                   />
                 </svg>
-                <h1 className={styles.title}>
-                {t('title4')}
-                </h1>
-                <h3 className={styles.description}>
-                {t('subtitle')}
-                </h3>
+                <h1 className={styles.title}>{t("title4")}</h1>
+                <h3 className={styles.description}>{t("subtitle")}</h3>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide className={styles.swiperslide}>
-            <div className={styles.fifthImage}
-            style={{
-              width: "100%",
-              height: "100%",
-              background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image5}")`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            <div
+              className={styles.fifthImage}
+              style={{
+                width: "100%",
+                height: "100%",
+                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image5}")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className={styles.info__container1}>
-                  <div
-                    onMouseEnter={() => {
-                      setMouse((mouse = false));
-                    }}
-                    onMouseLeave={() => {
-                      setMouse((mouse = true));
-                    }}
-                    onClick={() => {
-                      setMouse((mouse = true));
-                    }}
-                    className={styles.zone}
-                  >
-                    <div className={styles.circle}>
-                      <a href={state[0].image_url_new5}>{t('read')} {state[0].read_story5}</a>
-                    </div>
+                <div
+                  onMouseEnter={() => {
+                    setMouse((mouse = false));
+                  }}
+                  onMouseLeave={() => {
+                    setMouse((mouse = true));
+                  }}
+                  onClick={() => {
+                    setMouse((mouse = true));
+                  }}
+                  className={styles.zone}
+                >
+                  <div className={styles.circle}>
+                    <a href={state[0].image_url_new5}>
+                      {t("read")} {state[0].read_story5}
+                    </a>
                   </div>
-                  <p className={mouse ? styles.myk : styles.mykDis}>
+                </div>
+                <p className={mouse ? styles.myk : styles.mykDis}>
                   {state[0].child_name5} <br /> {state[0].child_age5}
-                  </p>
+                </p>
               </div>
               <div className={styles.text}>
                 <svg
@@ -363,45 +383,44 @@ export default function Slider({locale}:any) {
                     stroke-linecap="round"
                   />
                 </svg>
-                <h1 className={styles.title}>
-                {t('title5')}
-                </h1>
-                <h3 className={styles.description}>
-                {t('subtitle')}
-                </h3>
+                <h1 className={styles.title}>{t("title5")}</h1>
+                <h3 className={styles.description}>{t("subtitle")}</h3>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide className={styles.swiperslide}>
-            <div className={styles.thixImage}
-            style={{
-              width: "100%",
-              height: "100%",
-              background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image6}")`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
+            <div
+              className={styles.thixImage}
+              style={{
+                width: "100%",
+                height: "100%",
+                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image6}")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className={styles.info__container1}>
-                  <div
-                    onMouseEnter={() => {
-                      setMouse((mouse = false));
-                    }}
-                    onMouseLeave={() => {
-                      setMouse((mouse = true));
-                    }}
-                    onClick={() => {
-                      setMouse((mouse = true));
-                    }}
-                    className={styles.zone}
-                  >
-                    <div className={styles.circle}>
-                      <a href={state[0].image_url_new6}>{t('read')} {state[0].read_story6}</a>
-                    </div>
+                <div
+                  onMouseEnter={() => {
+                    setMouse((mouse = false));
+                  }}
+                  onMouseLeave={() => {
+                    setMouse((mouse = true));
+                  }}
+                  onClick={() => {
+                    setMouse((mouse = true));
+                  }}
+                  className={styles.zone}
+                >
+                  <div className={styles.circle}>
+                    <a href={state[0].image_url_new6}>
+                      {t("read")} {state[0].read_story6}
+                    </a>
                   </div>
-                  <p className={mouse ? styles.myk : styles.mykDis}>
+                </div>
+                <p className={mouse ? styles.myk : styles.mykDis}>
                   {state[0].child_name6} <br /> {state[0].child_age6}
-                  </p>
+                </p>
               </div>
               <div className={styles.text}>
                 <svg
@@ -419,16 +438,14 @@ export default function Slider({locale}:any) {
                     stroke-linecap="round"
                   />
                 </svg>
-                <h1 className={styles.title}>{t('title6')}</h1>
-                <h3 className={styles.description}>
-                {t('subtitle')}
-                </h3>
+                <h1 className={styles.title}>{t("title6")}</h1>
+                <h3 className={styles.description}>{t("subtitle")}</h3>
               </div>
             </div>
           </SwiperSlide>
-        <BtnsFirstSwiper></BtnsFirstSwiper>
-      </Swiper>
-    )}
+          <BtnsFirstSwiper></BtnsFirstSwiper>
+        </Swiper>
+      )}
     </>
   );
 }

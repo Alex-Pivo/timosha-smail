@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 .articles {
@@ -10,43 +10,43 @@
   background: #f5f5f5;
 
   .pages {
-        font-family: "Commissioner", sans-serif;
-        color: #374151;
-  
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 30px;
-        margin-top: 0px;
-        box-sizing: border-box;
-        .main{
-          font-family: "Commissioner", sans-serif;
-          color: #374151;
-  
-          font-size: 24px;
-          font-weight: 500;
-          line-height: 30px;
-          margin-top: 0px;
-          box-sizing: border-box;
-          text-decoration: none;
-          &:hover{
-            text-decoration: underline;
-          }
-        }
-        .historyLink{
-          font-family: "Commissioner", sans-serif;
-          color: #374151;
-  
-          font-size: 24px;
-          font-weight: 500;
-          line-height: 30px;
-          margin-top: 28px;
-          box-sizing: border-box;
-          text-decoration: none;
-          &:hover{
-            text-decoration: underline;
-          }
-        }
-   }
+    font-family: "Commissioner", sans-serif;
+    color: #374151;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    .main {
+      font-family: "Commissioner", sans-serif;
+      color: #374151;
+
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 30px;
+      margin-top: 0px;
+      box-sizing: border-box;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .historyLink {
+      font-family: "Commissioner", sans-serif;
+      color: #374151;
+
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 30px;
+      margin-top: 28px;
+      box-sizing: border-box;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 
   .menu {
     margin-top: 40px;
@@ -102,18 +102,17 @@
   }
 
   .card__container {
+    margin: 0 auto;
     margin-top: 70px;
-    width: 100%;
+    max-width: 1663px;
     height: auto;
     box-sizing: border-box;
 
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 10.862px;
-  
 
     .card {
       display: flex;
@@ -123,7 +122,7 @@
       flex-direction: column;
       align-items: flex-end;
       justify-content: flex-start;
-      
+
       flex-shrink: 0;
       box-sizing: border-box;
 
@@ -226,7 +225,7 @@
       align-items: center;
       justify-content: space-between;
       margin-left: auto;
-      svg{
+      svg {
         cursor: pointer;
       }
       .pages__link {
@@ -245,15 +244,15 @@
   }
 }
 
-@media screen and (min-width: 835px) and (max-width: 1541px){
+@media screen and (min-width: 1201px) and (max-width: 1541px) {
   .articles {
     width: 100%;
     height: auto;
-  
+
     padding: 78px 44px 201px 44px;
     box-sizing: border-box;
     background: #f5f5f5;
-  
+
     .pages {
       font-family: "Commissioner", sans-serif;
       color: #374151;
@@ -263,7 +262,7 @@
       line-height: 30px;
       margin-top: 28px;
       box-sizing: border-box;
-      .main{
+      .main {
         font-family: "Commissioner", sans-serif;
         color: #374151;
 
@@ -273,11 +272,11 @@
         margin-top: 38px;
         box-sizing: border-box;
         text-decoration: none;
-        &:hover{
+        &:hover {
           text-decoration: underline;
         }
       }
-      .historyLink{
+      .historyLink {
         font-family: "Commissioner", sans-serif;
         color: #374151;
 
@@ -287,17 +286,17 @@
         margin-top: 28px;
         box-sizing: border-box;
         text-decoration: none;
-        &:hover{
+        &:hover {
           text-decoration: underline;
         }
       }
     }
-  
+
     .menu {
       margin-top: 26px;
       width: 100%;
       height: auto;
-  
+
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -306,18 +305,18 @@
       box-sizing: border-box;
       flex-wrap: wrap;
       gap: 24px;
-  
+
       .menu__btn {
         display: flex;
         padding: 10px 26px;
         justify-content: center;
         align-items: center;
         // gap: 10px;
-  
+
         border-radius: 30px;
         border: 1px solid #649612;
         background: #f5f5f5;
-  
+
         color: #1d1d1d;
         font-family: "Commissioner", sans-serif;
         font-size: 20px;
@@ -335,7 +334,7 @@
         border: 1px solid #649612;
         background: #649612;
         border-radius: 30px;
-  
+
         color: #f5f5f5;
         font-family: "Commissioner", sans-serif;
         font-size: 20px;
@@ -345,20 +344,20 @@
         transition: all 0.4s ease 0s;
       }
     }
-  
+
     .card__container {
       margin-top: 60px;
       width: 100%;
       height: auto;
       box-sizing: border-box;
-      gap: 20px;
-  
+      gap: 0px;
+
       display: flex;
       flex-direction: row;
       align-items: flex-start;
-      justify-content: flex-start;
+      justify-content: center;
       flex-wrap: wrap;
-  
+
       .card {
         display: flex;
         width: 437px;
@@ -370,16 +369,16 @@
         gap: 10.862px;
         flex-shrink: 0;
         box-sizing: border-box;
-  
+
         margin-bottom: 50px;
-  
+
         .image {
           width: 369px;
           height: 369px;
           border-radius: 30px 30px 0 0;
           // margin-bottom: 10px;
         }
-  
+
         .title {
           position: relative;
           left: 4px;
@@ -395,7 +394,7 @@
           text-decoration: none;
           // margin-bottom: 14.3px;
         }
-  
+
         .descr {
           color: #374151;
           font-family: "Commissioner", sans-serif;
@@ -405,20 +404,20 @@
           line-height: normal;
           margin-bottom: 14.3px;
         }
-  
+
         .btn {
           width: 145px;
           height: 50px;
-  
+
           border-radius: 8px;
           background: #649612;
-  
+
           display: flex;
           align-items: center;
           justify-content: center;
           text-decoration: none;
           margin-top: auto;
-  
+
           color: #fff;
           text-align: center;
           font-family: "Rubik", sans-serif;
@@ -431,25 +430,25 @@
         }
       }
     }
-  
+
     .bottom__menu {
       margin-top: 20px;
       width: 100%;
       height: 76px;
       box-sizing: border-box;
-  
+
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-  
+
       .bottom__btn {
         width: 463px;
         height: 100%;
-  
+
         border-radius: 12px;
         border: 2px solid #649612;
-  
+
         color: #649612;
         font-family: "Commissioner", sans-serif;
         font-size: 32px;
@@ -459,17 +458,17 @@
         cursor: pointer;
         background: #f5f5f5;
       }
-  
+
       .pages {
         width: 249px;
         height: 40px;
-  
+
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         margin-left: auto;
-        svg{
+        svg {
           cursor: pointer;
         }
         .pages__link {
@@ -489,12 +488,11 @@
   }
 }
 
-
-@media screen and (min-width: 767px) and (max-width:835px){
+@media screen and (min-width: 767px) and (max-width: 1201px) {
   .articles {
     width: 100%;
     height: auto;
-  
+
     padding: 143px 40px 70px 40px;
     box-sizing: border-box;
     background: #f5f5f5;
@@ -509,7 +507,7 @@
       line-height: 30px;
       margin-top: 0px;
       box-sizing: border-box;
-      .main{
+      .main {
         font-family: "Commissioner", sans-serif;
         color: #374151;
 
@@ -519,11 +517,11 @@
         margin-top: 26px;
         box-sizing: border-box;
         text-decoration: none;
-        &:hover{
+        &:hover {
           text-decoration: underline;
         }
       }
-      .historyLink{
+      .historyLink {
         font-family: "Commissioner", sans-serif;
         color: #374151;
 
@@ -533,35 +531,36 @@
         margin-top: 28px;
         box-sizing: border-box;
         text-decoration: none;
-        &:hover{
+        &:hover {
           text-decoration: underline;
         }
       }
     }
-  
+
     .menu {
       margin-top: 26px;
       width: 100%;
       height: 108px;
-  
+
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
       box-sizing: border-box;
       flex-wrap: wrap;
-  
+      gap: 10px;
+
       .menu__btn {
         display: flex;
         padding: 10px 26px;
         justify-content: center;
         align-items: center;
         // gap: 10px;
-  
+
         border-radius: 30px;
         border: 1px solid #649612;
         background: #f5f5f5;
-  
+
         color: #1d1d1d;
         font-family: "Commissioner", sans-serif;
         font-size: 16px;
@@ -579,7 +578,7 @@
         border: 1px solid #649612;
         background: #649612;
         border-radius: 30px;
-  
+
         color: #f5f5f5;
         font-family: "Commissioner", sans-serif;
         font-size: 16px;
@@ -589,20 +588,20 @@
         transition: all 0.4s ease 0s;
       }
     }
-  
+
     .card__container {
       margin-top: 60px;
       width: 100%;
       height: auto;
       box-sizing: border-box;
-  
+
       display: flex;
       flex-direction: row;
       align-items: flex-start;
       justify-content: center;
       flex-wrap: wrap;
       gap: 0px;
-  
+
       .card {
         display: flex;
         width: 238px;
@@ -614,16 +613,16 @@
         gap: 10.862px;
         flex-shrink: 0;
         box-sizing: border-box;
-  
+
         margin-bottom: 40px;
-  
+
         .image {
           width: 208px;
           height: 208px;
           border-radius: 30px 30px 0 0;
           // margin-bottom: 10px;
         }
-  
+
         .title {
           position: relative;
           left: 4px;
@@ -640,7 +639,7 @@
           z-index: 0;
           // margin-bottom: 14.3px;
         }
-  
+
         .descr {
           color: #374151;
           font-family: "Commissioner", sans-serif;
@@ -655,20 +654,20 @@
           line-height: normal;
           margin-bottom: 0px;
         }
-  
+
         .btn {
           width: 120px;
           height: 30px;
-  
+
           border-radius: 8px;
           background: #649612;
-  
+
           display: flex;
           align-items: center;
           justify-content: center;
           text-decoration: none;
           margin-top: auto;
-  
+
           color: #fff;
           text-align: center;
           font-family: "Rubik", sans-serif;
@@ -681,25 +680,25 @@
         }
       }
     }
-  
+
     .bottom__menu {
       margin-top: 20px;
       width: 100%;
       height: 47px;
       box-sizing: border-box;
-  
+
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-  
+
       .bottom__btn {
         width: 290px;
         height: 100%;
-  
+
         border-radius: 12px;
         border: 2px solid #649612;
-  
+
         color: #649612;
         font-family: "Commissioner", sans-serif;
         font-size: 20px;
@@ -709,17 +708,17 @@
         cursor: pointer;
         background: #f5f5f5;
       }
-  
+
       .pages {
         width: 249px;
         height: 40px;
-  
+
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         margin-left: auto;
-        svg{
+        svg {
           cursor: pointer;
         }
         .pages__link {
@@ -739,12 +738,12 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px){
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .articles {
     max-width: 376px;
     height: auto;
     margin: 0 auto;
-  
+
     padding: 100px 16px 70px 16px;
     box-sizing: border-box;
     background: #f5f5f5;
@@ -759,7 +758,7 @@
       line-height: 30px;
       margin-top: 0px;
       box-sizing: border-box;
-      .main{
+      .main {
         font-family: "Commissioner", sans-serif;
         color: #374151;
 
@@ -769,11 +768,11 @@
         margin-top: 26px;
         box-sizing: border-box;
         text-decoration: none;
-        &:hover{
+        &:hover {
           text-decoration: underline;
         }
       }
-      .historyLink{
+      .historyLink {
         font-family: "Commissioner", sans-serif;
         color: #374151;
 
@@ -783,17 +782,17 @@
         margin-top: 28px;
         box-sizing: border-box;
         text-decoration: none;
-        &:hover{
+        &:hover {
           text-decoration: underline;
         }
       }
     }
-  
+
     .menu {
       margin-top: 26px;
       width: 100%;
       height: 118px;
-  
+
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -801,7 +800,7 @@
       box-sizing: border-box;
       flex-wrap: wrap;
       gap: 0px;
-  
+
       .menu__btn {
         flex: 0 0 calc(33.33% - 10px); /* Устанавливаем ширину элемента так, чтобы в строке было по 3 элемента */
         height: 30px;
@@ -810,11 +809,11 @@
         justify-content: center;
         align-items: center;
         // gap: 10px;
-  
+
         border-radius: 34px;
         border: 1px solid #649612;
         background: #f5f5f5;
-  
+
         color: #1d1d1d;
         font-family: "Commissioner", sans-serif;
         font-size: 13px;
@@ -835,7 +834,7 @@
         border: 1px solid #649612;
         background: #649612;
         border-radius: 34px;
-  
+
         color: #f5f5f5;
         font-family: "Commissioner", sans-serif;
         font-size: 13px;
@@ -846,18 +845,18 @@
         margin: 0px 3.5px;
       }
     }
-  
+
     .card__container {
       margin-top: 30px;
       width: 100%;
       height: auto;
       box-sizing: border-box;
-  
+
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       flex-wrap: wrap;
-  
+
       .card {
         display: flex;
         width: 100%;
@@ -869,16 +868,16 @@
         gap: 10.862px;
         flex-shrink: 0;
         box-sizing: border-box;
-  
+
         margin-bottom: 40px;
-  
+
         .image {
           width: 101%;
           height: 300px;
           // margin-bottom: 10px;
           border-radius: 30px 30px 0px 0px;
         }
-  
+
         .title {
           position: relative;
           left: 4px;
@@ -895,7 +894,7 @@
           z-index: 0;
           // margin-bottom: 14.3px;
         }
-  
+
         .descr {
           color: #374151;
           font-family: "Commissioner", sans-serif;
@@ -910,20 +909,20 @@
           line-height: normal;
           margin-bottom: 0px;
         }
-  
+
         .btn {
           width: 120px;
           height: 30px;
-  
+
           border-radius: 8px;
           background: #649612;
-  
+
           display: flex;
           align-items: center;
           justify-content: center;
           text-decoration: none;
           margin-top: auto;
-  
+
           color: #fff;
           text-align: center;
           font-family: "Rubik", sans-serif;
@@ -936,26 +935,26 @@
         }
       }
     }
-  
+
     .bottom__menu {
       margin-top: 20px;
       padding: 0px 21px;
       width: 100%;
       height: 99px;
       box-sizing: border-box;
-  
+
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-  
+
       .bottom__btn {
         width: 100%;
         height: 45px;
-  
+
         border-radius: 12px;
         border: 2px solid #649612;
-  
+
         order: 2;
         color: #649612;
         font-family: "Commissioner", sans-serif;
@@ -966,18 +965,18 @@
         cursor: pointer;
         background: #f5f5f5;
       }
-  
+
       .pages {
         width: 100%;
         height: 40px;
         order: 1;
-  
+
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         margin-left: auto;
-        svg{
+        svg {
           cursor: pointer;
         }
         .pages__link {

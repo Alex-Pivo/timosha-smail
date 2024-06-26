@@ -152,7 +152,7 @@ export default function HistoryPart() {
                       className={styles.photo}
                       style={{
                         background: `url(${PATH5})`,
-                        backgroundPosition: "center",
+                        backgroundPosition: "center -155px",
                         backgroundSize: "cover",
                       }}
                     ></div>

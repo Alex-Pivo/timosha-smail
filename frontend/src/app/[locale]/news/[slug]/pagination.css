@@ -73,7 +73,7 @@
     .photos .swiper-pagination {
         position: absolute;
         z-index: 10;
-        bottom: -75px;
+        bottom: -35px;
         left: 132px;
         width: 74px;
         display: flex;

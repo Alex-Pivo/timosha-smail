@@ -8,17 +8,19 @@ import "swiper/css/navigation";
 import "../styles/historySwipe.css";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useLocale } from "next-intl";
 
 const PATH = "/history/slider/1.png";
 const PATH2 = "/history/slider/2.png";
 const PATH3 = "/history/slider/3.png";
 const PATH4 = "/history/slider/4.png";
-const PATH5 = "/history/slider/5.jpg";
+const PATH5 = "/history/slider/en.jpg";
 
 export default function HistoryPart() {
   const [isLastSlide, setIsLastSlide] = useState(false);
   const t = useTranslations("History");
   let [active, setActive] = useState(true);
+  let locale = useLocale();
 
   const handleSlideChange = (swiper: any) => {
     if (swiper.activeIndex === 4) {
@@ -144,32 +146,157 @@ export default function HistoryPart() {
                 </div>
               </SwiperSlide>
               <SwiperSlide className={styles.slide}>
-                <div className={styles.inSlide}>
-                  <div
-                    className={styles.photo}
-                    style={{
-                      background: `url(${PATH5})`,
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                    }}
-                  ></div>
-                  <div className={styles.info}>
-                    <p className={styles.year}>{t("year5")}</p>
-                    <p className={styles.text}>
-                      {t("text5")}(
-                      <a
-                        style={{
-                          textDecoration: "underline",
-                        }}
-                        className={styles.text}
-                        href="https://sankostory.com/"
-                      >
-                        www.SankoStory.com
-                      </a>
-                      , @sankostory_book)
-                    </p>
+                {locale === "en" && (
+                  <div className={styles.inSlide}>
+                    <div
+                      className={styles.photo}
+                      style={{
+                        background: `url(${PATH5})`,
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                      }}
+                    ></div>
+                    <div className={styles.info}>
+                      <p className={styles.year}>{t("year5")}</p>
+                      <p className={styles.text}>
+                        {t("text5")}(
+                        <a
+                          style={{
+                            textDecoration: "underline",
+                          }}
+                          className={styles.text}
+                          href="https://sankostory.com/"
+                        >
+                          www.SankoStory.com
+                        </a>
+                        , 
+                        <a
+                          style={{
+                            textDecoration: "underline",
+                          }}
+                          className={styles.text}
+                          href="https://www.instagram.com/sankostory_book?igsh=MXZkMGpiNzRiYWFudw=="
+                        >
+                          @sankostory_book)
+                        </a>
+                      </p>
+                    </div>
                   </div>
-                </div>
+                )}
+
+                {locale === "ua" && (
+                  <div className={styles.inSlide}>
+                    <div
+                      className={styles.photo}
+                      style={{
+                        background: `url("/history/slider/ua.jpg")`,
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                      }}
+                    ></div>
+                    <div className={styles.info}>
+                      <p className={styles.year}>{t("year5")}</p>
+                      <p className={styles.text}>
+                        {t("text5")}(
+                        <a
+                          style={{
+                            textDecoration: "underline",
+                          }}
+                          className={styles.text}
+                          href="https://sankostory.com/"
+                        >
+                          www.SankoStory.com
+                        </a>
+                        , 
+                        <a
+                          style={{
+                            textDecoration: "underline",
+                          }}
+                          className={styles.text}
+                          href="https://www.instagram.com/sankostory_book?igsh=MXZkMGpiNzRiYWFudw=="
+                        >
+                          @sankostory_book)
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {locale === "it" && (
+                  <div className={styles.inSlide}>
+                    <div
+                      className={styles.photo}
+                      style={{
+                        background: `url("/history/slider/it.jpg")`,
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                      }}
+                    ></div>
+                    <div className={styles.info}>
+                      <p className={styles.year}>{t("year5")}</p>
+                      <p className={styles.text}>
+                        {t("text5")}(
+                        <a
+                          style={{
+                            textDecoration: "underline",
+                          }}
+                          className={styles.text}
+                          href="https://sankostory.com/"
+                        >
+                          www.SankoStory.com
+                        </a>
+                        , 
+                        <a
+                          style={{
+                            textDecoration: "underline",
+                          }}
+                          className={styles.text}
+                          href="https://www.instagram.com/sankostory_book?igsh=MXZkMGpiNzRiYWFudw=="
+                        >
+                          @sankostory_book)
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {locale === "ru" && (
+                  <div className={styles.inSlide}>
+                    <div
+                      className={styles.photo}
+                      style={{
+                        background: `url("/history/slider/ru.jpg")`,
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                      }}
+                    ></div>
+                    <div className={styles.info}>
+                      <p className={styles.year}>{t("year5")}</p>
+                      <p className={styles.text}>
+                        {t("text5")}(
+                        <a
+                          style={{
+                            textDecoration: "underline",
+                          }}
+                          className={styles.text}
+                          href="https://sankostory.com/"
+                        >
+                          www.SankoStory.com
+                        </a>
+                        , 
+                        <a
+                          style={{
+                            textDecoration: "underline",
+                          }}
+                          className={styles.text}
+                          href="https://www.instagram.com/sankostory_book?igsh=MXZkMGpiNzRiYWFudw=="
+                        >
+                          @sankostory_book)
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                )}
               </SwiperSlide>
               {active && <SwiperSlide />}
               <BtnsHistory />

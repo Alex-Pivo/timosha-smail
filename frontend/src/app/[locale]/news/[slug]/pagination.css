@@ -63,7 +63,40 @@
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 1200px){
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    .photos{
+        box-sizing: border-box;
+        width: 331px;
+        height: 401px;  
+    }
+    
+    .photos .swiper-pagination {
+        position: absolute;
+        z-index: 10;
+        bottom: -75px;
+        left: 132px;
+        width: 74px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .photos .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: #D1D5DB; /* Цвет активного пункта пагинации */
+        opacity: 1;
+    }
+      
+    .photos .swiper-pagination-bullet-active {
+        width: 14px;
+        height: 14px;
+        background-color: #649612; /* Цвет неактивного пункта пагинации */
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
     .photos{
         box-sizing: border-box;
         width: 331px;
@@ -95,3 +128,4 @@
         background-color: #649612; /* Цвет неактивного пункта пагинации */
     }
 }
+

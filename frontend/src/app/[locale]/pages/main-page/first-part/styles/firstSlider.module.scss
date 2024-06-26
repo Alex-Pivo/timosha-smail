@@ -1722,7 +1722,7 @@
     .zone {
       top: -178px;
       left: auto;
-      right: -100px;
+      right: -80px;
       position: absolute;
       width: 56%;
       height: 500px;
@@ -1751,13 +1751,24 @@
         letter-spacing: -1px;
         a {
           color: #f5f5f5;
-          text-decoration: none;
+          // text-decoration: none;
         }
       }
     }
     .zone:hover {
       transition: all 0.4s ease 0s;
       opacity: 0;
+    }
+
+    .zone5 {
+      top: -48px;
+      left: auto;
+      right: 10px;
+    }
+    .zone3 {
+      top: -48px;
+      left: auto;
+      right: -40px;
     }
   }
 

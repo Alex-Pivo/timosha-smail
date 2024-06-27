@@ -190,7 +190,7 @@ export default function Slider({ locale }: any) {
                   onClick={() => {
                     setMouse((mouse = true));
                   }}
-                  className={styles.zone}
+                  className={`${styles.zone2} ${styles.zone}`}
                 >
                   <div className={styles.circle}>
                     <a href={state[0].image_url_new2}>
@@ -300,7 +300,7 @@ export default function Slider({ locale }: any) {
                   onClick={() => {
                     setMouse((mouse = true));
                   }}
-                  className={styles.zone}
+                  className={`${styles.zone4} ${styles.zone}`}
                 >
                   <div className={styles.circle}>
                     <a href={state[0].image_url_new4}>

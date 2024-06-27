@@ -93,7 +93,7 @@ export const OurTeam = () => {
 								>
 									<SwiperSlide
 										className={styles.card} style={{display:"flex", justifyContent: "center"}}>
-										<img src="/sliderRand1.png" alt="" style={{borderRadius: '10px'}}/>
+										<img src="/sliderRand1.png" alt="" style={window.innerWidth < 700 ? {borderRadius: '10px', width: "160px"} : {borderRadius: '10px'}}/>
 										<div className="swiper-slide-shadow swiper-slide-shadow-cards"
 											 style={{
 												 background: 'transparent',
@@ -120,7 +120,7 @@ export const OurTeam = () => {
 											 }}></div>
 									</SwiperSlide>
 									<SwiperSlide className={styles.card} style={{display:"flex", justifyContent: "center"}}>
-										<img src="/sliderRand4.png" alt=""/>
+										<img src="/sliderRand4.png" alt="" style={window.innerWidth < 700 ? {borderRadius: '10px', width: "160px"} : {}} />
 										<div className="swiper-slide-shadow swiper-slide-shadow-cards"
 											 style={{
 												 background: 'transparent',

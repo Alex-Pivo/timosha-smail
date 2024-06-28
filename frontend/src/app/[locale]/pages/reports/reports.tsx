@@ -320,7 +320,7 @@ export default function Reports({ locale }: any) {
                   getIndex(i);
                 }}
               >
-                {stat.year} рік
+                {stat.year}
               </button>
             ))}
           </div>

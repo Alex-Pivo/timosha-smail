@@ -340,5 +340,9 @@
     "title": "Oops...",
     "sub": "Something went wrong. Please try again",
     "btn": "Reload"
+  },
+  "zmi": {
+    "title": "We are in the media",
+    "sub": "All articles and interviews covering the activities of the foundation are collected here."
   }
 }

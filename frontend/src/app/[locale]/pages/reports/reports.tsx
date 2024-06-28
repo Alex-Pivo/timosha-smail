@@ -23,6 +23,7 @@ const PATH4 = "/history/slider/4.png";
 
 export default function Reports({ locale }: any) {
   const t = useTranslations("Reports");
+  const g = useTranslations("zmi");
   let [active, setActive] = useState(true);
   let [index, setIndex] = useState(3);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -320,7 +321,7 @@ export default function Reports({ locale }: any) {
                   getIndex(i);
                 }}
               >
-                {stat.year}
+                {stat.year} рік
               </button>
             ))}
           </div>
@@ -526,7 +527,7 @@ export default function Reports({ locale }: any) {
 
         <div className={styles.we}>
           <div className={styles.box}>
-            <h3 className={styles.title}>Ми в ЗМІ</h3>
+            <h3 className={styles.title}>{g("title")}</h3>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="222"
@@ -542,10 +543,7 @@ export default function Reports({ locale }: any) {
             </svg>
           </div>
 
-          <p className={styles.descr}>
-            Тут зібрані усі статті та інтервʼю, які висвітлюють діяльність
-            фонду.
-          </p>
+          <p className={styles.descr}>{g("sub")}</p>
         </div>
 
         <div className={styles.histories}>

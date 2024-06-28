@@ -1273,13 +1273,33 @@
         letter-spacing: -1px;
         a {
           color: #f5f5f5;
-          text-decoration: none;
+          text-decoration: underline;
         }
       }
     }
     .zone:hover {
       transition: all 0.4s ease 0s;
       opacity: 0;
+    }
+    .zone5 {
+      top: 148px;
+      left: auto;
+      right: 10px;
+    }
+    .zone2{
+      top: -28px;
+      left: auto;
+      right: -250px;
+    }
+    .zone3{
+      top: -68px;
+      left: auto;
+      right: -250px;
+    }
+    .zone4{
+      top: -68px;
+      left: auto;
+      right: -250px;
     }
   }
 

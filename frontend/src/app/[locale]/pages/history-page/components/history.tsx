@@ -149,10 +149,10 @@ export default function HistoryPart() {
                 {locale === "en" && (
                   <div className={styles.inSlide}>
                     <div
-                      className={styles.photo}
+                       className={`${styles.photo} ${styles.photo1}`}
                       style={{
                         background: `url(${PATH5})`,
-                        backgroundPosition: "center -155px",
+                        backgroundPosition: "center",
                         backgroundSize: "cover",
                       }}
                     ></div>

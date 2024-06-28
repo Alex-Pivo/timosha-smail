@@ -340,5 +340,9 @@
     "title": "Oops..",
     "sub": "Qualcosa è andato storto. Per favore riprova",
     "btn": "Ricarica"
+  },
+  "zmi": {
+    "title": "Siamo nei media",
+    "sub": "Qui sono raccolti tutti gli articoli e le interviste che riguardano le attività della fondazione."
   }
 }

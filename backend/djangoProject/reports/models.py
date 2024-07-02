@@ -13,10 +13,10 @@ class ChooseLanguage(models.TextChoices):
 
 class Report(models.Model):
     year = models.CharField(max_length=4, default=str(datetime.now().year),verbose_name="Рік")
-    first_description = models.TextField(max_length=255, blank=False, default='',verbose_name="Пункт 1 (обов'язковий)")
-    second_description = models.TextField(max_length=255, blank=True, default='',verbose_name="Пункт 2")
-    third_description = models.TextField(max_length=255, blank=True, default='',verbose_name="Пункт 3")
-    fourth_description = models.TextField(max_length=255, blank=True, default='',verbose_name="Пункт 4")
+    first_description = models.TextField(max_length=255, blank=False, default='',verbose_name="Пункт 1 (обов'язковий) синій")
+    second_description = models.TextField(max_length=255, blank=True, default='',verbose_name="Пункт 2 зелений")
+    third_description = models.TextField(max_length=255, blank=True, default='',verbose_name="Пункт 3 помаранчевий")
+    fourth_description = models.TextField(max_length=255, blank=True, default='',verbose_name="Пункт 4 рожевий")
 
     first_diagram_percent = models.FloatField(blank=False, default=0,verbose_name="Відсоток пункту 1")
     second_diagram_percent = models.FloatField(blank=True, default=0,verbose_name="Відсоток пункту 2")

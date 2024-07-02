@@ -6,10 +6,8 @@ import styles from "./styles/firstHelp.module.scss";
 import { NavLink } from "react-router-dom";
 import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
-import {useLocale} from "next-intl";
+import { useLocale } from "next-intl";
 // var scroll = Scroll.animateScroll;
-
-
 
 export default function FirstHelp() {
   const [name, setName] = useState("");
@@ -42,13 +40,12 @@ export default function FirstHelp() {
   let [amountP, setAmountP] = useState("");
 
   useEffect(() => {
-    if(locale === "ua"){
-      setCurrency(currency = "UAH");
-    } else if(locale === "ru"){
-      setCurrency(currency = "UAH");
-    }
-    else {
-      setCurrency(currency = "USD");
+    if (locale === "ua") {
+      setCurrency((currency = "UAH"));
+    } else if (locale === "ru") {
+      setCurrency((currency = "UAH"));
+    } else {
+      setCurrency((currency = "USD"));
     }
   }, [locale]);
 
@@ -210,7 +207,9 @@ export default function FirstHelp() {
             >
               <p className={styles.title}>
                 <span
-                  className={(sub === "false") ? styles.span__active : styles.span}
+                  className={
+                    sub === "false" ? styles.span__active : styles.span
+                  }
                   id={styles.spanTitle}
                   onClick={() => {
                     setActive((active = "true"));
@@ -222,7 +221,7 @@ export default function FirstHelp() {
                 </span>
                 <span id={styles.tag}>/</span>
                 <span
-                  className={(sub === "true") ? styles.span__active : styles.span}
+                  className={sub === "true" ? styles.span__active : styles.span}
                   id={styles.spanTitle1}
                   onClick={() => {
                     setActive((active = "false"));
@@ -235,8 +234,8 @@ export default function FirstHelp() {
               </p>
               <div className={styles.summa}>
                 <p className={styles.label}>
-                {sub === "false" ?  t("subtitle") :  t("subtitle1")}
-                  </p>
+                  {sub === "false" ? t("subtitle") : t("subtitle1")}
+                </p>
                 <div className={styles.containerForm}>
                   <div
                     onClick={() => {
@@ -391,7 +390,17 @@ export default function FirstHelp() {
                       setBtnEight((btnEight = false));
                       setBtnSix((btnSix = true));
                     }}
-                    className={btnSix || (amount === amountPage && (amountPage !== t("11") && amountPage !== t("22") && amountPage !== t("33") && amountPage !== t("44") && amountPage !== t("77"))) ? styles.blockActive : styles.block}
+                    className={
+                      btnSix ||
+                      (amount === amountPage &&
+                        amountPage !== t("11") &&
+                        amountPage !== t("22") &&
+                        amountPage !== t("33") &&
+                        amountPage !== t("44") &&
+                        amountPage !== t("77"))
+                        ? styles.blockActive
+                        : styles.block
+                    }
                   >
                     {t("another")}
                   </div>
@@ -400,7 +409,17 @@ export default function FirstHelp() {
               <input
                 type="text"
                 placeholder={t("amount")}
-                className={btnSix || (amount === amountPage && (amountPage !== t("11") && amountPage !== t("22") && amountPage !== t("33") && amountPage !== t("44") && amountPage !== t("77"))) ? styles.inputActive : styles.input}
+                className={
+                  btnSix ||
+                  (amount === amountPage &&
+                    amountPage !== t("11") &&
+                    amountPage !== t("22") &&
+                    amountPage !== t("33") &&
+                    amountPage !== t("44") &&
+                    amountPage !== t("77"))
+                    ? styles.inputActive
+                    : styles.input
+                }
                 value={amount}
                 onChange={(e) => {
                   setAmount(e.target.value);
@@ -467,6 +486,7 @@ export default function FirstHelp() {
                 />
               </div>
               <div className={styles.btn__container}>
+                <p className={styles.textDown}>{t("downUp")}</p>
                 <button className={styles.btn} type="submit">
                   {t("btn")}
                 </button>
@@ -488,6 +508,7 @@ export default function FirstHelp() {
                   </svg>
                   <p>{t("down")}</p>
                 </div>
+                <p className={styles.textDownTwo}>{t("downText")}</p>
               </div>
             </form>
           </div>

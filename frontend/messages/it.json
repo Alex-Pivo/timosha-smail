@@ -22,7 +22,7 @@
     "subtitle": "Fondo di beneficenza cristiano in memoria di Tymosha Sanko",
     "name": "Sviatoslav",
     "year": "2 anni",
-    "read": "Storia di "
+    "read": "Leggi la storia di "
   },
   "helpcomp":{
     "yes": "Richiesta una tantum",
@@ -146,6 +146,8 @@
     "another": "Altro importo",
     "btn": "Fai una donazione",
     "down": "Aiutare ogni mese significa salvare vite ogni giorno",
+    "downUp": "Facendo clic sul pulsante «Dona», accetti che i fondi donati non siano rimborsabili (beneficenza)",
+    "downText": "*In caso di mancata realizzazione del progetto, i fondi ricevuti come risultato dei beni mobili e immobili della Fondazione e delle sue divisioni, delle imprese e organizzazioni da essa create, nonché i fondi finanziari dopo aver soddisfatto le richieste dei creditori, il pagamento dei debiti e degli stipendi dei dipendenti a tempo pieno della Fondazione, vengono utilizzati per scopi di beneficenza e, secondo la decisione del tribunale, vengono inviati alle entrate dello Stato. Inoltre, in caso di liquidazione, fusione, scissione, fusione o trasformazione, il patrimonio del Fondo potrà essere trasferito a una o più organizzazioni senza scopo di lucro del tipo corrispondente o essere incluso nelle entrate di bilancio. Importo stimato per la costruzione dell'ospedale: 16 milioni. Tempi di realizzazione: 5 anni.",
     "amount": "Inserisci l'importo",
     "first": "Nome",
     "last": "Cognome",

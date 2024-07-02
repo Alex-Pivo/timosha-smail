@@ -312,7 +312,7 @@
 
       .btn__container {
         width: 545px;
-        height: 124px;
+        min-height: 124px;
         margin-top: 94px;
 
         display: flex;
@@ -331,6 +331,7 @@
           font-weight: 500;
           color: #ffffff;
           cursor: pointer;
+          margin-top: 20px;
 
           transition: all 0.4s ease 0s;
         }
@@ -352,10 +353,16 @@
 
           font-size: 20px;
           font-weight: 500;
-
-          padding: 0;
-          margin: 0;
-          border: 0;
+        }
+        .textDown{
+          width: 100% !important;
+          text-align: left;
+          line-height: 20px;
+        }
+        .textDownTwo{
+          margin-top: 20px;
+          width: 100% !important;
+          text-align: left;
         }
 
         .description {
@@ -363,6 +370,7 @@
           flex-direction: row;
           align-items: flex-start;
           justify-content: center;
+          line-height: 20px;
 
           .star {
             margin-right: 4px;
@@ -745,7 +753,7 @@
 
         .btn__container {
           width: 100%;
-          height: 105px;
+          min-height: 105px;
           margin-top: 52px;
 
           display: flex;
@@ -1156,7 +1164,7 @@
 
         .btn__container {
           width: 100%;
-          height: 105px;
+          min-height: 105px;
           margin-top: 52px;
 
           display: flex;
@@ -1619,7 +1627,7 @@
 
         .btn__container {
           width: 100%;
-          height: 75px;
+          min-height: 75px;
 
           display: flex;
           flex-direction: column;
@@ -1662,6 +1670,14 @@
             padding: 0;
             margin: 0;
             border: 0;
+          }
+
+          .textDown{
+            line-height: 15px;
+            text-align: center;
+          }
+          .textDownTwo{
+            line-height: 18px;
           }
 
           .description {

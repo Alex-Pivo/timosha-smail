@@ -22,7 +22,7 @@
     "subtitle": "Charitable Christian Foundation in memory of Timosha Sanko",
     "name": "Sviatoslav",
     "year": "2 years old",
-    "read": "Story of "
+    "read": "Read the story of "
   },
   "helpcomp":{
     "yes": "One-off ",
@@ -146,6 +146,8 @@
     "another": "Another amount",
     "btn": "Donate",
     "down": "To help every month is to save children's lives every day",
+    "downUp": "By clicking the «Donate» button, you agree that the donated funds are non-refundable (charity)",
+    "downText": "*In case of non-implementation of the project, the funds received as a result of the movable and immovable property of the Foundation and its divisions, the enterprises and organizations created by it, as well as financial funds after meeting the demands of creditors, paying debts and salaries of the Foundation's full-time employees, are used for charitable purposes, and according to the court's decision, they are sent to the state income. In addition, in case of liquidation, merger, division, merger or transformation, the assets of the Fund may be transferred to one or more non-profit organizations of the corresponding type or be included in the budget income. Estimated amount for the construction of the hospital: 16 million. Implementation period: 5 years.",
     "amount": "Enter amount",
     "first": "Your name",
     "last": "Last name",

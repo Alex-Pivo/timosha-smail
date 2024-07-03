@@ -346,5 +346,12 @@
   "zmi": {
     "title": "Siamo nei media",
     "sub": "Qui sono raccolti tutti gli articoli e le interviste che riguardano le attività della fondazione."
+  },
+   "new": {
+    "home": "Principale",
+    "news": "Notizie",
+    "new": "Articolo",
+    "time": "Momento della lettura: ",
+    "min": " min"
   }
 }

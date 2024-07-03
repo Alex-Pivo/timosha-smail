@@ -18,10 +18,12 @@ import "swiper/css/navigation";
 import 'swiper/scss/pagination';
 import "./pagination.css"
 import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 
 export default function Page() {
 	let [state, setState] = useState<any[]>([]);
 	const pathname = usePathname();
+	const t = useTranslations("new");
 	const id = pathname.split('/').pop(); // Получить id из пути
 	// const idNum = parseInt(id);
 	let locale = useLocale();
@@ -63,9 +65,9 @@ export default function Page() {
 			</div>
 			<div className={stylesArticles.body__container}>
 				<p className={article.pages}>
-					<Link href="/" className={article.main}>Головна </Link>
-					/<Link href="/news" className={article.historyLink}> Новини </Link>
-					/<Link href={"@/app/news/" + id} className={article.historyLink}> Стаття</Link>
+					<Link href="/" className={article.main}>{t('home')} </Link>
+					/<Link href="/news" className={article.historyLink}> {t('news')} </Link>
+					/<Link href={"@/app/news/" + id} className={article.historyLink}> {t('new')}</Link>
 				</p>
 				{state.map((item) => {
 					if (item.slug === id) {
@@ -116,7 +118,7 @@ export default function Page() {
 												<path d="M12 22.5C17.5228 22.5 22 18.0228 22 12.5C22 6.97715 17.5228 2.5 12 2.5C6.47715 2.5 2 6.97715 2 12.5C2 18.0228 6.47715 22.5 12 22.5Z" stroke="#649612" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 												<path d="M12 6.5V12.5L16 14.5" stroke="#649612" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
 											</svg>
-											<p className={article.time}>Час прочитання: {item.time_to_read} хв</p>
+											<p className={article.time}>{t('time')} {item.time_to_read} {t('min')}</p>
 										</div>
 									</div>
 								</div>

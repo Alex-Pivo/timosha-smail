@@ -8,7 +8,7 @@
     position: absolute;
     z-index: 10;
     /* bottom: 44px; */
-    bottom: -20px;
+    bottom: -18px;
     left: 280px;
     width: 156px;
     display: flex;
@@ -40,7 +40,7 @@
     .photos .swiper-pagination {
         position: absolute;
         z-index: 10;
-        bottom: -65px;
+        bottom: -52px;
         left: 200px;
         width: 156px;
         display: flex;
@@ -73,7 +73,7 @@
     .photos .swiper-pagination {
         position: absolute;
         z-index: 10;
-        bottom: -75px;
+        bottom: -53px;
         left: 132px;
         width: 74px;
         display: flex;
@@ -106,7 +106,7 @@
     .photos .swiper-pagination {
         position: absolute;
         z-index: 10;
-        bottom: -35px;
+        bottom: -14px;
         left: 132px;
         width: 74px;
         display: flex;

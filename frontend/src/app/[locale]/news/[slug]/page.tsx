@@ -54,7 +54,7 @@ export default function Page() {
 				item.optional_image_3 ? `http://95.169.204.16:8000/${item.optional_image_3}` : null,
 			].filter(Boolean); // Удалить null значения
 
-			setHidden(photos.length <= 2);
+			setHidden(photos.length < 2);
 		}
 	}, [state, id]);
 

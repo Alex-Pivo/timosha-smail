@@ -77,7 +77,7 @@ export default function Articles({ locale }: any) {
       axios
         .get("http://95.169.204.16:8000/news/" + localeValue)
         .then((res) => {
-          data = res.data;
+          data = res.data.reverse();
           setState(data);
           setFilteredItems(state);
           setVisibleNews(
@@ -106,6 +106,7 @@ export default function Articles({ locale }: any) {
       );
     }
   }
+  
 
   useEffect(() => {
     componentDidMount();
@@ -153,14 +154,6 @@ export default function Articles({ locale }: any) {
     filterNewsByCategory(state, selectedCategory).length / newsPerPage
   );
 
-  // const handlePageClick = (page: number) => {
-  //   if(page <= 0){ page = 1}
-  //   setCurrentPage(page);
-  //   const startIndex = (page - 1) * newsPerPage;
-  //   const endIndex = Math.min(startIndex + newsPerPage, filterNewsByCategory(state, selectedCategory).length);
-
-  //   setVisibleNews(filterNewsByCategory(state, selectedCategory).slice(startIndex, endIndex));
-  // };
   const handlePageClick = (page: number) => {
     if (page <= 0) {
       page = 1;
@@ -180,9 +173,8 @@ export default function Articles({ locale }: any) {
   };
 
   useEffect(() => {
-    setIndexPage(indexPage = currentPage);
-  }, [handlePageClick])
-  
+    setIndexPage((indexPage = currentPage));
+  }, [handlePageClick]);
 
   const totalPages = Math.ceil(
     filterNewsByCategory(state, selectedCategory).length / newsPerPage
@@ -284,11 +276,12 @@ export default function Articles({ locale }: any) {
 
         <div className={styles.bottom__menu}>
           {filterNewsByCategory(state, selectedCategory).length >
-            visibleNews.length && indexPage < totalPages && (
-            <button className={styles.bottom__btn} onClick={loadMoreNews}>
-              {t("load")}
-            </button>
-          )}
+            visibleNews.length &&
+            indexPage < totalPages && (
+              <button className={styles.bottom__btn} onClick={loadMoreNews}>
+                {t("load")}
+              </button>
+            )}
           {/* {pageCount > 1 && (
             <div className={styles.pages}>
                 <svg
@@ -358,7 +351,11 @@ export default function Articles({ locale }: any) {
               {Array.from({ length: pageCount }, (_, index) => (
                 <button
                   key={index + 1}
-                  className={(indexPage === (index + 1)) ? styles.pages__link__on : styles.pages__link}
+                  className={
+                    indexPage === index + 1
+                      ? styles.pages__link__on
+                      : styles.pages__link
+                  }
                   onClick={() => {
                     handlePageClick(index + 1);
                     scrollToTop();
@@ -369,9 +366,9 @@ export default function Articles({ locale }: any) {
               ))}
               <svg
                 onClick={() => {
-                  if(indexPage < totalPages){
+                  if (indexPage < totalPages) {
                     handlePageClick(indexPage + 1);
-                  } else{
+                  } else {
                     handlePageClick(indexPage);
                   }
                   scrollToTop();

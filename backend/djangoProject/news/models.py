@@ -31,37 +31,24 @@ class News(models.Model):
     video_url = models.URLField(verbose_name='Посилання на YouTube:',blank=True,null=True,default='')
     language = models.CharField(max_length=30, choices=ChooseLanguage.choices, default=ChooseLanguage.UKRAINIAN,verbose_name='Мова сайту')
     created_at = models.DateTimeField(default=timezone.now,verbose_name='Дата створення:')
-    slug = models.SlugField(unique=True, default='', verbose_name="Slug сторінки",blank=True)
+    slug = models.SlugField(unique=True, default='', verbose_name="Slug сторінки",blank=True,editable=True)
 
-    # main_news = models.ForeignKey('self', null=True, blank=True, on_delete=models.SET_NULL, related_name='translations_set')
-
-    def save(self, *args, **kwargs):
-        if not self.pk:
-            super().save(*args, **kwargs)  # Зберігаємо новий об'єкт для отримання pk
-
-        if not self.slug:
-            if self.language in {ChooseLanguage.UKRAINIAN, ChooseLanguage.RUSSIAN}:
-                base_slug = slugify(unidecode(self.title))
-            else:
-                base_slug = slugify(self.title)
-
-            # Додаємо префікс з мовою до слагу
-            language_prefix = self.language.lower()
-            self.slug = f'{base_slug}-{language_prefix}'
-
-            # Перевіряємо, щоб слаг був унікальним
-            original_slug = self.slug
-            counter = 1
-            while News.objects.filter(slug=self.slug).exists():
-                self.slug = f'{original_slug}-{counter}'
-                counter += 1
-        else:
-            ...
-
-        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.title
+
+    def delete(self, *args, **kwargs):
+        # Видалення фотографій під час видалення новини
+        if self.main_image:
+            self.main_image.delete()
+        if self.optional_image_1:
+            self.optional_image_1.delete()
+        if self.optional_image_2:
+            self.optional_image_2.delete()
+        if self.optional_image_3:
+            self.optional_image_3.delete()
+
+        super().delete(*args, **kwargs)
 
     class Meta:
         verbose_name = 'Новина'

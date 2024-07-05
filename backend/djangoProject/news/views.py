@@ -2,6 +2,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import News
 from .serializers import NewsSerializer
+from unidecode import unidecode
+from django.utils.text import slugify
 
 class GetNewsList(APIView):
     def get(self, request, language):
@@ -13,6 +15,12 @@ class GetNewsDetail(APIView):
     def get(self, request, slug, language):
         news = News.objects.filter(language=language, slug=slug).first()
         serializer = NewsSerializer(news)
+        return Response(serializer.data)
+
+class GetNewOnAnotherLanguage(APIView):
+    def get(self,request,slug):
+        new = News.objects.filter(slug=slug).first()
+        serializer = NewsSerializer(new)
         return Response(serializer.data)
 
 class SortNewsByCategory(APIView):

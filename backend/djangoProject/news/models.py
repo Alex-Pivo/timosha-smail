@@ -4,7 +4,7 @@ from django.utils import timezone
 from unidecode import unidecode
 
 class ChooseLanguage(models.TextChoices):
-    UKRAINIAN = 'ua', 'Українська'
+    UKRAINIAN = 'uk', 'Українська'
     ENGLISH = 'en', 'English'
     ITALIAN = 'it', 'Italiano'
     RUSSIAN = 'ru', 'Русский'
@@ -28,10 +28,11 @@ class News(models.Model):
     optional_image_2 = models.ImageField(upload_to='media_storage/news_images', blank=True, verbose_name="Фото 3")
     optional_image_3 = models.ImageField(upload_to='media_storage/news_images', blank=True, verbose_name="Фото 4")
     category = models.CharField(max_length=25, choices=Category.choices, default=Category.IMPORTANT, verbose_name="Категорія новини")
-    video_url = models.URLField(verbose_name='Посилання на YouTube:')
-    slug = models.SlugField(unique=True, default='', verbose_name="Slug сторінки",blank=True)
+    video_url = models.URLField(verbose_name='Посилання на YouTube:',blank=True,null=True,default='')
     language = models.CharField(max_length=30, choices=ChooseLanguage.choices, default=ChooseLanguage.UKRAINIAN,verbose_name='Мова сайту')
     created_at = models.DateTimeField(default=timezone.now,verbose_name='Дата створення:')
+    slug = models.SlugField(unique=True, default='', verbose_name="Slug сторінки",blank=True)
+
     # main_news = models.ForeignKey('self', null=True, blank=True, on_delete=models.SET_NULL, related_name='translations_set')
 
     def save(self, *args, **kwargs):
@@ -39,29 +40,23 @@ class News(models.Model):
             super().save(*args, **kwargs)  # Зберігаємо новий об'єкт для отримання pk
 
         if not self.slug:
-            # Генеруємо базовий слаг з заголовку
-            base_slug = slugify(self.title)
+            if self.language in {ChooseLanguage.UKRAINIAN, ChooseLanguage.RUSSIAN}:
+                base_slug = slugify(unidecode(self.title))
+            else:
+                base_slug = slugify(self.title)
 
             # Додаємо префікс з мовою до слагу
-            language_prefix = ''
-            if self.language == ChooseLanguage.UKRAINIAN:
-                language_prefix = 'ua'
-            elif self.language == ChooseLanguage.ENGLISH:
-                language_prefix = 'en'
-            elif self.language == ChooseLanguage.ITALIAN:
-                language_prefix = 'it'
-            elif self.language == ChooseLanguage.RUSSIAN:
-                language_prefix = 'ru'
-
-            # Повністю формуємо унікальний слаг
+            language_prefix = self.language.lower()
             self.slug = f'{base_slug}-{language_prefix}'
 
             # Перевіряємо, щоб слаг був унікальним
+            original_slug = self.slug
+            counter = 1
             while News.objects.filter(slug=self.slug).exists():
-                self.slug = f'{self.slug}-{self.pk}'
-
-        if not self.main_news:
-            self.main_news = self
+                self.slug = f'{original_slug}-{counter}'
+                counter += 1
+        else:
+            ...
 
         super().save(*args, **kwargs)
 
@@ -71,3 +66,4 @@ class News(models.Model):
     class Meta:
         verbose_name = 'Новина'
         verbose_name_plural = 'Новини'
+

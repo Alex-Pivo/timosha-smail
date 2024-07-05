@@ -4,6 +4,7 @@ from .forms import NewsAdminForm
 from unidecode import unidecode
 from django.utils.text import slugify
 
+
 @admin.register(News)
 class NewsAdmin(admin.ModelAdmin):
     list_display = ('title', 'language', 'created_at')

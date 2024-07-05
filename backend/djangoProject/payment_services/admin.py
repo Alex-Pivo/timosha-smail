@@ -31,14 +31,12 @@ class LiqpayPaymentAdmin(admin.ModelAdmin):
                 payment.save()
             else:
                 print('Status',res.get('status'))
+                payment = LiqpayPayment.objects.get(order_id=id)
+                payment.status = res.get('status')
+                payment.save()
 
 
 
     def changelist_view(self, request, extra_context=None):
         self.check_payment()  # Call the function every time the list view is loaded
         return super().changelist_view(request, extra_context)
-@admin.register(InternationalPayment)
-class InternationalPaymentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'surname', 'email', 'phone', 'created_at')
-    readonly_fields = ('name', 'surname', 'email', 'phone', 'created_at')
-    ordering = ('-created_at',)

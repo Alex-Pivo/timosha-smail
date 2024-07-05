@@ -1,5 +1,3 @@
-from django.shortcuts import render, get_object_or_404
-from django.http import JsonResponse,HttpResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import News
@@ -38,6 +36,3 @@ class SortNewsByCategory(APIView):
 
         serializer = NewsSerializer(news, many=True)
         return Response(serializer.data)
-
-
-

@@ -1,7 +1,12 @@
 from rest_framework import serializers
-from . import models
+from .models import News
 
 class NewsSerializer(serializers.ModelSerializer):
+
     class Meta:
-        model = models.News
-        fields = ['title', 'short_description', 'description', 'content', 'time_to_read', 'main_image', 'optional_image_1', 'optional_image_2', 'optional_image_3', 'category', 'slug', 'language', 'created_at']
+        model = News
+        fields = '__all__'
+
+    # def get_translations(self, obj):
+    #     translations = obj.main_news.translations_set.all()
+    #     return NewsSerializer(translations, many=True).data

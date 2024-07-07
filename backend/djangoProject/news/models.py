@@ -10,9 +10,9 @@ class ChooseLanguage(models.TextChoices):
     RUSSIAN = 'ru', 'Русский'
 
 class Category(models.TextChoices):
-    CHILDS_HISTORY = 'childs_history', 'Історії діток'
+    EVACUATION = 'evacuation', 'Евакуація'
     FOND_ACHIVMENTS = 'fond_achievments', 'Досягнення фонду'
-    IMPORTANT = 'important', 'Важливе'
+    CLINIC = 'clinic', 'Клініка'
     YOUR_HELP = 'your_help', 'Ваша допомога'
     LIFE_OF_FOND = 'life_of_fond', 'Життя фонду'
     INTERVIEW = 'interview', 'Інтерв’ю'

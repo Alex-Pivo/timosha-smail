@@ -27,8 +27,8 @@ class SortNewsByCategory(APIView):
     def get(self, request, category, language):
         category_mappings = {
             'all_news': 'all_news',
-            'important': 'important',
-            'childs_history': 'childs_history',
+            'clinic': 'clinic',
+            'evacuation': 'evacuation',
             'fond_achievements': 'fond_achievements',
             'your_help': 'your_help',
             'life_of_fond': 'life_of_fond',

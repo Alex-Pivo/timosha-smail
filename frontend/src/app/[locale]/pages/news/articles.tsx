@@ -75,7 +75,7 @@ export default function Articles({ locale }: any) {
     try {
       let data;
       axios
-        .get("http://95.169.204.16:8000/news/" + localeValue)
+        .get("http://127.0.0.1:8000/news/" + localeValue + "/")
         .then((res) => {
           data = res.data.reverse();
           setState(data);
@@ -258,7 +258,7 @@ export default function Articles({ locale }: any) {
               <div
                 className={styles.image}
                 style={{
-                  backgroundImage: `url(http://95.169.204.16:8000/${item.main_image})`,
+                  backgroundImage: `url(http://127.0.0.1:8000/${item.main_image})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                 }}

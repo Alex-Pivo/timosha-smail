@@ -34,9 +34,9 @@ export default function Articles({ locale }: any) {
   let localeValue = locale;
 
   const filters = [
-    "childs_history",
+    "evacuation",
     "fond_achievments",
-    "important",
+    "clinic",
     "your_help",
     "life_of_fond",
     "interview",
@@ -44,13 +44,13 @@ export default function Articles({ locale }: any) {
 
   function categoryGet(category: any) {
     let cat = "";
-    if (category == "childs_history") {
+    if (category == "evacuation") {
       cat = t("btn2");
     }
     if (category == "fond_achievments") {
       cat = t("btn3");
     }
-    if (category == "important") {
+    if (category == "clinic") {
       cat = t("btn4");
     }
     if (category == "your_help") {
@@ -75,7 +75,7 @@ export default function Articles({ locale }: any) {
     try {
       let data;
       axios
-        .get("http://127.0.0.1:8000/news/" + localeValue + "/")
+        .get("http://95.169.204.16:8000/news/" + localeValue + "/")
         .then((res) => {
           data = res.data.reverse();
           setState(data);
@@ -258,7 +258,7 @@ export default function Articles({ locale }: any) {
               <div
                 className={styles.image}
                 style={{
-                  backgroundImage: `url(http://127.0.0.1:8000/${item.main_image})`,
+                  backgroundImage: `url(http://95.169.204.16:8000/${item.main_image})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                 }}

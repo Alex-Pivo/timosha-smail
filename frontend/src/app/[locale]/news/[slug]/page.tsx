@@ -20,6 +20,8 @@ import "swiper/scss/pagination";
 import "./pagination.css";
 import { useLocale } from "next-intl";
 import { useTranslations } from "next-intl";
+import reactStringReplace from "react-string-replace";
+import TextWithLinks from "./TextWithLinks";
 
 export default function Page() {
   let [state, setState] = useState<any[]>([]);
@@ -40,7 +42,7 @@ export default function Page() {
     }
     try {
       axios
-        .get(`http://127.0.0.1:8000/news/${locale}/`)
+        .get(`http://95.169.204.16:8000/news/${locale}/`)
         .then((res) => {
           setState(res.data);
           console.log(newStr);
@@ -67,15 +69,15 @@ export default function Page() {
     const item = state.find((item) => item.slug === newStr + locale);
     if (item) {
       const photos = [
-        item.main_image ? `http://127.0.0.1:8000/${item.main_image}` : null,
+        item.main_image ? `http://95.169.204.16:8000/${item.main_image}` : null,
         item.optional_image_1
-          ? `http://127.0.0.1:8000/${item.optional_image_1}`
+          ? `http://95.169.204.16:8000/${item.optional_image_1}`
           : null,
         item.optional_image_2
-          ? `http://127.0.0.1:8000/${item.optional_image_2}`
+          ? `http://95.169.204.16:8000/${item.optional_image_2}`
           : null,
         item.optional_image_3
-          ? `http://127.0.0.1:8000/${item.optional_image_3}`
+          ? `http://95.169.204.16:8000/${item.optional_image_3}`
           : null,
       ].filter(Boolean);
 
@@ -128,7 +130,7 @@ export default function Page() {
             if (item.slug === newStr + locale) {
               const photos = [
                 item.main_image
-                  ? `http://127.0.0.1:8000/${item.main_image}`
+                  ? `http://95.169.204.16:8000/${item.main_image}`
                   : null,
                 item.optional_image_1
                   ? `http://95.169.204.16:8000/${item.optional_image_1}`
@@ -216,7 +218,9 @@ export default function Page() {
                     </div>
                   </div>
                   <div className={article.wrapper__bottom}>
-                    <p className={article.text}>{item.content}</p>
+                    <p className={article.text}>
+                      <TextWithLinks text={item.content} />
+                    </p>
                   </div>
                   {item.video_url && (
                     <div className={article.video}>

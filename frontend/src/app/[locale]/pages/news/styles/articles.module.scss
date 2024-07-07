@@ -217,7 +217,7 @@
     }
 
     .pages {
-      width: 249px;
+      min-width: 249px;
       height: 40px;
 
       display: flex;
@@ -472,7 +472,7 @@
       }
 
       .pages {
-        width: 249px;
+        min-width: 249px;
         height: 40px;
 
         display: flex;
@@ -722,7 +722,7 @@
       }
 
       .pages {
-        width: 249px;
+        min-width: 249px;
         height: 40px;
 
         display: flex;

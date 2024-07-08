@@ -5,7 +5,8 @@ from .models import News, ChooseLanguage
 
 class NewsAdminForm(forms.ModelForm):
     existing_slugs = forms.ModelChoiceField(
-        queryset=News.objects.all(),
+        queryset=News.objects.filter(language='uk').order_by('created_at'),
+
         required=False,
         label="Виберіть існуючий Slug",
         help_text="Обирайте лише якщо хочете використовувати вже існуючий Slug але на іншій мові"

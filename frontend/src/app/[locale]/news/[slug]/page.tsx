@@ -225,7 +225,7 @@ export default function Page() {
                   {item.video_url && (
                     <div className={article.video}>
                       <ReactPlayer
-                        url={item.video_url}
+                        url={item.video}
                         playing={false}
                         controls={true}
                         width="100%"

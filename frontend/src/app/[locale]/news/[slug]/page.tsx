@@ -222,7 +222,7 @@ export default function Page() {
                       <TextWithLinks text={item.content} />
                     </p>
                   </div>
-                  {item.video_url && (
+                  {item.video && (
                     <div className={article.video}>
                       <ReactPlayer
                         url={item.video}

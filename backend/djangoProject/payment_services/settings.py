@@ -2,10 +2,10 @@
 # LIQPAY_PUBLIC_KEY = 'sandbox_i44149290870'
 # LIQPAY_PRIVATE_KEY = 'sandbox_8sN2L1VROdwIN0P2yIMfeUy7kFgHUaLR8qwB6mtr'
 
-LIQPAY_PUBLIC_KEY = 'i76800490512'
-LIQPAY_PRIVATE_KEY = 't8CZTRiiPyhGAJzgCJllEXJbzIdVzU8ov5FE4I8L'
+LIQPAY_PUBLIC_KEY = 'i62748508289'
+LIQPAY_PRIVATE_KEY = 'Wxl4Q3JJm7ADJ8EQmUpOFCDojUrHvDSoKDhqKfqM'
 
 
 
-test_link = 'https://www.liqpay.ua/uk/checkout/sandbox_i44149290870'
+# test_link = 'https://www.liqpay.ua/uk/checkout/sandbox_i44149290870'
 

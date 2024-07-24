@@ -84,7 +84,7 @@ export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 											style={{
 												width: "80%",
 												height: "80px",
-												background: `url(http://95.169.204.16:8000/${partner.image})`,
+												background: `url(https://95.169.204.16:8000/${partner.image})`,
 												marginTop: "0px",
 												backgroundPosition: "center",
 												backgroundSize: "contain",
@@ -120,7 +120,7 @@ export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 										style={{
 											width: "80%",
 											height: "80px",
-											background: `url(http://95.169.204.16:8000/${partner.image})`,
+											background: `url(https://95.169.204.16:8000/${partner.image})`,
 											marginTop: "0px",
 											backgroundPosition: "center",
 											backgroundSize: "contain",

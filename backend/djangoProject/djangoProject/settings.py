@@ -32,9 +32,9 @@ ALLOWED_HOSTS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://95.169.204.16:80',
-        'http://localhost:80',
-    'http://timoshas-smile.org',
+    'https://95.169.204.16:80',
+        'https://localhost:80',
+    'https://timoshas-smile.org',
 
 ] 
 
@@ -84,7 +84,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-
+    'sslserver',
     'news',
     'email_data',
     'payment_services',

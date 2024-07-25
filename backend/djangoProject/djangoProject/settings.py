@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
     '95.169.204.16',
     '127.0.0.1',
     'timoshas-smile.org',
+    'www.timoshas-smile.org'
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -80,6 +81,8 @@ EMAIL_USE_TLS = True
 
 
 
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 
 # Application definition

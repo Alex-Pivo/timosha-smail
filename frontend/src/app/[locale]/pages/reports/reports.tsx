@@ -82,7 +82,7 @@ export default function Reports({ locale }: any) {
     try {
       let data;
       axios
-        .get(`http://95.169.204.16:8000/reports_articles/${localeValue}`)
+        .get(`https://timoshas-smile.org:8443/reports_articles/${localeValue}`)
         .then((res) => {
           data = res.data;
           setArticle((article = data.articles));

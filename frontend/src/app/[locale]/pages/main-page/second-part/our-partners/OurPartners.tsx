@@ -39,7 +39,7 @@ export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 
 	const fetchData = async () => {
 		try {
-			const res = await axios.get(`https://95.169.204.16:8443/partners/${localeValue}`);
+			const res = await axios.get(`https://timoshas-smile.org:8443/partners/${localeValue}`);
 			console.log(res.data)
 			setState(res.data);
 		} catch (error) {

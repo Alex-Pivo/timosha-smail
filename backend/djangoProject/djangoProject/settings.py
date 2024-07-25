@@ -49,7 +49,7 @@ REST_FRAMEWORK = {
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 MEDIA_URL = '/'
-MEDIA_ROOT = os.path.join(BASE_DIR, '../../../')
+MEDIA_ROOT = os.path.join(BASE_DIR, '../../')
 
 
 # EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'

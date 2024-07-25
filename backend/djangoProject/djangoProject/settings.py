@@ -163,24 +163,6 @@ DATABASES = {
         'NAME': DB_BASE_DIR / 'fond_db.sqlite3',
     }
 }
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/root/Timosha/timosha-smail/backend/djangoProject/logs/django_debug.log',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
-    },
-}
 
 
 # Password validation

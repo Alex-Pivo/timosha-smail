@@ -2,6 +2,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+
+
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
 
@@ -15,5 +17,7 @@ urlpatterns = [
     path('email/', include('email_data.urls')),
     # path('fund/', include('pages.urls')),
 
-
+    #---------------errors--------------
+    # path('404/<str:language>', error_handler.ErrorView.as_view(), name='error_page'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

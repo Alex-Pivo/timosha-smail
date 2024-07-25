@@ -27,7 +27,7 @@ export default function Partners({locale}:any) {
     }
     try{
       let data;
-      axios.get(`http://95.169.204.16:8000/partners/${localeValue}`)
+      axios.get(`https://timoshas-smile.org:8443/partners/${localeValue}`)
       .then(res => {
         data = res.data;
         setState(data);
@@ -96,7 +96,7 @@ export default function Partners({locale}:any) {
                       style={{
                         width: "100%",
                         height: "80px",
-                        background: `url(http://95.169.204.16:8000/${item.image})`,
+                        background: `url(https://timoshas-smile.org:8443/${item.image})`,
                         marginTop: "0px",
                         backgroundPosition: "center",
                         backgroundSize: "contain",
@@ -159,7 +159,7 @@ export default function Partners({locale}:any) {
 			      style={{
 			        width: "80%",
 			        height: "80px",
-			        background: `url(http://95.169.204.16:8000/${item.image})`,
+			        background: `url(https://timoshas-smile.org:8443/${item.image})`,
 			        marginTop: "0px",
 			        backgroundPosition: "center",
 			        backgroundSize: "contain",

@@ -75,7 +75,7 @@ export default function Articles({ locale }: any) {
     try {
       let data;
       axios
-        .get("http://95.169.204.16:8000/news/" + localeValue + "/")
+        .get("https://95.169.204.16:8443/news/" + localeValue + "/")
         .then((res) => {
           data = res.data.reverse();
           setState(data);

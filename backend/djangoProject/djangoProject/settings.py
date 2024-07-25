@@ -23,16 +23,19 @@ from pathlib import Path
 SECRET_KEY = 'django-insecure-d@qe9w0+yd+h$o&!3!q$oh7b+b91b&#9@p^#gr%j!-g1u-3&*b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '95.169.204.16',
     '127.0.0.1',
+    'timoshas-smile.org',
 ]
 
 CORS_ALLOWED_ORIGINS = [
     'http://95.169.204.16:3002',
         'http://localhost:3000',
+    'https://timoshas-smile.org',
+    
 
 ] 
 
@@ -106,6 +109,7 @@ INSTALLED_APPS = [
 
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -115,6 +119,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'djangoProject.urls'
@@ -184,12 +189,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATIC_URL = 'static/'
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",]
-#
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

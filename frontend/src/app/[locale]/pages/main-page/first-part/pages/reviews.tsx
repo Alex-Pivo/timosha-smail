@@ -30,7 +30,7 @@ export default function Reviews({ locale }: any) {
     try {
       let data;
       axios
-        .get(`https://95.169.204.16:8000/reviews/${localeValue}`)
+        .get(`https://timoshas-smile.org:8443/reviews/${localeValue}`)
         .then((res) => {
           data = res.data;
           setState(data);

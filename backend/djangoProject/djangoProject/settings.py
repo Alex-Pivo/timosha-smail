@@ -33,14 +33,14 @@ REST_FRAMEWORK = {
 }
 
 # Media files (user-uploaded files)
-# MEDIA_URL = '/media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_storage')
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'  # Directory where static files will be collected
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',  # Custom directory for static files (if you have one)
+    BASE_DIR / 'templates',  # Custom directory for static files (if you have one)
 ]
 
 # Email settings

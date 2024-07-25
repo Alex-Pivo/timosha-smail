@@ -33,7 +33,7 @@ REST_FRAMEWORK = {
 }
 
 # Media files (user-uploaded files)
-MEDIA_URL = '/media/'
+# MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_storage')
 
 # Static files (CSS, JavaScript, Images)

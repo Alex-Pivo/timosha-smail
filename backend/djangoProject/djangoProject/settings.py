@@ -2,13 +2,12 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
+# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-d@qe9w0+yd+h$o&!3!q$oh7b+b91b&#9@p^#gr%j!-g1u-3&*b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -26,22 +25,20 @@ CORS_ALLOWED_ORIGINS = [
     'https://timoshas-smile.org',
 ]
 
+# REST Framework settings
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
     ]
 }
 
-# Media files (user-uploaded files)
+# Media files settings
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media_storage')
+MEDIA_ROOT = BASE_DIR / 'media_storage'
 
-# Static files (CSS, JavaScript, Images)
+# Static files settings
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # Directory where static files will be collected
-STATICFILES_DIRS = [
-    BASE_DIR / 'templates',  # Custom directory for static files (if you have one)
-]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Email settings
 EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
@@ -51,8 +48,7 @@ EMAIL_HOST_PASSWORD = 'ugfzrkaaqwnnzawh'
 EMAIL_PORT = 465
 EMAIL_USE_TLS = True
 
-APPEND_SLASH = False
-
+# Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -90,7 +86,7 @@ ROOT_URLCONF = 'djangoProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],  # Correct path to your templates directory
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -105,6 +101,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djangoProject.wsgi.application'
 
+# Database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -112,6 +109,7 @@ DATABASES = {
     }
 }
 
+# Internationalization
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True

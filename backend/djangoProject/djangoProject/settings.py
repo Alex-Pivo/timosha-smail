@@ -51,7 +51,7 @@ REST_FRAMEWORK = {
 # MEDIA_ROOT = BASE_DIR / 'media'
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-MEDIA_URL = 'media_storage/'
+MEDIA_URL = '/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '../../')
 
 

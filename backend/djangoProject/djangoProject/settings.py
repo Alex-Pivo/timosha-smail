@@ -127,8 +127,8 @@ USE_I18N = True
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
-STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_URL = '/root/Timosha/timosha-smail/backend/djangoProject/staticfiles/admin/'
+STATIC_ROOT = '/root/Timosha/timosha-smail/backend/djangoProject/staticfiles/admin/'
 
 # STATICFILES_DIRS = [
 #     BASE_DIR / "static",

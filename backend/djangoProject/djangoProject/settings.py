@@ -32,7 +32,7 @@ REST_FRAMEWORK = {
 }
 
 # MEDIA_URL and MEDIA_ROOT
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media_storage/'
 MEDIA_ROOT = BASE_DIR / 'media_storage'
 
 # Email settings

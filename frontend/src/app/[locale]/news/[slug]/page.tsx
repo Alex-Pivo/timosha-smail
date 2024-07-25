@@ -42,7 +42,7 @@ export default function Page() {
     }
     try {
       axios
-        .get(`http://95.169.204.16:8000/news/${locale}/`)
+        .get(`https://timoshas-smile.org:8443/news/${locale}/`)
         .then((res) => {
           setState(res.data);
           console.log(newStr);
@@ -69,15 +69,15 @@ export default function Page() {
     const item = state.find((item) => item.slug === newStr + locale);
     if (item) {
       const photos = [
-        item.main_image ? `http://95.169.204.16:8000/${item.main_image}` : null,
+        item.main_image ? `https://timoshas-smile.org:8443/${item.main_image}` : null,
         item.optional_image_1
-          ? `http://95.169.204.16:8000/${item.optional_image_1}`
+          ? `https://timoshas-smile.org:8443/${item.optional_image_1}`
           : null,
         item.optional_image_2
-          ? `http://95.169.204.16:8000/${item.optional_image_2}`
+          ? `https://timoshas-smile.org:8443/${item.optional_image_2}`
           : null,
         item.optional_image_3
-          ? `http://95.169.204.16:8000/${item.optional_image_3}`
+          ? `https://timoshas-smile.org:8443/${item.optional_image_3}`
           : null,
       ].filter(Boolean);
 
@@ -130,16 +130,16 @@ export default function Page() {
             if (item.slug === newStr + locale) {
               const photos = [
                 item.main_image
-                  ? `http://95.169.204.16:8000/${item.main_image}`
+                  ? `https://timoshas-smile.org:8443/${item.main_image}`
                   : null,
                 item.optional_image_1
-                  ? `http://95.169.204.16:8000/${item.optional_image_1}`
+                  ? `https://timoshas-smile.org:8443/${item.optional_image_1}`
                   : null,
                 item.optional_image_2
-                  ? `http://95.169.204.16:8000/${item.optional_image_2}`
+                  ? `https://timoshas-smile.org:8443/${item.optional_image_2}`
                   : null,
                 item.optional_image_3
-                  ? `http://95.169.204.16:8000/${item.optional_image_3}`
+                  ? `https://timoshas-smile.org:8443/${item.optional_image_3}`
                   : null,
               ].filter(Boolean); // Удалить null значения
 

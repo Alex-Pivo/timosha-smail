@@ -56,20 +56,9 @@ REST_FRAMEWORK = {
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = BASE_DIR / 'media'
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MEDIA_ROOT = os.path.join(BASE_DIR, '../../../')
+MEDIA_ROOT = os.path.join(BASE_DIR, '../../')
 MEDIA_URL = 'media_storage/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media_storage')
-#  MEDIA_URL = '/media_storage/'
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media_storage')
 
-# EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'cl9bix@gmail.com'
-# EMAIL_HOST_PASSWORD = 'hmrdotrgddtwjuhh' #google/security/авдетифіктор/создать ключ
-# EMAIL_PORT = 465
-# EMAIL_USE_TLS = True
-#
 APPEND_SLASH = False
 EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'

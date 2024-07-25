@@ -51,7 +51,7 @@ export default function FirstHelpUsa() {
       };
 
       const response = await axios.post(
-        "http://95.169.204.16:8000/donate/uk/",
+        "https://timoshas-smile.org:8443/donate/uk/",
         data
       );
 

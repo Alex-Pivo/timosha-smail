@@ -191,6 +191,9 @@ USE_TZ = True
 # STATICFILES_DIRS = [
 #     BASE_DIR / "static",]
 #
+# settings.py
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 

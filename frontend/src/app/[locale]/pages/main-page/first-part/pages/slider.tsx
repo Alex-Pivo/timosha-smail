@@ -91,7 +91,7 @@ export default function Slider({ locale }: any) {
                 height: "100%",
                 background: `${
                   active
-                    ? `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image1}")`
+                    ? `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("https://timoshas-smile.org:8443/${state[0].image1}")`
                     : `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("/tel.jpg")`
                 }`,
                 backgroundSize: "cover",
@@ -174,7 +174,7 @@ export default function Slider({ locale }: any) {
               style={{
                 width: "100%",
                 height: "100%",
-                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image2}")`,
+                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("https://timoshas-smile.org:8443/${state[0].image2}")`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -229,7 +229,7 @@ export default function Slider({ locale }: any) {
               style={{
                 width: "100%",
                 height: "100%",
-                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image3}")`,
+                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("https://timoshas-smile.org:8443/${state[0].image3}")`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -284,7 +284,7 @@ export default function Slider({ locale }: any) {
               style={{
                 width: "100%",
                 height: "100%",
-                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image4}")`,
+                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("https://timoshas-smile.org:8443/${state[0].image4}")`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -339,7 +339,7 @@ export default function Slider({ locale }: any) {
               style={{
                 width: "100%",
                 height: "100%",
-                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image5}")`,
+                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("https://timoshas-smile.org:8443/${state[0].image5}")`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -395,7 +395,7 @@ export default function Slider({ locale }: any) {
               style={{
                 width: "100%",
                 height: "100%",
-                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("http://95.169.204.16:8000/${state[0].image6}")`,
+                background: `linear-gradient(180deg, rgba(24, 24, 24, 0.15) 0%, rgba(15, 15, 15, 0.44) 78.66%), url("https://timoshas-smile.org:8443/${state[0].image6}")`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}

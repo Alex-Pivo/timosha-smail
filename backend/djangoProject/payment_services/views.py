@@ -88,6 +88,7 @@ class LiqPaymentAPI(APIView):
                 "version": "3",
                 "order_id": original_order_id
             })
+            print(res)
             if res.get('status') == 'success':
                 try:
                     get_data_from_res = res.get('info')
@@ -102,19 +103,21 @@ class LiqPaymentAPI(APIView):
                     get_amount = res.get('amount', "")
                     get_description = res.get('description', "")
 
-                    # Оновлюємо існуючий об'єкт LiqpayPayment
-                    payment = LiqpayPayment.objects.get(order_id=original_order_id)
-                    payment.amount = get_amount
-                    payment.currency = get_currency
-                    payment.email = get_email
-                    payment.phone = get_phone
-                    payment.name = get_name
-                    payment.last_name = get_last_name
-                    payment.description = get_description
-                    payment.status = 'Successfully donated'
-                    payment.save()
-                    return Response({'status': 'success'}, status=status.HTTP_202_ACCEPTED)
-
+                    if all([get_name,get_last_name,get_email,get_phone,get_amount,get_description]):
+                        try:
+                            payment = LiqpayPayment.objects.get(order_id=original_order_id)
+                            payment.amount = get_amount
+                            payment.currency = get_currency
+                            payment.email = get_email
+                            payment.phone = get_phone
+                            payment.name = get_name
+                            payment.last_name = get_last_name
+                            payment.description = get_description
+                            payment.status = 'Successfully donated'
+                            payment.save()
+                            return Response({'status': 'success'}, status=status.HTTP_202_ACCEPTED)
+                        except Exception as e:
+                            return Response({'error':e})
                 except Exception as e:
                     print("Error occurred while processing payment data:", str(e))
             else:
@@ -227,17 +230,6 @@ class LiqPayFunc:
 
 
 
-class InternationalPaymentInformation(APIView):
-    def post(self, request, *args, **kwargs):
-        name = request.data.get('name')
-        last_name = request.data.get('lastname')
-        language = request.data.get('phone')
-        email = request.data.get('email')
-        try:
-            InternationalPayment.objects.create(name=name, last_name=last_name, email=email)
-            return Response({'status': 'success'})
-        except Exception as e:
-            return Response({'status': 'error'})
 
 
 

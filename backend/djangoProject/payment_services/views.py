@@ -186,15 +186,15 @@ class LiqPayFunc:
             'version': '3',
             'public_key': settings.LIQPAY_PUBLIC_KEY,
             'private_key': settings.LIQPAY_PRIVATE_KEY,
-            'action': '',
+            'action': 'pay',
             'amount': str(input_amount),
             'info': f"Ім'я:{name} Прізвище:{last_name} Email:{email} Phone:{phone}",
             'language': language,
             'currency': (currency if currency else 'UAH'),
             'description': ('Підтримка з сайту' if language =='uk' else 'Support from timoshas-smile.org'),
             'order_id': order_id,
-            'server_url': f'timoshas-smile.org:8443/{language}/status/{hashed_order_id}',
-            'result_url': f'timoshas-smile.org/{new_language}/donate/status/{hashed_order_id}',
+            'server_url': f'https://timoshas-smile.org:8443/{language}/status/{hashed_order_id}',
+            'result_url': f'https://timoshas-smile.org/{new_language}/donate/status/{hashed_order_id}',
         }
 
         if is_subscription == 'true':

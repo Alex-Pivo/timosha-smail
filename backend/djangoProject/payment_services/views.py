@@ -34,20 +34,12 @@ class DonateView(APIView):
         amount = request.data.get('amount')
         currency = request.data.get('currency')
         is_subscription = request.data.get('is_subscription')
-        
-
-        # Log the incoming data
-        logger.info("Request data: name=%s, last_name=%s, email=%s, phone=%s, amount=%s, is_subscription=%s",
-                    name, last_name, email, phone, amount, is_subscription)
-
-        # Validate the amount
         try:
             amount = Decimal(amount)
         except (TypeError, InvalidOperation):
             logger.error("Invalid amount value: %s", amount)
             return Response({'error': 'Invalid amount value'}, status=status.HTTP_400_BAD_REQUEST)
 
-        # Check required fields
         if not all([name, last_name, email, phone, amount]):
             logger.error("Missing required fields")
             return Response({'error': 'Missing required fields'}, status=status.HTTP_400_BAD_REQUEST)

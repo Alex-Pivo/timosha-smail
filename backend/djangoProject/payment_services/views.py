@@ -118,7 +118,7 @@ class LiqPaymentAPI(APIView):
             else:
                 pass
                 print(res.get('status')
-                logger.info(res.get('status')
+                logger.info(res.get('status'))
 
         return Response({'status': res.get('status')})
 

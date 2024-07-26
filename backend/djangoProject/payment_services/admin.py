@@ -27,10 +27,14 @@ class LiqpayPaymentAdmin(admin.ModelAdmin):
             })
             if res.get('status') == 'success':
                 payment = LiqpayPayment.objects.get(order_id=id)
-                payment.status = 'Successfully donated'
+                payment.status = 'Успішно оплачено'
                 payment.save()
+            elif res.get('status') == 'subscribed':
+                payment = LiqpayPayment.objects.get(order_id=id)
+                payment.status = 'Регулярний платіж'
+                payment.save()
+                
             else:
-                print('Status',res.get('status'))
                 payment = LiqpayPayment.objects.get(order_id=id)
                 payment.status = res.get('status')
                 payment.save()

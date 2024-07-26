@@ -31,7 +31,7 @@ export default function Status() {
     // Функция для выполнения GET-запроса по указанной ссылке
     const getOrderStatus = async () => {
         try {
-            const response = await axios.get(`https://timoshas-smile:8443/donate/${locale}/status/${orderId}`);
+            const response = await axios.get(`https://timoshas-smile.org:8443/donate/${locale}/status/${orderId}`);
             console.log('Order Status:', response.data);
             if (response.data.status === 'success') {
                 setStatus(status = "true");

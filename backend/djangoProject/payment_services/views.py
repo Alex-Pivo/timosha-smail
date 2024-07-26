@@ -190,7 +190,7 @@ class LiqPayFunc:
             'version': '3',
             'public_key': settings.LIQPAY_PUBLIC_KEY,
             'private_key': settings.LIQPAY_PRIVATE_KEY,
-            'action': 'pay',
+            'action': '',
             'amount': str(input_amount),
             'info': f"Ім'я:{name} Прізвище:{last_name} Email:{email} Phone:{phone}",
             'language': language,
@@ -206,6 +206,7 @@ class LiqPayFunc:
             params.update({
                 'action': 'subscribe',
                 'recurringbytoken': '1',
+                'phone': phone
                 'subscribe_date_start': todays_date,
                 'subscribe_periodicity': 'month',
             })

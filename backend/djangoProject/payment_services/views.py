@@ -115,10 +115,32 @@ class LiqPaymentAPI(APIView):
 
                 except Exception as e:
                     print("Error occurred while processing payment data:", str(e))
-            else:
-                pass
-                print(res.get('status'))
-                logger.info(res.get('status'))
+            elif res.get('status') == 'subscribed':
+                get_data_from_res = res.get('info')
+                    info_parts = get_data_from_res.split(' ')
+                    info_dict = dict(part.split(':', 1) for part in info_parts)
+
+                    get_name = info_dict.get("Ім'я", "")
+                    get_last_name = info_dict.get("Прізвище", "")
+                    get_email = info_dict.get("Email", "")
+                    get_phone = info_dict.get("Phone", "")
+                    get_currency = res.get('currency', "")
+                    get_amount = res.get('amount', "")
+                    get_description = res.get('description', "")
+
+                    
+                    payment = LiqpayPayment.objects.get(order_id=original_order_id)
+                    payment.amount = get_amount
+                    payment.currency = get_currency
+                    payment.email = get_email
+                    payment.phone = get_phone
+                    payment.name = get_name
+                    payment.last_name = get_last_name
+                    payment.description = get_description
+                    payment.status = 'Успішний регулярний платіж'
+                    payment.save()
+                    return Response({'status': 'success'}, status=status.HTTP_202_ACCEPTED)
+                
 
         return Response({'status': res.get('status')})
 
@@ -155,7 +177,7 @@ class LiqPayFunc:
             })
         if res.get('status') == 'success':
                 donate = LiqpayPayment.objects.get(order_id=order_id)
-                donate.status = 'Successfully donated'
+                donate.status = 'Успішно оплачено'
                 donate.save()
                 return res.get('status')
 

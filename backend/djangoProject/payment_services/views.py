@@ -20,8 +20,6 @@ from rest_framework import status
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-LIQPAY_PUBLIC_KEY = 'sandbox_i44149290870'
-LIQPAY_PRIVATE_KEY = 'sandbox_8sN2L1VROdwIN0P2yIMfeUy7kFgHUaLR8qwB6mtr'
 
 
 
@@ -36,7 +34,7 @@ class DonateView(APIView):
         amount = request.data.get('amount')
         currency = request.data.get('currency')
         is_subscription = request.data.get('is_subscription')
-        print("ПІДПИСКА:",is_subscription,type(is_subscription))
+        
 
         # Log the incoming data
         logger.info("Request data: name=%s, last_name=%s, email=%s, phone=%s, amount=%s, is_subscription=%s",
@@ -54,7 +52,7 @@ class DonateView(APIView):
             logger.error("Missing required fields")
             return Response({'error': 'Missing required fields'}, status=status.HTTP_400_BAD_REQUEST)
 
-        if LIQPAY_PUBLIC_KEY and LIQPAY_PRIVATE_KEY:
+        if settings.LIQPAY_PUBLIC_KEY and settings.LIQPAY_PRIVATE_KEY:
             try:
                 payment = LiqPayFunc.pay_view(
                     amount=amount,
@@ -81,14 +79,13 @@ class LiqPaymentAPI(APIView):
         original_order_id_query = LiqpayPayment.objects.filter(hashed_order_id=hashed_order_id).values('order_id')
         if original_order_id_query.exists():
             original_order_id = original_order_id_query.first()['order_id']
-            liqpay = LiqPayFunc(LIQPAY_PUBLIC_KEY, LIQPAY_PRIVATE_KEY)
+            liqpay = LiqPayFunc(settings.LIQPAY_PUBLIC_KEY, settings.LIQPAY_PRIVATE_KEY)
 
             res = liqpay.api("request", {
                 "action": "status",
                 "version": "3",
                 "order_id": original_order_id
             })
-            print(res)
             if res.get('status') == 'success':
                 try:
                     get_data_from_res = res.get('info')
@@ -103,21 +100,19 @@ class LiqPaymentAPI(APIView):
                     get_amount = res.get('amount', "")
                     get_description = res.get('description', "")
 
-                    if all([get_name,get_last_name,get_email,get_phone,get_amount,get_description]):
-                        try:
-                            payment = LiqpayPayment.objects.get(order_id=original_order_id)
-                            payment.amount = get_amount
-                            payment.currency = get_currency
-                            payment.email = get_email
-                            payment.phone = get_phone
-                            payment.name = get_name
-                            payment.last_name = get_last_name
-                            payment.description = get_description
-                            payment.status = 'Successfully donated'
-                            payment.save()
-                            return Response({'status': 'success'}, status=status.HTTP_202_ACCEPTED)
-                        except Exception as e:
-                            return Response({'error':e})
+                    
+                    payment = LiqpayPayment.objects.get(order_id=original_order_id)
+                    payment.amount = get_amount
+                    payment.currency = get_currency
+                    payment.email = get_email
+                    payment.phone = get_phone
+                    payment.name = get_name
+                    payment.last_name = get_last_name
+                    payment.description = get_description
+                    payment.status = 'Successfully donated'
+                    payment.save()
+                    return Response({'status': 'success'}, status=status.HTTP_202_ACCEPTED)
+
                 except Exception as e:
                     print("Error occurred while processing payment data:", str(e))
             else:
@@ -137,7 +132,6 @@ class LiqPayFunc:
 
     def api(self, action, params):
         return self.liqpay.api(action, params)
-
     @staticmethod
     def generate_signature(private_key, data):
         sign_string = private_key + data + private_key
@@ -148,37 +142,38 @@ class LiqPayFunc:
     def generate_order_id():
         order_id = f'order_{uuid.uuid4().hex}'
         return order_id
-
     @staticmethod
     def check_payment_status(order_id):
-        liqpay = LiqPayFunc(LIQPAY_PUBLIC_KEY, LIQPAY_PRIVATE_KEY)
+
+        liqpay = LiqPayFunc(settings.LIQPAY_PUBLIC_KEY, settings.LIQPAY_PRIVATE_KEY)
+
         res = liqpay.api("request", {
-            "action": "status",
-            "version": "3",
-            "order_id": order_id,
-        })
+                "action": "status",
+                "version": "3",
+                "order_id": order_id
+            })
         if res.get('status') == 'success':
-            donate = LiqpayPayment.objects.get(order_id=order_id)
-            donate.status = 'Successfully donated'
-            donate.save()
-            return res.get('status')
+                donate = LiqpayPayment.objects.get(order_id=order_id)
+                donate.status = 'Successfully donated'
+                donate.save()
+                return res.get('status')
+
 
     @staticmethod
-    def pay_view(amount, currency, name, last_name, phone, email, is_subscription: str, language='uk'):
+    def pay_view(amount,currency, name, last_name, phone, email, is_subscription: str, language='uk'):
         try:
             input_amount = Decimal(amount)
             if input_amount <= 0:
-                raise ValueError("Amount must be greater than zero.")
-        except (ValueError, TypeError) as e:
-            return Response({'error': str(e)}, status=400)
-    
+                raise ValueError()
+        except (ValueError, TypeError):
+            return Response({'error': 'Invalid amount'}, status=400)
+
         order_id = LiqPayFunc.generate_order_id()
         hashed_order_id = sha256(order_id.encode()).hexdigest()
-    
         try:
             LiqpayPayment.objects.create(
                 amount=input_amount,
-                currency=currency if currency else 'UAH',
+                currency=(currency if currency else 'UAH'),
                 email=email,
                 phone=phone,
                 name=name,
@@ -189,24 +184,23 @@ class LiqPayFunc:
             )
         except Exception as e:
             print(e)
-            return Response({'error': 'Error creating payment record'}, status=500)
-    
         new_language = 'ua' if language == 'uk' else language
-    
+
         params = {
             'version': '3',
-            'public_key': LIQPAY_PUBLIC_KEY,
+            'public_key': settings.LIQPAY_PUBLIC_KEY,
+            'private_key': settings.LIQPAY_PRIVATE_KEY,
             'action': 'pay',
             'amount': str(input_amount),
             'info': f"Ім'я:{name} Прізвище:{last_name} Email:{email} Phone:{phone}",
             'language': language,
-            'currency': currency if currency else 'UAH',
-            'description': 'Підтримка з сайту' if language == 'uk' else 'Support from timoshas-smile.org',
+            'currency': (currency if currency else 'UAH'),
+            'description': ('Підтримка з сайту' if language =='uk' else 'Support from timoshas-smile.org'),
             'order_id': order_id,
-            'server_url': f'https://timoshas-smile.org:8443/{language}/status/{hashed_order_id}',
-            'result_url': f'https://timoshas-smile.org/{new_language}/donate/status/{hashed_order_id}',
+            'server_url': f'timoshas-smile.org:8443/{language}/status/{hashed_order_id}',
+            'result_url': f'timoshas-smile.org/{new_language}/donate/status/{hashed_order_id}',
         }
-    
+
         if is_subscription == 'true':
             todays_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             params.update({
@@ -215,23 +209,19 @@ class LiqPayFunc:
                 'subscribe_date_start': todays_date,
                 'subscribe_periodicity': 'month',
             })
-    
-        try:
-            json_string = json.dumps(params, separators=(',', ':'))
-            data = base64.b64encode(json_string.encode('utf-8')).decode('utf-8')
-            signature = LiqPayFunc.generate_signature(LIQPAY_PRIVATE_KEY, data)
-        except Exception as e:
-            print(e)
-            return Response({'error': 'Error generating signature or encoding data'}, status=500)
-    
-        redirected_url = f'https://www.liqpay.ua/api/3/checkout?data={data}&signature={signature}'
-    
-        return Response({
+
+        json_string = json.dumps(params, separators=(',', ':'))
+        data = base64.b64encode(json_string.encode('utf-8')).decode('utf-8')
+
+        signature = LiqPayFunc.generate_signature(settings.LIQPAY_PRIVATE_KEY, data)
+
+        redirected_url = f'https://www.liqpay.ua/api/3/checkout/{data}/?signature={signature}'
+
+        return {
             'redirected_url': redirected_url,
             'data': data,
             'signature': signature,
-        })
-
+        }
 
 
 

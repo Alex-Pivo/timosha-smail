@@ -84,7 +84,7 @@ export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 											style={{
 												width: "80%",
 												height: "80px",
-												background: `url(https://timoshas-smile.org:8443/${partner.image})`,
+												background: `url(https://timoshas-smile.org:8443${partner.image})`,
 												marginTop: "0px",
 												backgroundPosition: "center",
 												backgroundSize: "contain",
@@ -120,7 +120,7 @@ export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 										style={{
 											width: "80%",
 											height: "80px",
-											background: `url(https://timoshas-smile.org:8443/${partner.image})`,
+											background: `url(https://timoshas-smile.org:8443${partner.image})`,
 											marginTop: "0px",
 											backgroundPosition: "center",
 											backgroundSize: "contain",

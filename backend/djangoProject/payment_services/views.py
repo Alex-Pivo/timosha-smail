@@ -192,7 +192,7 @@ class LiqPayFunc:
             'version': '3',
             'public_key': LIQPAY_PUBLIC_KEY,
             'private_key': LIQPAY_PRIVATE_KEY,
-            'action': 'pay',
+            'action': 'donate',
             'amount': str(input_amount),
             'info': f"Ім'я:{name} Прізвище:{last_name} Email:{email} Phone:{phone}",
             'language': language,

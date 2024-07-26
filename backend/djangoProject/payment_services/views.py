@@ -137,6 +137,7 @@ class LiqPayFunc:
 
     def api(self, action, params):
         return self.liqpay.api(action, params)
+
     @staticmethod
     def generate_signature(private_key, data):
         sign_string = private_key + data + private_key
@@ -147,22 +148,20 @@ class LiqPayFunc:
     def generate_order_id():
         order_id = f'order_{uuid.uuid4().hex}'
         return order_id
+
     @staticmethod
     def check_payment_status(order_id):
-
         liqpay = LiqPayFunc(LIQPAY_PUBLIC_KEY, LIQPAY_PRIVATE_KEY)
-
         res = liqpay.api("request", {
-                "action": "status",
-                "version": "3",
-                "order_id": order_id,
-            })
+            "action": "status",
+            "version": "3",
+            "order_id": order_id,
+        })
         if res.get('status') == 'success':
-                donate = LiqpayPayment.objects.get(order_id=order_id)
-                donate.status = 'Successfully donated'
-                donate.save()
-                return res.get('status')
-
+            donate = LiqpayPayment.objects.get(order_id=order_id)
+            donate.status = 'Successfully donated'
+            donate.save()
+            return res.get('status')
 
     @staticmethod
     def pay_view(amount, currency, name, last_name, phone, email, is_subscription: str, language='uk'):

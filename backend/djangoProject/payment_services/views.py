@@ -67,75 +67,49 @@ class DonateView(APIView):
 
 
 class LiqPaymentAPI(APIView):
-    def get(self, request,language, hashed_order_id):
-        original_order_id_query = LiqpayPayment.objects.filter(hashed_order_id=hashed_order_id).values('order_id')
-        if original_order_id_query.exists():
-            original_order_id = original_order_id_query.first()['order_id']
-            liqpay = LiqPayFunc(settings.LIQPAY_PUBLIC_KEY, settings.LIQPAY_PRIVATE_KEY)
-
-            res = liqpay.api("request", {
-                "action": "status",
-                "version": "3",
-                "order_id": original_order_id
-            })
-            if res.get('status') == 'success':
-                try:
-                    get_data_from_res = res.get('info')
-                    info_parts = get_data_from_res.split(' ')
-                    info_dict = dict(part.split(':', 1) for part in info_parts)
-
-                    get_name = info_dict.get("Ім'я", "")
-                    get_last_name = info_dict.get("Прізвище", "")
-                    get_email = info_dict.get("Email", "")
-                    get_phone = info_dict.get("Phone", "")
-                    get_currency = res.get('currency', "")
-                    get_amount = res.get('amount', "")
-                    get_description = res.get('description', "")
-
-                    
-                    payment = LiqpayPayment.objects.get(order_id=original_order_id)
-                    payment.amount = get_amount
-                    payment.currency = get_currency
-                    payment.email = get_email
-                    payment.phone = get_phone
-                    payment.name = get_name
-                    payment.last_name = get_last_name
-                    payment.description = get_description
-                    payment.status = 'Успішно оплачено'
-                    payment.save()
-                    return Response({'status': 'success'}, status=status.HTTP_202_ACCEPTED)
-
-                except Exception as e:
-                    print("Error occurred while processing payment data:", str(e))
-            elif res.get('status') == 'subscribed':
-                    get_data_from_res = res.get('info')
-                    info_parts = get_data_from_res.split(' ')
-                    info_dict = dict(part.split(':', 1) for part in info_parts)
-
-                    get_name = info_dict.get("Ім'я", "")
-                    get_last_name = info_dict.get("Прізвище", "")
-                    get_email = info_dict.get("Email", "")
-                    get_phone = info_dict.get("Phone", "")
-                    get_currency = res.get('currency', "")
-                    get_amount = res.get('amount', "")
-                    get_description = res.get('description', "")
-
-                    
-                    payment = LiqpayPayment.objects.get(order_id=original_order_id)
-                    payment.amount = get_amount
-                    payment.currency = get_currency
-                    payment.email = get_email
-                    payment.phone = get_phone
-                    payment.name = get_name
-                    payment.last_name = get_last_name
-                    payment.description = get_description
-                    payment.status = 'Успішний регулярний платіж'
-                    payment.save()
-                    return Response({'status': 'success'}, status=status.HTTP_202_ACCEPTED)
-            else:
-                
+    def get(self, request, language, hashed_order_id):
+        try:
+            original_order_id = LiqpayPayment.objects.filter(hashed_order_id=hashed_order_id).values('order_id').first()['order_id']
+        except (LiqpayPayment.DoesNotExist, TypeError):
+            return Response({'status': 'not_found'}, status=status.HTTP_404_NOT_FOUND)
+        
+        liqpay = LiqPayFunc(settings.LIQPAY_PUBLIC_KEY, settings.LIQPAY_PRIVATE_KEY)
+        res = liqpay.api("request", {
+            "action": "status",
+            "version": "3",
+            "order_id": original_order_id
+        })
+        
+        if res.get('status') in ['success', 'subscribed']:
+            try:
+                self.process_payment_data(res, original_order_id, res.get('status'))
+                return Response({'status': 'success'}, status=status.HTTP_202_ACCEPTED)
+            except Exception as e:
+                print("Error occurred while processing payment data:", str(e))
+                return Response({'status': 'error'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         return Response({'status': res.get('status')})
+
+    def process_payment_data(self, res, order_id, status):
+        info_dict = dict(part.split(':', 1) for part in res.get('info', '').split(' '))
+
+        payment = LiqpayPayment.objects.get(order_id=order_id)
+        payment.amount = res.get('amount', "")
+        payment.currency = res.get('currency', "")
+        payment.email = info_dict.get("Email", "")
+        payment.phone = info_dict.get("Phone", "")
+        payment.name = info_dict.get("Ім'я", "")
+        payment.last_name = info_dict.get("Прізвище", "")
+        payment.description = res.get('description', "")
+        status = res.get('status')
+        if status =='success':
+            payment.status = 'Успішно оплачено'
+        elif status =='subscribed':
+             payment.status = 'Успішний регулярний платіж'
+        else:
+            payment.status = f'Статус:{res.get('status')}'
+        payment.save()
+
 
 
 

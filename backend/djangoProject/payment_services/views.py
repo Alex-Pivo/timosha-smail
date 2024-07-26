@@ -117,7 +117,8 @@ class LiqPaymentAPI(APIView):
                     print("Error occurred while processing payment data:", str(e))
             else:
                 pass
-                print('Статус не успішний')
+                print(res.get('status')
+                logger.info(res.get('status')
 
         return Response({'status': res.get('status')})
 

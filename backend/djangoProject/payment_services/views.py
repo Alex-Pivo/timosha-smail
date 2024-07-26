@@ -166,72 +166,72 @@ class LiqPayFunc:
 
     @staticmethod
     def pay_view(amount, currency, name, last_name, phone, email, is_subscription: str, language='uk'):
-    try:
-        input_amount = Decimal(amount)
-        if input_amount <= 0:
-            raise ValueError("Amount must be greater than zero.")
-    except (ValueError, TypeError) as e:
-        return Response({'error': str(e)}, status=400)
-
-    order_id = LiqPayFunc.generate_order_id()
-    hashed_order_id = sha256(order_id.encode()).hexdigest()
-
-    try:
-        LiqpayPayment.objects.create(
-            amount=input_amount,
-            currency=currency if currency else 'UAH',
-            email=email,
-            phone=phone,
-            name=name,
-            last_name=last_name,
-            status='В процесі...',
-            order_id=order_id,
-            hashed_order_id=hashed_order_id,
-        )
-    except Exception as e:
-        print(e)
-        return Response({'error': 'Error creating payment record'}, status=500)
-
-    new_language = 'ua' if language == 'uk' else language
-
-    params = {
-        'version': '3',
-        'public_key': LIQPAY_PUBLIC_KEY,
-        'action': 'pay',
-        'amount': str(input_amount),
-        'info': f"Ім'я:{name} Прізвище:{last_name} Email:{email} Phone:{phone}",
-        'language': language,
-        'currency': currency if currency else 'UAH',
-        'description': 'Підтримка з сайту' if language == 'uk' else 'Support from timoshas-smile.org',
-        'order_id': order_id,
-        'server_url': f'https://timoshas-smile.org:8443/{language}/status/{hashed_order_id}',
-        'result_url': f'https://timoshas-smile.org/{new_language}/donate/status/{hashed_order_id}',
-    }
-
-    if is_subscription == 'true':
-        todays_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        params.update({
-            'action': 'subscribe',
-            'recurringbytoken': '1',
-            'subscribe_date_start': todays_date,
-            'subscribe_periodicity': 'month',
+        try:
+            input_amount = Decimal(amount)
+            if input_amount <= 0:
+                raise ValueError("Amount must be greater than zero.")
+        except (ValueError, TypeError) as e:
+            return Response({'error': str(e)}, status=400)
+    
+        order_id = LiqPayFunc.generate_order_id()
+        hashed_order_id = sha256(order_id.encode()).hexdigest()
+    
+        try:
+            LiqpayPayment.objects.create(
+                amount=input_amount,
+                currency=currency if currency else 'UAH',
+                email=email,
+                phone=phone,
+                name=name,
+                last_name=last_name,
+                status='В процесі...',
+                order_id=order_id,
+                hashed_order_id=hashed_order_id,
+            )
+        except Exception as e:
+            print(e)
+            return Response({'error': 'Error creating payment record'}, status=500)
+    
+        new_language = 'ua' if language == 'uk' else language
+    
+        params = {
+            'version': '3',
+            'public_key': LIQPAY_PUBLIC_KEY,
+            'action': 'pay',
+            'amount': str(input_amount),
+            'info': f"Ім'я:{name} Прізвище:{last_name} Email:{email} Phone:{phone}",
+            'language': language,
+            'currency': currency if currency else 'UAH',
+            'description': 'Підтримка з сайту' if language == 'uk' else 'Support from timoshas-smile.org',
+            'order_id': order_id,
+            'server_url': f'https://timoshas-smile.org:8443/{language}/status/{hashed_order_id}',
+            'result_url': f'https://timoshas-smile.org/{new_language}/donate/status/{hashed_order_id}',
+        }
+    
+        if is_subscription == 'true':
+            todays_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            params.update({
+                'action': 'subscribe',
+                'recurringbytoken': '1',
+                'subscribe_date_start': todays_date,
+                'subscribe_periodicity': 'month',
+            })
+    
+        try:
+            json_string = json.dumps(params, separators=(',', ':'))
+            data = base64.b64encode(json_string.encode('utf-8')).decode('utf-8')
+            signature = LiqPayFunc.generate_signature(LIQPAY_PRIVATE_KEY, data)
+        except Exception as e:
+            print(e)
+            return Response({'error': 'Error generating signature or encoding data'}, status=500)
+    
+        redirected_url = f'https://www.liqpay.ua/api/3/checkout?data={data}&signature={signature}'
+    
+        return Response({
+            'redirected_url': redirected_url,
+            'data': data,
+            'signature': signature,
         })
-
-    try:
-        json_string = json.dumps(params, separators=(',', ':'))
-        data = base64.b64encode(json_string.encode('utf-8')).decode('utf-8')
-        signature = LiqPayFunc.generate_signature(LIQPAY_PRIVATE_KEY, data)
-    except Exception as e:
-        print(e)
-        return Response({'error': 'Error generating signature or encoding data'}, status=500)
-
-    redirected_url = f'https://www.liqpay.ua/api/3/checkout?data={data}&signature={signature}'
-
-    return Response({
-        'redirected_url': redirected_url,
-        'data': data,
-        'signature': signature,
-    })
 
 
 

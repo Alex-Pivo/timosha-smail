@@ -101,14 +101,14 @@ class LiqPaymentAPI(APIView):
                     payment.name = get_name
                     payment.last_name = get_last_name
                     payment.description = get_description
-                    payment.status = 'Successfully donated'
+                    payment.status = 'Успішно оплачено'
                     payment.save()
                     return Response({'status': 'success'}, status=status.HTTP_202_ACCEPTED)
 
                 except Exception as e:
                     print("Error occurred while processing payment data:", str(e))
             elif res.get('status') == 'subscribed':
-                get_data_from_res = res.get('info')
+                    get_data_from_res = res.get('info')
                     info_parts = get_data_from_res.split(' ')
                     info_dict = dict(part.split(':', 1) for part in info_parts)
 
@@ -132,6 +132,7 @@ class LiqPaymentAPI(APIView):
                     payment.status = 'Успішний регулярний платіж'
                     payment.save()
                     return Response({'status': 'success'}, status=status.HTTP_202_ACCEPTED)
+            else:
                 
 
         return Response({'status': res.get('status')})
@@ -171,9 +172,14 @@ class LiqPayFunc:
                 donate = LiqpayPayment.objects.get(order_id=order_id)
                 donate.status = 'Успішно оплачено'
                 donate.save()
-                return res.get('status')
-
-
+                return Response({"status":"success"})
+        
+        elif res.get('status') == 'subscribed':
+                donate = LiqpayPayment.objects.get(order_id=order_id)
+                donate.status = 'Успішний регулярний платіж'
+                donate.save()
+                return Response({"status":"success"},status=status.HTTP_202_ACCEPTED)
+        
     @staticmethod
     def pay_view(amount,currency, name, last_name, phone, email, is_subscription: str, language='uk'):
         try:
@@ -198,7 +204,8 @@ class LiqPayFunc:
                 hashed_order_id=hashed_order_id,
             )
         except Exception as e:
-            print(e)
+            pass
+
         new_language = 'ua' if language == 'uk' else language
 
         params = {

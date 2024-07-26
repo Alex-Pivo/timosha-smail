@@ -258,7 +258,7 @@ export default function Articles({ locale }: any) {
               <div
                 className={styles.image}
                 style={{
-                  backgroundImage: `url(https://timoshas-smile.org:8443/${item.main_image})`,
+                  backgroundImage: `url(https://timoshas-smile.org:8443${item.main_image})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                 }}

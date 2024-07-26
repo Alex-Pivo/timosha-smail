@@ -31,7 +31,7 @@ class LiqpayPaymentAdmin(admin.ModelAdmin):
                 payment.save()
             elif res.get('status') == 'subscribed':
                 payment = LiqpayPayment.objects.get(order_id=id)
-                payment.status = 'Регулярний платіж'
+                payment.status = 'Успішний регулярний платіж'
                 payment.save()
                 
             else:

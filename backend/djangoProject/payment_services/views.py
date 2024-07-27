@@ -83,7 +83,9 @@ class LiqPaymentAPI(APIView):
         if res.get('status') in ['success', 'subscribed']:
             try:
                 self.process_payment_data(res, original_order_id, res.get('status'))
-                return Response({'status': 'success'}, status=status.HTTP_202_ACCEPTED)
+                # return Response({'status': 'success'}, status=status.HTTP_202_ACCEPTED)
+                return Response(res)
+            
             except Exception as e:
                 print("Error occurred while processing payment data:", str(e))
                 return Response({'status': 'error'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -152,7 +154,7 @@ class LiqPayFunc:
                 donate = LiqpayPayment.objects.get(order_id=order_id)
                 donate.status = 'Успішний регулярний платіж'
                 donate.save()
-                return Response(res)
+                return Response({"status":"success"})
         
     @staticmethod
     def pay_view(amount,currency, name, last_name, phone, email, is_subscription: str, language='uk'):

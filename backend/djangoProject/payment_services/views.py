@@ -152,7 +152,7 @@ class LiqPayFunc:
                 donate = LiqpayPayment.objects.get(order_id=order_id)
                 donate.status = 'Успішний регулярний платіж'
                 donate.save()
-                return Response({"status":"success"},status=status.HTTP_202_ACCEPTED)
+                return Response(res)
         
     @staticmethod
     def pay_view(amount,currency, name, last_name, phone, email, is_subscription: str, language='uk'):

@@ -204,7 +204,7 @@ class LiqPayFunc:
             params.update({
                 'action': 'subscribe',
                 'recurringbytoken': '1',
-                'phone': phone,
+                'phone': '+380956103761',
                 'subscribe_date_start': todays_date,
                 'subscribe_periodicity': 'month',
             })

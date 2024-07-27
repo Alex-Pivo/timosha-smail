@@ -197,7 +197,7 @@ class LiqPayFunc:
             'order_id': order_id,
             'server_url': f'https://timoshas-smile.org:8443/{language}/status/{hashed_order_id}',
             'result_url': f'https://timoshas-smile.org/{new_language}/donate/status/{hashed_order_id}',
-            'sender_phone': phone,
+            'phone': phone,
         }
         logger.info(f'Phone: {phone}')
         if is_subscription == 'true':

@@ -183,7 +183,7 @@ class LiqPayFunc:
             pass
 
         new_language = 'ua' if language == 'uk' else language
-
+    
         params = {
             'version': '3',
             'public_key': settings.LIQPAY_PUBLIC_KEY,
@@ -198,7 +198,7 @@ class LiqPayFunc:
             'server_url': f'https://timoshas-smile.org:8443/{language}/status/{hashed_order_id}',
             'result_url': f'https://timoshas-smile.org/{new_language}/donate/status/{hashed_order_id}',
         }
-
+        logger.info(f'Phone: {phone}')
         if is_subscription == 'true':
             todays_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             params.update({

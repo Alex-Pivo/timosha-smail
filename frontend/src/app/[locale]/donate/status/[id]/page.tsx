@@ -39,6 +39,9 @@ export default function Status() {
             else if(response.data.status === 'error'){
                 setStatus(status = "false");
             }
+            else if(response.data.status === 'subscribed'){
+                setStatus(status = "subscribed");
+            }
             return response.data;
         } catch (error) {
             console.error('Error fetching order status:', error);

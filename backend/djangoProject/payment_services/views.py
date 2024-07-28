@@ -83,7 +83,7 @@ class LiqPaymentAPI(APIView):
         if res.get('status') in ['success', 'subscribed']:
             try:
                 self.process_payment_data(res, original_order_id, res.get('status'))
-                return Response(res.get('status'), status=status.HTTP_202_ACCEPTED))
+                return Response(res.get('status'), status=status.HTTP_202_ACCEPTED)
             
             except Exception as e:
                 print("Error occurred while processing payment data:", str(e))

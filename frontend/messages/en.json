@@ -180,7 +180,8 @@
     "name": "By name:",
     "adres": "Address:",
     "name1": "Timosha's Smile",
-    "adres1": "2357 S Tamiami TrI Ste 3, PMB 189 Venice, FL, 34293"
+    "adres1": "2357 S Tamiami TrI Ste 3, PMB 189 Venice, FL, 34293",
+     "subs": "To cancel a recurring payment, you need to: go to your Liqpay account and cancel a recurring payment, or write to the Liqpay support service and cancel a recurring payment."
   },
   "popupDonate": {
     "title": "Where do you plan to help from?",

@@ -80,7 +80,7 @@ class LiqPaymentAPI(APIView):
             "order_id": original_order_id
         })
         
-        if res.get('status') in ['success', 'subscribed']:
+        if res.get('status') in ['success', 'subscribed','wait_accept']:
             try:
                 self.process_payment_data(res, original_order_id, res.get('status'))
                 return Response({'status': 'success'}, status=status.HTTP_202_ACCEPTED)

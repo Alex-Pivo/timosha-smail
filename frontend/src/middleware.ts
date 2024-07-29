@@ -12,9 +12,14 @@ export default function middleware(req: NextRequest) {
     pathname.startsWith('/api') ||
     pathname.startsWith('/_next/static') ||
     pathname.startsWith('/_next/image') ||
-    pathname === '/favicon.ico' ||
-    pathname.startsWith('/public')
+    pathname === '/favicon.ico'
   ) {
+    return NextResponse.next();
+  }
+
+  // Исключаем все файлы из папки public
+  const publicFileExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.ico', '.webp'];
+  if (publicFileExtensions.some(extension => pathname.endsWith(extension))) {
     return NextResponse.next();
   }
 

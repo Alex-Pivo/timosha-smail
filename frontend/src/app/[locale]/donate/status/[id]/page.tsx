@@ -56,7 +56,7 @@ export default function Status() {
 
     useEffect(() => {
         const timeout = setTimeout(() => {
-            if (status != "true" && status != "false" && status != "subscribed") {
+            if (status != "true" && status != "false") {
                 window.location.href = `/${locale}/donate`;
             }
         }, 3000);

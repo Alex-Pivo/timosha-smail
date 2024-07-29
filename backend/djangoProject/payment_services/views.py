@@ -103,7 +103,7 @@ class LiqPaymentAPI(APIView):
         payment.last_name = info_dict.get("Прізвище", "")
         payment.description = res.get('description', "")
         status = res.get('status')
-        if status =='success':
+        if status =='success' or 'wait_accept':
             payment.status = 'Успішно оплачено'
         elif status =='subscribed':
              payment.status = 'Успішний регулярний платіж'

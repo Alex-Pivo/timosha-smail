@@ -180,7 +180,8 @@
     "name": "A nome di:",
     "adres": "Indirizzo:",
     "name1": "Il sorriso di Timosha",
-    "adres1": "2357 S Tamiami TrI Ste 3, PMB 189 Venice, FL, 34293"
+    "adres1": "2357 S Tamiami TrI Ste 3, PMB 189 Venice, FL, 34293",
+     "subs": "Per annullare un pagamento ricorrente, devi: andare sul tuo conto Liqpay e annullare un pagamento ricorrente, oppure scrivere al servizio di supporto Liqpay e annullare un pagamento ricorrente."
   },
   "popupDonate": {
     "title": "Da dove intendi aiutare?",

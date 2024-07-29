@@ -508,7 +508,10 @@ export default function FirstHelp() {
                   </svg>
                   <p>{t("down")}</p>
                 </div>
-                <p className={styles.textDownTwo}>{t("downText")}</p>
+                <p className={styles.textDownTwo}>{t("downText")} <br />
+                <br />
+                  {sub === "false" ? t("") : t("subs")}
+                </p>
               </div>
             </form>
           </div>

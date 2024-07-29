@@ -569,7 +569,7 @@ export default function Reports({ locale }: any) {
                     <div
                       className={styles.photo}
                       style={{
-                        backgroundImage: `url(https://timoshas-smile.org:8443/${entry.article_image})`,
+                        backgroundImage: `url(https://timoshas-smile.org:8443/media_storage/${entry.article_image})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",
                       }}

@@ -510,7 +510,7 @@ export default function FirstHelp() {
                 </div>
                 <p className={styles.textDownTwo}>{t("downText")} <br />
                 <br />
-                  {sub === "false" ? t("") : t("subs")}
+                  {sub === "false" ? "" : t("subs")}
                 </p>
               </div>
             </form>

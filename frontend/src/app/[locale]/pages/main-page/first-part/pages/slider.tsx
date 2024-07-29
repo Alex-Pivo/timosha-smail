@@ -30,7 +30,7 @@ export default function Slider({ locale }: any) {
     try {
       let data;
       axios
-        .get(`https://timoshas-smile.org:8443/${localeValue}`)
+        .get(`https://timoshas-smile.org:8443/${localeValue}/`)
         .then((res) => {
           data = res.data;
           setState(data);

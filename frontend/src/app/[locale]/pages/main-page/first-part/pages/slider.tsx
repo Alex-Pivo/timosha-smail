@@ -25,7 +25,7 @@ export default function Slider({ locale }: any) {
 
   function componentDidMount() {
     if (localeValue === "ua") {
-      localeValue = "";
+      localeValue = "uk";
     }
     try {
       let data;

@@ -8,7 +8,7 @@ export default function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   // Исключаем статические файлы и API из обработки middleware
-  if (pathname.startsWith('/api') || pathname.startsWith('/_next/static') || pathname === '/favicon.ico') {
+  if (pathname.startsWith('/api') || pathname.startsWith('/_next/static') || pathname.startsWith('/_next/image') || pathname === '/favicon.ico') {
     return NextResponse.next();
   }
 

@@ -178,7 +178,7 @@ export default function Reports({ locale }: any) {
   };
 
   const handleClickDonwload = async () => {
-    const url = `http://localhost:8000/media/${state[index].statement_file}`;
+    const url = `https://timoshas-smile.org:8443/media/${state[index].statement_file}`;
     const destination = `${state[index].statement_file_name}.png`;
 
     try {
@@ -569,7 +569,7 @@ export default function Reports({ locale }: any) {
                     <div
                       className={styles.photo}
                       style={{
-                        backgroundImage: `url(http://95.169.204.16:8000/media_storage/${entry.article_image})`,
+                        backgroundImage: `url(https://timoshas-smile.org:8443/${entry.article_image})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",
                       }}

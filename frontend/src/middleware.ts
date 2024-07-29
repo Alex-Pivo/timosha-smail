@@ -27,5 +27,5 @@ export default function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/:path*'] // Убрал лишние пути, чтобы обработка шла для всех маршрутов
+  matcher: ['/((?!api|_next/static|favicon.ico).*)'], // Исключаем API и статические файлы
 };

@@ -10,6 +10,7 @@ import styles from "./styles/articles.module.scss";
 import Popup from "@/app/[locale]/components/popup/popup";
 
 import { useRouter } from "next/navigation";
+import { useSearchParams } from 'next/navigation';
 
 interface News {
   title: string;
@@ -32,6 +33,8 @@ export default function Articles({ locale }: any) {
 
   const router = useRouter();
   let localeValue = locale;
+  const searchParams = useSearchParams();
+  const myString = searchParams.get('new');
 
   const filters = [
     "evacuation",
@@ -99,7 +102,10 @@ export default function Articles({ locale }: any) {
       setFilteredItems(tempItems.flat());
       setVisibleNews(tempItems.flat().slice(0, newsPerPage));
     } else {
-      setActive((active = true));
+      const filterFromURL = searchParams.get('new');
+      if (!filterFromURL){
+        setActive((active = true));
+      } 
       setFilteredItems(state);
       setVisibleNews(
         filterNewsByCategory(state, selectedCategory).slice(0, newsPerPage)
@@ -110,6 +116,12 @@ export default function Articles({ locale }: any) {
 
   useEffect(() => {
     componentDidMount();
+    const filterFromURL = searchParams.get('new');
+    if (filterFromURL) {
+      setSelectedFilters([filterFromURL]);
+      handleCategoryClick(filterFromURL);
+      setActive((active = false));
+    }
   }, []);
 
   useEffect(() => {

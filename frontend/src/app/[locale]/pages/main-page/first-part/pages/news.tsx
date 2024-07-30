@@ -2,7 +2,7 @@
 import styles from "../styles/news.module.scss";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
-
+import { Link } from "@/navigation";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
@@ -168,7 +168,14 @@ useEffect(() => {
                 }}
                 className={back ? styles.back : styles.backDis}
               >
-                <button className={styles.btn}>{t('read')}</button>
+{/*                 <button className={styles.btn}>{t('read')}</button> */}
+                <Link href="/news" className={styles.btn}
+                    style={{
+                      textDecoration: "none",
+                    }} 
+                  >
+                  {t("read")}
+                </Link>
               </div>
               <button className={styles.btn}>{t('article')}</button>
               <div className={styles.text__container}>
@@ -190,7 +197,14 @@ useEffect(() => {
                 }}
                 className={backDown ? styles.backDown : styles.backDisDown}
               >
-                <button className={styles.btn}>{t('read')}</button>
+{/*                 <button className={styles.btn}>{t('read')}</button> */}
+                <Link href="/news" className={styles.btn}
+                  style={{
+                    textDecoration: "none",
+                  }} 
+                  >
+                  {t("read")}
+                </Link>
               </div>
               <svg className={styles.hash} width="81" height="78" viewBox="0 0 81 78" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="81" height="78" fill="url(#pattern0_464_12012)"/>
@@ -223,7 +237,14 @@ useEffect(() => {
               }}
               className={backCenter ? styles.backCenter : styles.backDisCenter}
             >
-              <button className={styles.btn}>{t('read')}</button>
+{/*               <button className={styles.btn}>{t('read')}</button> */}
+              <Link href="/news" className={styles.btn}
+                    style={{
+                      textDecoration: "none",
+                    }} 
+                  >
+                  {t("read")}
+                </Link>
             </div>
             <svg
               className={styles.hearts}
@@ -266,7 +287,14 @@ useEffect(() => {
               }}
               className={backRight ? styles.backRight : styles.backDisRight}
             >
-              <button className={styles.btn}>{t('read')}</button>
+{/*               <button className={styles.btn}>{t('read')}</button> */}
+              <Link href="/news" className={styles.btn}
+                    style={{
+                      textDecoration: "none",
+                    }} 
+                  >
+                  {t("read")}
+                </Link>
             </div>
             <button className={styles.btn}>{t('article')}</button>
             <div className={styles.text__containerRight}>

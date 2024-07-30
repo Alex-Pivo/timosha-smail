@@ -190,7 +190,7 @@ export default function Abouthelp() {
                   </Link>
                 </div>
               </div>
-              <Link href={`/${locale}/news?new=${encodeURIComponent(evacuation)}`} className={styles.btn__help}
+              <Link href={`/${locale}/news?new=${encodeURIComponent(clinic)}`} className={styles.btn__help}
                   style={{
                     textDecoration: "none",
                   }} 

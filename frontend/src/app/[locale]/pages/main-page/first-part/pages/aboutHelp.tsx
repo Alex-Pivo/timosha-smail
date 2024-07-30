@@ -282,7 +282,7 @@ export default function Abouthelp() {
                     }}
                     className={back ? styles.back : styles.backDis}
                   >
-                    <Link href=`/${locale}/news` className={styles.btn}
+                    <Link href={`/${locale}/news`} className={styles.btn}
                     style={{
                       textDecoration: "none",
                       display: "flex",
@@ -313,7 +313,7 @@ export default function Abouthelp() {
                     }}
                     className={backDown ? styles.backDown : styles.backDisDown}
                   >
-                    <Link href=`/${locale}/news` className={styles.btn}
+                    <Link href={`/${locale}/news`} className={styles.btn}
                     style={{
                       textDecoration: "none",
                       display: "flex",
@@ -361,7 +361,7 @@ export default function Abouthelp() {
                   }}
                   className={backCenter ? styles.backCenter : styles.backDisCenter}
                 >
-                  <Link href=`/${locale}/news` className={styles.btn}
+                  <Link href={`/${locale}/news`} className={styles.btn}
                     style={{
                       textDecoration: "none",
                       display: "flex",
@@ -413,7 +413,7 @@ export default function Abouthelp() {
                   }}
                   className={backRight ? styles.backRight : styles.backDisRight}
                 >
-                 <Link href=`/${locale}/news` className={styles.btn}
+                 <Link href={`/${locale}/news`} className={styles.btn}
                     style={{
                       textDecoration: "none",
                       display: "flex",

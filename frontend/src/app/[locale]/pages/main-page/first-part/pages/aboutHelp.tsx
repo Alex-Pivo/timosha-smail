@@ -2,6 +2,8 @@
 import styles from "../styles/abouthelp.module.scss";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+import {useLocale} from "next-intl";
 
 export default function Abouthelp() {
   let [back, setBack] = useState(false);
@@ -12,6 +14,9 @@ export default function Abouthelp() {
   let [text, setText] = useState(false);
   const t = useTranslations('mThird');
   const c = useTranslations('mSecond');
+   let locale = useLocale();
+  const evacuation = "evacuation";
+  const clinic = "clinic";
 
   return (
     <>
@@ -83,7 +88,7 @@ export default function Abouthelp() {
                       {t('btn2')}
                     </div>
                   </div>
-                  <button className={styles.btn}>
+                  <Link href={`/${locale}/news?new=${encodeURIComponent(evacuation)}`} className={styles.btn}>
                     <svg
                       className={styles.arrow}
                       xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +116,7 @@ export default function Abouthelp() {
                       <path d="M17.2779 2.22131L5.78746 2.39808M17.2779 2.22131L17.1012 13.7118M17.2779 2.22131L7.06909 12.4302M1.7216 17.7777L4.15228 15.347" stroke="#F5F5F5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     {t('find')}
-                  </button>
+                  </Link>
                 </div>
               </div>
               <div className={styles.right}>
@@ -150,7 +155,7 @@ export default function Abouthelp() {
                   <p className={styles.description}>
                   {t('subtitle2')}
                   </p>
-                  <button className={styles.btn}>
+                  <Link href={`/${locale}/news?new=${encodeURIComponent(clinic)}`} className={styles.btn}>
                     <svg
                       className={styles.arrow}
                       xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +183,7 @@ export default function Abouthelp() {
                       <path d="M17.2779 2.22131L5.78746 2.39808M17.2779 2.22131L17.1012 13.7118M17.2779 2.22131L7.06909 12.4302M1.7216 17.7777L4.15228 15.347" stroke="#F5F5F5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     {t('find')}
-                  </button>
+                  </Link>
                 </div>
               </div>
               <div className={styles.btn__help}>

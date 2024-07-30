@@ -136,7 +136,11 @@ export default function Abouthelp() {
                   />
                 </svg>
               </div>
-              <div className={styles.btn__help}>
+              <Link href={`/${locale}/news?new=${encodeURIComponent(evacuation)}`} className={styles.btn__help}
+                style={{
+                    textDecoration: "none",
+                  }} 
+                >
                     <svg 
                     className={styles.arrow1}
                     xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
@@ -144,7 +148,7 @@ export default function Abouthelp() {
                       <path d="M17.2779 2.22131L5.78746 2.39808M17.2779 2.22131L17.1012 13.7118M17.2779 2.22131L7.06909 12.4302M1.7216 17.7777L4.15228 15.347" stroke="#F5F5F5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     {t('find')}
-              </div>
+              </Link>
             </div>
             <div className={styles.down}>
               <div className={styles.left}>
@@ -186,7 +190,11 @@ export default function Abouthelp() {
                   </Link>
                 </div>
               </div>
-              <div className={styles.btn__help}>
+              <Link href={`/${locale}/news?new=${encodeURIComponent(evacuation)}`} className={styles.btn__help}
+                  style={{
+                    textDecoration: "none",
+                  }} 
+                >
                     <svg 
                     className={styles.arrow1}
                     xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
@@ -194,7 +202,7 @@ export default function Abouthelp() {
                       <path d="M17.2779 2.22131L5.78746 2.39808M17.2779 2.22131L17.1012 13.7118M17.2779 2.22131L7.06909 12.4302M1.7216 17.7777L4.15228 15.347" stroke="#F5F5F5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     {t('find')}
-              </div>
+              </Link>
             </div>
             <div className={text ? styles.footer__active : styles.footer}>
             <div className={styles.left}>
@@ -274,7 +282,16 @@ export default function Abouthelp() {
                     }}
                     className={back ? styles.back : styles.backDis}
                   >
-                    <button className={styles.btn}>{t('find')}</button>
+                    <Link href=`/${locale}/news` className={styles.btn}
+                    style={{
+                      textDecoration: "none",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }} 
+                  >
+                  {t("read")}
+                </Link>
                   </div>
                   <button className={styles.btn}>{c('article')}</button>
                   <div className={styles.text__container}>
@@ -296,7 +313,16 @@ export default function Abouthelp() {
                     }}
                     className={backDown ? styles.backDown : styles.backDisDown}
                   >
-                    <button className={styles.btn}>{c('read')}</button>
+                    <Link href=`/${locale}/news` className={styles.btn}
+                    style={{
+                      textDecoration: "none",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }} 
+                  >
+                  {t("read")}
+                </Link>
                   </div>
                   <svg
                     className={styles.hash}
@@ -335,7 +361,16 @@ export default function Abouthelp() {
                   }}
                   className={backCenter ? styles.backCenter : styles.backDisCenter}
                 >
-                  <button className={styles.btn}>{c('read')}</button>
+                  <Link href=`/${locale}/news` className={styles.btn}
+                    style={{
+                      textDecoration: "none",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }} 
+                  >
+                  {t("read")}
+                </Link>
                 </div>
                 <svg
                   className={styles.hearts}
@@ -378,7 +413,16 @@ export default function Abouthelp() {
                   }}
                   className={backRight ? styles.backRight : styles.backDisRight}
                 >
-                  <button className={styles.btn}>{c('read')}</button>
+                 <Link href=`/${locale}/news` className={styles.btn}
+                    style={{
+                      textDecoration: "none",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }} 
+                  >
+                  {t("read")}
+                </Link>
                 </div>
                 <button className={styles.btn}>{c('article')}</button>
                 <div className={styles.text__containerRight}>

@@ -172,6 +172,9 @@ useEffect(() => {
                 <Link href="/news" className={styles.btn}
                     style={{
                       textDecoration: "none",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }} 
                   >
                   {t("read")}
@@ -201,6 +204,9 @@ useEffect(() => {
                 <Link href="/news" className={styles.btn}
                   style={{
                     textDecoration: "none",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }} 
                   >
                   {t("read")}
@@ -241,6 +247,9 @@ useEffect(() => {
               <Link href="/news" className={styles.btn}
                     style={{
                       textDecoration: "none",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }} 
                   >
                   {t("read")}
@@ -291,6 +300,9 @@ useEffect(() => {
               <Link href="/news" className={styles.btn}
                     style={{
                       textDecoration: "none",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }} 
                   >
                   {t("read")}

@@ -94,6 +94,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'partners',
     'reviews',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 # REST_FRAMEWORK = {

@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-# from ckeditor.fields import RichTextField
+from ckeditor.fields import RichTextField
 
 class ChooseLanguage(models.TextChoices):
     UKRAINIAN = 'uk', 'Українська'
@@ -18,7 +18,7 @@ class Category(models.TextChoices):
 class News(models.Model):
     title = models.CharField(max_length=100, verbose_name='Заголовок')
     description = models.TextField(max_length=400, verbose_name='Опис')
-    content = models.TextField(verbose_name="Текст новини")
+    content = RichTextField(verbose_name="Текст новини")
     short_description = models.TextField(max_length=200, verbose_name='Скорочений текст')
     time_to_read = models.CharField(max_length=5, default='10', verbose_name="Час прочитання")
     video = models.URLField(verbose_name='Посилання на YouTube:', blank=True, null=True,default=' ')
@@ -36,7 +36,7 @@ class News(models.Model):
         return self.title
 
     def delete(self, *args, **kwargs):
-        # Видалення фотографій під час видалення новини
+
         if self.main_image:
             self.main_image.delete()
         if self.optional_image_1:

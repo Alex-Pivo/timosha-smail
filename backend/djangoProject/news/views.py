@@ -32,7 +32,8 @@ class SortNewsByCategory(APIView):
             'fond_achievements': 'fond_achievements',
             'your_help': 'your_help',
             'life_of_fond': 'life_of_fond',
-            'interview': 'interview'
+            'interview': 'interview',
+            'important': 'important',
         }
 
         category_key = category_mappings.get(category)

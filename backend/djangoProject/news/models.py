@@ -15,6 +15,8 @@ class Category(models.TextChoices):
     YOUR_HELP = 'your_help', 'Ваша допомога'
     LIFE_OF_FOND = 'life_of_fond', 'Життя фонду'
     INTERVIEW = 'interview', 'Інтерв’ю'
+    IMPORTANT = 'important','Важливе'
+
 class News(models.Model):
     title = models.CharField(max_length=100, verbose_name='Заголовок')
     description = models.TextField(max_length=400, verbose_name='Опис')

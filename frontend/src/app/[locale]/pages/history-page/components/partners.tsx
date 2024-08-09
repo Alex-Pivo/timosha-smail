@@ -112,7 +112,7 @@ export default function Partners({ locale }: any) {
               ></div> */}
 
               <div className={styles.text}>
-                Діджитал агенція, яка спеціалізується на розробці та дизайні
+                {t("yk")}
               </div>
             </motion.a>
 
@@ -144,8 +144,7 @@ export default function Partners({ locale }: any) {
               ></div>
 
               <div className={styles.text}>
-                Некомерційна організація, що надає та перевіряє інформацію про
-                фонди, неприбуткові корпорації
+                {t("candid")}
               </div>
             </motion.a>
 
@@ -239,7 +238,7 @@ export default function Partners({ locale }: any) {
                   <span> Y.K </span> Agency
                 </h2>
                 <div className={styles.text}>
-                Діджитал агенція, яка спеціалізується на розробці та дизайні
+                {t("yk")}
                 </div>
               </a>
             </SwiperSlide>
@@ -267,8 +266,7 @@ export default function Partners({ locale }: any) {
                         }}
                       ></div>
                     <div className={styles.text}>
-                    Некомерційна організація, що надає та перевіряє інформацію про
-                    фонди, неприбуткові корпорації
+                    {t("candid")}
                     </div>
                   </a>
                 </SwiperSlide>

@@ -17,10 +17,12 @@
         left: 0px;
         margin: 0 auto;
         width: 150px;
+        height: auto;
+        flex-wrap: wrap;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
     }
     
     #slider .swiper-pagination-bullet {

@@ -61,7 +61,46 @@ export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 				</div>
 				<div className={styles.companies}>
 					<div className={styles.firstPart}>
-						{state.map((partner, idx) => (
+							<motion.a href={"https://www.instagram.com/y.k.agency/?utm_source=ig_web_button_share_sheet"}
+									  className={styles.card}
+									  whileHover={{
+										  transform: "rotate(2deg)"
+									  }}
+									  style={{
+										  textDecoration: "none",
+									  }}
+							>
+									<div className={styles.yk_agency}>
+										<span className={styles.yk}>y.k</span>
+										<span className={styles.agency}> AGENCY</span>
+									</div>
+
+							</motion.a>
+							<motion.a href={"https://candid.org/"}
+									  className={styles.card}
+									  whileHover={{
+										  transform: "rotate(2deg)"
+									  }}
+									  style={{
+										  textDecoration: "none",
+									  }}
+							>
+									<div
+											className={styles.logo}
+											style={{
+												width: "80%",
+												height: "80px",
+												background: `url("/candid.jpg")`,
+												marginTop: "0px",
+												backgroundPosition: "center",
+												backgroundSize: "contain",
+												backgroundRepeat: "no-repeat"
+											}}
+										></div>
+							</motion.a>
+
+
+						{state.slice().reverse().map((partner, idx) => (
 							<motion.a href={partner.company_url}
 									  className={styles.card}
 									  whileHover={{
@@ -100,7 +139,45 @@ export const OurPartners: React.FC<OurPartnersProps> = ({ locale }) => {
 
 				<div className={styles.companiesPhone}>
 					<div className={styles.firstPart}>
-						{state.map((partner, idx) => (
+					<motion.a href={"https://www.instagram.com/y.k.agency/?utm_source=ig_web_button_share_sheet"}
+									  className={styles.card}
+									  whileHover={{
+										  transform: "rotate(2deg)"
+									  }}
+									  style={{
+										  textDecoration: "none",
+									  }}
+							>
+									<div className={styles.yk_agency}>
+										<span className={styles.yk}>y.k</span>
+										<span className={styles.agency}> AGENCY</span>
+									</div>
+
+							</motion.a>
+							<motion.a href={"https://candid.org/"}
+									  className={styles.card}
+									  whileHover={{
+										  transform: "rotate(2deg)"
+									  }}
+									  style={{
+										  textDecoration: "none",
+									  }}
+							>
+									<div
+											className={styles.logo}
+											style={{
+												width: "80%",
+												height: "80px",
+												background: `url("/candid.jpg")`,
+												marginTop: "0px",
+												backgroundPosition: "center",
+												backgroundSize: "contain",
+												backgroundRepeat: "no-repeat"
+											}}
+										></div>
+							</motion.a>
+
+						{state.slice().reverse().map((partner, idx) => (
 							<motion.a href={partner.company_url}
 									  className={styles.card}
 

@@ -43,6 +43,7 @@ export default function Articles({ locale }: any) {
     "your_help",
     "life_of_fond",
     "interview",
+    "important",
   ];
 
   function categoryGet(category: any) {
@@ -67,6 +68,9 @@ export default function Articles({ locale }: any) {
     }
     if (category == "interview") {
       cat = t("btn7");
+    }
+    if (category == "important") {
+      cat = t("btn8");
     }
     return cat;
   }

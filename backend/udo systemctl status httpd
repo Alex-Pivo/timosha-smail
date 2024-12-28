@@ -1,0 +1,15 @@
+[0;1;31m×[0m apache2.service - The Apache HTTP Server
+     Loaded: loaded (]8;;file://vps/usr/lib/systemd/system/apache2.service/usr/lib/systemd/system/apache2.service]8;;; [0;1;38;5;185mdisabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Sun 2024-09-08 09:29:15 UTC; 3h 19min ago
+       Docs: ]8;;https://httpd.apache.org/docs/2.4/https://httpd.apache.org/docs/2.4/]8;;
+    Process: 244721 ExecStart=/usr/sbin/apachectl start [0;1;31m(code=exited, status=1/FAILURE)[0m
+        CPU: 29ms
+
+Sep 08 09:29:15 vps systemd[1]: Starting apache2.service - The Apache HTTP Server...
+Sep 08 09:29:15 vps apachectl[244723]: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:8443
+Sep 08 09:29:15 vps apachectl[244723]: (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0.0:8443
+Sep 08 09:29:15 vps apachectl[244723]: no listening sockets available, shutting down
+Sep 08 09:29:15 vps apachectl[244723]: AH00015: Unable to open logs
+Sep 08 09:29:15 vps systemd[1]: [0;1;39m[0;1;31m[0;1;39mapache2.service: Control process exited, code=exited, status=1/FAILURE[0m
+Sep 08 09:29:15 vps systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mapache2.service: Failed with result 'exit-code'.[0m
+Sep 08 09:29:15 vps systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start apache2.service - The Apache HTTP Server.[0m

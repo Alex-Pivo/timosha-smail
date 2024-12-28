@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+.typesOfHelp{
+  margin-bottom: 152px;
+  .wrapperPhone{
+    display: none;
+  }
+  .wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    .svgSmile{
+      position: absolute;
+      right: 626.048px;
+      bottom: -35.789px;
+    }
+    .corona{
+      position: absolute;
+      right: 731px;
+      bottom: -15px;
+    }
+    .fish{
+      position: absolute;
+      right: -33px;
+      top: -51px;
+    }
+    .typeCard{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 45px;
+      .joinBtn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .contact{
+          svg{
+            stroke-width: 3px;
+          }
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          justify-content: center;
+          width: 463px;
+          height: 76px;
+          padding: 20px 51px;
+          border-radius: 12px;
+          background: #649612;
+          color: var(--Main-white, #F5F5F5);
+          font-family: Commissioner,sans-serif;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          &:hover {
+            background: #45660e;
+            transition: all 0.4s ease 0s;
+          }
+          &:active {
+            background: #263a06;
+            transition: all 0.4s ease 0s;
+          }
+        }
+      }
+      .nameOfTypes{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        .name{
+          display: flex;
+          align-items: flex-start;
+          gap: 30px;
+          span{
+            color: var(--Chief-Black, #1D1D1D);
+            font-family: Rubik, sans-serif;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 110%; /* 44px */
+          }
+        }
+        .description{
+          width: 830px;
+          color: var(--Neutral-Neutral-700, #374151);
+          font-family: Commissioner, sans-serif;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%; /* 33.6px */
+        }
+      }
+    }
+    // .imageOfTypes{
+    //   width: 830px;
+    //   height: 499px;
+    //   border-radius: 20px;
+    //   background: url("/img9.png") no-repeat center center;
+    //   background-size: cover;
+    // }
+  }
+  .joinBtnTablet{
+    display: none;
+  }
+}
+
+@media (min-width: 1250px)  and (max-width: 1541px){
+
+  .typesOfHelp{
+    margin-bottom: 200px;
+    .wrapperPhone{
+      display: none;
+    }
+    .wrapper{
+      display: flex;
+      width: 1352px;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      .svgSmile{
+        position: absolute;
+        right: 626.048px;
+        bottom: -35.789px;
+      }
+      .corona{
+        position: absolute;
+        right: 580px;
+        bottom: -13.01px;
+      }
+      .fish{
+        position: absolute;
+        right: -33px;
+        top: -51px;
+      }
+      .typeCard{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 52px;
+        .joinBtn{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .contact{
+            svg{
+              stroke-width: 3px;
+            }
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            width: 463px;
+            height: 76px;
+            padding: 20px 51px;
+            border-radius: 12px;
+            background: #649612;
+            color: var(--Main-white, #F5F5F5);
+            font-family: Commissioner,sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            &:hover {
+              background: #45660e;
+              transition: all 0.4s ease 0s;
+            }
+            &:active {
+              background: #263a06;
+              transition: all 0.4s ease 0s;
+            }
+          }
+        }
+        .nameOfTypes{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 40px;
+          .name{
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            span{
+              color: var(--Chief-Black, #1D1D1D);
+              font-family: Rubik, sans-serif;
+              font-size: 40px;
+              font-style: normal;
+              font-weight: 800;
+              line-height: 110%; /* 44px */
+            }
+          }
+          .description{
+            width: 668px;
+            color: var(--Neutral-Neutral-700, #374151);
+            font-family: Commissioner, sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 33.6px */
+          }
+        }
+      }
+      // .imageOfTypes{
+      //   width: 666px;
+      //   height: 400.99px;
+      //   border-radius: 20px;
+      //   background: url("/img9.png");
+      // }
+    }
+    .joinBtnTablet{
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1250px) {
+
+  .typesOfHelp{
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .wrapperPhone{
+      display: none;
+    }
+    .wrapper{
+      display: flex;
+      width: 100%;
+
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      .corona{
+        position: absolute;
+        right: 314px;
+        bottom: -0.102px;
+        width: 73px;
+        height: 53px;
+      }
+      .fish{
+        width: 82px;
+        height: 81px;
+        position: absolute;
+        right: -23px;
+        top: -23.932px;
+      }
+      .typeCard{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        .joinBtn{
+          display: none;
+        }
+        .nameOfTypes{
+          display: flex;
+          width: 100%;
+
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+          .name{
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            span{
+              color: var(--Chief-Black, #1D1D1D);
+              font-family: Rubik, sans-serif;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 800;
+              line-height: 110%;
+            }
+          }
+          .description{
+            width: 100%;
+            color: var(--Neutral-Neutral-700, #374151);
+            font-family: Commissioner, sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 19.6px */
+          }
+        }
+      }
+      // .imageOfTypes{
+      //   width: 100%;
+      //   max-width: 367px;
+      //   height: 220.966px;
+      //   flex-shrink: 0;
+      //   border-radius: 20px;
+      //   background: url("/img9.png") no-repeat center center;
+      //   background-size: cover;
+      // }
+    }
+    .joinBtnTablet{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .contact{
+        svg{
+          stroke-width: 3px;
+          width: 16px;
+          height: 22px;
+          transform: rotate(-135deg);
+        }
+        display: flex;
+        width: 367px;
+        height: 50px;
+        padding: 20px 51px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 8px;
+        background: var(--main-green, #649612);
+        color: var(--Main-white, #F5F5F5);
+        font-family: Commissioner, sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        &:hover {
+          background: #45660e;
+          transition: all 0.4s ease 0s;
+        }
+        &:active {
+          background: #263a06;
+          transition: all 0.4s ease 0s;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .typesOfHelp {
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .wrapper {
+      display: none;
+    }
+
+    .wrapperPhone {
+      display: flex;
+      width: 343px;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+
+      .typeCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        .joinBtn {
+          display: none;
+        }
+
+        .nameOfTypes {
+          display: flex;
+          width: 343px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+
+          .name {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+            gap: 8px;
+
+            span {
+              color: var(--Chief-Black, #1D1D1D);
+              font-family: Rubik, sans-serif;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 800;
+              line-height: 110%; // 22px
+            }
+          }
+
+          .corona {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 43px;
+            height: 31px;
+          }
+
+          .fish {
+            width: 67px;
+            height: 66px;
+            position: absolute;
+            right: -10px;
+            top: -20px;
+          }
+
+          // .imageOfTypes {
+          //   width: 100%;
+          //   max-width: 343px;
+          //   height: 206px;;
+          //   flex-shrink: 0;
+          //   border-radius: 20px;
+          //   background: url("/img9.png") no-repeat center center;
+          //   background-size: cover;
+          //   position: relative;
+          // }
+
+          .description {
+            width: 343px;
+            color: var(--Neutral-Neutral-700, #374151);
+            font-family: Commissioner, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; // 22.4px
+          }
+        }
+      }
+
+      .joinBtnTablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .contact {
+          svg {
+            stroke-width: 3px;
+            width: 16px;
+            height: 22px;
+            transform: rotate(-135deg);
+          }
+          display: flex;
+          width: 343px;
+          height: 45px;
+          padding: 20px 51px;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          border-radius: 8px;
+          background: var(--main-green, #649612);
+          color: #FFF;
+          text-align: center;
+          font-family: Rubik, sans-serif;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 11px; // 61.111%
+
+          &:hover {
+            background: #45660e;
+            transition: all 0.4s ease 0s;
+          }
+
+          &:active {
+            background: #263a06;
+            transition: all 0.4s ease 0s;
+          }
+        }
+      }
+    }
+  }
+}

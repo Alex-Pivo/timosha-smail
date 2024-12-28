@@ -1,0 +1,34 @@
+.historySwipe {
+  width: 100%;
+  height: 647px;
+}
+
+.historySwipe .slideHidden {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 835px) and (max-width: 1541px){
+  .historySwipe {
+    width: 100%;
+    height: 474px;
+  }
+  
+  .historySwipe .slideHidden {
+    visibility: hidden;
+  }
+}
+
+
+@media screen and (min-width: 767px) and (max-width:835px) {
+  .historySwipe {
+    width: 100%;
+    height: 360px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+  .historySwipe {
+    width: 100%;
+    height: auto;
+  }
+}

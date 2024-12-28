@@ -1,0 +1,2175 @@
+[33mcommit ac2d37891547b79da0458df74f2fad3c17dc1cf5[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: GTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Tue Jul 23 21:34:00 2024 +0300
+
+    Update settings.py
+
+[33mcommit 7a2f73066054d105f2c8801332ceb4875c2c823e[m[33m ([m[1;32mmain[m[33m)[m
+Author: GTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Tue Jul 23 20:21:15 2024 +0300
+
+    Update settings.py
+
+[33mcommit 0ef3684a53c187139195da414891ce6c5a709dbd[m
+Author: GTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Tue Jul 23 20:13:05 2024 +0300
+
+    Update settings.py
+
+[33mcommit 42ea16f76131aabba5b3d59597f511f78187c207[m
+Author: Yuriy Klyap <126515747+cl9bix@users.noreply.github.com>
+Date:   Wed Jul 17 19:58:46 2024 +0200
+
+    Update settings.py
+
+[33mcommit 7243eadfb4c1aea576bc4971622225e4afd19599[m
+Author: Yuriy Klyap <126515747+cl9bix@users.noreply.github.com>
+Date:   Tue Jul 16 23:13:49 2024 +0200
+
+    Update settings.py
+
+[33mcommit 7b5c1b67bea2f931091a33ae583d71004a769099[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jul 9 20:44:17 2024 +0300
+
+    Update TextWithLinks.tsx
+
+[33mcommit d817610efde96d69f5fa2566caaa14f5e40d0a22[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jul 9 20:33:05 2024 +0300
+
+    Update page.tsx
+
+[33mcommit 980d51dd5581ed43e9125891ba2b902e79a86f18[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jul 9 20:25:26 2024 +0300
+
+    Update page.tsx
+
+[33mcommit 95bfb955417266ac484228ef4edcb0f975047e17[m
+Author: Yuriy Klyap <126515747+cl9bix@users.noreply.github.com>
+Date:   Mon Jul 8 19:44:21 2024 +0200
+
+    Update models.py
+
+[33mcommit 23c571f1e110a5da9b01e635da2e4c7015bef863[m
+Author: Yuriy Klyap <126515747+cl9bix@users.noreply.github.com>
+Date:   Mon Jul 8 19:33:39 2024 +0200
+
+    Add files via upload
+
+[33mcommit 984202ccce976bb68d05d7d8f205509493d53f4f[m
+Author: Yuriy Klyap <126515747+cl9bix@users.noreply.github.com>
+Date:   Mon Jul 8 19:29:44 2024 +0200
+
+    update
+
+[33mcommit 0cc3990ea0ce8a536a28ce893d981fefdfb09925[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jul 7 23:46:41 2024 +0300
+
+    Update ua.json
+
+[33mcommit f459fee7bc436c0c8d378207694a7a8b753a83fb[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jul 7 23:46:01 2024 +0300
+
+    Update ru.json
+
+[33mcommit 92ad49f79719ac3496bf362c1f2b358517f44088[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jul 7 23:44:56 2024 +0300
+
+    Update it.json
+
+[33mcommit 0248e359b97b9dd1322e730eb69107cbee0d9ef5[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jul 7 23:42:37 2024 +0300
+
+    Update en.json
+
+[33mcommit 491691a0a0a059cc35b6a0a06bb09b2112089955[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jul 7 23:35:40 2024 +0300
+
+    load
+
+[33mcommit e7d9950d77e28e366eea26155312e9b82dc57a84[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jul 7 23:30:07 2024 +0300
+
+    Update styles.module.scss
+
+[33mcommit 9e14dd66a7b7284df652e80d46a4fe65c028a60b[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jul 7 23:27:57 2024 +0300
+
+    Update page.tsx
+
+[33mcommit f2ae2bdef33f7870dd588037126a85b36987a51e[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jul 7 23:26:03 2024 +0300
+
+    Update articles.module.scss
+
+[33mcommit c807dd9c0f5a35e3e32d8b2555fc67a01232bcdc[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jul 7 23:23:27 2024 +0300
+
+    Update articles.tsx
+
+[33mcommit 1342a32f0a841d1919b47f339e6edc14b763244b[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jul 7 14:18:36 2024 +0300
+
+    Update styles.module.scss
+
+[33mcommit 5beabcee8ecc8aa9edf7f144b70fb1a95aeb67a8[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jul 7 14:17:47 2024 +0300
+
+    Update articles.tsx
+
+[33mcommit f941fef2a101cfcafb31bdae8ac50b1337716121[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jul 7 14:16:44 2024 +0300
+
+    Update page.tsx
+
+[33mcommit 2e75559788b10d09861d788e11aee7656f2ebbda[m
+Author: Yuriy Klyap <126515747+cl9bix@users.noreply.github.com>
+Date:   Sun Jul 7 12:46:42 2024 +0200
+
+    update
+
+[33mcommit 8d3700224feab54735e67e38a912329c926a5e5d[m
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Fri Jul 5 18:16:52 2024 +0200
+
+    update
+
+[33mcommit f01cbe4c7d890a389c8e8056cb9ce1738101e87f[m
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Fri Jul 5 18:16:41 2024 +0200
+
+    update
+
+[33mcommit a044825cab7e9974364594bb8ca66bbe17fd084c[m
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Fri Jul 5 18:13:14 2024 +0200
+
+    update
+
+[33mcommit beb2d3828ee425464701c9466d4ff68e84667781[m
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Fri Jul 5 15:47:31 2024 +0200
+
+    update
+
+[33mcommit dabcbc15bbdf3db313fea0803ae9e9bec994f469[m
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Fri Jul 5 14:50:54 2024 +0200
+
+    update
+
+[33mcommit c8b9affd1ce6499e3d699e567d5d06d7d539c5fc[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jul 5 02:31:08 2024 +0300
+
+    Update styles.module.scss
+
+[33mcommit f0b9bc3887c5aa1424166fbc57336d7421041f28[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jul 5 02:28:34 2024 +0300
+
+    Update pagination.css
+
+[33mcommit b8ba11794f3d4440d95ea60b5843532a9b45907b[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jul 5 02:24:00 2024 +0300
+
+    Update styles.module.scss
+
+[33mcommit 4d81b360c88c6eccb1eaf40c325b3d77bd887223[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jul 5 02:16:03 2024 +0300
+
+    Update pagination.css
+
+[33mcommit 20c2c87820b4eb305dc3468577f25fe1f0f7f420[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jul 5 02:10:51 2024 +0300
+
+    Update page.tsx
+
+[33mcommit 480f78f30c8c07cc46bc22a1e4e959902825d1b9[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jul 5 01:56:07 2024 +0300
+
+    Update styles.module.scss
+
+[33mcommit f3516258e12768979b7030239f524e035a225052[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jul 5 01:55:07 2024 +0300
+
+    Update articles.tsx
+
+[33mcommit 967359a2677011d45f759a7b79483c6538f0507f[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jul 4 16:31:21 2024 +0300
+
+    Update articles.module.scss
+
+[33mcommit d0ce1825d2c9f1a706594073dd9d14c3dde3d021[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jul 4 16:29:41 2024 +0300
+
+    Update articles.tsx
+
+[33mcommit 589a2029ed1b38201a05a24335e02d2802c2016f[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jul 4 00:56:50 2024 +0300
+
+    Update page.tsx
+
+[33mcommit dcad57ce3b2f2fc8b2d8af2dfb9c1d26cdc3ecb0[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jul 4 00:55:39 2024 +0300
+
+    Update styles.module.scss
+
+[33mcommit dc8aac444fe811b9f99d5ac9ca987472bd1ae014[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jul 4 00:54:09 2024 +0300
+
+    Update articles.module.scss
+
+[33mcommit 34c8cd10616a3d811ac0c89fb03af7d5eb09e7ec[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jul 4 00:50:49 2024 +0300
+
+    Update ua.json
+
+[33mcommit 9949243f5a4596dfd994c5a97fdb3679d05d4732[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jul 4 00:47:07 2024 +0300
+
+    Update ru.json
+
+[33mcommit 93176f887889abaee82541c23278bf3a27228f96[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jul 4 00:45:13 2024 +0300
+
+    Update it.json
+
+[33mcommit e648fb97fe25dc01fd48445a4bf38f16452fdd32[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jul 4 00:42:24 2024 +0300
+
+    Update en.json
+
+[33mcommit d6de9947a9ff1b3a4b975c588cbc97524f716e09[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jul 3 01:43:48 2024 +0300
+
+    Update firstHelp.module.scss
+
+[33mcommit 52cf5cc07248ff76090a81896fa869f3b604a66a[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jul 3 01:42:52 2024 +0300
+
+    Update firstHelp.tsx
+
+[33mcommit f8af5593ab2fd33fe828cb0e438f0000d6530a3a[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jul 3 01:41:56 2024 +0300
+
+    Update ua.json
+
+[33mcommit 6b9fe3b11932ee850965311b84043aa00c2c2e45[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jul 3 01:41:27 2024 +0300
+
+    Update ru.json
+
+[33mcommit 6d4aa1dc818ba0f1cf111f4b112aad09c658350d[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jul 3 01:40:21 2024 +0300
+
+    Update it.json
+
+[33mcommit abf45b618f8a04b8a0bce56c27ba1865b4dc1100[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jul 3 01:39:55 2024 +0300
+
+    Update en.json
+
+[33mcommit 25ac6a2554bafcc0603443b4dc38969c8b12f7c7[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jul 3 01:03:55 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit c8638657faa01b6698e37c75f71b953f3982b2e3[m
+Author: Yuriy Klyap <126515747+cl9bix@users.noreply.github.com>
+Date:   Tue Jul 2 11:26:48 2024 +0200
+
+    Update models.py
+
+[33mcommit fb15855d8c69a16b57bb74a636127f9280b7953a[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 28 23:06:41 2024 +0300
+
+    Update reports.module.scss
+
+[33mcommit 5372ca0c7eee81443e78896afb60db37389ce6e5[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 28 23:05:51 2024 +0300
+
+    Update reports.tsx
+
+[33mcommit 5e8053ab81517e2852cd15ecb27228e2f0ced71f[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 28 23:03:18 2024 +0300
+
+    Update ua.json
+
+[33mcommit 0f2997aa2a0637c819ed7f12c9282c6cfc76f5a7[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 28 23:01:43 2024 +0300
+
+    Update ru.json
+
+[33mcommit 39a3a8f9b2ee34bfcc18b13d7d66fa486e17e0a3[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 28 22:59:18 2024 +0300
+
+    Update it.json
+
+[33mcommit 244225b9bbae1f59fd69c9cce47ffdee2588477d[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 28 22:58:45 2024 +0300
+
+    Update en.json
+
+[33mcommit 8a32812e9c81700b4be690ac8ccd7531791880dc[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 28 14:16:57 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit 3ffbde5ebccac99e596af3280d18f480c6225efe[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 28 14:02:24 2024 +0300
+
+    Update history.module.scss
+
+[33mcommit cab0d7ef6690dba0164eb217cd46a37a9d9b4e30[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 28 14:01:46 2024 +0300
+
+    Update history.tsx
+
+[33mcommit ee1b7f5637f7d6835a479e57bfee0187ef4722b4[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 28 13:48:58 2024 +0300
+
+    Update reports.tsx
+
+[33mcommit 8c6bf95d9ae832fa18c71571c4d1643053831237[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 28 13:47:36 2024 +0300
+
+    Update it.json
+
+[33mcommit a3f60b132676046c70f116c8eae1face0401482b[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 28 13:47:03 2024 +0300
+
+    Update ru.json
+
+[33mcommit 8fe3adbc1e07e28507bf38da27f2629fd0334d4d[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 28 13:46:37 2024 +0300
+
+    Update en.json
+
+[33mcommit 1d861666ca237fae6f94f07fd540f551658f10ac[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 27 21:21:13 2024 +0300
+
+    Update Header.module.scss
+
+[33mcommit bbdc20d301a950e6330794291c78e9f40ef100fa[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 27 21:20:21 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit adce2629736e0c8ae5366196a03e6239a90fe7e2[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 27 21:19:21 2024 +0300
+
+    Update slider.tsx
+
+[33mcommit f84b19f8b772d1a12a1324c6b73e77d797289350[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Thu Jun 27 20:29:01 2024 +0300
+
+    Update OurTeam.tsx
+
+[33mcommit 019bfb5e19f2a5dd606d3739d68ae82f217c5f0f[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 27 02:31:04 2024 +0300
+
+    Update stylesPagination.css
+
+[33mcommit 8f75985858d3460732af33dda3c2e3c237ad86e0[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 27 02:24:34 2024 +0300
+
+    Update pagination.css
+
+[33mcommit 934d1e8078248b06e5f912fe7ffc18d2f10f046e[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 27 02:22:27 2024 +0300
+
+    Update pagination.css
+
+[33mcommit 27b6e7f8f7e4e7ed591dbc44628e1a92e3aafd4d[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 27 02:14:37 2024 +0300
+
+    Update Header.module.scss
+
+[33mcommit bc939f6afd9e5bc798c90322486d13c049641864[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 27 02:13:35 2024 +0300
+
+    Update articles.module.scss
+
+[33mcommit b501c5ce218febd087e1c0a4529c86eea7fd8463[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 27 02:12:38 2024 +0300
+
+    Update history.tsx
+
+[33mcommit b9e627eb9c61e3587cc773c462859933f07a719f[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 27 02:11:41 2024 +0300
+
+    Update slider.tsx
+
+[33mcommit 20506fd81826ffa40221ddce04a3ebae884d4d75[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 27 02:10:38 2024 +0300
+
+    Update btnsFirstSwiper.module.scss
+
+[33mcommit f3a8a4a36b3549fa83bc1118d68959c5c2d7adb8[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 27 02:09:53 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit c3016bb8a9f9daebb690dd7e61619a7af20dc007[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 27 02:08:52 2024 +0300
+
+    Update stylesPagination.css
+
+[33mcommit da8fca0ee04c0171fc9eb52923231d068f888622[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Wed Jun 26 19:04:28 2024 +0300
+
+    Update HelpComponent.tsx
+
+[33mcommit 51bd2918475f7ea69f98c2cc0db10fe8d6e39991[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jun 26 13:45:56 2024 +0300
+
+    Update OurPartners.tsx
+
+[33mcommit 66037ecad4fe32608e5d0bfd42ca7decb6ffe5bd[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jun 26 12:50:52 2024 +0300
+
+    load
+
+[33mcommit c6c4f2b4e5f843335c83a85ff7d64ac4ef2429c8[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jun 26 12:48:05 2024 +0300
+
+    Update en.json
+
+[33mcommit 4f7d6fc85394cc3477471efd04c3cf7b73c5febd[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jun 26 12:46:59 2024 +0300
+
+    Update it.json
+
+[33mcommit bb7c78c2e49231b3f69ce24e1605ae60518a64a9[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jun 26 12:45:58 2024 +0300
+
+    Update ru.json
+
+[33mcommit 62becd897b6ef5752e865054ded7fd0f5938f324[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jun 26 12:45:34 2024 +0300
+
+    Update ua.json
+
+[33mcommit 46c23531c0bfe90de3a7ce7a933aea3445d3069d[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jun 26 12:40:48 2024 +0300
+
+    Update slider.tsx
+
+[33mcommit 90bd480d2d98ea03392ea32d66c72f0237600446[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jun 26 12:33:34 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit ab8a6ef1a2924b3f206616ffdfede865f0524a16[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jun 26 12:32:54 2024 +0300
+
+    Update btnsFirstSwiper.module.scss
+
+[33mcommit 3fd9b2c13d8036e2efb338c817bd5aee211999f6[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jun 26 12:31:54 2024 +0300
+
+    Update btnsFirstSwiper.module.scss
+
+[33mcommit fbd2d62cd954c6d356666de1a22ec0b792d2500b[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Wed Jun 26 12:31:03 2024 +0300
+
+    Update history.tsx
+
+[33mcommit 12c612a179e54f3e60a86daa61e47f8cb12b7f69[m
+Author: Yuriy Klyap <126515747+cl9bix@users.noreply.github.com>
+Date:   Tue Jun 25 21:08:38 2024 +0200
+
+    Update models.py
+
+[33mcommit 17705908c21e0e42e5edfa692287e66beda2c8db[m
+Author: Yuriy Klyap <126515747+cl9bix@users.noreply.github.com>
+Date:   Tue Jun 25 21:02:51 2024 +0200
+
+    Update models.py
+
+[33mcommit 739fc18e67bb5e65228e66444aff6b98aa5c2055[m
+Author: Yuriy Klyap <126515747+cl9bix@users.noreply.github.com>
+Date:   Tue Jun 25 21:00:52 2024 +0200
+
+    Update models.py
+
+[33mcommit 2827dda177aee4a9857e5903abccb7d3ed78e189[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 13:45:22 2024 +0300
+
+    Update OurPartners.tsx
+
+[33mcommit 4c46aef105ab216d5598c9b3b03c28880b5adfba[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 13:44:34 2024 +0300
+
+    Update reports.tsx
+
+[33mcommit 082fc846565ffc0de1b17ce807a70ce285b90bc1[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 13:43:53 2024 +0300
+
+    Update history.tsx
+
+[33mcommit 53488fa199412d195e4f81b3775a5c6a3051cd62[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 13:42:17 2024 +0300
+
+    Update ua.json
+
+[33mcommit c970efe97b27e5d6581fda17050516ebd066fa69[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 13:40:58 2024 +0300
+
+    Update ru.json
+
+[33mcommit 786285871475847e6328788b0d86e5104687159d[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 13:40:34 2024 +0300
+
+    Update it.json
+
+[33mcommit b563e5f47c0c87eb7f1c838e6cab0d380a0d70de[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 13:40:14 2024 +0300
+
+    Update en.json
+
+[33mcommit 9c0e57008eac0dcf649ad49c939af41dbc8e8441[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 02:34:56 2024 +0300
+
+    Update it.json
+
+[33mcommit 89d7196ef1ba97db5ee54613ee4d68f6552ca06d[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:33:52 2024 +0300
+
+    load
+
+[33mcommit 02d66d35977d9f82d2888c981ac6cd73ddf3d0eb[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:33:01 2024 +0300
+
+    Update history.module.scss
+
+[33mcommit 7aeddf287dc9b03bdf29ce2dd557268f6d075e30[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:32:15 2024 +0300
+
+    Update historySwipe.css
+
+[33mcommit 4d7cabb7499776cbe0a5cf02912e83ee17461da6[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:31:09 2024 +0300
+
+    Update history.tsx
+
+[33mcommit 7cf850bdc45ab57afcc39772de96ea6c4af83095[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:30:29 2024 +0300
+
+    Update history.tsx
+
+[33mcommit b2fe19d2d37f1741730fa0c30b1ce6e52a3d9e18[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:29:03 2024 +0300
+
+    Update bankQR.module.scss
+
+[33mcommit b8a12d27922aee92988d9180e6750caa428c61b0[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:27:23 2024 +0300
+
+    Update bankQRUSA.tsx
+
+[33mcommit bd2e0187ea455c6390ccceb045a96a5028607f11[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:26:52 2024 +0300
+
+    Update bankQR.tsx
+
+[33mcommit 6790d60ea75dced66ec56f7d2d5abaffc0a3dcdb[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:19:45 2024 +0300
+
+    Update Header.module.scss
+
+[33mcommit c10cf638153681571e8848db5d908211e955d4f2[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:19:00 2024 +0300
+
+    Update Header.tsx
+
+[33mcommit 5bc68a329ec6d40a842f15df04746e01b5db90da[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:18:11 2024 +0300
+
+    Update ua.json
+
+[33mcommit b235426641f3b404bdfa27569d9620ba0e6df329[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:17:13 2024 +0300
+
+    Update ru.json
+
+[33mcommit 742ecb418319b21764b9ea53ed8be8d8b698dd0d[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:15:47 2024 +0300
+
+    Update it.json
+
+[33mcommit ea8b0f0a8521d20cd527795ef190663d29be8831[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:15:12 2024 +0300
+
+    Update en.json
+
+[33mcommit f7129ba4a9947dda65cf3b7f2d747e077782e1a2[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:14:00 2024 +0300
+
+    Update slider.tsx
+
+[33mcommit 8bdfd364d8305a0dda27ac07888ff9bc31ad5ce5[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:12:32 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit 4110abfe30a66a4969061ae9d22d5e2733e16c91[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Tue Jun 25 01:11:36 2024 +0300
+
+    Update btnsFirstSwiper.module.scss
+
+[33mcommit fbc86ff89ab543d5725b0fa86996569210b6f9be[m
+Author: Yuriy Klyap <126515747+cl9bix@users.noreply.github.com>
+Date:   Mon Jun 24 22:14:36 2024 +0200
+
+    Update models.py
+
+[33mcommit 9fe24d1c49892bb594886326e907298a21e3cedd[m
+Author: Yuriy Klyap <126515747+cl9bix@users.noreply.github.com>
+Date:   Mon Jun 24 22:14:17 2024 +0200
+
+    Update admin.py
+
+[33mcommit 84da60f4e8fef96df94fbdb8ecf87bfd938b40a6[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Mon Jun 24 00:21:25 2024 +0300
+
+    Update pagination.css
+
+[33mcommit 514274aa1e187c35809d0b2da3deb20568d57f80[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Mon Jun 24 00:18:15 2024 +0300
+
+    Update partners.module.scss
+
+[33mcommit 3e11735de1d2d380a7328338d75084d3e3c6863f[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Mon Jun 24 00:17:15 2024 +0300
+
+    Update pagination.css
+
+[33mcommit d717f4fbe273ca91cfb4cf2c3461abce5bdb5ced[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 23:13:09 2024 +0300
+
+    Update Footer.tsx
+
+[33mcommit cb5353f741f69667f038fef6fe0ddd22dc5e5657[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 22:58:03 2024 +0300
+
+    Add files via upload
+
+[33mcommit c95e24868a5c00d73e3b5c2f9eba0d9b48ab754c[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 22:57:52 2024 +0300
+
+    Delete frontend/public/enLogo.png
+
+[33mcommit 421ddfb5e3cc7ba20b16bfbbd30a597b85746f25[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 22:57:35 2024 +0300
+
+    Update Header.tsx
+
+[33mcommit 945f36b314daea1c08dc2f54dd27712ee8897451[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 22:57:21 2024 +0300
+
+    Update Footer.tsx
+
+[33mcommit ac0fb9651e1ae05223a9c48e969e7991323b5b2a[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 22:39:12 2024 +0300
+
+    Update Footer.module.scss
+
+[33mcommit 472f5da3a472e24e8aef07c9469d7214627bf07e[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 22:31:17 2024 +0300
+
+    Update Header.tsx
+
+[33mcommit a3e3b54143000e77440dc05d439a52e87900dc23[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 22:28:15 2024 +0300
+
+    Update Header.tsx
+
+[33mcommit 6eb18f9ad533d70a4343365654850f25af3a2df6[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 22:27:52 2024 +0300
+
+    Update Footer.tsx
+
+[33mcommit ecc962558d9d50950de1e3c017276335ca7adf95[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 22:27:23 2024 +0300
+
+    Add files via upload
+
+[33mcommit 7b2655bfee8c895d0fb6042f4682e06feb5d4751[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 21:07:22 2024 +0300
+
+    Update history.module.scss
+
+[33mcommit 38f2b2e22f234c8180ef21824007f7997062d7e5[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 20:40:14 2024 +0300
+
+    Update Header.module.scss
+
+[33mcommit 65f0e1ac47e65eec4f2819849f6176dc63556f42[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 20:37:37 2024 +0300
+
+    Update historySwipe.css
+
+[33mcommit 63aca0e85bb9dd6464eb07acb4cd270c774a5090[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 20:37:34 2024 +0300
+
+    Update HelpComponent.tsx
+
+[33mcommit 12714bce4e3558d7e02356541799d73e4f1ae598[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 20:37:06 2024 +0300
+
+    Update history.module.scss
+
+[33mcommit a57d1831b84514f74aa734b4fec680efb637c7f4[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 20:31:43 2024 +0300
+
+    Update pagination.css
+
+[33mcommit 800ef15a89b0e5b09791ccc26cbe2564c4f734e7[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 20:30:54 2024 +0300
+
+    Update HelpComponent.tsx
+
+[33mcommit 3d7560902647e40d9359689d47c1d7a93538b4a1[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 20:29:07 2024 +0300
+
+    Update Header.tsx
+
+[33mcommit 51170e6a219426b8b500b5bc00ad64acbbe14be7[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 20:28:51 2024 +0300
+
+    Update slider.tsx
+
+[33mcommit 540e766e16f890a6af2bacf41f9b44ef09bec318[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 19:44:22 2024 +0300
+
+    Update history.module.scss
+
+[33mcommit b9dc89604833f7228bb101fbda6d0c36cf5bcfdc[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 18:30:24 2024 +0300
+
+    Update DonateHelp.module.scss
+
+[33mcommit b31ce89394332392b36508da08a074a9192c4058[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 17:00:10 2024 +0300
+
+    Update DonateHelp.module.scss
+
+[33mcommit ec6014d1ab21e2f6756dd406608ccde3c0e94d06[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 16:55:33 2024 +0300
+
+    Update ru.json
+
+[33mcommit b8f10fd4283fa6dbcafa96ab6ccf4dfd4f72639d[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 16:55:14 2024 +0300
+
+    Update it.json
+
+[33mcommit 642305baf0d2b648b2a5eb35d6defffceb5ff11f[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 16:54:41 2024 +0300
+
+    Update en.json
+
+[33mcommit 84fd5e4a3ddffc28d272fcd41ce608b0df71a9be[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 16:53:31 2024 +0300
+
+    Update ua.json
+
+[33mcommit 701f58f7dc9dec8f05a057bea1686ffeede9b712[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 16:26:44 2024 +0300
+
+    Update slider.tsx
+
+[33mcommit e8022e274e47a2454b7045ddf1f3901f14a0bec2[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 16:13:01 2024 +0300
+
+    Update Footer.tsx
+
+[33mcommit 3b28f120be9586c35a67ce07d2830d074ac197de[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 16:11:06 2024 +0300
+
+    Update slider.tsx
+
+[33mcommit c5b78a7f758fe9ce4b9ba7a4e6590309aac3951c[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 16:10:44 2024 +0300
+
+    Update Footer.tsx
+
+[33mcommit ba2989a38b0cfda3e1c2134519dadb7d963794a6[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 16:09:05 2024 +0300
+
+    Update Footer.tsx
+
+[33mcommit 4f1d30d68d5bc42ad520daf3e147e7dc7a770988[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 16:05:49 2024 +0300
+
+    Update Footer.module.scss
+
+[33mcommit 9913c0db17d08c276f8139e39cbf19a419404867[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 16:05:40 2024 +0300
+
+    Update Footer.tsx
+
+[33mcommit 1eeb76f7b712f2948267e016860fb0a3f77028ad[m
+Author: Yuriy Klyap <126515747+cl9bix@users.noreply.github.com>
+Date:   Sun Jun 23 15:05:39 2024 +0200
+
+    Update models.py
+
+[33mcommit 405d67eca5f8c57552a7cb068821b6ded2345645[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 16:05:09 2024 +0300
+
+    Add files via upload
+
+[33mcommit 023bedbf382eee44f5fd990c183e064513953599[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 16:04:54 2024 +0300
+
+    Delete files directory
+
+[33mcommit e0bfc519e7a8e8f45ebf2a523d335872d84811f4[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 16:04:40 2024 +0300
+
+    Add files via upload
+
+[33mcommit 292e32616e8526c02c4bdb3300cdaf5b55ed10f8[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 15:34:19 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit 72fbbaa4f24fcb32761b03f9b0905b382d646717[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 15:24:59 2024 +0300
+
+    Update OurPartners.module.scss
+
+[33mcommit 82fa0df7b3831de8be107e76f7b8a1215440b524[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 15:10:32 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit 151c982c9aa2909080d9c95e88bc72b447fdda0c[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 15:09:48 2024 +0300
+
+    Update HelpComponent.tsx
+
+[33mcommit e51dc36cfece1c1f554b4417ffc2b0408d3a1408[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 15:08:58 2024 +0300
+
+    Update slider.tsx
+
+[33mcommit de15d5f29946dadda0856cb805440ce1d1e4f828[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 15:08:08 2024 +0300
+
+    Update cryptoUSA.module.scss
+
+[33mcommit 2a7f60aa5c68f33a813aa839eeebabce2a368714[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 15:07:23 2024 +0300
+
+    Update crypto.module.scss
+
+[33mcommit b398f7661a59620affc626c891372363ecba3274[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 15:06:43 2024 +0300
+
+    Update goFound.tsx
+
+[33mcommit 9b412f615ac9e0f09ac65e633958709e3a04957a[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 15:05:58 2024 +0300
+
+    Update bankQRUSA.tsx
+
+[33mcommit bf440f5a0fbc1317feb1b17dfb8dfd4cdbfe7cf6[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 15:05:23 2024 +0300
+
+    Update cryptoUSA.tsx
+
+[33mcommit 3bc4ddb4e0dd2d6d646d34f05c97e94965beea87[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 15:04:49 2024 +0300
+
+    Update chek.tsx
+
+[33mcommit 18786a2ce89cd7025b733c1ecc0d33948422cae6[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 15:04:16 2024 +0300
+
+    Update firstHelpUSA.tsx
+
+[33mcommit c6131742c47db1b591f059bff6b0a96b8789e4af[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 15:03:39 2024 +0300
+
+    Update bankQR.tsx
+
+[33mcommit b747601267d9e945ab7d8953858a060894c380fe[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 15:01:44 2024 +0300
+
+    Update TohPartner.tsx
+
+[33mcommit df46569297f7b80deffbdb73df8b13be3bb923df[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 15:01:11 2024 +0300
+
+    Update crypto.tsx
+
+[33mcommit 3dd2eb7bbe160c94264cb4017ab9c2775efe4f31[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 14:59:52 2024 +0300
+
+    Update crypto.tsx
+
+[33mcommit 187e73184145cec6b136ee85349869e852c1ad12[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 14:59:15 2024 +0300
+
+    Update bank.tsx
+
+[33mcommit 75973984586ce1eeaa8158b290e7232f4adbbaf3[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 14:58:32 2024 +0300
+
+    Update firstHelp.tsx
+
+[33mcommit 9f19dbee4ea81f9e565a2644a576a943500d7af2[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 14:57:42 2024 +0300
+
+    Update Contact.tsx
+
+[33mcommit ea8f05280510ea3f4aa449cde38c812271b39a27[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 14:57:31 2024 +0300
+
+    Update ScrollContext.tsx
+
+[33mcommit b21db5c1f7fba2f66ecffba469433aa5bdc5a344[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 14:57:14 2024 +0300
+
+    Update AdvOfFund.tsx
+
+[33mcommit f0e5027738633f464cbae82f65c2343e40c2abd1[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 14:57:07 2024 +0300
+
+    Update ru.json
+
+[33mcommit c7fc989dede53ec4a9a484ad9303efce4c390253[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 14:57:02 2024 +0300
+
+    Update AdvOfVol.tsx
+
+[33mcommit a1460aeb5544c2c6f1df55849fa245a27e6aa059[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 14:56:48 2024 +0300
+
+    Update TohPartner.tsx
+
+[33mcommit db6635d1fe967c42e218f6963590f6f2379d1d1c[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 14:56:34 2024 +0300
+
+    Update it.json
+
+[33mcommit 0b1f885cf0e31c39bc78f320d4a47723ef1a83ca[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 14:55:45 2024 +0300
+
+    Update ua.json
+
+[33mcommit d8d942d1a764b22c753944db69b22d5182ad14e9[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 14:55:11 2024 +0300
+
+    Update en.json
+
+[33mcommit 3a33d179bf72d6d35c81d65fa09b4d24c1cc173f[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 13:38:41 2024 +0300
+
+    Update TohPartner.module.scss
+
+[33mcommit c70744c8f5bfd8677fd611606a99964bad0193b3[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 12:24:38 2024 +0300
+
+    Update reviews.module.scss
+
+[33mcommit 83c1d4df51147a12d776efb2db7c79144da059e6[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 12:24:05 2024 +0300
+
+    Update reviewsSwipe.css
+
+[33mcommit f5889911f02f8cf1d6a5dd1bb6cc571f73fff8ce[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 12:23:32 2024 +0300
+
+    Update reviews.tsx
+
+[33mcommit 31cef68c57fd1840fd610ef777ac9a0a42fb5c48[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 04:18:31 2024 +0300
+
+    Add files via upload
+
+[33mcommit 5701bb620cc542d6c8eb942aed094ac20ee1d33d[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sun Jun 23 04:16:48 2024 +0300
+
+    Update OurPartners.tsx
+
+[33mcommit 36ce8f0af1c3be03f79b0a8cc4ea90664136419a[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 04:06:35 2024 +0300
+
+    Update reviews.module.scss
+
+[33mcommit 68299fad3efa7e97f05aa1c19b611afe7fa1a8de[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 04:06:03 2024 +0300
+
+    Update reviewsSwipe.css
+
+[33mcommit 73cde91cdba4a3ff6d6e7bc61ea12a786a0b5b11[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 04:05:24 2024 +0300
+
+    Update reviews.tsx
+
+[33mcommit c2167ec07c1f742f5dd97c865fd18d58a660e4cd[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 01:38:11 2024 +0300
+
+    Update firstHelp.tsx
+
+[33mcommit 071a034a6351f91a4341abd140f620dee57532ac[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 01:37:01 2024 +0300
+
+    Update HelpComponent.tsx
+
+[33mcommit 7d65b399eaa4acc37c7a52267e4fbd6d5d810a6a[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 00:09:17 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit 5484037daebb85f7f76f28ac0155aac520698ce0[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 00:06:22 2024 +0300
+
+    Update main.module.scss
+
+[33mcommit 286a122f1711d8f5d09178db8443dada1ca962b8[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sun Jun 23 00:03:28 2024 +0300
+
+    Update main.module.scss
+
+[33mcommit b3d06125c4a7282192aeecf544cad87adb8e3a9d[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 23:55:07 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit f435774abf3382c04f6e4d3340cd86cb58981dbb[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 23:53:59 2024 +0300
+
+    Update main.module.scss
+
+[33mcommit 7b75ee3d49b1ab3435be0c34995ca43ea1e3a129[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 23:24:06 2024 +0300
+
+    Update slider.tsx
+
+[33mcommit d0ff4f40fadd5611540220883192ac82f2264db3[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 23:21:40 2024 +0300
+
+    load
+
+[33mcommit 480ee33bdd6c4d5b072124220f99b82cbcd81d51[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 22:53:19 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit 7ce58f176661759aec2fe5f55b1fa5caa0391dc2[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 22:41:27 2024 +0300
+
+    Update news.module.scss
+
+[33mcommit c2cc983725d3f3aa678f63efdae060d5e0e4104f[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 22:29:27 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit 14bb8e8a28c510f1fd65a7d36d4a97a05e9dbdac[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 22:26:27 2024 +0300
+
+    Update main.module.scss
+
+[33mcommit d65c6688a613c75f6e09f1fc46d302e21cc4cb1d[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 22:10:22 2024 +0300
+
+    Update Header.module.scss
+
+[33mcommit e5c06d642844eda9997686da8ead5f6d2a874dd8[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 22:07:25 2024 +0300
+
+    Update Header.module.scss
+
+[33mcommit a757ec3b6e040e9c829f7b10bcd2558036ff39a7[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 22:01:32 2024 +0300
+
+    Update OurPartners.module.scss
+
+[33mcommit 5de408ec17e88fd1d2b16cd3fa1d6e97c9e4d997[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 21:58:40 2024 +0300
+
+    Update OurPartners.module.scss
+
+[33mcommit 004b576e52a5fb791d717bc0f6b383626d6f06c1[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 21:58:27 2024 +0300
+
+    Update OurPartners.tsx
+
+[33mcommit ac105aa5ade19cd7a0351013d1aa4905873672c8[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 21:54:52 2024 +0300
+
+    Update OurPartners.module.scss
+
+[33mcommit ef3b9b5db7839ed3c8e4972c12fef3ed81a8bce9[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 21:50:31 2024 +0300
+
+    Update OurPartners.tsx
+
+[33mcommit e291bc5e5ae16710fe7c42fdf91f4d3d069f4ea2[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 21:30:08 2024 +0300
+
+    Update OurPartners.tsx
+
+[33mcommit f21751cb82e759d5f9f421a1ba474e53506308f9[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 21:23:06 2024 +0300
+
+    Update OurPartners.tsx
+
+[33mcommit 041d19707b6aad6976aa3b80bcccd76880869596[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 21:15:43 2024 +0300
+
+    Update page.tsx
+
+[33mcommit f8edcb7681d4b89e8efe504f95133e36713dad16[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 21:15:27 2024 +0300
+
+    Update page.tsx
+
+[33mcommit b84f290de6f8166c91a3d9601d62f4bcc566b2ba[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 21:14:45 2024 +0300
+
+    Update next.config.mjs
+
+[33mcommit cab2539122b94cb83e7d72eda72eb65704caa524[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 21:14:09 2024 +0300
+
+    Update next.config.mjs
+
+[33mcommit 647ddd4d64d2cb758b53bfb9eb380d1113e7bc7f[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 21:13:39 2024 +0300
+
+    Update OurPartners.module.scss
+
+[33mcommit 019c2a3b2ceeea16107e4ea0f8ae8e520a8e1b70[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 21:13:18 2024 +0300
+
+    Update OurPartners.tsx
+
+[33mcommit ba356c4b5e3e94e2000cb64ea9abd6d9c8a25b0b[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 19:29:04 2024 +0300
+
+    Update settings.py
+
+[33mcommit fdcd1ab74d023b916bfcd89d7bf41b2d4d4f7e8e[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 18:50:59 2024 +0300
+
+    Update partners.module.scss
+
+[33mcommit 33cb4155accbde68accf7589a2fe8bb39ef1ecc3[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 18:44:48 2024 +0300
+
+    Update partners.tsx
+
+[33mcommit a50f592b67d68d72e377f4eb2e3574faa887ce8d[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 18:39:49 2024 +0300
+
+    Update partners.tsx
+
+[33mcommit c7bad7c4e88dcbd3f531ad4cd6cda0584e4fbe17[m
+Merge: 9312ac2 28edde4
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:33:40 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit 9312ac2d32f2265354dda62126549beaad04f82a[m
+Merge: f3476e6 f33119c
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:32:43 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit 28edde4dd87a703c9d9ca012e1077c936932e804[m
+Merge: f3476e6 f33119c
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:32:43 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit f3476e6a5ff8eb6ccc310a6b04ae9681b0ebc06d[m
+Merge: bb096a6 017fd2a
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:30:33 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit f33119c87309c37d6f3627d182c0052d7e81e76c[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 18:30:37 2024 +0300
+
+    Update partners.tsx
+
+[33mcommit 9cd99affc9fb2ef36fc5a4fa5aac0b695745f51e[m
+Merge: bb096a6 017fd2a
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:30:33 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit bb096a67c216b4227a56b0ecca9d5eeba094bfd4[m
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:25:06 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit 017fd2aef1ed1331a65eff600ccfc344f6400277[m
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:25:06 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit edc7642de7d8df9387341e720b904ffff815cb97[m
+Merge: 5de5135 9bc718c
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:23:17 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit 5de5135a92ab9b68401353491974b19da3597560[m
+Merge: 4799949 20e6c98
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:13:32 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit 9bc718cfb4143ce5d8ce5d95f8b97062356df4b3[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 18:21:58 2024 +0300
+
+    Update TohPartner.tsx
+
+[33mcommit cd2c95e2907a67da1e3441d80a9b6d7f19dccc07[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 18:21:45 2024 +0300
+
+    Update TohPartner.module.scss
+
+[33mcommit 86be5d2971212a48a7b65a9bd39c5d2bc510271c[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 18:19:13 2024 +0300
+
+    Update partners.tsx
+
+[33mcommit 15143c71f6ab346f828323bb5f1ae962ac3e2665[m
+Merge: 4799949 20e6c98
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:13:32 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit 4799949a025fb4ad3c4b253773a52a97569f6481[m
+Merge: d872f05 bf0107d
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:11:01 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit 20e6c98ecb4fb8dc6f58c3836d16c4249dfc56fd[m
+Merge: d872f05 bf0107d
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:11:01 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit d872f05bdfa3ef5fb099862c9f9789995f3ac005[m
+Merge: dbfe04f fa3947d
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:08:16 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit bf0107dda8a7be790d6d81ca8f0b57036381b842[m
+Merge: dbfe04f fa3947d
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:08:16 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit dbfe04f24bff85c6999a7f8adbbf501da03614ea[m
+Merge: d55f7e8 a1f7a03
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:07:46 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit fa3947d5e51ea57badd6e22c8a1edf1a3195d021[m
+Merge: d55f7e8 a1f7a03
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:07:46 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit d55f7e8bfa5ff0e9c7271d3523ee8f4dd260bfb8[m
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:07:40 2024 +0200
+
+    main page update
+
+[33mcommit a1f7a03deb7b178a372a58f215d2bd97b786d6bd[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 18:07:13 2024 +0300
+
+    Update TohVol.module.scss
+
+[33mcommit 1f3954b876fc02b507384158487bf69070d3d19e[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 18:06:40 2024 +0300
+
+    Update en.json
+
+[33mcommit 56b90544b8d08671aada09bdf2d59d75b08c9c8f[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 18:05:47 2024 +0300
+
+    Update Caption.module.scss
+
+[33mcommit 031ee3cec0fc59496324526e47b02d9bb414c3e4[m
+Merge: 9a1fda1 ad1225e
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:05:24 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit 9a1fda1621288b3531c0b79df15e5e6574b29c74[m
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 17:02:01 2024 +0200
+
+    main page update
+
+[33mcommit ad1225e9f8c94fc195388b120b0b6c136fcec5e5[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 18:02:25 2024 +0300
+
+    Update news.module.scss
+
+[33mcommit 328d91abbbdbb3c6de8de6cd0b614ad0d488814d[m
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 16:50:05 2024 +0200
+
+    main page update
+
+[33mcommit ab7cdbed79c7e93fb3b10940572071251c0350ea[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 17:33:30 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit 641a8c5742a180a482a0bf5a50a53ae3d0b9cc44[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 17:19:37 2024 +0300
+
+    Update news.module.scss
+
+[33mcommit 7ec4c35eab61c2b78d3358709be6070256d75f44[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 17:18:26 2024 +0300
+
+    Update main.module.scss
+
+[33mcommit 511f8e49ecb2e5ae55ea3c995af6250b302eaf01[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Sat Jun 22 17:17:51 2024 +0300
+
+    Update GetHelp.module.scss
+
+[33mcommit 4da4016c21635045b06a243daaadb65363600b1c[m
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Sat Jun 22 13:14:47 2024 +0200
+
+    main page update
+
+[33mcommit 445900b481e7d580173a1c886b5b0af078342269[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 04:45:24 2024 +0300
+
+    Update crypto.module.scss
+
+[33mcommit 0f6cc3c59e1a0a8864d572215aede23d8700d255[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 04:32:41 2024 +0300
+
+    Update reviews.tsx
+
+[33mcommit cc0faed5a7ae9a5e56f44bbc6399934ef63ad86c[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 04:28:06 2024 +0300
+
+    Update reviews.tsx
+
+[33mcommit b97f5881e45112329433b2cc1553f123aeb8340a[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 04:23:04 2024 +0300
+
+    Update reports.tsx
+
+[33mcommit 2792e3faf5c5ea90ae34e43f6e47405bd70312c5[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 04:11:53 2024 +0300
+
+    Update reviews.tsx
+
+[33mcommit b63d071b142bdd3dd8eab342d34781e33363daf1[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 04:09:19 2024 +0300
+
+    Update reviews.tsx
+
+[33mcommit 29d841e99fe3d84dea104174ab55cc7a1e5b822e[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 04:05:42 2024 +0300
+
+    Update reports.tsx
+
+[33mcommit ec26dd7271aa86acc78b25bdeee0aa3910d83e71[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 04:04:53 2024 +0300
+
+    Update reviews.tsx
+
+[33mcommit 3d4ea7032b6a71074bc373244544a57c4517bbbd[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 03:54:50 2024 +0300
+
+    Update abouthelp.module.scss
+
+[33mcommit 8cdc8607be5fdbb453e15f58f78098886f89c05b[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 03:53:06 2024 +0300
+
+    Update styles.module.scss
+
+[33mcommit d28bd5c9a41e4e76006a5049ffcb63218df02b92[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 03:51:19 2024 +0300
+
+    Update reports.tsx
+
+[33mcommit 3927f74f03bd5c738dee943dff0e3eee96ece575[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 03:49:03 2024 +0300
+
+    Update reviews.tsx
+
+[33mcommit b9a1691e02839da2f409a95d84a20b540c731cff[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 03:47:18 2024 +0300
+
+    Update history.tsx
+
+[33mcommit 6e880224d7d63e8354b8c1a5d7580e4202135a33[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 02:53:56 2024 +0300
+
+    Update main.module.scss
+
+[33mcommit 589986fde5daa869305976d8cebc0f21a1f9c9db[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 02:49:24 2024 +0300
+
+    Update main.module.scss
+
+[33mcommit 534de771403719399ce524984537ee6e63fc2534[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 02:40:33 2024 +0300
+
+    Update main.module.scss
+
+[33mcommit 9c52203d0ad788ca3ff86e5c43ad7a0013ded397[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 02:32:58 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit 21f7ff1a60802108cda1edc9f4004630a22a6120[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Sat Jun 22 02:20:51 2024 +0300
+
+    Update main.module.scss
+
+[33mcommit 6fc96f649de0af1948125b30bbefd13c05f1aac8[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 23:49:01 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit c18dbd01c25a010569d39ab3247505c76dd8685b[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 23:05:35 2024 +0300
+
+    Update history.tsx
+
+[33mcommit 19d1fa5e59abbdf5abb8bc4e9e4ee4e4c7155e58[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 23:04:37 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit 5ca8e31c71b02f7f6ed43234d07f44c2bbb6a04c[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 22:52:02 2024 +0300
+
+    Update Contact.module.scss
+
+[33mcommit b4a3b0a262dbdb4fb0c31736cfe9773c2c60d081[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 22:43:48 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit 5aa93bf57ed1a9dd0d75663bf5eaad80c6f488de[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 22:36:50 2024 +0300
+
+    Update Option.module.scss
+
+[33mcommit bd760749c5689d65976f80d0e805a907bb761044[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 22:36:26 2024 +0300
+
+    Update OurTeam.module.scss
+
+[33mcommit b9e96d1b5231dc5387d8836cc6d0b57db1e82762[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 22:36:08 2024 +0300
+
+    Update Contact.module.scss
+
+[33mcommit b796c18a57945ee20c99f8c49cec8d81ac999014[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 22:35:51 2024 +0300
+
+    Update DonateHelp.module.scss
+
+[33mcommit aeb5ef9b78bd1c82c8827548dec02b42636f7fa7[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 22:34:19 2024 +0300
+
+    Update main.module.scss
+
+[33mcommit 86bb668b6d1e1e5767c13857b376d003d7bacadc[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 22:31:49 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit 9ec8cc5e8c097165a398b3b0ab75f5ea7623813d[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 22:24:30 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit 707eb1bdf4038f60a8df230c382a3cbd8afee211[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 22:21:27 2024 +0300
+
+    Update reviews.module.scss
+
+[33mcommit eb1166aa85e291c6f1c3f820e2227a00fcc17169[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 22:16:06 2024 +0300
+
+    Update reviewsSwipe.css
+
+[33mcommit b44c1b142eae436c4cfdbfd21c00f4a0e08e564f[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 22:15:08 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit 894761c4aa88afe08bdf907d435ab23a60419d50[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 22:11:02 2024 +0300
+
+    Update btnsFirstSwiper.module.scss
+
+[33mcommit 1f37d76edb0215f598ef6e644af3e46d721692e5[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 22:10:12 2024 +0300
+
+    Update reviews.module.scss
+
+[33mcommit 3a1ff3618de355166d6f9bf982847de9d7826106[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 21:57:32 2024 +0300
+
+    Update Option.module.scss
+
+[33mcommit 80606db32682c0be9987591d1ef1abb2d0435dd3[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 21:49:26 2024 +0300
+
+    Update OurTeam.module.scss
+
+[33mcommit 828c47c9fd5b83fbb2142aad15fc5deccc2e3999[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 21:45:31 2024 +0300
+
+    Update OurTeam.module.scss
+
+[33mcommit 0d934f9e9a4ae08872fe521a1c6511615a6ef223[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 21:45:12 2024 +0300
+
+    Update HelpOptions.module.scss
+
+[33mcommit ab93d6e17e9e0f191216791a5130cf1a40bfb253[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 21:44:54 2024 +0300
+
+    Update GetHelp.module.scss
+
+[33mcommit 15ba1266aad320b1e53363c3485260ae89c7a2c2[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 21:19:57 2024 +0300
+
+    Update OurTeam.module.scss
+
+[33mcommit 715f9ba97905b3527592318f21d6bd9827da70a0[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 21:06:53 2024 +0300
+
+    Update GetHelp.tsx
+
+[33mcommit 6e2b36b264ced969b9379f6ffd79164bb55f4d79[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 20:22:36 2024 +0300
+
+    Update OurTeam.module.scss
+
+[33mcommit 0470cd0c915f6bf278a3ee73fa114bd02d876be4[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 19:43:34 2024 +0300
+
+    Update ua.json
+
+[33mcommit f399571858ee0b5a441b242a1b384549d09f022f[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 19:43:13 2024 +0300
+
+    Update ru.json
+
+[33mcommit e9928ba565e83769539ac9b5f9e7730b08af241b[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 19:42:07 2024 +0300
+
+    Update en.json
+
+[33mcommit 655df69a1f2b123aeba68f0c7103b810fd35160f[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 19:38:19 2024 +0300
+
+    Update Contact.tsx
+
+[33mcommit e22b415062cdbba6939d2d21f14f588e53bb9e76[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 19:36:55 2024 +0300
+
+    Update Contact.module.scss
+
+[33mcommit 327057708a864c5ecde20905dac2dd8a5d545805[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 19:36:43 2024 +0300
+
+    Update Contact.tsx
+
+[33mcommit b7dffbb48ccbbd6b6c6874dfbd527f028034ac2f[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 19:06:45 2024 +0300
+
+    Update Contact.tsx
+
+[33mcommit 44bbb3948653c98035c8b5ebf8256c23a48265f8[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 19:04:29 2024 +0300
+
+    Update Contact.tsx
+
+[33mcommit d747de978f257565ea8fa9d254fa6e3d5d8992c3[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Fri Jun 21 19:04:16 2024 +0300
+
+    Update Contact.module.scss
+
+[33mcommit eea3ecafcdddedba17e74192a1485ad43999b190[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 13:33:50 2024 +0300
+
+    Update firtsBlock.tsx
+
+[33mcommit f87c733f0840b85f92464472b5a353a68d4a1a59[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 13:33:11 2024 +0300
+
+    Update slider.tsx
+
+[33mcommit 6a0674543328f994e785994231c8ca8c7a99bba4[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 13:29:38 2024 +0300
+
+    Update Header.tsx
+
+[33mcommit 0fbad074a39708c76f21142da9334022e9edabd6[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 13:28:45 2024 +0300
+
+    Update Header.module.scss
+
+[33mcommit c4ce1ad991e2c89a222d723c751d1d230760cb6e[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 13:17:19 2024 +0300
+
+    Update stylesPagination.css
+
+[33mcommit 6085fa93365d75b0152b66e55e6944b96235a2e7[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 13:16:07 2024 +0300
+
+    Update news.module.scss
+
+[33mcommit 99f13237896dceb8b042da30df516ddfcb011853[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 13:15:33 2024 +0300
+
+    Update abouthelp.module.scss
+
+[33mcommit 7b4a6194ff0a3a9218178a06d16c2517b16b6f1d[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 13:13:08 2024 +0300
+
+    Update firstSlider.module.scss
+
+[33mcommit 54117fb4d4c83fa81c0cb6347c8a7edafdc681ec[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 13:11:16 2024 +0300
+
+    Update main.module.scss
+
+[33mcommit 2e629b74c2bdb01bbfc478f888abe8f1b60b181b[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:56:14 2024 +0300
+
+    Update Header.module.scss
+
+[33mcommit f2a6408afec755fe996dc12a45f0cb3827196423[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:55:12 2024 +0300
+
+    Update styles.module.scss
+
+[33mcommit 82eec033eaf9e4196693b3dae89472260d48cb76[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:53:55 2024 +0300
+
+    Update page.tsx
+
+[33mcommit 183996ae34fc69e442cc39989e9a500b2835839e[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:52:33 2024 +0300
+
+    123
+
+[33mcommit 7762db5723753676d70b7758a69371a40e1cdfa8[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:51:46 2024 +0300
+
+    123
+
+[33mcommit dbd4fc8bb4bbbf54dd4ad7a3ae5aefd6266b1b96[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:49:15 2024 +0300
+
+    Update firstHelpUSA.module.scss
+
+[33mcommit bec13dc77d44eb6b85cccda0e33e5161e273f1d5[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:48:13 2024 +0300
+
+    Update firstHelp.module.scss
+
+[33mcommit 6ddc7c2a582521828047132e9fbd6c07ed2bea65[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:47:04 2024 +0300
+
+    Update cryptoUSA.module.scss
+
+[33mcommit 86c6fafc6c9d1afb97094d475e49bc925cc335ac[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:45:54 2024 +0300
+
+    Update crypto.module.scss
+
+[33mcommit 0afedc8172d55b938babcca516906dd46771e6d6[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:45:16 2024 +0300
+
+    Update chek.module.scss
+
+[33mcommit 22c8e28d8ca8f54120f8c61b7f0eb2291c8dbea4[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:44:00 2024 +0300
+
+    Update bankQR.module.scss
+
+[33mcommit ce2b8c73fa0474d1a93fa0ff698d0674acdce9b5[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:42:57 2024 +0300
+
+    Update bank.module.scss
+
+[33mcommit a7c6cff9c0007c2204afc5973335ba5e0bd7d652[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:41:41 2024 +0300
+
+    Update chek.tsx
+
+[33mcommit 06c3759b7c82d7fbbbe805b30c4785ab095ef08b[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:39:45 2024 +0300
+
+    Update chek.tsx
+
+[33mcommit fd6e4bd11da85624fe73d2cc3b26688ca1703953[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:38:44 2024 +0300
+
+    Update cryptoUSA.tsx
+
+[33mcommit 91e592c7ac6e14e1f1a858484ed964bdb1bbc181[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:36:42 2024 +0300
+
+    Update bankQRUSA.tsx
+
+[33mcommit 41503602667a54a4e32e77a22b79cb953fbee307[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Fri Jun 21 02:36:08 2024 +0300
+
+    Update crypto.tsx
+
+[33mcommit 958c1d531a35efd99ac0417b8777f9799d7e8927[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 20 23:34:55 2024 +0000
+
+    Update bankQR.tsx
+
+[33mcommit 39eed0290990fe67c2e52994db68ebfd8f95047c[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 20 23:34:17 2024 +0000
+
+    Update firstHelp.tsx
+
+[33mcommit aac2b79ded2747691d5ac8cc5b248461a799fef3[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 20 23:33:31 2024 +0000
+
+    Update firstHelpUSA.tsx
+
+[33mcommit 9fd75e70ef247165ad7fec212a2a05d015a9ba55[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 20 23:32:17 2024 +0000
+
+    Update ru.json
+
+[33mcommit f84aa845445d5714730ed3ae064011f5c25c0c20[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 20 23:31:48 2024 +0000
+
+    Update en.json
+
+[33mcommit fcb8ed3acce138cf852c25af764afe6d43994b66[m
+Author: AlexseyPivoshencko <110694722+Alex-Pivo@users.noreply.github.com>
+Date:   Thu Jun 20 23:31:21 2024 +0000
+
+    Update ua.json
+
+[33mcommit f8db8accdc15ae0d6061550ce293cd5d71d21ba1[m
+Merge: ea389b3 7e19f63
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Thu Jun 20 23:14:04 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit ea389b3c7670fadc20620a59e8985ff18e195e7e[m
+Author: cl9bix <yuraklyap1103@gmail.com>
+Date:   Thu Jun 20 23:13:40 2024 +0200
+
+    Update Contact.tsx
+
+[33mcommit 3d7284eec2ccf4c70b66d1d3125eeccdec007541[m
+Author: RAZZERGTI <78425187+razzergti@users.noreply.github.com>
+Date:   Thu Jun 20 22:34:49 2024 +0300
+
+    Update Contact.tsx
+
+[33mcommit 7e19f6379510b10c11f2376ead952f0761a2469a[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Thu Jun 20 22:34:49 2024 +0300
+
+    Update Contact.tsx
+
+[33mcommit 5c8cd58a682df2156cdaebdc1a0f807afb5f6c71[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Thu Jun 20 22:34:30 2024 +0300
+
+    Update Contact.module.scss
+
+[33mcommit b7da1e490ad53ecac9784472913a140f95827a0a[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Thu Jun 20 22:28:06 2024 +0300
+
+    Update Contact.tsx
+
+[33mcommit bca30a875ef89ce2e9871b5495b08569e27db86b[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Thu Jun 20 22:27:52 2024 +0300
+
+    Update Contact.module.scss
+
+[33mcommit 927c3c806b768aca2e90b76a7404b9897b4d7f80[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Thu Jun 20 21:48:06 2024 +0300
+
+    Update Contact.module.scss
+
+[33mcommit 2e261808eff20c31133a565c4acf17c466e5a988[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Thu Jun 20 21:47:38 2024 +0300
+
+    Update Contact.module.scss
+
+[33mcommit 7dfe6fba1eba94db83896cfbd4312ff7bd9efeba[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Thu Jun 20 21:40:48 2024 +0300
+
+    Update Contact.module.scss
+
+[33mcommit 10dc310d3706a7bb4c333a79be0570623734cb3a[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Thu Jun 20 21:23:58 2024 +0300
+
+    Update Contact.module.scss
+
+[33mcommit 83dec48f5925181c3e99a166b148d477023d44a6[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Thu Jun 20 21:11:35 2024 +0300
+
+    Update Contact.module.scss
+
+[33mcommit 0cdb2f8a091aeee47a4ae91cc72dd5ef53410bc6[m
+Author: RAZZERGTI <78425187+RAZZERGTI@users.noreply.github.com>
+Date:   Thu Jun 20 21:11:18 2024 +0300
+
+    Update Contact.tsx

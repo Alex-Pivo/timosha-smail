@@ -1,0 +1,18 @@
+[0;1;31m×[0m gunicorn.service - gunicorn daemon for my Django project
+     Loaded: loaded (]8;;file://vps/etc/systemd/system/gunicorn.service/etc/systemd/system/gunicorn.service]8;;; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Thu 2024-07-25 19:23:40 UTC; 7s ago
+   Duration: 617ms
+    Process: 334244 ExecStart=/root/Timosha/timosha-smail/backend/venv/bin/gunicorn --workers 3 --bind unix:/root/Timosha/timosha-smail/backend/gunicorn.sock djangoProject.wsgi:application [0;1;31m(code=exited, status=3)[0m
+   Main PID: 334244 (code=exited, status=3)
+        CPU: 319ms
+
+Jul 25 19:23:40 vps gunicorn[334283]:   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+Jul 25 19:23:40 vps gunicorn[334283]:   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+Jul 25 19:23:40 vps gunicorn[334283]:   File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+Jul 25 19:23:40 vps gunicorn[334283]: ModuleNotFoundError: No module named 'djangoProject.wsgi'
+Jul 25 19:23:40 vps gunicorn[334283]: [2024-07-25 19:23:40 +0000] [334283] [INFO] Worker exiting (pid: 334283)
+Jul 25 19:23:40 vps gunicorn[334244]: [2024-07-25 19:23:40 +0000] [334244] [ERROR] Worker (pid:334283) exited with code 3
+Jul 25 19:23:40 vps gunicorn[334244]: [2024-07-25 19:23:40 +0000] [334244] [ERROR] Shutting down: Master
+Jul 25 19:23:40 vps gunicorn[334244]: [2024-07-25 19:23:40 +0000] [334244] [ERROR] Reason: Worker failed to boot.
+Jul 25 19:23:40 vps systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+Jul 25 19:23:40 vps systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m

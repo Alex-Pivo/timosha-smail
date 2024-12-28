@@ -1,0 +1,759 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.bank {
+  width: 100%;
+  height: 815px;
+
+  box-sizing: border-box;
+
+  padding-top: 152px;
+  background: #f5f5f5;
+  scroll-behavior: smooth;
+
+  .container {
+    margin: 0 auto;
+    max-width: 1396px;
+    height: 100%;
+    box-sizing: border-box;
+
+    border-radius: 20px;
+    background: #f9fafb;
+    box-shadow: 0px 4px 28px 0px rgba(221, 221, 221, 0.2);
+
+    padding: 40px 74px 40px 74px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .title {
+      color: #1d1d1d;
+      text-align: center;
+      font-family: "Rubik", sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20.933px; /* 87.221% */
+    }
+
+    .btn__container {
+      width: auto;
+      height: 54px;
+
+      margin-top: 64px;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      .btnCash {
+        width: 112px;
+        height: 100%;
+        border-radius: 30px;
+        border: 1px solid var(--main-green, #649612);
+        background: #f9fafb;
+        cursor: pointer;
+
+        color: #1d1d1d;
+        font-family: "Commissioner", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        transition: all 0.4s ease 0s;
+      }
+      .btnCash__active {
+        width: 112px;
+        height: 100%;
+        cursor: pointer;
+
+        border-radius: 30px;
+        background: #649612;
+        color: #f5f5f5;
+        font-family: "Commissioner", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        transition: all 0.4s ease 0s;
+      }
+    }
+
+    .cash {
+      width: 100%;
+      height: 208px;
+
+      margin-top: 60px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .line {
+        width: 100%;
+        height: 40px;
+
+        border-bottom: 1px solid #d1d5db;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        justify-content: space-between;
+        position: relative;
+
+        .massage {
+          display: none;
+        }
+        .massage__active {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          right: -65px;
+          top: -20px;
+          width: 160px;
+          height: 25px;
+          background-color: #6396125d;
+
+          border-radius: 10px;
+
+          color: #6b7280;
+          text-align: left;
+          font-family: "Rubik", sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 17.584px;
+          letter-spacing: 0.733px;
+        }
+
+        .left {
+          color: #6b7280;
+          text-align: left;
+          font-family: "Rubik", sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 17.584px; /* 109.898% */
+          letter-spacing: 0.733px;
+          width: 291px;
+        }
+        .center {
+          width: 451px;
+          text-align: left;
+          color: #1d1d1d;
+          font-family: "Rubik", sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 17.584px; /* 109.898% */
+          letter-spacing: 0.733px;
+        }
+      }
+    }
+
+    .btn {
+      width: 545px;
+      height: 76px;
+      border-radius: 10px;
+      background: #649612;
+
+      color: #fff;
+      text-align: center;
+      font-family: "Rubik", sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 18.316px; /* 76.318% */
+
+      transition: all 0.4s ease 0s;
+      margin-top: 96px;
+    }
+    .btn:hover {
+      background: #45660e;
+      transition: all 0.4s ease 0s;
+    }
+    .btn:active {
+      background: #263a06;
+      transition: all 0.4s ease 0s;
+    }
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1541px) {
+  .bank {
+    width: 100%;
+    height: 731px;
+
+    box-sizing: border-box;
+
+    padding-top: 144px;
+    background: #f5f5f5;
+    scroll-behavior: smooth;
+
+    .container {
+      margin: 0 auto;
+      max-width: 1124px;
+      height: 100%;
+      box-sizing: border-box;
+
+      border-radius: 20px;
+      background: #f9fafb;
+      box-shadow: 0px 4px 28px 0px rgba(221, 221, 221, 0.2);
+
+      padding: 40px 95px 40px 95px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      .title {
+        color: #1d1d1d;
+        text-align: center;
+        font-family: "Rubik", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20.933px; /* 87.221% */
+      }
+
+      .btn__container {
+        width: auto;
+        height: 42px;
+
+        margin-top: 60px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        .btnCash {
+          width: 53px;
+          height: 100%;
+          border-radius: 30px;
+          border: 1px solid var(--main-green, #649612);
+          background: #f9fafb;
+          cursor: pointer;
+
+          color: #1d1d1d;
+          font-family: "Commissioner", sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          transition: all 0.4s ease 0s;
+        }
+        .btnCash__active {
+          width: 53px;
+          height: 100%;
+          cursor: pointer;
+
+          border-radius: 30px;
+          background: #649612;
+          color: #f5f5f5;
+          font-family: "Commissioner", sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          transition: all 0.4s ease 0s;
+        }
+      }
+
+      .cash {
+        width: 100%;
+        height: 208px;
+
+        margin-top: 60px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .line {
+          width: 100%;
+          height: 40px;
+
+          border-bottom: 1px solid #d1d5db;
+
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          justify-content: space-between;
+          position: relative;
+
+          .massage {
+            display: none;
+          }
+          .massage__active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: -65px;
+            top: -20px;
+            width: 160px;
+            height: 25px;
+            background-color: #6396125d;
+
+            border-radius: 10px;
+
+            color: #6b7280;
+            text-align: left;
+            font-family: "Rubik", sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 17.584px;
+            letter-spacing: 0.733px;
+          }
+
+          .left {
+            color: #6b7280;
+            text-align: left;
+            font-family: "Rubik", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 17.584px; /* 109.898% */
+            letter-spacing: 0.733px;
+            width: 243px;
+          }
+          .center {
+            width: 356px;
+            text-align: left;
+            color: #1d1d1d;
+            font-family: "Rubik", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 17.584px; /* 109.898% */
+            letter-spacing: 0.733px;
+          }
+        }
+      }
+
+      .btn {
+        width: 471px;
+        height: 57px;
+        border-radius: 10px;
+        background: #649612;
+
+        color: #fff;
+        text-align: center;
+        font-family: "Rubik", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18.316px; /* 76.318% */
+
+        transition: all 0.4s ease 0s;
+        margin-top: 60px;
+      }
+      .btn:hover {
+        background: #45660e;
+        transition: all 0.4s ease 0s;
+      }
+      .btn:active {
+        background: #263a06;
+        transition: all 0.4s ease 0s;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1201px) {
+  .bank {
+    width: 100%;
+    height: auto;
+
+    box-sizing: border-box;
+
+    padding-top: 70px;
+    background: #f5f5f5;
+    scroll-behavior: smooth;
+
+    .container {
+      margin: 0 auto;
+      max-width: 600px;
+      height: 100%;
+      box-sizing: border-box;
+
+      border-radius: 20px;
+      background: #f9fafb;
+      box-shadow: 0px 4px 28px 0px rgba(221, 221, 221, 0.2);
+
+      padding: 28px 63px 28px 63px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      .title {
+        color: #1d1d1d;
+        text-align: center;
+        font-family: "Rubik", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20.933px; /* 87.221% */
+      }
+
+      .btn__container {
+        width: auto;
+        height: 45px;
+
+        margin-top: 18px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        .btnCash {
+          width: 55px;
+          height: 100%;
+          border-radius: 30px;
+          border: 1px solid var(--main-green, #649612);
+          background: #f9fafb;
+          cursor: pointer;
+
+          color: #1d1d1d;
+          font-family: "Commissioner", sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          transition: all 0.4s ease 0s;
+        }
+        .btnCash__active {
+          width: 55px;
+          height: 100%;
+          cursor: pointer;
+
+          border-radius: 30px;
+          background: #649612;
+          color: #f5f5f5;
+          font-family: "Commissioner", sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          transition: all 0.4s ease 0s;
+        }
+      }
+
+      .cash {
+        width: 100%;
+        height: 191px;
+
+        margin-top: 44px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .line {
+          width: 100%;
+          height: 41px;
+
+          border-bottom: 1px solid #d1d5db;
+
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          justify-content: space-between;
+          position: relative;
+
+          .massage {
+            display: none;
+          }
+          .massage__active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: -65px;
+            top: -20px;
+            width: 160px;
+            height: 25px;
+            background-color: #6396125d;
+
+            border-radius: 10px;
+
+            color: #6b7280;
+            text-align: left;
+            font-family: "Rubik", sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 17.584px;
+            letter-spacing: 0.733px;
+          }
+
+          .left {
+            color: #6b7280;
+            text-align: left;
+            font-family: "Rubik", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 17.584px; /* 109.898% */
+            letter-spacing: 0.733px;
+            width: auto;
+            margin-right: auto;
+          }
+          .center {
+            width: auto;
+            text-align: right;
+            color: #1d1d1d;
+            font-family: "Rubik", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 17.584px; /* 109.898% */
+            letter-spacing: 0.733px;
+            margin-right: 58px;
+          }
+        }
+      }
+
+      .btn {
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        background: #649612;
+
+        color: #fff;
+        text-align: center;
+        font-family: "Rubik", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18.316px; /* 76.318% */
+
+        transition: all 0.4s ease 0s;
+        margin-top: 44px;
+      }
+      .btn:hover {
+        background: #45660e;
+        transition: all 0.4s ease 0s;
+      }
+      .btn:active {
+        background: #263a06;
+        transition: all 0.4s ease 0s;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .bank {
+    max-width: 376px;
+    height: auto;
+
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    padding: 70px 16px 0px 16px;
+    background: #f5f5f5;
+    scroll-behavior: smooth;
+
+    .container {
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+
+      border-radius: 20px;
+      background: #f9fafb;
+      box-shadow: 0px 4px 28px 0px rgba(221, 221, 221, 0.2);
+
+      padding: 16px 16px 16px 16px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      .title {
+        color: #1d1d1d;
+        text-align: center;
+        font-family: "Rubik", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20.933px; /* 87.221% */
+      }
+
+      .btn__container {
+        width: auto;
+        height: 104px;
+
+        margin-top: 18px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        .btnCash {
+          width: 53px;
+          height: 45px;
+          border-radius: 30px;
+          border: 1px solid var(--main-green, #649612);
+          background: #f9fafb;
+          cursor: pointer;
+
+          color: #1d1d1d;
+          font-family: "Commissioner", sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          transition: all 0.4s ease 0s;
+          margin: 0 7px;
+        }
+        .btnCash__active {
+          width: 53px;
+          height: 45px;
+          cursor: pointer;
+          margin: 0 7px;
+
+          border-radius: 30px;
+          background: #649612;
+          color: #f5f5f5;
+          font-family: "Commissioner", sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          transition: all 0.4s ease 0s;
+        }
+      }
+
+      .cash {
+        width: 100%;
+        height: 425px;
+
+        margin-top: 24px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .line {
+          width: 100%;
+          height: auto;
+
+          border-bottom: 1px solid #d1d5db;
+
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding-bottom: 12px;
+
+          justify-content: flex-start;
+          position: relative;
+
+          .massage {
+            display: none;
+          }
+          .massage__active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: -65px;
+            top: -20px;
+            width: 160px;
+            height: 25px;
+            background-color: #6396125d;
+
+            border-radius: 10px;
+
+            color: #6b7280;
+            text-align: left;
+            font-family: "Rubik", sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 17.584px;
+            letter-spacing: 0.733px;
+          }
+
+          .left {
+            color: #6b7280;
+            text-align: left;
+            font-family: "Rubik", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 17.584px; /* 109.898% */
+            letter-spacing: 0.733px;
+            width: auto;
+            margin-right: auto;
+          }
+          .center {
+            width: auto;
+            text-align: left;
+            color: #1d1d1d;
+            font-family: "Rubik", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 17.584px; /* 109.898% */
+            letter-spacing: 0.733px;
+            margin-right: auto;
+            margin-top: 10px;
+            margin-bottom: 16px;
+          }
+        }
+      }
+
+      .btn {
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        background: #649612;
+
+        color: #fff;
+        text-align: center;
+        font-family: "Rubik", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18.316px; /* 76.318% */
+
+        transition: all 0.4s ease 0s;
+        margin-top: 19px;
+      }
+      .btn:hover {
+        background: #45660e;
+        transition: all 0.4s ease 0s;
+      }
+      .btn:active {
+        background: #263a06;
+        transition: all 0.4s ease 0s;
+      }
+    }
+  }
+}

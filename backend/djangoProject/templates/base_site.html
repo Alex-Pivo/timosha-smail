@@ -1,0 +1,16 @@
+{% extends "admin/../base.html" %}
+{% load static %}
+{% block title %}Admin Panel Timosha's Smile{% endblock %}
+
+{% block branding %}
+<div id="site-name"><a href="{% url 'admin:index' %}">Адмін панель сайту "Усмішка Тимоші"</a></div>
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+{% endif %}
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'admin/base.css' %}"/>
+{% endblock %}

@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+
+.loadingBar .progressBar {
+  animation: loadingAnimation 6s linear infinite;
+}
+.getHelp{
+  margin-bottom: 150px;
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 82px;
+    .caption{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--Chief-Black, #1D1D1D);
+      font-family: Rubik, sans-serif;
+      font-size: 52px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 110%; /* 52.8px */
+    }
+    .stepsPhone{
+      display: none;
+    }
+    .steps{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      .stepAll{
+        width: 481px;
+        height: 261px;
+        position: relative;
+        display: flex;
+        padding: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        border-radius: 20px;
+        border: 3px dashed var(--Neutral-Neutral-300, #D1D5DB);
+        &.highlighted { /* Добавляем стили для подсвеченного шага */
+          background: #5380A1;
+          border: none;
+          height: 308px;
+          svg{
+            position: absolute;
+            right: 30px;
+            top: 18px;
+          }
+          .captionStep{
+            color: #FFF;
+            font-family: Rubik, sans-serif;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px; /* 66.667% */
+            letter-spacing: 1px;
+          }
+          .loadWrapper{
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 95px;
+            .text{
+              width: 376px;
+              height: 150px;
+              color: #FFF;
+              font-family: Commissioner, sans-serif;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 140%; /* 33.6px */
+              .loadingBar {
+                width: 486px;
+                height: 3px;
+                background-color: #fff;
+                border-radius: 5px;
+                overflow: hidden;
+                /* Анимация полосы загрузки */
+                .progressBar {
+                  width: 486px;
+                  height: 100%;
+                  background-color: #AFCA0B; /* зеленый цвет */
+                  animation: loadingAnimation 13s linear infinite; /* анимация заполнения */
+                }
+              }
+            }
+          }
+        }
+        .captionStep{
+          color: var(--Chief-Black, #1D1D1D);
+          font-family: Rubik, sans-serif;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 24px; /* 66.667% */
+          letter-spacing: 1px;
+        }
+        .text{
+          color: var(--Neutral-Neutral-700, #374151);
+          font-family: Commissioner, sans-serif;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%; /* 33.6px */
+          width: 487px;
+        }
+        .loadingBar {
+          width: 486px;
+          height: 4px;
+          background-color: #fff;
+          border-radius: 5px;
+          overflow: hidden;
+          /* Анимация полосы загрузки */
+          .progressBar {
+            width: 0;
+            height: 100%;
+            background-color: #AFCA0B; /* зеленый цвет */
+            animation: loadingAnimation 13s linear infinite; /* анимация заполнения */
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes loadingAnimation {
+  0% { width: 0%; } /* Начальная ширина полосы загрузки */
+  100% { width: 100%; } /* Ширина полосы загрузки при завершении анимации */
+}
+@media (min-width: 1250px)  and (max-width: 1541px) {
+  .getHelp{
+    margin-bottom: 200px;
+    .wrapper{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 64px;
+      .caption{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--Chief-Black, #1D1D1D);
+        font-family: Rubik, sans-serif;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%; /* 52.8px */
+      }
+      .stepsPhone{
+        display: none;
+      }
+      .steps{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        .stepAll{
+          width: 100%;
+
+          height: 219px;
+          position: relative;
+          display: flex;
+          padding: 30px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 30px;
+          border-radius: 20px;
+          border: 3px dashed var(--Neutral-Neutral-300, #D1D5DB);
+          &.highlighted { /* Добавляем стили для подсвеченного шага */
+            background: #5380A1;
+            border: none;
+            height: 250px;
+            svg{
+              position: absolute;
+              right: 30px;
+              top: 18px;
+            }
+            .captionStep{
+              color: #FFF;
+              font-family: Rubik, sans-serif;
+              font-size: 36px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 24px; /* 66.667% */
+              letter-spacing: 1px;
+            }
+            .loadWrapper{
+              display: flex;
+              height: 199px;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 95px;
+              .text{
+                height: auto;
+                width: 100%;
+                color: #FFF;
+                font-family: Commissioner, sans-serif;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%; /* 33.6px */
+                .loadingBar {
+                  width: 100%;
+                  height: 3px;
+                  background-color: #fff;
+                  border-radius: 5px;
+                  overflow: hidden;
+                  /* Анимация полосы загрузки */
+                  .progressBar {
+                    width: 0;
+                    height: 100%;
+                    background-color: #AFCA0B; /* зеленый цвет */
+                    animation: loadingAnimation 13s linear infinite; /* анимация заполнения */
+                  }
+                }
+              }
+            }
+          }
+          .captionStep{
+            color: var(--Chief-Black, #1D1D1D);
+            font-family: Rubik, sans-serif;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px; /* 66.667% */
+            letter-spacing: 1px;
+          }
+          .text{
+            height: auto;
+            color: var(--Neutral-Neutral-700, #374151);
+            font-family: Commissioner, sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 33.6px */
+            width: 100%;
+          }
+          .loadingBar {
+            width: 100%;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            /* Анимация полосы загрузки */
+            .progressBar {
+              width: 0;
+              height: 100%;
+              background-color: #AFCA0B; /* зеленый цвет */
+              animation: loadingAnimation 13s linear infinite; /* анимация заполнения */
+            }
+          }
+        }
+      }
+    }
+  }
+  @keyframes loadingAnimation {
+    0% { width: 0%; } /* Начальная ширина полосы загрузки */
+    100% { width: 100%; } /* Ширина полосы загрузки при завершении анимации */
+  }
+}
+
+@media (min-width: 836px)  and (max-width: 1249px) {
+  .getHelp{
+    margin-bottom: 200px;
+    .wrapper{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 64px;
+      .caption{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--Chief-Black, #1D1D1D);
+        font-family: Rubik, sans-serif;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%; /* 52.8px */
+      }
+      .stepsPhone{
+        display: none;
+      }
+      .steps{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        .stepAll{
+          width: 100%;
+
+          height: 219px;
+          position: relative;
+          display: flex;
+          padding: 30px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 30px;
+          border-radius: 20px;
+          border: 3px dashed var(--Neutral-Neutral-300, #D1D5DB);
+          &.highlighted { /* Добавляем стили для подсвеченного шага */
+            background: #5380A1;
+            border: none;
+            height: 250px;
+            svg{
+              position: absolute;
+              right: 30px;
+              top: 18px;
+            }
+            .captionStep{
+              color: #FFF;
+              font-family: Rubik, sans-serif;
+              font-size: 28px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 24px; /* 66.667% */
+              letter-spacing: 1px;
+            }
+            .loadWrapper{
+              display: flex;
+              height: 199px;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 95px;
+              .text{
+                height: auto;
+                width: 100%;
+                color: #FFF;
+                font-family: Commissioner, sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%; /* 33.6px */
+                .loadingBar {
+                  width: 100%;
+                  height: 3px;
+                  background-color: #fff;
+                  border-radius: 5px;
+                  overflow: hidden;
+                  /* Анимация полосы загрузки */
+                  .progressBar {
+                    width: 0;
+                    height: 100%;
+                    background-color: #AFCA0B; /* зеленый цвет */
+                    animation: loadingAnimation 13s linear infinite; /* анимация заполнения */
+                  }
+                }
+              }
+            }
+          }
+          .captionStep{
+            color: var(--Chief-Black, #1D1D1D);
+            font-family: Rubik, sans-serif;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px; /* 66.667% */
+            letter-spacing: 1px;
+          }
+          .text{
+            height: auto;
+            color: var(--Neutral-Neutral-700, #374151);
+            font-family: Commissioner, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 33.6px */
+            width: 100%;
+          }
+          .loadingBar {
+            width: 100%;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            /* Анимация полосы загрузки */
+            .progressBar {
+              width: 0;
+              height: 100%;
+              background-color: #AFCA0B; /* зеленый цвет */
+              animation: loadingAnimation 13s linear infinite; /* анимация заполнения */
+            }
+          }
+        }
+      }
+    }
+  }
+  @keyframes loadingAnimation {
+    0% { width: 0%; } /* Начальная ширина полосы загрузки */
+    100% { width: 100%; } /* Ширина полосы загрузки при завершении анимации */
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 835px) {
+
+  .getHelp {
+    margin-bottom: 70px;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+
+      .caption {
+        color: var(--Chief-Black, #1D1D1D);
+        font-family: Rubik, sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%; /* 35.2px */
+      }
+      .stepsPhone{
+        display: none;
+      }
+      .steps {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .stepAll {
+          width: 170px;
+          padding: 20px 20px 40px 20px;
+          height: auto;
+          position: relative;
+          display: flex;
+          border-radius: 10px;
+          border: 2px dashed var(--Neutral-Neutral-300, #D1D5DB);
+          &.highlighted { /* Добавляем стили для подсвеченного шага */
+            display: flex;
+            width: 175px;
+            height: 110px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 18px;
+            border-radius: 10px;
+            background: #5380A1;
+            svg {
+              display: none;
+            }
+
+            .captionStep {
+              color: var(--Main-white, #F5F5F5);
+              font-family: Commissioner, sans-serif;
+              font-size: 20.348px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 13.565px; /* 66.667% */
+              letter-spacing: 0.565px;
+            }
+
+            .loadWrapper {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 47px;
+              height: auto;
+              .text {
+                width: 170px;
+                height: 50px;
+                color: var(--Main-white, #F5F5F5);
+                font-family: Commissioner, sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%; /* 16.8px */
+                .loadingBar {
+                  width: 100%;
+                  height: 3px;
+                  background-color: #fff;
+                  border-radius: 5px;
+                  overflow: hidden;
+                  /* Анимация полосы загрузки */
+                  .progressBar {
+                    width: 0;
+                    height: 100%;
+                    background-color: #AFCA0B; /* зеленый цвет */
+                    animation: loadingAnimation 13s linear infinite; /* анимация заполнения */
+                  }
+                }
+              }
+            }
+          }
+
+          .captionStep {
+            color: var(--Chief-Black, #1D1D1D);
+            font-family: Commissioner, sans-serif;
+            font-size: 20.348px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 13.565px; /* 66.667% */
+            letter-spacing: 0.565px;
+          }
+
+          .text {
+            width: 170px;
+            height: 50px;
+            color: var(--Neutral-Neutral-700, #374151);
+            font-family: Commissioner, sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 16.8px */
+          }
+
+          .loadingBar {
+            width: 100%;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            /* Анимация полосы загрузки */
+            .progressBar {
+              width: 0;
+              height: 100%;
+              background-color: #AFCA0B; /* зеленый цвет */
+              animation: loadingAnimation 13s linear infinite; /* анимация заполнения */
+            }
+          }
+        }
+      }
+    }
+  }
+  @keyframes loadingAnimation {
+    0% {
+      width: 0%;
+    }
+    /* Начальная ширина полосы загрузки */
+    100% {
+      width: 100%;
+    }
+    /* Ширина полосы загрузки при завершении анимации */
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .getHelp {
+    margin-bottom: 70px;
+
+    .wrapper {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+
+      .caption {
+        color: var(--Chief-Black, #1D1D1D);
+        font-family: Rubik, sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 110%; /* 26.4px */
+      }
+      .stepsPhone{
+        display: flex;
+        .stepAll {
+          width: 194px;
+          //height: 156px;
+          padding: 26px 22px 47px 22px;
+          height: 100px;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 18px;
+          border-radius: 10px;
+          border: 2px dashed var(--Neutral-Neutral-300, #D1D5DB);
+          &.highlighted { /* Добавляем стили для подсвеченного шага */
+            border: none;
+            display: flex;
+            width: 194px;
+            height: 100px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 18px;
+            border-radius: 10px;
+            background: #5380A1;
+            svg {
+              display: none;
+            }
+
+            .captionStep {
+              color: var(--Main-white, #F5F5F5);
+              font-family: Commissioner, sans-serif;
+              font-size: 20.348px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 13.565px; /* 66.667% */
+              letter-spacing: 0.565px;
+            }
+
+            .loadWrapper {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 47px;
+              height: auto;
+              .text {
+                width: 195px;
+                height: 50px;
+                color: var(--Main-white, #F5F5F5);
+                font-family: Commissioner, sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%; /* 16.8px */
+
+                .loadingBar {
+                  width: 100%;
+                  height: 3px;
+                  background-color: #fff;
+                  border-radius: 5px;
+                  overflow: hidden;
+                  /* Анимация полосы загрузки */
+                  .progressBar {
+                    width: 0;
+                    height: 100%;
+                    background-color: #AFCA0B; /* зеленый цвет */
+                    animation: loadingAnimation 6s linear infinite; /* анимация заполнения */
+                  }
+                }
+              }
+            }
+          }
+
+          .captionStep {
+            color: var(--Chief-Black, #1D1D1D);
+            font-family: Commissioner, sans-serif;
+            font-size: 20.348px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 13.565px; /* 66.667% */
+            letter-spacing: 0.565px;
+          }
+
+          .text {
+            width: 194px;
+            height: 50px;
+            color: var(--Neutral-Neutral-700, #374151);
+            font-family: Commissioner, sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 16.8px */
+          }
+
+          .loadingBar {
+            width: 100%;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            /* Анимация полосы загрузки */
+            .progressBar {
+              width: 0;
+              height: 100%;
+              background-color: #AFCA0B; /* зеленый цвет */
+              animation: loadingAnimation 6s linear infinite; /* анимация заполнения */
+            }
+          }
+        }
+      }
+      .steps {
+        display: none;
+      }
+    }
+  }
+  .loadingBar .progressBar {
+    animation: loadingAnimation 6s linear infinite;
+  }
+  @keyframes loadingAnimation {
+    0% {
+      width: 0%;
+    }
+    /* Начальная ширина полосы загрузки */
+    100% {
+      width: 100%;
+    }
+    /* Ширина полосы загрузки при завершении анимации */
+  }
+}

@@ -1,0 +1,879 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@font-face {
+  font-family: Ermilov, sans-serif;
+  src: url('../../../../../../fonts/Ermilov-bold.otf') format('otf'); /* путь к вашему файлу шрифта */
+  /* Дополнительные свойства для настройки шрифта, такие как font-weight и font-style, могут быть указаны здесь */
+}
+
+.partners {
+  width: 100%;
+  height: auto;
+  margin-bottom: 216px;
+  padding: 152px 120px 0px 120px;
+  background: #F5F5F5;
+  box-sizing: border-box;
+
+  .container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    .box__title {
+      width: auto;
+      height: 154px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 40px;
+
+      position: relative;
+      box-sizing: border-box;
+
+      .left {
+        position: absolute;
+        z-index: 2;
+        left: -40px;
+        top: -20px;
+        box-sizing: border-box;
+      }
+      .right {
+        position: absolute;
+        z-index: 2;
+        right: -50px;
+        top: 20px;
+      }
+
+      .title {
+        width: auto;
+        text-align: center;
+        font-family: "Rubik", sans-serif;
+        font-size: 52px;
+        font-weight: 800;
+        color: #1d1d1d;
+        line-height: 110%;
+        letter-spacing: -1px;
+        position: relative;
+        z-index: 2;
+        box-sizing: border-box;
+      }
+
+      .descrip {
+        margin-top: 10px;
+        width: 743px;
+        color: #1d1d1d;
+        text-align: center;
+        font-family: "Commissioner", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        box-sizing: border-box;
+      }
+    }
+
+    .box__partners {
+      width: 100%;
+      height: auto;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+
+      gap: 64px;
+
+      .card,
+        .card__active {
+          width: 500px;
+          height: 290px;
+
+          padding: 0px 30px 15px 30px;
+
+          // margin-right: 20px;
+          // margin-bottom: 40px;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.4s ease 0s;
+          box-sizing: border-box;
+
+          background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23D0D0D0FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+          border-radius: 20px;
+
+          .textLogo{
+            color: var(--Chief-Black, #1D1D1D);
+            font-family: "Ermilov", sans-serif;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+
+            span{
+              color: var(--Main-white, #D0142C);
+              text-align: center;
+              font-family: Ermilov, sans-serif;
+              font-size: 40px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              text-transform: uppercase;
+            }
+          }
+
+          .logo {
+            background-size: contain;
+            background-position: center;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+          }
+          .text {
+            font-family: "Commissioner", sans-serif;
+            color: #374151;
+
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 140%;
+            box-sizing: border-box;
+          }
+        }
+
+      .up,
+      .center,
+      .down {
+        width: 100%;
+        height: 242px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+
+        .card,
+        .card__active {
+          width: 408px;
+          height: 242px;
+
+          padding: 0px 30px 15px 30px;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.4s ease 0s;
+          box-sizing: border-box;
+
+          background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23D0D0D0FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+          border-radius: 20px;
+
+          .logo {
+            background-size: contain;
+            background-position: center;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+          }
+          .text {
+            font-family: "Commissioner", sans-serif;
+            color: #374151;
+
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 140%;
+            box-sizing: border-box;
+          }
+        }
+        // .card:hover {
+        //   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23649612FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+        //   border-radius: 20px;
+
+        //   transform: rotate(-3deg);
+        //   transition: all 0.4s ease 0s;
+        //   box-sizing: border-box;
+        // }
+      }
+
+      .down {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+#logo1{
+  width: 270px;
+  height: 29px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/logo.png");
+}
+
+#logo5{
+  width: 260px;
+  height: 60px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/logo/5.png");
+}
+#logo7{
+  width: 230px;
+  height: 60px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/logo/7.png");
+}
+
+.partners__phone{
+  display: none;
+}
+
+@media screen and (min-width: 835px) and (max-width: 1541px){
+  .partners {
+    width: 100%;
+    height: auto;
+    margin-bottom: 216px;
+    padding: 40px 44px 0px 44px;
+    background: #F5F5F5;
+    box-sizing: border-box;
+  
+    .container {
+      width: 100%;
+      height: 100%;
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+  
+      .box__title {
+        width: auto;
+        height: 154px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 40px;
+  
+        position: relative;
+        box-sizing: border-box;
+  
+        .left {
+          position: absolute;
+          z-index: 2;
+          left: -40px;
+          top: -20px;
+          box-sizing: border-box;
+        }
+        .right {
+          position: absolute;
+          z-index: 2;
+          right: -50px;
+          top: 20px;
+        }
+  
+        .title {
+          text-align: center;
+          font-family: "Rubik", sans-serif;
+          font-size: 48px;
+          font-weight: 800;
+          color: #1d1d1d;
+          line-height: 110%;
+          letter-spacing: -1px;
+          position: relative;
+          z-index: 2;
+          box-sizing: border-box;
+        }
+  
+        .descrip {
+          margin-top: 10px;
+          width: 600px;
+          color: #1d1d1d;
+          text-align: center;
+          font-family: "Commissioner", sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          box-sizing: border-box;
+        }
+      }
+  
+      .box__partners {
+        width: 100%;
+        height: auto;
+  
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+  
+        gap: 44px;
+  
+        .card,
+          .card__active {
+            width: 408px;
+            height: 242px;
+  
+            padding: 0px 30px 15px 30px;
+  
+            // margin-right: 20px;
+            // margin-bottom: 40px;
+  
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease 0s;
+            box-sizing: border-box;
+  
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23D0D0D0FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+            border-radius: 20px;
+  
+            .textLogo{
+              color: var(--Chief-Black, #1D1D1D);
+              font-family: "Ermilov", sans-serif;
+              font-size: 40px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              text-transform: uppercase;
+  
+              margin-bottom: 20px;
+  
+              span{
+                color: var(--Main-white, #D0142C);
+                text-align: center;
+                font-family: "Ermilov", sans-serif;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-transform: uppercase;
+              }
+            }
+  
+            .logo {
+              background-size: contain;
+              background-position: center;
+              box-sizing: border-box;
+              margin-bottom: 20px;
+            }
+            .text {
+              font-family: "Commissioner", sans-serif;
+              color: #374151;
+  
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 140%;
+              box-sizing: border-box;
+            }
+          }
+  
+        .up,
+        .center,
+        .down {
+          width: 100%;
+          height: 242px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          box-sizing: border-box;
+  
+          .card,
+          .card__active {
+            width: 408px;
+            height: 242px;
+  
+            padding: 0px 30px 15px 30px;
+  
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease 0s;
+            box-sizing: border-box;
+  
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23D0D0D0FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+            border-radius: 20px;
+  
+            .logo {
+              background-size: contain;
+              background-position: center;
+              box-sizing: border-box;
+              margin-bottom: 20px;
+            }
+            .text {
+              font-family: "Commissioner", sans-serif;
+              color: #374151;
+  
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 140%;
+              box-sizing: border-box;
+            }
+          }
+          // .card:hover {
+          //   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23649612FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+          //   border-radius: 20px;
+  
+          //   transform: rotate(-3deg);
+          //   transition: all 0.4s ease 0s;
+          //   box-sizing: border-box;
+          // }
+        }
+  
+        .down {
+          justify-content: center;
+        }
+      }
+    }
+  }
+  
+  #logo1{
+    width: 270px;
+    height: 29px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/logo.png");
+  }
+  
+  #logo5{
+    width: 260px;
+    height: 60px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/logo/5.png");
+  }
+  #logo7{
+    width: 230px;
+    height: 60px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/logo/7.png");
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 835px) {
+  .partners {
+    width: 100%;
+    height: auto;
+    margin-bottom: 70px;
+    padding: 40px 0px 0px 44px;
+    background: #F5F5F5;
+    box-sizing: border-box;
+  
+    .container {
+      width: 100%;
+      height: 100%;
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+  
+      .box__title {
+        width: 544px;
+        height: 99px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+  
+        position: relative;
+        box-sizing: border-box;
+
+        margin-bottom: 37px;
+  
+        .left {
+          position: absolute;
+          z-index: 2;
+          left: -24px;
+          top: -10px;
+          box-sizing: border-box;
+
+        }
+        .right {
+          position: absolute;
+          z-index: 2;
+          right: 18px;
+          top: 20px;
+          display: none;
+        }
+  
+        .title {
+          text-align: center;
+          font-family: "Rubik", sans-serif;
+          font-size: 32px;
+          font-weight: 800;
+          color: #1d1d1d;
+          line-height: 110%;
+          letter-spacing: -1px;
+          position: relative;
+          z-index: 2;
+          box-sizing: border-box;
+        }
+  
+        .descrip {
+          margin-top: 10px;
+          width: 474px;
+          color: #1d1d1d;
+          text-align: center;
+          font-family: "Commissioner", sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          box-sizing: border-box;
+        }
+      }
+  
+      .box__partners {
+        width: 100%;
+      height: auto;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+
+      gap: 20px;
+
+      .card,
+        .card__active {
+          width: 238px;
+          height: 305px;
+
+          padding: 0px 30px 15px 30px;
+
+          // margin-right: 20px;
+          // margin-bottom: 40px;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.4s ease 0s;
+          box-sizing: border-box;
+
+          background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23D0D0D0FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+          border-radius: 20px;
+
+          .logo {
+            // width: auto;
+            // height: auto;
+            background-size: contain;
+            background-position: center;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+          }
+          .text {
+            font-family: "Commissioner", sans-serif;
+            color: #374151;
+
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 140%;
+            box-sizing: border-box;
+          }
+          .textLogo{
+            color: var(--Chief-Black, #1D1D1D);
+            font-family: "Ermilov", sans-serif;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+
+            span{
+              color: var(--Main-white, #D0142C);
+              text-align: center;
+              font-family: "Ermilov", sans-serif;
+              font-size: 26px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              text-transform: uppercase;
+            }
+          }
+        }
+
+        .up,
+        .center,
+        .down {
+          width: 100%;
+          height: 305px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          box-sizing: border-box;
+  
+          .card,
+          .card__active {
+            width: 238px;
+            height: 305px;
+  
+            padding: 30px 30px 15px 30px;
+  
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease 0s;
+            box-sizing: border-box;
+            border-radius: 20px;
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23649612FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+            // background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23D0D0D0FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+            
+  
+            .logo {
+              background-size: contain;
+              background-position: center;
+              box-sizing: border-box;
+              margin-bottom: 20px;
+            }
+            .text {
+              font-family: "Commissioner", sans-serif;
+              color: #374151;
+  
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 140%;
+              box-sizing: border-box;
+            }
+          }
+          // .card:hover {
+          //   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23649612FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+          //   border-radius: 20px;
+  
+          //   transform: rotate(-3deg);
+          //   transition: all 0.4s ease 0s;
+          //   box-sizing: border-box;
+          // }
+        }
+  
+        .down {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  #logo1{
+    width: 100%;
+    height: 25px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/logoYK.png");
+  }
+  #logo5{
+    width: 100%;
+    height: 41px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/logo/5.png");
+  }
+  #logo7{
+    width: 100%;
+    height: 45px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/logo/7.png");
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+  .partners{
+    display: none;
+  }
+
+
+  .partners__phone{
+    padding: 70px 16px 0px 16px;
+    display: flex;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    max-width: 376px;
+    height: 756px;
+
+    .container{
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      box-sizing: border-box;
+      position: relative;
+
+
+      .left{
+        left: 5px;
+        top: -10px;
+        position: absolute;
+        z-index: 5;
+      }
+
+      .box__title{
+        width: 100%;
+        height: 169px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+
+        
+
+        .title{
+          width: auto;
+          text-align: center;
+          font-family: "Rubik", sans-serif;
+          font-size: 24px;
+          font-weight: 800;
+          color: #1d1d1d;
+          line-height: 110%;
+          letter-spacing: -1px;
+          position: relative;
+          z-index: 2;
+          box-sizing: border-box;
+        }
+        .descrip{
+          margin-top: 16px;
+          width: 100%;
+          color: #1d1d1d;
+          text-align: center;
+          font-family: "Commissioner", sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          box-sizing: border-box;
+        }
+      }
+
+      .swiperPar{
+        margin-top: 34px;
+        width: 100%;
+        height: 434px;
+
+        display: flex;
+        flex-direction: column;
+
+        .slide{
+          width: 100%;
+          height: 359px;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          border-radius: 20px;
+          // background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23D0D0D0FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+
+          .logo{
+            width: 176px;
+            height: 30px;
+            background: url("/logo/1.png");
+            background-size: cover;
+            background-position: center;
+          }
+
+          .textLogo{
+            color: var(--Chief-Black, #1D1D1D);
+            font-family: "Ermilov", sans-serif;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+
+            span{
+              color: var(--Main-white, #D0142C);
+              text-align: center;
+              font-family: "Ermilov", sans-serif;
+              font-size: 28px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              text-transform: uppercase;
+            }
+          }
+
+          .text{
+            margin-top: 20px;
+            width: 70%;
+            font-family: "Commissioner", sans-serif;
+            color: #374151;
+            text-align: center;
+
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 140%;
+            box-sizing: border-box;
+          }
+        }
+
+        
+
+        // .slideActive{
+        //   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23649612FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+        // }
+      }
+
+      // .swiper-slide-active{
+      //   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23649612FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e") !important;
+      // }
+    }
+  }
+
+  .btns__container{
+    margin: 0 auto;
+    width: 284px;
+    height: 45px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    .btn{
+      border-radius: 45px;
+      width: 45px;
+      height: 45px;
+      background-color: #D1D5DB;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg{
+        width: 31px;
+        height: 31px;
+      }
+    }
+  }
+}

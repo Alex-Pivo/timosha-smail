@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.abouthelp {
+  width: 100%;
+  height: 1239px;
+  background-color: #fbfbfb;
+  padding: 200px 44px 0px 44px;
+}
+.abouthelp .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.abouthelp .container .title__container {
+  height: 98px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.abouthelp .container .title__container .line {
+  width: 404px;
+  height: 75px;
+  margin-left: 190px;
+  margin-top: -16px;
+  position: absolute;
+  z-index: 1;
+  background: url("../../public/lines/line2.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.abouthelp .container .title__container .title {
+  position: relative;
+  z-index: 2;
+  font-family: "Rubik", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: #1d1d1d;
+  line-height: 110%;
+  letter-spacing: -1px;
+}
+.abouthelp .container .title__container .text {
+  font-family: "Commissioner", sans-serif;
+  color: #1d1d1d;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+.abouthelp .container .about__container {
+  width: 100%;
+  height: 877px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.abouthelp .container .about__container .up {
+  width: 100%;
+  height: 401px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.abouthelp .container .about__container .up .left {
+  width: 49%;
+  height: 100%;
+}
+.abouthelp .container .about__container .up .left .info {
+  width: 100%;
+  height: 401px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.abouthelp .container .about__container .up .left .info .title {
+  font-family: "Rubik", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #1d1d1d;
+  line-height: 110%;
+  letter-spacing: -1px;
+}
+.abouthelp .container .about__container .up .left .info .description {
+  font-family: "Commissioner", sans-serif;
+  color: #374151;
+  line-height: 140%;
+  font-size: 24px;
+  font-weight: 500;
+}
+.abouthelp .container .about__container .up .left .info .btns {
+  width: 382px;
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.abouthelp .container .about__container .up .left .info .btns .btnOne {
+  width: 201px;
+  height: 100%;
+  border: 1px solid #5380a1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+.abouthelp .container .about__container .up .left .info .btns .btnTwo {
+  width: 171px;
+  height: 100%;
+  border: 1px solid #5380a1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+.abouthelp .container .about__container .up .left .info .btns .btnOne,
+.abouthelp .container .about__container .up .left .info .btns .btnTwo {
+  font-family: "Commissioner", sans-serif;
+  color: #374151;
+  line-height: 140%;
+  font-size: 16px;
+  font-weight: 600;
+}
+.abouthelp .container .about__container .up .left .info .btns .btnOne .marker,
+.abouthelp .container .about__container .up .left .info .btns .btnTwo .marker {
+  background-image: url("../../public/star.png");
+  width: 18px;
+  height: 16px;
+  margin-left: 10px;
+}
+.abouthelp .container .about__container .up .left .info .btn {
+  width: 463px;
+  height: 76px;
+  background-color: #649612;
+  border-radius: 12px;
+  font-family: "Commissioner", sans-serif;
+  color: #fbfbfb;
+  line-height: 140%;
+  font-size: 32px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.abouthelp .container .about__container .up .left .info .btn .arrow {
+  width: 21.5px;
+  height: 29.33px;
+  margin-right: 7px;
+  background-image: url("../../public/Vector.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.abouthelp .container .about__container .up .right {
+  width: 49%;
+  height: 100%;
+  background: url("../../public/group.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+.abouthelp .container .about__container .up .right .fire {
+  width: 67px;
+  height: 107px;
+  background: url("../../public/lines/fire.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  left: -30px;
+  top: 310px;
+}
+.abouthelp .container .about__container .down {
+  width: 100%;
+  height: 332px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.abouthelp .container .about__container .down .left {
+  width: 49%;
+  height: 100%;
+  background: url("../../public/house.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+.abouthelp .container .about__container .down .left .star {
+  width: 86px;
+  height: 68px;
+  background: url("../../public/lines/star.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  left: -30px;
+  top: 294px;
+}
+.abouthelp .container .about__container .down .right {
+  width: 49%;
+  height: 100%;
+}
+.abouthelp .container .about__container .down .right .info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.abouthelp .container .about__container .down .right .info .title {
+  font-family: "Rubik", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #1d1d1d;
+  line-height: 110%;
+  letter-spacing: -1px;
+}
+.abouthelp .container .about__container .down .right .info .description {
+  font-family: "Commissioner", sans-serif;
+  color: #374151;
+  line-height: 140%;
+  font-size: 24px;
+  font-weight: 500;
+}
+.abouthelp .container .about__container .down .right .info .btn {
+  width: 463px;
+  height: 76px;
+  background-color: #649612;
+  border-radius: 12px;
+  font-family: "Commissioner", sans-serif;
+  color: #fbfbfb;
+  line-height: 140%;
+  font-size: 32px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.abouthelp .container .about__container .down .right .info .btn .arrow {
+  width: 21.5px;
+  height: 29.33px;
+  margin-right: 7px;
+  background-image: url("../../public/Vector.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=abouthelp.module.css.map */

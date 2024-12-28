@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Налаштування
+DB_PATH="/Timosh/fond_db.sqlite3"
+BACKUP_DIR="/path/to/your/backup/dir"
+TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+BACKUP_FILE="$BACKUP_DIR/fond_db_$TIMESTAMP.sqlite3"
+
+# Створення резервної копії
+cp "$DB_PATH" "$BACKUP_FILE"
+
+# (Опціонально) Видалення старих резервних копій (наприклад, старіші за 7 днів)
+find "$BACKUP_DIR" -name "*.sqlite3" -type f -mtime +7 -exec rm {} \;

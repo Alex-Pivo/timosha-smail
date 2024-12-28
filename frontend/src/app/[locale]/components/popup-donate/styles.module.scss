@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.modal{
+    width: 100%;
+    height: 100%;
+    background-color: #00000042;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    z-index: 19;
+    overflow: hidden;
+
+    .modal__content{
+        width: 758px;
+        min-height: auto;
+        padding: 30px 57px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 20px;
+        background: #F5F5F5;
+        box-sizing: border-box;
+        position: relative;
+
+        .img{
+            width: 56px;
+            height: 59px;
+            background: url("/earth.png");
+            background-position: center;
+            background-size: cover;
+            margin-bottom: 12px;
+        }
+
+        .title{
+            color: #1D1D1D;
+            font-family: Rubik, sans-serif;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 110%; /* 35.2px */
+            margin-bottom: 10px;
+            text-align: center;
+            width: 110%;
+        }
+
+        .text{
+            width: 554px;
+            color: #1D1D1D;
+            text-align: center;
+            font-family: Commissioner, sans-serif;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 30px; /* 110% */
+        }
+
+        .box{
+            width: 100%;
+            height: auto;
+
+            padding: 0px 52.5px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            margin-top: 40px;
+
+            .btn{
+                width: 289px;
+                height: 78px;
+                background-color: #F5F5F5;
+
+                border: 3px solid #649612;
+                border-radius: 12px;
+
+                color: #1D1D1D;
+                text-align: center;
+                font-family: Commissioner, sans-serif;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 30px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                .cntr{
+                    width: 36px;
+                    height: 36px;
+                    // background: url("/ukraine.png");
+                    background-position: center;
+                    background-size: cover;
+                    margin-left: 8px;
+                }
+            }
+        }
+
+        .btn__exit{
+            width: 43px;
+            height: 43px;
+            position: absolute;
+            right: 45px;
+            background-color: #F5F5F5;
+            cursor: pointer;
+
+            svg{
+                width: 43px;
+                height: 43px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 835px) and (max-width: 1541px) {
+    .modal{
+        width: 100%;
+        height: 100%;
+        background-color: #00000042;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        z-index: 19;
+        overflow: hidden;
+    
+        .modal__content{
+            width: 654px;
+            min-height: auto;
+            padding: 30px 57px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 20px;
+            background: #F5F5F5;
+            box-sizing: border-box;
+            position: relative;
+    
+            .img{
+                width: 56px;
+                height: 59px;
+                background: url("/earth.png");
+                background-position: center;
+                background-size: cover;
+                margin-bottom: 12px;
+            }
+    
+            .title{
+                color: #1D1D1D;
+                font-family: Rubik, sans-serif;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 110%; /* 35.2px */
+                margin-bottom: 22px;
+                text-align: center;
+                width: 110%;
+            }
+    
+            .text{
+                width: 464px;
+                color: #1D1D1D;
+                text-align: center;
+                font-family: Commissioner, sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 30px; /* 110% */
+            }
+    
+            .box{
+                width: 100%;
+                height: 150px;
+    
+                padding: 0px 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+    
+                margin-top: 26px;
+    
+                .btn{
+                    width: 271px;
+                    height: 69px;
+                    background-color: #F5F5F5;
+    
+                    border: 3px solid #649612;
+                    border-radius: 12px;
+    
+                    color: #1D1D1D;
+                    text-align: center;
+                    font-family: Commissioner, sans-serif;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 30px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+    
+                    .cntr{
+                        width: 36px;
+                        height: 36px;
+                        // background: url("/ukraine.png");
+                        background-position: center;
+                        background-size: cover;
+                        margin-left: 8px;
+                    }
+                }
+            }
+    
+            .btn__exit{
+                width: 43px;
+                height: 43px;
+                position: absolute;
+                right: 45px;
+                background-color: #F5F5F5;
+                cursor: pointer;
+    
+                svg{
+                    width: 43px;
+                    height: 43px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 835px) {
+    .modal{
+        width: 100%;
+        height: 100%;
+        background-color: #00000042;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        z-index: 19;
+        overflow: hidden;
+    
+        .modal__content{
+            width: 538px;
+            height: auto;
+            padding: 28px 9.5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 20px;
+            background: #F5F5F5;
+            box-sizing: border-box;
+            position: relative;
+    
+            .img{
+                width: 56px;
+                height: 59px;
+                background: url("/earth.png");
+                background-position: center;
+                background-size: cover;
+                margin-bottom: 12px;
+            }
+    
+            .title{
+                color: #1D1D1D;
+                font-family: Rubik, sans-serif;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 110%; /* 35.2px */
+                margin-bottom: 22px;
+                text-align: center;
+                width: 80%;
+            }
+    
+            .text{
+                width: 345px;
+                color: #1D1D1D;
+                text-align: center;
+                font-family: Commissioner, sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 22px; /* 110% */
+            }
+    
+            .box{
+                width: 100%;
+                height: 312px;
+    
+                padding: 0px 0px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+    
+                margin-top: 8px;
+    
+                .btn{
+                    width: 271px;
+                    height: 69px;
+                    background-color: #F5F5F5;
+    
+                    border: 3px solid #649612;
+                    border-radius: 12px;
+    
+                    color: #1D1D1D;
+                    text-align: center;
+                    font-family: Commissioner, sans-serif;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 30px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+    
+                    .cntr{
+                        width: 36px;
+                        height: 36px;
+                        // background: url("/ukraine.png");
+                        background-position: center;
+                        background-size: cover;
+                        margin-left: 8px;
+                    }
+                }
+            }
+    
+            .btn__exit{
+                width: 43px;
+                height: 43px;
+                position: absolute;
+                right: 45px;
+                background-color: #F5F5F5;
+                cursor: pointer;
+    
+                svg{
+                    width: 43px;
+                    height: 43px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .modal{
+        width: 100%;
+        height: 100%;
+        background-color: #00000042;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        z-index: 19;
+        overflow: hidden;
+    
+        .modal__content{
+            width: 343px;
+            height: auto;
+            padding: 27px 19.5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 20px;
+            background: #F5F5F5;
+            box-sizing: border-box;
+            position: relative;
+    
+            .img{
+                width: 56px;
+                height: 59px;
+                background: url("/earth.png");
+                background-position: center;
+                background-size: cover;
+                margin-bottom: 12px;
+            }
+    
+            .title{
+                color: #1D1D1D;
+                font-family: Rubik, sans-serif;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 110%; /* 35.2px */
+                margin-bottom: 22px;
+                text-align: center;
+                width: 90%;
+            }
+    
+            .text{
+                width: 345px;
+                color: #1D1D1D;
+                text-align: center;
+                font-family: Commissioner, sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 22px; /* 110% */
+            }
+    
+            .box{
+                width: 100%;
+                height: 236px;
+    
+                padding: 0px 0px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+    
+                margin-top: 8px;
+    
+                .btn{
+                    width: 271px;
+                    height: 50px;
+                    background-color: #F5F5F5;
+    
+                    border: 3px solid #649612;
+                    border-radius: 8px;
+    
+                    color: #1D1D1D;
+                    text-align: center;
+                    font-family: Commissioner, sans-serif;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 30px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+    
+                    .cntr{
+                        width: 36px;
+                        height: 36px;
+                        // background: url("/ukraine.png");
+                        background-position: center;
+                        background-size: cover;
+                        margin-left: 8px;
+                    }
+                }
+            }
+    
+            .btn__exit{
+                width: 43px;
+                height: 43px;
+                position: absolute;
+                right: 45px;
+                background-color: #F5F5F5;
+                cursor: pointer;
+    
+                svg{
+                    width: 43px;
+                    height: 43px;
+                }
+            }
+        }
+    }
+}

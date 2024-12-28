@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+
+.typesOfHelp{
+  margin-bottom: 70px;
+  .wrapperPhone{
+    display: none;
+  }
+  .wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    .nameOfTypes{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+      .name{
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        span{
+          color: var(--Chief-Black, #1D1D1D);
+          font-family: Rubik, sans-serif;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 110%; /* 44px */
+        }
+      }
+      .description{
+        width: 830px;
+        color: var(--Neutral-Neutral-700, #374151);
+        font-family: Commissioner, sans-serif;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 33.6px */
+        span{
+          color: var(--main-green, #649612);
+          font-family: Commissioner,sans-serif;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%; /* 33.6px */
+        }
+      }
+    }
+    .imageOfTypes{
+      .imgNote{
+        display: none;
+      }
+      .imgDesc{
+
+      }
+      .hearts{
+        position: absolute;
+        left: 118px;
+        bottom: 96px;
+      }
+      .sun{
+        position: absolute;
+        left: 517px;
+        top: 86px;
+      }
+      img{
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1250px)  and (max-width: 1541px){
+
+  .typesOfHelp{
+    margin-bottom: 90px;
+    .wrapperPhone{
+      display: none;
+    }
+    .wrapper{
+      display: flex;
+      width: 1352px;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      .nameOfTypes{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        .name{
+          display: flex;
+          align-items: flex-start;
+          gap: 30px;
+          span{
+            color: var(--Chief-Black, #1D1D1D);
+            font-family: Rubik, sans-serif;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 110%; /* 44px */
+          }
+        }
+        .description{
+          width: 668px;
+          color: var(--Neutral-Neutral-700, #374151);
+          font-family: Commissioner, sans-serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%; /* 33.6px */
+          span{
+            color: var(--main-green, #649612);
+            font-family: Commissioner,sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 33.6px */
+          }
+        }
+      }
+      .imageOfTypes{
+        .imgNote{
+          display: flex;
+        }
+        .imgDesc{
+          display: none;
+        }
+        .hearts{
+          position: absolute;
+          left: 82px;
+          bottom: 91.98px;
+        }
+        .sun{
+          position: absolute;
+          left: 420px;
+          top: 92.01px;
+        }
+        img{
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1250px) {
+
+  .typesOfHelp {
+    margin-bottom: 40px;
+    .wrapperPhone{
+      display: none;
+    }
+    .wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+
+      .nameOfTypes {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+
+        .name {
+          display: flex;
+          align-items: flex-start;
+          gap: 12px;
+
+          span {
+            color: var(--Chief-Black, #1D1D1D);
+            font-family: Rubik, sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 110%; /* 26.4px */
+          }
+        }
+
+        .description {
+          width: 100%;
+
+          color: var(--Neutral-Neutral-700, #374151);
+          font-family: Commissioner, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+        }
+      }
+
+      .imageOfTypes {
+        .hearts {
+          position: absolute;
+          left: 49px;
+          bottom: 57.933px;
+          width: 56px;
+          height: 54px;
+        }
+
+        .sun {
+          position: absolute;
+          left: 246px;
+          top: 41.033px;
+          width: 56px;
+          height: 54px;
+        }
+
+        img {
+          border-radius: 20px;
+          width: 367px;
+          height: 220.966px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .typesOfHelp {
+    margin-bottom: 50px;
+    .wrapper{
+      display: none;
+    }
+    .wrapperPhone {
+      display: flex;
+      width: 343px;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+
+      .nameOfTypes {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+
+        .name {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: center;
+          gap: 8px;
+
+          span {
+            color: var(--Chief-Black, #1D1D1D);
+            font-family: Rubik, sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 110%; /* 22px */
+          }
+        }
+        .imageOfTypes {
+          .hearts {
+            position: absolute;
+            left: 49px;
+            top: 133px;
+            width: 72px;
+            height: 70px;
+          }
+
+          .sun {
+            position: absolute;
+            right: 79px;
+            top: 48px;
+            width: 56px;
+            height: 54px;
+          }
+
+          img {
+            border-radius: 20px;
+            width: 343px;
+            height: 206.516px;
+          }
+        }
+        .description {
+          width: 343px;
+          color: var(--Neutral-Neutral-700, #374151);
+          font-family: Commissioner, sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+        }
+      }
+    }
+  }
+}

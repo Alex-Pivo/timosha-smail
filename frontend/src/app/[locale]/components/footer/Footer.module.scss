@@ -1,0 +1,928 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.footer{
+  display: inline-flex;
+  width: 100%;
+  padding: 24px 0 64px 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  flex-shrink: 0;
+  background: #F1F1F1;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.10);
+  .wrapper{
+    display: flex;
+    width: 1679px;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 33px;
+      .txtBtnPhone{
+        display: none;
+      }
+      .paymentMethodsTablet{
+        display:none;
+      }
+      .image{
+        width: 119px;
+        height: 63px;
+      }
+      .text{
+        width: 295px;
+        color: #649612;
+        font-family: Commissioner, sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 33.6px */
+      }
+      .btn{
+        text-decoration: none;
+        cursor: pointer;
+        display: flex;
+        padding: 20px 51px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 8px;
+        background: #649612;
+        color: #FBFBFB;
+        font-family: Commissioner, sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        &:hover {
+          background: #45660e;
+          transition: all 0.4s ease 0s;
+        }
+        &:active {
+          background: #263a06;
+          transition: all 0.4s ease 0s;
+        }
+      }
+    }
+    .navListPhone{
+      display: none;
+    }
+    .navList{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      a{
+        text-decoration: none;
+        color: var(--Chief-Black, #1D1D1D);
+        text-align: right;
+        font-family: Commissioner, sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        &:hover {
+          color: #45660e;
+          transition: all 0.2s ease 0s;
+        }
+      }
+    }
+    .contactPhone{
+      display: none;
+    }
+    .contact{
+      display: flex;
+      height: 244px;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      .address{
+        color: #649612;
+        font-family: Commissioner, sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+      }
+      .phoneNumber{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .countryPhone{
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          .phone{
+            color: #649612;
+            font-family: Commissioner, sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: underline;
+          }
+        }
+      }
+      .socialMedia{
+        display: flex;
+        align-items: flex-end;
+        gap: 30px;
+        a{
+          display: flex;
+          width: 40px;
+          height: 40px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border-radius: 100000000px;
+          background: #649612;
+          &:hover {
+            background: #45660e;
+            transition: all 0.4s ease 0s;
+          }
+          &:active {
+            background: #263a06;
+            transition: all 0.4s ease 0s;
+          }
+        }
+      }
+      .profit{
+        cursor: pointer;
+        color: #649612;
+        font-family: Commissioner, sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: underline;
+      }
+    }
+    .paymentMethods{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      .candid{
+        img{
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+  .copyright{
+    color: var(--Chief-Black, #1D1D1D);
+    font-family: Commissioner, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+@media (min-width: 1353px)  and (max-width: 1679px){
+  .wrap{
+    display: flex;
+    gap: 160px;
+    align-items: center;
+  }
+  .footer{
+    display: inline-flex;
+    width: 100%;
+    padding: 24px 0 64px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    flex-shrink: 0;
+    background: #F1F1F1;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.10);
+    .wrapper{
+      display: flex;
+      width: 1352px;
+      justify-content: space-between;
+      align-items: center;
+      .logo{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 33px;
+        .txtBtnPhone{
+          display: none;
+        }
+        .paymentMethodsTablet{
+          display:none;
+        }
+        .image{
+          width: 133px;
+          height: 70px;
+        }
+        .text{
+          width: 295px;
+          color: #649612;
+          font-family: Commissioner, sans-serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%; /* 33.6px */
+        }
+        .btn{
+          cursor: pointer;
+          display: flex;
+          padding: 20px 51px;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          border-radius: 8px;
+          background: #649612;
+          color: #FBFBFB;
+          font-family: Commissioner, sans-serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          &:hover {
+            background: #45660e;
+            transition: all 0.4s ease 0s;
+          }
+          &:active {
+            background: #263a06;
+            transition: all 0.4s ease 0s;
+          }
+        }
+      }
+      .navListPhone{
+        display: none;
+      }
+      .navList{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        a{
+          text-decoration: none;
+          color: var(--Chief-Black, #1D1D1D);
+          text-align: right;
+          font-family: Commissioner, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          &:hover {
+            color: #45660e;
+            transition: all 0.2s ease 0s;
+          }
+        }
+      }
+      .contactPhone{
+        display: none;
+      }
+      .contact{
+        display: flex;
+        height: 244px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        .address{
+          color: #649612;
+          font-family: Commissioner, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-decoration-line: underline;
+        }
+        .phoneNumber{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          .countryPhone{
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            .phone{
+              color: #649612;
+              font-family: Commissioner, sans-serif;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              text-decoration: underline;
+            }
+          }
+        }
+        .socialMedia{
+          display: flex;
+          align-items: flex-end;
+          gap: 30px;
+          a{
+            display: flex;
+            width: 40px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 100000000px;
+            background: #649612;
+          }
+        }
+        .profit{
+          color: #649612;
+          font-family: Commissioner, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-decoration: underline;
+        }
+      }
+      .paymentMethods{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+    .copyright{
+      color: var(--Chief-Black, #1D1D1D);
+      font-family: Commissioner, sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+@media (min-width: 1001px)  and (max-width: 1352px){
+  .footer{
+    display: inline-flex;
+    width: 100%;
+    padding: 24px 0 64px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    flex-shrink: 0;
+    background: #F1F1F1;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.10);
+    .wrapper{
+      display: flex;
+      width: 1000px;
+      justify-content: space-between;
+      align-items: center;
+      .logo{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 33px;
+        .txtBtnPhone{
+          display: none;
+        }
+        .paymentMethodsTablet{
+          display:none;
+        }
+        .image{
+          width: 133px;
+          height: 70px;
+        }
+        .text{
+          width: 295px;
+          color: #649612;
+          font-family: Commissioner, sans-serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%; /* 33.6px */
+        }
+        .btn{
+          cursor: pointer;
+          display: flex;
+          padding: 20px 51px;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          border-radius: 8px;
+          background: #649612;
+          color: #FBFBFB;
+          font-family: Commissioner, sans-serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          &:hover {
+            background: #45660e;
+            transition: all 0.4s ease 0s;
+          }
+          &:active {
+            background: #263a06;
+            transition: all 0.4s ease 0s;
+          }
+        }
+      }
+      .navListPhone{
+        display: none;
+      }
+      .navList{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        a{
+          text-decoration: none;
+          color: var(--Chief-Black, #1D1D1D);
+          text-align: right;
+          font-family: Commissioner, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          &:hover {
+            color: #45660e;
+            transition: all 0.2s ease 0s;
+          }
+        }
+      }
+      .contactPhone{
+        display: none;
+      }
+      .contact{
+        display: flex;
+        height: 244px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        .address{
+          color: #649612;
+          font-family: Commissioner, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-decoration-line: underline;
+        }
+        .phoneNumber{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          .countryPhone{
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            .phone{
+              color: #649612;
+              font-family: Commissioner, sans-serif;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              text-decoration: underline;
+            }
+          }
+        }
+        .socialMedia{
+          display: flex;
+          align-items: flex-end;
+          gap: 30px;
+          a{
+            display: flex;
+            width: 40px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 100000000px;
+            background: #649612;
+          }
+        }
+        .profit{
+          color: #649612;
+          font-family: Commissioner, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-decoration: underline;
+        }
+      }
+      .paymentMethods{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+    .copyright{
+      color: var(--Chief-Black, #1D1D1D);
+      font-family: Commissioner, sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+
+  .footer{
+    display: inline-flex;
+    width: 100%;
+    padding: 30px 0 64px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    flex-shrink: 0;
+    background: #F1F1F1;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.10);
+    .wrapper{
+      display: flex;
+      width: 674px;
+      height: 439px;
+      justify-content: normal;
+      padding: 0 40px;
+      align-items: center;
+      .wrap{
+        display: flex;
+        align-items: center;
+      }
+      .logo{
+        margin-right: 14px;
+        .txtBtnPhone{
+          display: none;
+        }
+        .paymentMethodsTablet{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+          div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+          }
+          .candid{
+            img{
+              width: 80px;
+              height: 80px;
+            }
+          }
+        }
+        .image{
+          width: 119.036px;
+          height: 62.998px;
+        }
+        .text{
+          width: 297px;
+          color: var(--main-green, #649612);
+          font-family: Commissioner, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%; /* 28px */
+        }
+        .btn{
+          cursor: pointer;
+          display: flex;
+          height: 30px;
+          padding: 20px 51px;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          border-radius: 8px;
+          background: var(--main-green, #649612);
+          color: #FFF;
+          font-family: Commissioner, sans-serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          &:hover {
+            background: #45660e;
+            transition: all 0.4s ease 0s;
+          }
+          &:active {
+            background: #263a06;
+            transition: all 0.4s ease 0s;
+          }
+        }
+      }
+      .navListPhone{
+        display: none;
+      }
+      .navList{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+        margin-right: 30px;
+        a{
+          text-decoration: none;
+          color: var(--Chief-Black, #1D1D1D);
+          text-align: left;
+          font-family: Commissioner, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          &:hover {
+            color: #45660e;
+            transition: all 0.2s ease 0s;
+          }
+        }
+      }
+      .contactPhone{
+        display: none;
+      }
+      .contact{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 23px;
+        .address{
+          color: var(--main-green, #649612);
+          font-family: Commissioner, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-decoration-line: underline;
+          width: 270px;
+        }
+        .phoneNumber{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          .countryPhone{
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            .phone{
+              color: var(--main-green, #649612);
+              font-family: Commissioner, sans-serif;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+        }
+        .socialMedia{
+          display: flex;
+          align-items: flex-end;
+          gap: 30px;
+          a{
+            display: flex;
+            width: 40px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 100000000px;
+            background: var(--main-green, #649612);
+          }
+        }
+        .profit{
+          color: var(--main-green, #649612);
+          font-family: Commissioner, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+      .paymentMethods{
+        display: none;
+      }
+    }
+    .copyright{
+      color: var(--Chief-Black, #1D1D1D);
+      font-family: Commissioner, sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .footer{
+    padding: 51px 0 30px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-shrink: 0;
+    background: #F1F1F1;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.10);
+    .wrapper{
+      padding: 0;
+      width: 343px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      .logo{
+        margin-right: 0px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 48px;
+        .paymentMethodsTablet{
+          display: none;
+        }
+        .txtBtnPhone{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+          .textPhone{
+            width: 160px;
+            color: var(--main-green, #649612);
+            font-family: Commissioner, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 22.4px */
+          }
+          .btn{
+            cursor: pointer;
+            display: flex;
+            width: 130px;
+            height: 40px;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            border-radius: 8px;
+            background: var(--main-green, #649612);
+            color: var(--Main-white, #F5F5F5);
+            font-family: Commissioner, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            &:hover {
+              background: #45660e;
+              transition: all 0.4s ease 0s;
+            }
+            &:active {
+              background: #263a06;
+              transition: all 0.4s ease 0s;
+            }
+          }
+        }
+        .image{
+          width: 133px;
+          height: 70px;
+        }
+        .text{
+          display: none;
+        }
+        .btn{
+         display: none;
+        }
+      }
+      .navListPhone{
+        display: flex;
+        width: 343px;
+        justify-content: space-between;
+        align-items: flex-start;
+        .left{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+        }
+        .right{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 20px;
+        }
+        a{
+          text-decoration: none;
+          color: var(--Chief-Black, #1D1D1D);
+          text-align: right;
+          font-family: Commissioner, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          &:hover {
+            color: #45660e;
+            transition: all 0.2s ease 0s;
+          }
+        }
+      }
+      .navList{
+        display: none;
+      }
+      .contactPhone{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-self: stretch;
+        .wrapperContact{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+        }
+        .address{
+          color: var(--main-green, #649612);
+          font-family: Commissioner, sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-decoration-line: underline;
+          width: 270px;
+         }
+        .phoneNumber{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          .countryPhone{
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            .phone{
+              color: var(--main-green, #649612);
+              font-family: Commissioner, sans-serif;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+        }
+        .socialMedia{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          align-self: stretch;
+          a{
+            display: flex;
+            width: 40px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 100000000px;
+            background: var(--main-green, #649612);
+          }
+        }
+        .profit{
+          color: var(--main-green, #649612);
+          font-family: Commissioner, sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+      .contact {
+        display: none;
+      }
+      .paymentMethods{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        .candid{
+          img{
+            width: 60px;
+            height: 60px;
+          }
+        }
+      }
+    }
+    .copyright{
+      color: var(--Chief-Black, #1D1D1D);
+      font-family: Commissioner, sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

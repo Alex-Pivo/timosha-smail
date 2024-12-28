@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+    #slider .swiper-slide-active{
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23649612FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e") !important;
+    }
+
+    #slider .swiper-slide{
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%23D0D0D0FF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+    }
+
+    #slider .swiper-pagination {
+        position: relative;
+        z-index: 10;
+        bottom: -36px;
+        left: 0px;
+        margin: 0 auto;
+        width: 150px;
+        height: auto;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #slider .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: #D1D5DB; /* Цвет активного пункта пагинации */
+        opacity: 1;
+    }
+      
+    #slider .swiper-pagination-bullet-active {
+        width: 14px;
+        height: 14px;
+        background-color: #649612; /* Цвет неактивного пункта пагинации */
+    }
+}

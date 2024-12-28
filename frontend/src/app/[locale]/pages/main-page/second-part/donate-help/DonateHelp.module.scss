@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.donateHelp{
+  height: 922px;
+  position: relative;
+  background: url('/bgBaby.png') center;
+  margin-bottom: 150px;
+  flex-shrink: 0;
+  .bottomImages{
+    width: 100%;
+    position: absolute;
+    bottom: -4px;
+    .tabletImage{
+      display: none;
+    }
+    .phoneImage {
+      display: none;
+    }
+    .image{
+      width: 100%;
+    }
+  }
+  .wrapper{
+    padding: 169px 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 172px;
+    .mainTxt{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 17px;
+      position: relative;
+      svg{
+        width: 782px;
+        height: 99px;
+        position: absolute;
+        left: -18px;
+        top: -20px;
+      }
+      .caption{
+        width: 877px;
+        z-index: 1;
+        color: #FFF;
+        font-family: Rubik, sans-serif;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 114%; /* 54.72px */
+      }
+      .moreTxt{
+        color: #FFF;
+        font-family: Commissioner, sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px; /* 125% */
+      }
+    }
+
+    .bannerDonate{
+      z-index: 5;
+    }
+  }
+}
+
+@media (min-width: 1260px)  and (max-width: 1541px) {
+  .donateHelp{
+    height: 692px;
+    position: relative;
+    background: url('/bgBaby.png') no-repeat center center;
+    background-size: cover;
+    margin-bottom: 200px;
+    flex-shrink: 0;
+    .bottomImages{
+      position: absolute;
+      bottom: -4px;
+      .tabletImage{
+        display: none;
+      }
+      .phoneImage {
+        display: none;
+      }
+      .image{
+
+      }
+    }
+    .wrapper{
+      padding: 99px 44px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0px;
+      .mainTxt{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        position: relative;
+        svg{
+          position: absolute;
+          left: -8px;
+          top: -1px;
+          width: 655px;
+          height: 69px;
+        }
+        .caption{
+          width: 666px;
+          z-index: 1;
+          color: #FFF;
+          font-family: Rubik, sans-serif;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 114%; /* 54.72px */
+        }
+        .moreTxt{
+          color: #FFF;
+          font-family: Commissioner, sans-serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 30px; /* 125% */
+        }
+      }
+
+      .bannerDonate{
+        z-index: 5;
+      }
+    }
+  }
+}
+@media (min-width: 836px)  and (max-width: 1260px){
+  .donateHelp{
+    height: 692px;
+    position: relative;
+    background: url('/bgBaby.png') no-repeat center center;
+    background-size: cover;
+    margin-bottom: 300px;
+    flex-shrink: 0;
+    .bottomImages{
+      position: absolute;
+      bottom: -4px;
+      .tabletImage{
+        display: none;
+      }
+      .phoneImage {
+        display: none;
+      }
+      .image{
+
+      }
+    }
+    .wrapper{
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      padding: 99px 44px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .mainTxt{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        position: relative;
+        svg{
+          position: absolute;
+          left: -8px;
+          top: -1px;
+          width: 655px;
+          height: 69px;
+        }
+        .caption{
+          width: 666px;
+          z-index: 1;
+          color: #FFF;
+          font-family: Rubik, sans-serif;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 114%; /* 54.72px */
+        }
+        .moreTxt{
+          color: #FFF;
+          font-family: Commissioner, sans-serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 30px; /* 125% */
+        }
+      }
+
+      .bannerDonate{
+        z-index: 5;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 835px) {
+
+  .donateHelp {
+    position: relative;
+    background: url(/bgBabyTablet.png), no-repeat center center;
+    background-size: cover;
+    margin-bottom: 400px;
+    width: 100%;
+    height: 596px;
+    .bottomImages {
+      z-index: 1;
+      .phoneImage {
+        display: none;
+      }
+      .tabletImage{
+        display: flex;
+        position: absolute;
+        bottom: 4px;
+        width: 100%;
+        height: 137.263px;
+        flex-shrink: 0;
+      }
+      .image{
+        display: none;
+      }
+    }
+
+    .wrapper {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 100px;
+      .firstBlock {
+
+      }
+      .mainTxt {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        position: relative;
+
+        svg {
+          width: 604px;
+          height: 63px;
+          position: absolute;
+          left: -8px;
+          top: -1px;
+        }
+
+        .caption {
+          width: 666px;
+          z-index: 1;
+          color: #FFF;
+          font-family: Rubik, sans-serif;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 114%; /* 45.6px */
+        }
+
+        .moreTxt {
+          color: #FFF;
+          font-family: Commissioner, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 30px; /* 150% */
+        }
+      }
+
+      .bannerDonate {
+        z-index: 5;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .donateHelp {
+    position: relative;
+    background: url(/donatePhone.png) no-repeat center center;
+    background-size: cover;
+    margin-bottom: 300px;
+    width: 100%;
+    height: 367px;
+    .bottomImages {
+      width: 100%;
+      .tabletImage{
+        display: none;
+      }
+      .phoneImage{
+        display: flex;
+        position: absolute;
+        bottom: 4px;
+        width: 100%;
+        height: 68.96px;
+        flex-shrink: 0;
+      }
+      .image{
+        display: none;
+      }
+    }
+
+    .wrapper {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 70px;
+      svg{
+        display: none;
+      }
+      .mainTxt {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+        position: relative;
+
+
+        .caption {
+          width: 343px;
+          color: var(--Main-white, #F5F5F5);
+          font-family: Rubik, sans-serif;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 110%; /* 30.8px */
+          letter-spacing: -1.12px;
+        }
+
+        .moreTxt {
+          color: #FFF;
+          font-family: Commissioner, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 30px; /* 214.286% */
+        }
+      }
+
+      .bannerDonate {
+        z-index: 5;
+      }
+    }
+  }
+}

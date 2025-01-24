@@ -31,7 +31,7 @@ export default function News() {
   const achievementsList = [
     {
       metric: `${t("number1")}`,
-      value: "107",
+      value: "112",
       postfix: "+",
     },
     {

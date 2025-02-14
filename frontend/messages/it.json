@@ -264,10 +264,12 @@
     "title": "Una vita salvata è un futuro salvato!",
     "btn": "Aiuto",
     "city": "",
-    "street": "Rivne, st. Kulyk e Hudachek (Makarov) 10/99 33010",
+    "street": "Rivne, st. Kulyk e Hudachek 10/99 33010",
     "code": "",
     "user": "Accordo per gli utenti",
-    "copy": "Tymoshka Sorriso"
+    "copy": "Tymoshka Sorriso",
+    "facebook": "https://www.facebook.com/share/15XcGLjvDV/?mibextid=wwXIfr",
+    "country": "Ukraine"
   },
   "contacts": {
     "title": "Contattaci",

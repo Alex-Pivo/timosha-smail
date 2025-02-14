@@ -3,7 +3,7 @@
     "title": "Charitable Christian Foundation «Timosha's Smile»",
     "title1": "Timosha`s Smile"
   },
-  "Header":{
+  "Header": {
     "home": "Home Page",
     "history": "Our history",
     "news": "News",
@@ -13,7 +13,7 @@
     "donate": "Donate",
     "menu": "Menu"
   },
-  "mSlider":{
+  "mSlider": {
     "title1": "We help children with cancer in Ukraine!",
     "title2": "Every Ukrainian child with cancer deserves a chance",
     "title3": "We are building the first Christian oncology center",
@@ -25,7 +25,7 @@
     "year": "2 years old",
     "read": "Read the story of "
   },
-  "helpcomp":{
+  "helpcomp": {
     "yes": "One-off ",
     "no": "Recurring payment",
     "subtitle": "Select the amount of the one-off payment",
@@ -45,7 +45,7 @@
     "down": "To help every month is to save children's lives every day",
     "amount": "Enter amount"
   },
-  "mSecond":{
+  "mSecond": {
     "number1": "Evacuated child",
     "number2": "Years of experience",
     "number3": "The families received emotional and spiritual support",
@@ -103,11 +103,11 @@
     "year2": "2019",
     "text2": "Timosha died in August 2019. Treatment in one of the best clinics in Europe (Italy) left a deep impression on our hearts. It was here, being in ideal conditions for the patient and parents, that a Dream was born in our hearts. Returning to Ukraine  without our boy, this Dream did not leave us.",
     "year3": "2020",
-    "text3": "And on February 14, 2020, on Timik's earthly birthday, for the first time we told out loud to all acquaintances and strangers that with God's help we plan to build the first Christian oncology center in Ukraine for research and treatment of leukemia in children. \n And this Dream ceased to be only ours, it was picked up by thousands of caring hearts. We have registered the Christian Charitable Nonprofit Organization «Timothy's Smile». The task and purpose of which is the construction and ensuring the functioning of this medical institution.",
+    "text3": "And on February 14, 2020, on Timosha earthly birthday, for the first time we told out loud to all acquaintances and strangers that with God's help we plan to build the first Christian oncology center in Ukraine for research and treatment of leukemia in children. \n And this Dream ceased to be only ours, it was picked up by thousands of caring hearts. We have registered the Christian Charitable Nonprofit Organization \"Timosha's Smile\". The task and purpose of which is the construction and ensuring the functioning of this medical institution.",
     "year4": "Now",
-    "text4": "The construction of the hospital is the project that started our Organization. When a full-scale invasion began, we did not hold onto Nonprofit Organization funds and resources to wait until it was all over. \n We decided to help already! This is how the «Evacuation» project appeared, thanks to which we helped more than a hundred children receive high-quality and caring treatment in Italy. \n But the first Christian Children's Oncology Clinic in Ukraine remains an important and long-term project of the Nonprofit Organization.",
+    "text4": "The construction of the hospital is the project that started our Organization. When a full-scale invasion began, we did not hold onto Nonprofit Organization funds and resources to wait until it was all over. \n We decided to help already! This is how the \"Evacuation\" project started, thanks to which we helped more than a hundred children receive high-quality and caring treatment in Italy. \n But the first Christian Children's Oncology Clinic in Ukraine remains an important and long-term project of the Nonprofit Organization.",
     "year5": "Book",
-    "text5": "In order to learn our entire path from pain to calling, you can read Yulia Sanko's autobiographical book «The Story of One Soul» ",
+    "text5": "In order to learn our entire path from pain to calling, you can read Yuliia Sanko's autobiographical book \"A Story of One Soul\" ",
     "tagline": "Our mission: to provide effective treatment for children who have been diagnosed with leukemia in cooperation with health workers, scientists and parents",
     "partitle": "We are proud of our partners",
     "parsubtitle": "Thanks to them, our charitable organization can work and help children with cancer. We are grateful to each of our partners for understanding the importance of the problem we are fighting and helping us along the way.",
@@ -120,7 +120,7 @@
   },
   "Donate": {
     "main": "Home page",
-    "mTitle":"A convenient way to help",
+    "mTitle": "A convenient way to help",
     "btn1": "Visa/MasterCard",
     "btn2": "Bank Transfer",
     "btn3": "Payment in crypto",
@@ -158,13 +158,13 @@
     "mail": "Your e-mail",
     "title2": "Bank Transfer",
     "recName": "Recipient's name",
-    "iban":"IBAN",
-    "reccode":"Receiver code",
-    "bank":"Bank",
+    "iban": "IBAN",
+    "reccode": "Receiver code",
+    "bank": "Bank",
     "recName1": "CO CCF“Timosha’s Smile” ",
-    "iban1":"UA663052990000026009000705161",
-    "reccode1":"43624277",
-    "bank1":"RIVNA BRANCH JSC CB “PRIVATBANK”",
+    "iban1": "UA663052990000026009000705161",
+    "reccode1": "43624277",
+    "bank1": "RIVNA BRANCH JSC CB “PRIVATBANK”",
     "button2": "Copy data",
     "title3": "Bank transfer QR code",
     "qrText": "To pay, click here or scan the QR code",
@@ -184,7 +184,7 @@
     "adres": "Address:",
     "name1": "Timosha's Smile",
     "adres1": "2357 S Tamiami TrI Ste 3, PMB 189 Venice, FL, 34293",
-     "subs": "To cancel a recurring payment, you need to: go to your Liqpay account and cancel a recurring payment, or write to the Liqpay support service and cancel a recurring payment."
+    "subs": "To cancel a recurring payment, you need to: go to your Liqpay account and cancel a recurring payment, or write to the Liqpay support service and cancel a recurring payment."
   },
   "popupDonate": {
     "title": "Where do you plan to help from?",
@@ -264,10 +264,12 @@
     "title": "A saved life is a saved future!",
     "btn": "Donate",
     "city": "Rivne,",
-    "street": "Kulyka i Gudacheka (Makarova) 10/99",
+    "street": "Kulyka i Gudacheka 10/99",
     "code": "33010",
     "user": "User agreement",
-    "copy": "Timosha’s Smile"
+    "copy": "Timosha’s Smile",
+    "facebook": "https://www.facebook.com/share/15XcGLjvDV/?mibextid=wwXIfr",
+    "country": "Ukraine"
   },
   "contacts": {
     "title": "Contact us",
@@ -352,7 +354,7 @@
     "title": "We are in the media",
     "sub": "All articles and interviews covering the activities of the Organization are collected here."
   },
-   "new": {
+  "new": {
     "home": "Home page",
     "news": "News",
     "new": "Article",

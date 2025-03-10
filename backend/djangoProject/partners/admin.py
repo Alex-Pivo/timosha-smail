@@ -6,7 +6,7 @@ class PartnerForms(forms.ModelForm):
     class Meta:
         model = Partner
         fields = '__all__'
-        help_texts = {'description': '(до 100 символів)','image':
+        help_texts = {'description': '(до 255 символів)','image':
                       "Лого партнера буде відображатися одразу на всіх мовах сайту на головній сторінці (тільки лого)"}
 
 @admin.register(Partner)
